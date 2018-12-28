@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Brian Tripp</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
+    <link rel="shortcut icon" type="image/png" href="http://bdtripp.com/images/favicon.png">
+    <script src="highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="main.js" type="text/javascript"></script>
+</head>
+<body onload="init()">
+    <div id="overlay"></div>
+    <header>
+        <img id="menu_icon" src="images/menu_icon.png">
+        <div class="header_text">
+            <p id="name">Brian Tripp</p>
+            <p>Full Stack Developer</p>
+        </div>
+    </header>
+    <nav id="slide_out">
+        <img class="close_btn" src="images/close_icon.png" onclick="slideIn()">
+        <ul>
+            <li>
+                <a href="#about" onclick="slideIn()">
+                    <img src="images/menu_icons/about_menu_icon.png">
+                    About
+                </a>
+            </li>
+            <li> 
+                <a href="#projects" onclick="slideIn()">
+                    <img src="images/menu_icons/projects_menu_icon.png">
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a href="#skills" onclick="slideIn()">
+                    <img src="images/menu_icons/skills_menu_icon.png">
+                    Skills
+                </a>
+            </li>
+            <li>
+                <a href="#education" onclick="slideIn()">
+                    <img src="images/menu_icons/education_menu_icon.png">
+                    Education
+                </a>
+            </li>
+            <li>
+                <a href="#contact" onclick="slideIn()">
+                    <img src="images/menu_icons/contact_menu_icon.png">
+                    Contact
+                </a>
+            </li>
+            <li>                 
+                <a href="#resume" onclick="slideIn()">
+                    <img src="images/menu_icons/resume_menu_icon.png">
+                    Resume
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <img id="portrait" src="images/portrait.jpg">
+        <section id="about">
+            <h1>About</h1>
+            <div class="card">
+                <p>Student soon to complete a degree in Web Design and Development.</p>
+                <p>Seeking to apply my knowledge and gain real world experience as a full stack developer. I find satisfaction in problem solving, understanding how things work, and making ideas come to fruition.</p>
+            </div>
+
+        </section>
+        
+        <section id="projects">
+            <h1>Projects</h1>
+            
+            <div id="pas_screenshot_card" class="project screenshot card" onclick="slideUp('pas_accomplishments')">
+<!--                <h2>Portland Art Supply</h2>-->
+                <img src="images/pas_screenshot.png">
+                
+                <div id="pas_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('pas_scroll_indicator')">
+                    <h2>Design &amp; Development<br> Features</h2>
+                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('pas_accomplishments')">
+                    
+                    <ul>
+                        <li>PHP
+                            <ul>
+                                <li>Sessions
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_session', 'pas_accomplishments', this)">
+                                </li>
+                                <li>Dynamically Generated HTML
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this)">
+                                </li>
+<!--                                <li>Dynamic Generating image locations</li>-->
+                                <li>GET/POST</li>
+                                <li>User Authentication
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_authentication', 'pas_accomplishments', this)">
+                                </li>
+                                <li>Password Hashing</li>
+                                <li>JSON Encoding</li>
+                            </ul>
+                        </li>
+                        
+                        <li>Javascript
+                            <ul>
+                                <li>Event Handling</li>
+                                <li>Dynamic CSS Styling
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this)">
+                                </li>
+                                <li>Input Validation
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_validation', 'pas_accomplishments', this)">
+                                </li>
+                                <li>AJAX
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_ajax', 'pas_accomplishments', this)">
+                                </li>
+                                <li>Regular Expressions
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_regex', 'pas_accomplishments', this)">
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li>Database
+                            <ul>
+                                <li>SQL
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this)">
+                                </li>
+                                <li>Data Modeling</li>
+                            </ul>
+                        </li>
+                        
+                        <li>LESS
+                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_less', 'pas_accomplishments', this)">
+                        </li>
+                        
+                    </ul>
+                    <a href="http://bdtripp.com/portland_art_supply/" target="_blank">
+                        <img class="link_to_site" src="images/external_link_icon.png">
+                    </a>
+                    <div id="pas_scroll_indicator" class="scroll_indicator">
+                        <img src="images/down_arrow.png">
+                    </div>
+                </div>
+                
+                <div id="pas_src_session" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this)">
+                       
+<pre><code class="PHP">/*
+    When the user clicks "Add to Cart", the $_SESSION gets updated with an 
+    array that contains the items properties. When the user logs out and back in, the session data is
+    retrieved to repopulate the shopping cart.
+*/
+
+function addItemToCart($id, $category, $subcategory, $groupCode, $color, $size, $price, $quantity, $groupDescription) {
+    $items = getItemsInCart();
+    $newItem = true;
+
+    //check if the item already exists in the cart
+    for ($count = 0; $count &lt; count($items); $count++) {
+        if ($items[$count][PRODUCT_ITEM_ID_FIELD] == $id) {
+            $items[$count][QUANTITY_FIELD] += $quantity;
+            $newItem = false;
+            set_session_value(SESSION_CART_KEY, $items);
+        }
+    }
+    if ($newItem) {
+        $items[] = array(PRODUCT_ITEM_ID_FIELD => $id, PRODUCT_CATEGORY_NAME_FIELD => $category,
+            PRODUCT_SUBCATEGORY_NAME_FIELD => $subcategory, PRODUCT_GROUP_CODE_FIELD => $groupCode,
+            PRODUCT_COLOR_NAME_FIELD => $color, PRODUCT_SIZE_DESCRIPTION_FIELD => $size,
+            PRODUCT_ITEM_PRICE_FIELD => $price, QUANTITY_FIELD => $quantity, PRODUCT_GROUP_DESCRIPTION_FIELD => $groupDescription);
+        set_session_value(SESSION_CART_KEY, $items);
+    }
+    save_session();
+}</code></pre>
+                    
+                </div> 
+                
+                <div id="pas_src_generate" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this)">
+                       
+<pre><code class="PHP">/*
+    All of the site's HTML is dynamically generated from PHP. The the product information is stored
+    in the database and insterted into the html code as needed. 
+*/
+
+function show_subcategories($categoryID, $categoryName, $rowsPerColumn) {
+    $subcategories = lookup_subcategories($categoryID);
+
+    echo '        &lt;div class="' . SIX_COLUMNS_CLASS . '">' . "\n";
+    echo '            &lt;ul>' . "\n";
+    for ($i = $rowsPerColumn - ROWS_PER_COLUMN; ($i &lt; $rowsPerColumn) &amp;&amp; ($i &lt; sizeof($subcategories)); $i++) {
+        echo '                &lt;li class="' . SUBCATEGORY_BUTTON_CLASS . '"&gt;' . "\n";
+        echo '                    &lt;a href="' . GROUP_PRODUCTS_PAGE . "?" . PRODUCT_CATEGORY_NAME_FIELD . "=" . $categoryName . "&amp;" .
+                                      PRODUCT_SUBCATEGORY_NAME_FIELD . "=" . $subcategories[$i][PRODUCT_SUBCATEGORY_NAME_FIELD] . '"&gt;'
+                                      . ucfirst($subcategories[$i][PRODUCT_SUBCATEGORY_NAME_FIELD]) . '&lt;/a>' . "\n";
+        echo '                &lt;/li&gt;' . "\n";
+    }
+    echo '            &lt;/ul&gt;' . "\n";
+    echo '        &lt;/div&gt;' . "\n\n";
+}</code></pre>  
+                </div>
+                
+                <div id="pas_src_authentication" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_authentication', 'pas_accomplishments', this)">
+                       
+<pre><code class="PHP">/*
+    Checks the username and password received from the form the login page. If there are any issues,
+    an error message is returned. Otherwise the user's session data is restored and the user is
+    redirected to the page that they were previously viewing.
+*/
+
+function login($username, $password, $returnToUrl) {
+    if (empty($username)) {
+        return error_message(E_LOGIN, E_NO_USERNAME);
+    }
+
+    if (empty($password)) {
+        return error_message(E_LOGIN, E_NO_PASSWORD);
+    }
+
+    $user = lookup_user($username);
+
+    if (!$user) {
+        return error_message(E_LOGIN, E_USERNAME_NOT_FOUND);
+    }
+
+    if (!password_verify($password, $user[USERS_HASH_FIELD])) {
+        return error_message(E_LOGIN, E_PASSWORD_INCORRECT);
+    }
+
+    set_user($user[USER_ID_FIELD], $username, $returnToUrl);
+    restore_session();
+    return '';
+}</code></pre>
+                    
+                </div>
+                
+                <div id="pas_src_dynamic_styling" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this)">
+                       
+<pre><code class="JavaScript">/*
+    Makes dynamic height adjustments involving calculations that could not be achieved using pure
+    css.
+*/
+
+        if (window.innerWidth >= 700 &amp;&amp; window.innerWidth &lt; 1000) {
+            if (colorThumbnails !== null) {
+                let colorThumbnailsStyle = window.getComputedStyle(colorThumbnails);
+
+                itemOptions.style.height = Math.max(colorThumbnails.clientHeight + parseInt(colorThumbnailsStyle.marginTop) +
+                    parseInt(colorThumbnailsStyle.marginBottom), optionsRightCol.clientHeight +
+                    parseInt(optionsRightColStyle.marginTop) + parseInt(optionsRightColStyle.marginBottom),
+                    itemImage.clientHeight + 40) + "px";
+            } else {
+                itemOptions.style.height = Math.max(optionsRightCol.clientHeight + parseInt(optionsRightColStyle.marginTop) +
+                    parseInt(optionsRightColStyle.marginBottom), itemImage.clientHeight + 40) + "px";
+            }
+
+            itemWrapper.style.height = "auto";
+        }</code></pre>
+                    
+                </div>
+                
+                <div id="pas_src_validation" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_validation', 'pas_accomplishments', this)">
+                       
+<pre><code class="JavaScript">/*
+    Checks if password meets requirements on client side before allowing the form to be submitted to
+    the server.
+*/
+
+function isUpper(character) {
+    return character &gt;= 'A' &amp;&amp; character &lt;= 'Z';
+}
+
+function isLower(character) {
+    return character &gt;= 'a' &amp;&amp; character &lt;= 'z';
+}
+
+function isDigit(character) {
+    return character &gt;= 0 &amp;&amp; character &lt;= 9;
+}
+
+function isSpecial(character) {
+    return REQUIRED_SPECIAL_CHARACTERS.indexOf(character) &gt;= 0;
+}
+
+function checkPasswordRequirements(input) {
+    let hasUpper = false;
+    let hasDigit = false;
+    let hasSpecial = false;
+
+    for (count = 0; count &lt; input.length; count++) {
+        if (isUpper(input.charAt(count))) {
+            hasUpper = true;
+        }
+        if (isDigit(input.charAt(count))) {
+            hasDigit = true;
+        }
+        if (isSpecial(input.charAt(count))) {
+            hasSpecial = true;
+        }
+    }
+
+    if (!hasUpper) {
+        setErrorMessage(PASSWORD_MESSAGE_ID, PASSWORD_UPPERCASE_ERROR);
+    } else if (!hasDigit) {
+        setErrorMessage(PASSWORD_MESSAGE_ID, PASSWORD_DIGIT_ERROR);
+    } else if (!hasSpecial) {
+        setErrorMessage(PASSWORD_MESSAGE_ID, PASSWORD_SPECIAL_ERROR);
+    }
+
+    if (hasUpper &amp;&amp; hasDigit &amp;&amp; hasSpecial) {
+        return true;
+    } else {
+        return false;
+    }
+}</code></pre>
+                    
+                </div>
+                
+                <div id="pas_src_ajax" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_ajax', 'pas_accomplishments', this)">
+                       
+<pre><code class="JavaScript">/*
+    When user adds an item to the cart, AJAX is used to send data about the selection back to the
+    server such as the quanity, size, and color selected. The server then saves the item to the users 
+    session data in the database. 
+*/
+
+let xhttp = new XMLHttpRequest();
+        let sendString = PRODUCT_ITEM_ID_FIELD + '=' + itemID + '&amp;' + PRODUCT_CATEGORY_NAME_FIELD + '=' + category +
+            '&amp;' + PRODUCT_SUBCATEGORY_NAME_FIELD + '=' + subcategory + '&amp;' + PRODUCT_GROUP_CODE_FIELD + '=' + groupCode +
+            '&amp;' + PRODUCT_COLOR_NAME_FIELD + '=' + currentColorSelection +
+            '&amp;' + PRODUCT_SIZE_DESCRIPTION_FIELD + '=' + currentSizeSelection + '&amp;' + PRODUCT_ITEM_PRICE_FIELD + '=' + currentPrice +
+            '&amp;' + QUANTITY_FIELD + '=' + quantity + '&amp;' + PRODUCT_GROUP_DESCRIPTION_FIELD + '=' + groupDescription;
+
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 &amp;&amp; this.status == 200) {
+                updateCartCountDisplay(QUANTITY_DROP_DOWN_ID, "+");
+            }
+        }
+        xhttp.open("POST", "product_items.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(sendString);
+</code></pre>
+                    
+                </div>
+                
+                <div id="pas_src_regex" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_regex', 'pas_accomplishments', this)">
+                       
+<pre><code class="JavaScript">/*
+    Image paths are dynamically generated from values in the database. Used regular expressions to
+    remove quotes, slashes, pound signs, and spaces. Replaced them with either underscores or dashes.
+*/
+
+image.src = IMAGE_FOLDER + category + '/' + subcategory + '/' + groupCode + '-' +
+        color.toLowerCase().replace(/\s+(?=[^()]*(\(|$))/g, '-').replace(/"+|#+/g, '_') +
+        size.toLowerCase().replace(/\s+(?=[^()]*(\(|$))/g, '-').replace(/"+|#+/g, '_') + '.jpg';
+</code></pre>
+                    
+                </div>
+                
+                <div id="pas_src_sql" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this)">
+                       
+<pre><code class="PHP">/*
+    All product information is stored in a database. When the user clicks on a link to view a 
+    particular product, a query is sent to the database and an array containing all of the products
+    color and size options is returned. 
+*/
+
+function lookup_items($groupID) {
+    $db = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
+    $query = "SELECT " . PRODUCT_ITEM_ID_FIELD . ', ' . PRODUCT_COLOR_NAME_FIELD . ", ";
+    $query .= PRODUCT_SIZE_DESCRIPTION_FIELD . ", " . PRODUCT_ITEM_PRICE_FIELD . " FROM " . PRODUCT_ITEM_TABLE;
+    $query .= " LEFT JOIN " . PRODUCT_COLOR_TABLE . " ON " . PRODUCT_ITEM_TABLE . "." . PRODUCT_ITEM_COLOR_ID_FIELD;
+    $query .= " = " . PRODUCT_COLOR_TABLE . "." . PRODUCT_COLOR_ID_FIELD . " LEFT JOIN " . PRODUCT_SIZE_TABLE;
+    $query .= " ON " . PRODUCT_ITEM_TABLE . "." . PRODUCT_ITEM_SIZE_ID_FIELD . " = " . PRODUCT_SIZE_TABLE . ".";
+    $query .= PRODUCT_SIZE_ID_FIELD . " WHERE " . PRODUCT_ITEM_GROUP_ID_FIELD . " = " . $groupID;
+    $result = $db->query($query);
+    while($item = $result->fetch_array(MYSQLI_ASSOC)) {
+        $items[] = $item;
+    };
+    return $items;
+}</code></pre>
+                    
+                </div>
+                
+                <div id="pas_src_less" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_less', 'pas_accomplishments', this)">
+                       
+<pre><code class="plaintext">/*
+    Most of the CSS for the site is generated from LESS.
+*/
+</code></pre>
+<pre><code class="Less">&amp;#product_groups {
+
+    div {
+
+        &amp;.group_row {
+            overflow: hidden;
+        }
+    }
+
+    div {
+
+        &amp;.product_group {
+            padding: 20px 0 0 0;
+            box-shadow: 5px 5px 20px #AAA;
+            margin: 15px auto;
+            border-radius: 5px;
+
+            a {
+
+                &amp;.group_description_text {
+                    max-width: 97%;
+                    margin: 0 auto;
+                    text-decoration: none;
+                    color: black;
+                    font-size: 1.2rem;
+                    display: block;
+                    padding: 0 0 5px 0;
+                }
+            }
+        }
+    }
+}
+
+</code></pre>
+                    
+                </div>
+            </div>
+            
+            <div id="bm_screenshot_card" class="project screenshot card" onclick="slideUp('bm_accomplishments')">
+<!--                <h2>Burrito Masala</h2>-->
+                <img src="images/bm_screenshot.png">
+                
+                <div id="bm_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('bm_scroll_indicator')">
+                    <h2>Design &amp; Development<br> Features</h2>
+                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('bm_accomplishments')">
+                    <ul>
+                        <li>Responsive Grid</li>
+                        <li>Web Fonts</li>
+                        <li>UI/UX Design Principles
+                            <ul>
+                                <li>Simple</li>
+                                <li>Consistent</li>
+                                <li>Follows Conventions</li>
+                                <li>Intuitive</li>
+                                <li>Meets User Requirements</li>
+                            </ul>
+                        </li>
+                        <li>Design Processes:
+                            <ul>
+                                <li>Content Reference Wireframe</li>
+                                <li>High Fidelity Wireframe</li>
+                                <li>User Journeys</li>
+                                <li>Mood Board</li>
+                                <li>Brand Book
+                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this)">
+                                    <a class="show_in_mobile" href="https://bdtripp.com/brand_book.pdf" target="_blank">
+                                        <img class="src_code_icon" src="images/document.png">
+                                    </a>
+                                </li>
+                                <li>Color Pallettes</li>
+                                <li>User Personas</li>
+                                <li>User Interface Inventory
+                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this)">
+                                   <a class="show_in_mobile" href="https://bdtripp.com/interface_inventory.pdf" target="_blank">
+                                        <img class="src_code_icon" src="images/document.png">
+                                    </a>
+                                </li>
+                                <li>Competitive Analysis</li>
+                                <li>Goal and Messaging</li>
+                                <li>List of Requirements
+                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this)">
+                                    <a class="show_in_mobile" href="https://bdtripp.com/listofrequirements.pdf" target="_blank">
+                                        <img class="src_code_icon" src="images/document.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                    <a href="http://bdtripp.com/burrito_masala/" target="_blank">
+                        <img class="link_to_site" src="images/external_link_icon.png">
+                    </a>
+                    <div id="bm_scroll_indicator" class="scroll_indicator">
+                        <img src="images/down_arrow.png">
+                    </div>
+                </div>
+                
+                <div id="bm_brand_book" class="document hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this)">
+                       
+                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vSVYWG12T2JgcXCFsrPxet9D9kibx8qJfTrcS64IAoYO7qE5tKKIaoufJPD9ODEsH-rG96uPIcxflB0/pub?embedded=true"></iframe>
+                    
+                </div>
+                
+                <div id="bm_interface_inventory" class="document hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this)">
+                       
+                    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDYEJkA2k0XaDg_6wWrJFUtG6E4XmKMIzDfftJpz3zDgzvv_th2JjLKvpbt0vn1pjyk7qu4Frc48Hn/pubhtml?widget=true&amp;headers=false"></iframe>
+                    
+                </div> 
+                
+                <div id="bm_requirements" class="document hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this)">
+                       
+                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vTRw2ofXeXInPQOnuodV_qLQmYHXQ-_wx6m10Dg1jo0utvvbP76icRZXnT2xQoyziNZxa70FcWP6QbS/pub?embedded=true"></iframe>
+                    
+                </div> 
+            </div>
+            
+            <div id="ff_screenshot_card" class="project screenshot card" onclick="slideUp('ff_accomplishments')">
+<!--                <h2>Fairfield Farm</h2>-->
+                <img src="images/ff_screenshot.png">
+                
+                <div id="ff_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('ff_scroll_indicator')">
+                    <h2>Design &amp; Development<br> Features</h2>
+                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('ff_accomplishments')">
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Mobile First
+<!--                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="slideUp('ff_src_code')">-->
+                        </li>
+                        <li>Responsive Design</li>
+                        <li>Semantic HTML</li>
+                        <li>Accessibility</li>
+                        <li>HTML &amp; CSS Best Practices</li>
+                        <li>Basic SEO Principles</li>
+                    </ul>
+                    <a href="http://bdtripp.com/fairfield_farm/" target="_blank">
+                        <img class="link_to_site" src="images/external_link_icon.png">
+                    </a>
+                    <div id="ff_scroll_indicator" class="scroll_indicator">
+                        <img src="images/down_arrow.png">
+                    </div>
+                </div>
+                
+<!--
+                <div id="ff_src_code" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('ff_src_code')">
+-->
+                       
+<!--
+<pre><code class="plaintext">
+</code></pre>
+-->
+                    
+<!--                </div>-->
+            </div>
+            
+            <div id="bg_screenshot_card" class="project screenshot card" onclick="slideUp('bg_accomplishments')">
+<!--                <h2>Bramblewood Guitars</h2>-->
+                <img src="images/bg_screenshot.png">
+                
+                <div id="bg_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('bg_scroll_indicator')">
+                    <h2>Design &amp; Development<br> Features</h2>
+                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('bg_accomplishments')">
+                    <ul>
+                        <li>WordPress</li>
+                        <li>Custom CSS styles
+                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this)">
+                        </li>
+                        <li>User Roles</li>
+                        <li>Default and Custom Widgets</li>
+                        <li>Display Plugins</li>
+                        <li>Photo Editing with GIMP</li>
+                        <li>Embedded Google Map and<br> Youtube Video
+                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('bg_src_map', 'bg_accomplishments', this)">
+                        </li>
+                    </ul>
+                    <a href="http://bdtripp.com/bramblewood_guitars/" target="_blank">
+                        <img class="link_to_site" src="images/external_link_icon.png">
+                    </a>
+                    <div id="bg_scroll_indicator" class="scroll_indicator">
+                        <img src="images/down_arrow.png">
+                    </div>
+                </div>
+                
+                <div id="bg_src_custom_css" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this)">
+                       
+<pre><code class="CSS">/*
+    CSS to customize the style of the Contact Form 7 pluglin for WordPress
+*/
+
+.wpcf7 label {
+      display: block;
+}
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea { 
+    width: 100%;
+	border: 1px solid #ccc;
+}
+</code></pre>
+                </div>    
+                
+                    <div id="bg_src_map" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this)">
+                       
+<pre><code class="HTML">/*
+    HTML to embed a google map.
+*/
+
+&lt;div id="googlemap"&gt;
+    &lt;div class="responsive-iframe-container"&gt;
+        &lt;iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d178837.51239538696!2d-
+        122.79450770226657!3d45.543563358590355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5
+        4950b0b7da97427%3A0x1c36b9e6f6d18591!2sPortland%2C+OR!5e0!3m2!1sen!2sus!4v1511215736169"
+        width="600" height="450" frameborder="0" style="border:0" allowfullscreen>&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div> 
+            </div>
+            
+            <div id="cc_screenshot_card" class="project screenshot card" onclick="slideUp('cc_accomplishments')">
+<!--                <h2>Calorie Calculator</h2>-->
+                <img src="images/cc_screenshot.png">
+                
+                <div id="cc_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('cc_scroll_indicator')">
+                    <h2>Design &amp; Development<br> Features</h2>
+                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('cc_accomplishments')">
+                    <ul>
+                        <li>App Developed in Android Studio</li>
+                        <li>Java
+                            <ul>
+                                <li>Input Validation
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this)">
+                                </li>
+                                <li>Event Handling</li>
+                                <li>Intents
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this)">
+                                </li>
+                                <li>Calculations</li>
+                            </ul>
+                        </li>
+                        <li>Multiple Activities</li>
+                        <li>Lifecycle Callbacks</li>      
+                        <li>XML Layouts
+                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this)">
+                        </li>           
+                        <li>Resources that Support Multiple:
+                            <ul>
+                                <li>Languages
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this)">
+                                </li>
+                                <li>Screen Densities</li>
+                                <li>Orientations</li>
+                            </ul>
+                        </li>
+                        <li>Tested With Emulators</li>
+                        <li>Prepared App for Play Store</li>
+                    </ul>
+                    <a href="http://bdtripp.com/app-release.apk" target="_blank">
+                        <img class="link_to_site" src="images/download-btn.png">
+                    </a>
+                    <div id="cc_scroll_indicator" class="scroll_indicator">
+                        <img src="images/down_arrow.png">
+                    </div>
+                </div>
+                
+                <div id="cc_src_validation" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this)">
+                       
+<pre><code class="Java">/*
+    Checking user input and displaying a toast when the input is invalid. 
+*/
+
+try {
+    float f = Float.parseFloat(weightString);
+} catch (NumberFormatException e){
+    Toast.makeText(this, R.string.missingWeight, Toast.LENGTH_LONG).show();
+    return;
+}
+
+try {
+    float f = Float.parseFloat(metString);
+} catch (NumberFormatException e) {
+    Toast.makeText(this, R.string.missingMET, Toast.LENGTH_LONG).show();
+    return;
+}
+
+if (Float.parseFloat(weightString) > 1400f) {
+    Toast.makeText(this, R.string.invalidWeight, Toast.LENGTH_LONG).show();
+    return;
+}
+
+if ((Float.parseFloat(metString) &lt; 0.9f) | (Float.parseFloat(metString) > 23f)) {
+    Toast.makeText(this, R.string.invalidMET, Toast.LENGTH_LONG).show();
+    return;
+}
+</code></pre>
+                </div>
+                
+                <div id="cc_src_intent" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this)">
+                       
+<pre><code class="Java">/*
+    Passing data between activities using an intent. 
+*/
+
+Intent intent = new Intent(this, OutputActivity.class);
+
+intent.putExtra(EXTRA_WEIGHT, Float.parseFloat(weightString));
+intent.putExtra(EXTRA_MET, Float.parseFloat(metString));
+
+startActivity(intent);
+</code></pre>
+                </div> 
+                
+                <div id="cc_src_xml" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this)">
+                       
+<pre><code class="XML">/*
+    App layout written in XML. 
+*/
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+
+&lt;LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"&gt;
+
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/creator"
+        android:padding="@dimen/small_space"/&gt;
+
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/version"
+        android:padding="@dimen/small_space"/&gt;
+
+    &lt;Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/close"
+        android:onClick="dismiss"
+        android:padding="@dimen/small_space"
+        android:layout_marginBottom="@dimen/small_space" /&gt;
+
+&lt;/LinearLayout&gt;
+</code></pre>
+                </div>
+                
+                <div id="cc_src_languages" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this)">
+                       
+<pre><code class="XML">/*
+    String resources provided in Spanish. If the user has set their phone's language to Spanish, 
+    the app will use the string resources provided here. 
+*/
+
+&lt;resources&gt;
+    &lt;string name="app_name"&gt;Calculadora de Calorías&lt;/string&gt;
+    &lt;string name="weight_label"&gt;Peso(lbs)&lt;/string&gt;
+    &lt;string name="met_value_label"&gt;Cantidad de MET&lt;/string&gt;
+    &lt;string name="burn_rate_label"&gt;Tasa de Quema:&lt;/string&gt;
+    &lt;string name="weight_amount"&gt;0.00&lt;/string&gt;
+    &lt;string name="met_value"&gt;0.0&lt;/string&gt;
+    &lt;string name="calorie_burn_rate"&gt;0.00&lt;/string&gt;
+    &lt;string name="calories_per_hour_label"&gt;Calorías/hora&lt;/string&gt;
+    &lt;string name="calculate_button"&gt;Calcular&lt;/string&gt;
+    &lt;string name="metDescription"&gt;Las cantidades de MET se pueden encontrar en:
+        https://sites.google.com/site/compendiumofphysicalactivities/Activity-Categories&lt;/string&gt;
+    &lt;string name="missingWeight"&gt;Por favor, introduzca un peso!&lt;/string&gt;
+    &lt;string name="missingMET"&gt;Por favor, introduzca un valor MET!&lt;/string&gt;
+    &lt;string name="invalidWeight"&gt;El peso debe ser inferior a 1400 libras&lt;/string&gt;
+    &lt;string name="invalidMET"&gt;El valor MET debe estar entre 0.9 y 23.0&lt;/string&gt;
+&lt;/resources&gt;
+
+</code></pre>
+                </div> 
+            </div>
+            
+        </section>
+        
+        <section id="skills">
+            <h1>Skills</h1>
+            <div id="languages" class="card">
+                <h2>Languages</h2>
+                <ul>
+                    <li><a><img src="images/html5.svg">HTML5</a></li>
+                    <li><a><img src="images/css3.svg">CSS3</a></li>
+                    <li><a><img src="images/less.svg">LESS</a></li>
+                    <li><a><img src="images/java.svg">Java</a></li>
+                    <li><a><img src="images/javascript.svg">JavaScript</a></li>
+                    <li><a><img src="images/php.svg">PHP</a></li>
+                    <li><a><img src="images/mysql.svg">MySQL</a></li>
+                    <li><a><img src="images/jquery.svg">jQuery</a></li>
+                    <li><a><img src="images/python.svg">Python</a></li>
+                    <li><a><img src="images/xml.svg">XML</a></li>
+                </ul>
+            </div>
+            
+            <div id="tools" class="card">
+                <h2>Tools</h2>
+                <ul>
+                    <li><a><img src="images/git.svg">GIT</a></li>
+                    <li><a><img src="images/phpstorm.svg">PHPStorm</a></li>
+                    <li><a><img src="images/pycharm.svg">PyCharm</a></li>
+                    <li><a><img src="images/wordpress.svg">WordPress</a></li>
+                    <li><a><img src="images/gimp.svg">GIMP</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h1>Education</h1>
+            <div class="card">
+                <h2>A.A.S. in Website Development and Design</h2>
+                <ul>
+                    <li>Graduating June 2018</li>
+                    <li>President’s List Fall 2017 – Current</li>
+                    <li>Portland Community College, Portland, OR</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h1>Contact</h1>
+            <div class="card">
+                <ul>
+                    <li><img src="images/email_icon.png"><p>brian.tripp@pcc.edu</p></li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="resume">
+            <h1>Resume</h1>
+            <div class="card">
+                <div id="icons">
+                    <a href="https://bdtripp.com/brian_tripp_resume.pdf" target="_blank">
+                        <img id="pdf_icon" src="images/pdf_icon.png">
+                    </a>
+                </div>
+                <iframe src="https://docs.google.com/document/d/e/2PACX-1vT9jXdXatr1MMJEt3QBPsKaz-Ji07hhn-XOIVGAOxmOekoQqEQZKcRx5enFuuH4xs4StZwKPox4ObaF/pub?embedded=true"></iframe>
+            </div>
+        </section>
+        
+    </main>
+</body>
+</html>
