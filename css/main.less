@@ -370,11 +370,18 @@ html {
                             padding: 15px;
 
                             li {
-                                width: 19%;
+                                width: 50%;
                                 float: left;
                                 text-align: center;
                                 margin: 10px auto;
-                                padding: 0 7%;
+                                
+                                img {
+                                    max-height: 60px;
+                                    max-width: 60px;
+                                    display: block;
+                                    margin: 0 auto;
+                                    margin-bottom: 10px;
+                                }
                             }
                         }
                         
@@ -482,7 +489,42 @@ html {
         }
     }
 }
+/*===============================
+==== 500PX CSS CODE AND UP =======
+===============================*/
 
+@media (min-width: 320px) {
+    
+    html {
+        
+        body {
+            
+            main {
+                
+                section {
+                    
+                    &#skills {
+
+                        div {
+
+                            ul {
+
+                                li {
+                                    width: 33%;
+
+                                    img {
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    
 /*===============================
 ==== 500PX CSS CODE AND UP =======
 ===============================*/
@@ -545,7 +587,7 @@ html {
                                     
                                     li {
                                         
-                                        width: 11%;
+                                        width: 25%;
                                     }
                                 }
                             }
@@ -683,7 +725,7 @@ html {
                                 ul {
                                     
                                     li {
-                                        
+
                                     }
                                 }
                             }
@@ -799,8 +841,11 @@ html {
                                 ul {
                                     
                                     li {
+                                        width: 20%;
                                         
-                                        width: 6%;
+                                        img {
+                                            
+                                        }
                                     }
                                 }
                             }
@@ -1076,6 +1121,28 @@ html {
                                 }
                             }
                         }  
+                    }
+                    
+                    &#skills {
+                        
+                        div {
+                            
+                            &#languages, &#tools {
+                                
+                                ul {
+                                    
+                                    li {
+                                        width: 20%;
+                                        
+                                        img {
+                                            max-height: 80px;
+                                            max-width: 80px;
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                     
                     &#resume {

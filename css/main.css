@@ -259,11 +259,17 @@ html body main section#skills div ul {
   padding: 15px;
 }
 html body main section#skills div ul li {
-  width: 19%;
+  width: 50%;
   float: left;
   text-align: center;
   margin: 10px auto;
-  padding: 0 7%;
+}
+html body main section#skills div ul li img {
+  max-height: 60px;
+  max-width: 60px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 html body main section#skills div#languages {
   background-color: white;
@@ -329,6 +335,14 @@ html body main section#resume div.card div#icons a img#pdf_icon {
 /*===============================
 ==== 500PX CSS CODE AND UP =======
 ===============================*/
+@media (min-width: 320px) {
+  html body main section#skills div ul li {
+    width: 33%;
+  }
+}
+/*===============================
+==== 500PX CSS CODE AND UP =======
+===============================*/
 @media (min-width: 500px) {
   .hide_in_mobile {
     display: block;
@@ -345,7 +359,7 @@ html body main section#resume div.card div#icons a img#pdf_icon {
   }
   html body main section#skills div#languages ul li,
   html body main section#skills div#tools ul li {
-    width: 11%;
+    width: 25%;
   }
   html body main section#education div.card {
     padding: 20px 0;
@@ -401,7 +415,7 @@ html body main section#resume div.card div#icons a img#pdf_icon {
   }
   html body main section#skills div#languages ul li,
   html body main section#skills div#tools ul li {
-    width: 6%;
+    width: 20%;
   }
   html body main section#education div.card {
     max-width: 45%;
@@ -488,5 +502,14 @@ html body main section#resume div.card div#icons a img#pdf_icon {
     width: 100%;
     max-width: 858px;
     margin: 0 auto;
+  }
+  html body main section#skills div#languages ul li,
+  html body main section#skills div#tools ul li {
+    width: 20%;
+  }
+  html body main section#skills div#languages ul li img,
+  html body main section#skills div#tools ul li img {
+    max-height: 80px;
+    max-width: 80px;
   }
 }
