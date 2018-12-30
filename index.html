@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
-    <link rel="shortcut icon" type="image/png" href="http://bdtripp.com/images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="http://bdtripp.com/images/favicon.ico">
     <script src="highlight/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="main.js" type="text/javascript"></script>
@@ -214,7 +214,7 @@ function show_subcategories($categoryID, $categoryName, $rowsPerColumn) {
                     <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_authentication', 'pas_accomplishments', this)">
                        
 <pre><code class="PHP">/*
-    Checks the username and password received from the form the login page. If there are any issues,
+    Checks the username and password received from the form on the login page. If there are any issues,
     an error message is returned. Otherwise the user's session data is restored and the user is
     redirected to the page that they were previously viewing.
 */
@@ -333,9 +333,9 @@ function checkPasswordRequirements(input) {
                     <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_ajax', 'pas_accomplishments', this)">
                        
 <pre><code class="JavaScript">/*
-    When user adds an item to the cart, AJAX is used to send data about the selection back to the
-    server such as the quanity, size, and color selected. The server then saves the item to the users 
-    session data in the database. 
+    When a user adds an item to the cart, AJAX is used to send data about the selection back to the
+    server such as the quanity, size, and color selected. The item data is then saved to the user's 
+    session data that is stored in the database. 
 */
 
 let xhttp = new XMLHttpRequest();
@@ -736,9 +736,9 @@ startActivity(intent);
                 <div id="cc_src_xml" class="src_code hidden_card">
                     <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this)">
                        
-<pre><code class="XML">/*
+<pre><code class="XML">&lt;!--
     App layout written in XML. 
-*/
+--&gt;
 
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 
@@ -776,10 +776,10 @@ startActivity(intent);
                 <div id="cc_src_languages" class="src_code hidden_card">
                     <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this)">
                        
-<pre><code class="XML">/*
+<pre><code class="XML">&lt;!--
     String resources provided in Spanish. If the user has set their phone's language to Spanish, 
     the app will use the string resources provided here. 
-*/
+--&gt;
 
 &lt;resources&gt;
     &lt;string name="app_name"&gt;Calculadora de Calorías&lt;/string&gt;
