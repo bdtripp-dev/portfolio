@@ -5,7 +5,8 @@
 # AddType application/x-httpd-ea-php70 .php .phtml
 # php -- END cPanel-generated handler, do not edit
 
-RewriteEngine off<FilesMatch "\.(css|flv|gif|htm|html|ico|jpe|jpeg|jpg|js|mp3|mp4|png|pdf|swf|txt)$">
+RewriteEngine off
+<FilesMatch "\.(css|flv|gif|htm|html|ico|jpe|jpeg|jpg|js|mp3|mp4|png|pdf|swf|txt)$">
 	<IfModule mod_expires.c>
 		ExpiresActive Off
 	</IfModule>
