@@ -106,9 +106,13 @@ function displayFullScreen(inFrontId, accomplishmentsId) {
     let main = document.getElementsByTagName("main")[0];
     let hiddenCards = document.getElementsByClassName("hidden_card");
     
-    document.body.ontouchmove = function(e) {
-        e.preventDefault();
+    inFront.ontouchmove = function(e) {
+        e.stopPropagation();
     };
+    
+//    inFront.onwheel = function(e) {
+//        e.stopPropagation();
+//    };
     
     
     for (let card of hiddenCards) {
