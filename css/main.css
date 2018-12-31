@@ -183,7 +183,7 @@ html body main section#projects div div.document {
   max-width: 858px;
 }
 html body main section#projects div div.document img.close_btn {
-  padding: 10px 25px 0 0;
+  padding: 7px 7px 0 0;
 }
 html body main section#projects div div.document iframe {
   height: 500px;
@@ -191,6 +191,8 @@ html body main section#projects div div.document iframe {
   width: 100%;
   max-width: 858px;
   margin: 0 auto;
+  margin-top: 30px;
+  border-top: 1px solid black;
 }
 html body main section#projects div div.accomplishments ul {
   width: 90%;
@@ -505,15 +507,13 @@ html body main section#resume div.card div#icons a img#pdf_icon {
     width: 100%;
     max-width: 858px;
   }
-  html body main section#projects div.project.screenshot div.document img.close_btn {
-    padding: 10px 25px 0 0;
-  }
   html body main section#projects div.project.screenshot div.document iframe {
     height: 600px;
     display: block;
     width: 100%;
     max-width: 858px;
     margin: 0 auto;
+    margin-top: 30px;
   }
   html body main section#projects div.project.screenshot div#pas_erd {
     max-width: 1200px;
