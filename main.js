@@ -104,6 +104,7 @@ function displayFullScreen(inFrontId, accomplishmentsId) {
     }
     
     document.body.style.overflow = "hidden";
+    main.style.overflow = "hidden";
     inFront.style.display = "block";
     inFront.style.position = "fixed";
     if (inFront.className === "src_code hidden_card") {
@@ -139,6 +140,7 @@ function closeFullScreen(inFrontId, accomplishmentsId) {
     }
     
     document.body.style.overflow = "scroll";
+    main.stly.overflow = "auto";
     inFront.style.width = "100%";
     inFront.style.height = "311px";
     inFront.style.zIndex = "5";
