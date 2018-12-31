@@ -179,7 +179,8 @@ html {
                             
                             p:first-child {
                                 font-weight: bold;
-                                border-bottom: 2px dotted black;
+                                border-left: 4px solid darkblue;
+                                margin-left: 8%;
                             }
                             
                             p {
@@ -414,6 +415,7 @@ html {
                             
                             h2 {
                                 padding: 2%;
+                                font-weight: bold;
                             }
                             
                             ul {
@@ -819,6 +821,10 @@ html {
                             &.card {
                                 max-width: 76%;
                                 
+                                p:first-child {
+                                    
+                                }
+                                
                                 p {
                                     max-width: 85%;
                                     margin: 0 auto;
@@ -1080,7 +1086,7 @@ html {
             }
             
             main {
-                width: 85%;
+                width: 90%;
                 float: left;
                 clear: none;
                 margin-left: 15%;
@@ -1089,7 +1095,16 @@ html {
                 section {
                     
                     &#about {
-
+                        
+                        div {
+                            
+                            &.card {
+                                
+                                p:first-child {
+                                   
+                                }
+                            }
+                        }
                     }
                     
                     &#projects {
