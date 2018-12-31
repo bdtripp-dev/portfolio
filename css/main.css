@@ -138,8 +138,8 @@ html body main section#about div.card {
 }
 html body main section#about div.card p:first-child {
   font-weight: bold;
-  border-left: 4px solid darkblue;
-  margin-left: 8%;
+  border-left: 4px solid #225568;
+  margin-left: 13%;
 }
 html body main section#about div.card p {
   font-size: 1.5rem;
@@ -346,6 +346,9 @@ html body main section#resume div.card div#icons a img#pdf_icon {
 ==== 320PX CSS CODE AND UP =======
 ===============================*/
 @media (min-width: 320px) {
+  html body main section#about div.card p:first-child {
+    margin-left: 8%;
+  }
   html body main section#skills div ul li {
     width: 33%;
   }
@@ -492,7 +495,6 @@ html body main section#resume div.card div#icons a img#pdf_icon {
     display: none;
   }
   html body main {
-    width: 90%;
     float: left;
     clear: none;
     margin-left: 15%;
