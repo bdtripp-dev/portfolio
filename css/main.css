@@ -136,9 +136,14 @@ html body main section#about div.card {
   padding: 20px 0;
   background-color: white;
 }
+html body main section#about div.card p:first-child {
+  font-weight: bold;
+  border-bottom: 2px dotted black;
+}
 html body main section#about div.card p {
   font-size: 1.5rem;
   padding: 10px 30px;
+  line-height: 130%;
 }
 html body main section#projects div.project h2 {
   padding: 10px 0;
@@ -409,7 +414,7 @@ html body main section#resume div.card div#icons a img#pdf_icon {
     padding-top: 0;
   }
   html body main section#about div.card {
-    max-width: 60%;
+    max-width: 76%;
   }
   html body main section#about div.card p {
     max-width: 85%;
