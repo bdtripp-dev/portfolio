@@ -254,7 +254,7 @@ html body main section#projects div div.src_code {
 }
 html body main section#projects div div.src_code pre code {
   line-height: 130%;
-  font-family: Consolas;
+  font-family: 'Source Code Pro', Consolas, monospace;
 }
 html body main section#skills h2 {
   font-size: 1.7rem;
