@@ -2,7 +2,14 @@ var navHidden = true;
 var showingSrc = false;
 
 function init() {
-//    let sourceCodeBtns = document.getElementsByClassName("source_code_icon");
+    
+//    document.body.onscroll = function(e) {
+//        e.preventDefault();
+//    };
+//    
+//    document.body.onwheel = function(e) {
+//        e.preventDefault();
+//    };
     
     document.getElementById("menu_icon").addEventListener("click", slideOut);
     document.getElementsByTagName("main")[0].addEventListener("click", slideIn);
@@ -99,9 +106,10 @@ function displayFullScreen(inFrontId, accomplishmentsId) {
     let main = document.getElementsByTagName("main")[0];
     let hiddenCards = document.getElementsByClassName("hidden_card");
     
-    document.body.addEventListener('touchmove', function(e) {
+    document.body.ontouchmove = function(e) {
         e.preventDefault();
-    }, false);
+    };
+    
     
     for (let card of hiddenCards) {
         card.style.display = "none";
