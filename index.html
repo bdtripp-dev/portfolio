@@ -24,40 +24,40 @@
         </div>
     </header>
     <nav id="slide_out">
-        <img class="close_btn" src="images/close_icon.png" onclick="slideIn()">
+        <img class="close_btn" src="images/close_icon.png" onclick="slideIn(event)">
         <ul>
             <li>
-                <a href="#about" onclick="slideIn()">
+                <a href="#about" onclick="slideIn(event)">
                     <img src="images/menu_icons/about_menu_icon.png">
                     About
                 </a>
             </li>
             <li> 
-                <a href="#projects" onclick="slideIn()">
+                <a href="#projects" onclick="slideIn(event)">
                     <img src="images/menu_icons/projects_menu_icon.png">
                     Projects
                 </a>
             </li>
             <li>
-                <a href="#skills" onclick="slideIn()">
+                <a href="#skills" onclick="slideIn(event)">
                     <img src="images/menu_icons/skills_menu_icon.png">
                     Skills
                 </a>
             </li>
             <li>
-                <a href="#education" onclick="slideIn()">
+                <a href="#education" onclick="slideIn(event)">
                     <img src="images/menu_icons/education_menu_icon.png">
                     Education
                 </a>
             </li>
             <li>
-                <a href="#contact" onclick="slideIn()">
+                <a href="#contact" onclick="slideIn(event)">
                     <img src="images/menu_icons/contact_menu_icon.png">
                     Contact
                 </a>
             </li>
             <li>                 
-                <a href="#resume" onclick="slideIn()">
+                <a href="#resume" onclick="slideIn(event)">
                     <img src="images/menu_icons/resume_menu_icon.png">
                     Resume
                 </a>
@@ -90,15 +90,15 @@
                         <li>PHP
                             <ul>
                                 <li>Sessions
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_session', 'pas_accomplishments', this)">
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
                                 </li>
                                 <li>Dynamically Generated HTML
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this)">
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
                                 </li>
 <!--                                <li>Dynamic Generating image locations</li>-->
                                 <li>GET/POST</li>
                                 <li>User Authentication
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_authentication', 'pas_accomplishments', this)">
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_authentication', 'pas_accomplishments', this, event)">
                                 </li>
                                 <li>Password Hashing</li>
                                 <li>JSON Encoding</li>
@@ -109,16 +109,16 @@
                             <ul>
                                 <li>Event Handling</li>
                                 <li>Dynamic CSS Styling
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this)">
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
                                 </li>
                                 <li>Input Validation
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_validation', 'pas_accomplishments', this)">
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_validation', 'pas_accomplishments', this, event)">
                                 </li>
                                 <li>AJAX
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_ajax', 'pas_accomplishments', this)">
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_ajax', 'pas_accomplishments', this, event)">
                                 </li>
                                 <li>Regular Expressions
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_regex', 'pas_accomplishments', this)">
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_regex', 'pas_accomplishments', this, event)">
                                 </li>
                             </ul>
                         </li>
@@ -126,10 +126,10 @@
                         <li>Database
                             <ul>
                                 <li>SQL
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this)">
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
                                 </li>
                                 <li>Data Modeling
-                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this)">
+                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
                                     <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/pas_erd.pdf" target="_blank">
                                         <img class="src_code_icon" src="images/document.png">
                                     </a>
@@ -138,7 +138,7 @@
                         </li>
                         
                         <li>LESS
-                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_less', 'pas_accomplishments', this)">
+                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_less', 'pas_accomplishments', this, event)">
                         </li>
                         
                     </ul>
@@ -151,7 +151,7 @@
                 </div>
                 
                 <div id="pas_src_session" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
                        
 <pre><code class="PHP">/*
     When the user clicks "Add to Cart", the $_SESSION gets updated with an 
@@ -184,7 +184,7 @@ function addItemToCart($id, $category, $subcategory, $groupCode, $color, $size, 
                 </div> 
                 
                 <div id="pas_src_generate" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
                        
 <pre><code class="PHP">/*
     All of the site's HTML is dynamically generated from PHP. The product information is stored
@@ -209,7 +209,7 @@ function show_subcategories($categoryID, $categoryName, $rowsPerColumn) {
                 </div>
                 
                 <div id="pas_src_authentication" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_authentication', 'pas_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_authentication', 'pas_accomplishments', this, event)">
                        
 <pre><code class="PHP">/*
     Checks the username and password received from the form on the login page. If there are any issues,
@@ -244,7 +244,7 @@ function login($username, $password, $returnToUrl) {
                 </div>
                 
                 <div id="pas_src_dynamic_styling" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
                        
 <pre><code class="JavaScript">/*
     Makes dynamic height adjustments involving calculations that could not be achieved using pure
@@ -270,7 +270,7 @@ function login($username, $password, $returnToUrl) {
                 </div>
                 
                 <div id="pas_src_validation" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_validation', 'pas_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_validation', 'pas_accomplishments', this, event)">
                        
 <pre><code class="JavaScript">/*
     Checks if password meets requirements on client side before allowing the form to be submitted to
@@ -328,7 +328,7 @@ function checkPasswordRequirements(input) {
                 </div>
                 
                 <div id="pas_src_ajax" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_ajax', 'pas_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_ajax', 'pas_accomplishments', this, event)">
                        
 <pre><code class="JavaScript">/*
     When a user adds an item to the cart, AJAX is used to send data about the selection back to the
@@ -356,7 +356,7 @@ let xhttp = new XMLHttpRequest();
                 </div>
                 
                 <div id="pas_src_regex" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_regex', 'pas_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_regex', 'pas_accomplishments', this, event)">
                        
 <pre><code class="JavaScript">/*
     Image paths are dynamically generated from values in the database. Used regular expressions to
@@ -371,7 +371,7 @@ image.src = IMAGE_FOLDER + category + '/' + subcategory + '/' + groupCode + '-' 
                 </div>
                 
                 <div id="pas_src_sql" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
                        
 <pre><code class="PHP">/*
     All product information is stored in a database. When the user clicks on a link to view a 
@@ -397,14 +397,14 @@ function lookup_items($groupID) {
                 </div>
                 
                 <div id="pas_erd" class="document hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
                        
                     <iframe src="https://docs.google.com/document/d/e/2PACX-1vS6sBk7MWt3fPM8J3yiuAJOh_CjfDS9NuGeFyf5fYwD3vtT0mXXp3m891dhAejNqpUIz209-iO6InqZ/pub?embedded=true"></iframe>
                     
                 </div>
                 
                 <div id="pas_src_less" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_less', 'pas_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_less', 'pas_accomplishments', this, event)">
                        
 <pre><code class="plaintext">/*
     Most of the CSS for the site is generated from LESS.
@@ -474,7 +474,7 @@ function lookup_items($groupID) {
                                 <li>User Journeys</li>
                                 <li>Mood Board</li>
                                 <li>Brand Book
-                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this)">
+                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
                                     <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/brand_book.pdf" target="_blank">
                                         <img class="src_code_icon" src="images/document.png">
                                     </a>
@@ -482,7 +482,7 @@ function lookup_items($groupID) {
                                 <li>Color Pallettes</li>
                                 <li>User Personas</li>
                                 <li>User Interface Inventory
-                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this)">
+                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
                                    <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/interface_inventory.pdf" target="_blank">
                                         <img class="src_code_icon" src="images/document.png">
                                     </a>
@@ -490,7 +490,7 @@ function lookup_items($groupID) {
                                 <li>Competitive Analysis</li>
                                 <li>Goal and Messaging</li>
                                 <li>List of Requirements
-                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this)">
+                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
                                     <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/listofrequirements.pdf" target="_blank">
                                         <img class="src_code_icon" src="images/document.png">
                                     </a>
@@ -508,21 +508,21 @@ function lookup_items($groupID) {
                 </div>
                 
                 <div id="bm_brand_book" class="document hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
                        
                     <iframe src="https://docs.google.com/document/d/e/2PACX-1vSVYWG12T2JgcXCFsrPxet9D9kibx8qJfTrcS64IAoYO7qE5tKKIaoufJPD9ODEsH-rG96uPIcxflB0/pub?embedded=true"></iframe>
                     
                 </div>
                 
                 <div id="bm_interface_inventory" class="document hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
                        
                     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDYEJkA2k0XaDg_6wWrJFUtG6E4XmKMIzDfftJpz3zDgzvv_th2JjLKvpbt0vn1pjyk7qu4Frc48Hn/pubhtml?widget=true&amp;headers=false"></iframe>
                     
                 </div> 
                 
                 <div id="bm_requirements" class="document hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
                        
                     <iframe src="https://docs.google.com/document/d/e/2PACX-1vTRw2ofXeXInPQOnuodV_qLQmYHXQ-_wx6m10Dg1jo0utvvbP76icRZXnT2xQoyziNZxa70FcWP6QbS/pub?embedded=true"></iframe>
                     
@@ -578,14 +578,14 @@ function lookup_items($groupID) {
                     <ul>
                         <li>WordPress</li>
                         <li>Custom CSS styles
-                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this)">
+                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this, event)">
                         </li>
                         <li>User Roles</li>
                         <li>Default and Custom Widgets</li>
                         <li>Display Plugins</li>
                         <li>Photo Editing with GIMP</li>
                         <li>Embedded Google Map and<br> Youtube Video
-                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('bg_src_map', 'bg_accomplishments', this)">
+                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
                         </li>
                     </ul>
                     <a href="http://bdtripp.com/bramblewood_guitars/" target="_blank">
@@ -594,7 +594,7 @@ function lookup_items($groupID) {
                 </div>
                 
                 <div id="bg_src_custom_css" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this, event)">
                        
 <pre><code class="CSS">/*
     CSS to customize the style of the Contact Form 7 pluglin for WordPress
@@ -614,7 +614,7 @@ function lookup_items($groupID) {
                 </div>    
                 
                     <div id="bg_src_map" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this)">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
                        
 <pre><code class="HTML">/*
     HTML to embed a google map.
@@ -644,11 +644,11 @@ function lookup_items($groupID) {
                         <li>Java
                             <ul>
                                 <li>Input Validation
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this)">
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
                                 </li>
                                 <li>Event Handling</li>
                                 <li>Intents
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this)">
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
                                 </li>
                                 <li>Calculations</li>
                             </ul>
@@ -656,12 +656,12 @@ function lookup_items($groupID) {
                         <li>Multiple Activities</li>
                         <li>Lifecycle Callbacks</li>      
                         <li>XML Layouts
-                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this)">
+                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
                         </li>           
                         <li>Resources that Support Multiple:
                             <ul>
                                 <li>Languages
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this)">
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
                                 </li>
                                 <li>Screen Densities</li>
                                 <li>Orientations</li>
@@ -679,7 +679,7 @@ function lookup_items($groupID) {
                 </div>
                 
                 <div id="cc_src_validation" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
                        
 <pre><code class="Java">/*
     Checking user input and displaying a toast when the input is invalid. 
@@ -712,7 +712,7 @@ if ((Float.parseFloat(metString) &lt; 0.9f) | (Float.parseFloat(metString) > 23f
                 </div>
                 
                 <div id="cc_src_intent" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
                        
 <pre><code class="Java">/*
     Passing data between activities using an intent. 
@@ -728,7 +728,7 @@ startActivity(intent);
                 </div> 
                 
                 <div id="cc_src_xml" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
                        
 <pre><code class="XML">&lt;!--
     App layout written in XML. 
@@ -768,7 +768,7 @@ startActivity(intent);
                 </div>
                 
                 <div id="cc_src_languages" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this)">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
                        
 <pre><code class="XML">&lt;!--
     String resources provided in Spanish. If the user has set their phone's language to Spanish, 

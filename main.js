@@ -11,8 +11,12 @@ function init() {
 //        e.preventDefault();
 //    };
     
-    document.getElementById("menu_icon").addEventListener("click", slideOut);
-    document.getElementsByTagName("main")[0].addEventListener("click", slideIn);
+    document.getElementById("menu_icon").addEventListener("click", function(event) {
+        slideOut(event);
+    });
+    document.getElementsByTagName("main")[0].addEventListener("click", function(event) {
+        slideIn(event);
+    });
     window.addEventListener("resize", function() {
         let slideOut = document.getElementById("slide_out");
         let main = document.getElementsByTagName("main")[0];
@@ -42,21 +46,21 @@ function init() {
     });
 }
 
-function checkSize(inFrontId, accomplishmentsId, btn) {
+function checkSize(inFrontId, accomplishmentsId, btn, event) {
     if (window.innerWidth >= 580 && (btn.className === 'src_code_icon hide_in_mobile') || (btn.className === 'src_code_icon')) {
-        displayFullScreen(inFrontId, accomplishmentsId);
+        displayFullScreen(inFrontId, accomplishmentsId, event);
     } else if (btn.className === 'src_code_icon') {
-        slideUp(inFrontId)
+        slideUp(inFrontId, event)
     } else if (window.innerWidth >= 580 && btn.className === 'close_btn') {
-        closeFullScreen(inFrontId, accomplishmentsId);
+        closeFullScreen(inFrontId, accomplishmentsId, event);
     } else if (btn.className === 'close_btn' && showingSrc) {
-        closeFullScreen(inFrontId, accomplishmentsId);   
+        closeFullScreen(inFrontId, accomplishmentsId, event);   
     } else if (btn.className === 'close_btn') {
-        slideDown(inFrontId);
+        slideDown(inFrontId, event);
     }
 }
 
-function slideOut() {
+function slideOut(event) {
     if (navHidden) {
         document.getElementById("slide_out").style.left = "0px";
         document.getElementById("overlay").style.display = "block";
@@ -65,7 +69,7 @@ function slideOut() {
     event.stopPropagation();
 }
 
-function slideIn() {
+function slideIn(event) {
 
     if (!navHidden && window.innerWidth < 1000) {
         document.getElementById("slide_out").style.left = "-200px";
@@ -100,7 +104,7 @@ function hideElement(id) {
     document.getElementById(id).style.opacity = 0;
 }
 
-function displayFullScreen(inFrontId, accomplishmentsId) { 
+function displayFullScreen(inFrontId, accomplishmentsId, event) { 
     let inFront = document.getElementById(inFrontId);
     let parent = inFront.parentElement;
     let accomplishments = document.getElementById(accomplishmentsId);
@@ -109,8 +113,10 @@ function displayFullScreen(inFrontId, accomplishmentsId) {
     let hiddenCards = document.getElementsByClassName("hidden_card");
     
     inFront.ontouchmove = function(e) {
-        e.stopPropagation();
+        event.stopPropagation();
     };
+    
+    document.body.ontouchmove = event.preventDefault();
     
     for (let card of hiddenCards) {
         card.style.display = "none";
@@ -139,7 +145,7 @@ function displayFullScreen(inFrontId, accomplishmentsId) {
     showingSrc = true;
 }
 
-function closeFullScreen(inFrontId, accomplishmentsId) {
+function closeFullScreen(inFrontId, accomplishmentsId, event) {
     let inFront = document.getElementById(inFrontId);
     let parent = inFront.parentElement;
     let accomplishments = document.getElementById(accomplishmentsId);
