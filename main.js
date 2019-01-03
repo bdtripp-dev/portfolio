@@ -61,7 +61,8 @@ function slideOut() {
         document.getElementById("slide_out").style.left = "0px";
         document.getElementById("overlay").style.display = "block";
         navHidden = false;
-    } 
+    }
+    event.stopPropagation();
 }
 
 function slideIn() {
@@ -83,13 +84,14 @@ function slideIn() {
 
 }
 
-function slideUp(inFrontId, accomplishmentsId) {
+function slideUp(inFrontId, event) {
     let inFront = document.getElementById(inFrontId);
     
     inFront.style.transform = "translateY(-100%)";
+    event.stopPropagation();
 }
 
-function slideDown(inFrontId) {
+function slideDown(inFrontId, event) {
     document.getElementById(inFrontId).style.transform = "translateY(100%)";
     event.stopPropagation();
 }
@@ -109,11 +111,6 @@ function displayFullScreen(inFrontId, accomplishmentsId) {
     inFront.ontouchmove = function(e) {
         e.stopPropagation();
     };
-    
-//    inFront.onwheel = function(e) {
-//        e.stopPropagation();
-//    };
-    
     
     for (let card of hiddenCards) {
         card.style.display = "none";

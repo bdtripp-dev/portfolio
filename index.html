@@ -78,13 +78,13 @@
         <section id="projects">
             <h1>Projects</h1>
             
-            <div id="pas_screenshot_card" class="project screenshot card" onclick="slideUp('pas_accomplishments')">
+            <div id="pas_screenshot_card" class="project screenshot card" onclick="slideUp('pas_accomplishments', event)">
 <!--                <h2>Portland Art Supply</h2>-->
                 <img src="images/pas_screenshot.png">
                 
                 <div id="pas_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('pas_scroll_indicator')">
                     <h2>Design &amp; Development<br> Features</h2>
-                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('pas_accomplishments')">
+                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('pas_accomplishments', event)">
                     
                     <ul>
                         <li>PHP
@@ -448,13 +448,13 @@ function lookup_items($groupID) {
                 </div>
             </div>
             
-            <div id="bm_screenshot_card" class="project screenshot card" onclick="slideUp('bm_accomplishments')">
+            <div id="bm_screenshot_card" class="project screenshot card" onclick="slideUp('bm_accomplishments', event)">
 <!--                <h2>Burrito Masala</h2>-->
                 <img src="images/bm_screenshot.png">
                 
                 <div id="bm_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('bm_scroll_indicator')">
                     <h2>Design &amp; Development<br> Features</h2>
-                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('bm_accomplishments')">
+                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('bm_accomplishments', event)">
                     <ul>
                         <li>Responsive Grid</li>
                         <li>Web Fonts</li>
@@ -529,18 +529,17 @@ function lookup_items($groupID) {
                 </div> 
             </div>
             
-            <div id="ff_screenshot_card" class="project screenshot card" onclick="slideUp('ff_accomplishments')">
+            <div id="ff_screenshot_card" class="project screenshot card" onclick="slideUp('ff_accomplishments', event)">
 <!--                <h2>Fairfield Farm</h2>-->
                 <img src="images/ff_screenshot.png">
                 
                 <div id="ff_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('ff_scroll_indicator')">
                     <h2>Design &amp; Development<br> Features</h2>
-                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('ff_accomplishments')">
+                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('ff_accomplishments', event)">
                     <ul>
                         <li>HTML5</li>
                         <li>CSS3</li>
                         <li>Mobile First
-<!--                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="slideUp('ff_src_code')">-->
                         </li>
                         <li>Responsive Design</li>
                         <li>Semantic HTML</li>
@@ -558,7 +557,7 @@ function lookup_items($groupID) {
                 
 <!--
                 <div id="ff_src_code" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('ff_src_code')">
+                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('ff_src_code', event)">
 -->
                        
 <!--
@@ -569,13 +568,13 @@ function lookup_items($groupID) {
 <!--                </div>-->
             </div>
             
-            <div id="bg_screenshot_card" class="project screenshot card" onclick="slideUp('bg_accomplishments')">
+            <div id="bg_screenshot_card" class="project screenshot card" onclick="slideUp('bg_accomplishments', event)">
 <!--                <h2>Bramblewood Guitars</h2>-->
                 <img src="images/bg_screenshot.png">
                 
                 <div id="bg_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('bg_scroll_indicator')">
                     <h2>Design &amp; Development<br> Features</h2>
-                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('bg_accomplishments')">
+                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('bg_accomplishments', event)">
                     <ul>
                         <li>WordPress</li>
                         <li>Custom CSS styles
@@ -633,13 +632,13 @@ function lookup_items($groupID) {
                 </div> 
             </div>
             
-            <div id="cc_screenshot_card" class="project screenshot card" onclick="slideUp('cc_accomplishments')">
+            <div id="cc_screenshot_card" class="project screenshot card" onclick="slideUp('cc_accomplishments', event)">
 <!--                <h2>Calorie Calculator</h2>-->
                 <img src="images/cc_screenshot.png">
                 
                 <div id="cc_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('cc_scroll_indicator')">
                     <h2>Design &amp; Development<br> Features</h2>
-                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('cc_accomplishments')">
+                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('cc_accomplishments', event)">
                     <ul>
                         <li>App Developed in Android Studio</li>
                         <li>Java
