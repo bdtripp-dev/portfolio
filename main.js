@@ -112,16 +112,31 @@ function displayFullScreen(inFrontId, accomplishmentsId, event) {
     let main = document.getElementsByTagName("main")[0];
     let hiddenCards = document.getElementsByClassName("hidden_card");
     
-    inFront.ontouchmove = function(e) {
+    inFront.ontouchmove = function(event) {
         event.stopPropagation();
     };
     
-    document.body.ontouchmove = event.preventDefault();
+//    window.ontouchmove = function(event) {
+//        event.preventDefault();
+//    }
+//    
+//    window.onwheel = function(event) {
+//        event.preventDefault();
+//    }
+//    
+//    window.onscroll = function(event) {
+//        event.preventDefault();
+//    }
+    
+//    document.body.ontouchmove = "event.preventDefault()";
+//    document.body.onwheel = "event.preventDefault()";
+//    document.body.onscroll = "event.preventDefault()";
     
     for (let card of hiddenCards) {
         card.style.display = "none";
     }
     
+    document.getElementsByTagName("html")[0].style.overflow = "hidden";
     document.body.style.overflow = "hidden";
     inFront.style.display = "block";
     inFront.style.position = "fixed";
@@ -157,6 +172,7 @@ function closeFullScreen(inFrontId, accomplishmentsId, event) {
         card.style.display = "block";
     }
     
+    document.getElementsByTagName("html")[0].style.overflow = "auto";
     document.body.style.overflow = "scroll";
     inFront.style.width = "100%";
     inFront.style.height = "311px";
