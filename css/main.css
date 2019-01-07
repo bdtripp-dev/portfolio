@@ -157,6 +157,9 @@ html body main section#projects div.screenshot.card {
   height: 311px;
   overflow: hidden;
 }
+html body main section#projects div.screenshot.card:hover {
+  cursor: pointer;
+}
 html body main section#projects div div.hidden_card {
   position: absolute;
   transform: translateY(0px);
