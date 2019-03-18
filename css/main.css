@@ -146,7 +146,7 @@ html body main section#about div.card p {
   padding: 10px 30px;
   line-height: 130%;
 }
-html body main section#projects div.project h2 {
+html body main section#projects h2 {
   padding: 10px 0;
   margin: 0 auto;
 }
@@ -154,16 +154,40 @@ html body main section#projects div.screenshot.card {
   position: relative;
   margin-top: 40px;
   background-color: white;
-  height: 311px;
+  height: 386px;
   overflow: hidden;
+  text-align: center;
 }
 html body main section#projects div.screenshot.card:hover {
   cursor: pointer;
 }
+html body main section#projects div div.project_buttons {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid #999;
+}
+html body main section#projects div div.project_buttons button {
+  display: inline-block;
+  width: 41%;
+  height: 34px;
+  margin: 20px 2%;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #0095ff;
+  border-color: #07c;
+  box-shadow: inset 0 1px 0 #66bfff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+html body main section#projects div div.project_buttons button:hover {
+  background-color: #0077cc;
+}
 html body main section#projects div div.hidden_card {
   position: absolute;
   transform: translateY(0px);
-  top: 100%;
+  top: 311px;
   transition: transform 1s;
   width: 100%;
   margin: 0;
@@ -172,6 +196,7 @@ html body main section#projects div div.hidden_card {
   height: 311px;
   background-color: white;
   overflow: scroll;
+  text-align: left;
 }
 html body main section#projects div div.hidden_card img.close_btn {
   width: 15px;

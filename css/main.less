@@ -194,35 +194,57 @@ html {
                 
                 &#projects {
                     
+                    h2 {
+                        padding: 10px 0;
+                        margin: 0 auto;
+                    }
+                    
                     div {
-                        
-                        &.project {
-                            
-                            h2 {
-                                padding: 10px 0;
-                                margin: 0 auto;
-                            }    
-
-                        }
-                        
+       
                         &.screenshot.card {
                             position: relative;
                             margin-top: 40px;
                             background-color: white;
-                            height: 311px;
+                            height: 386px;
                             overflow: hidden;
-                            
+                            text-align: center;
+
                             &:hover {
                                 cursor: pointer;
-                            }
+                            }                        
                         }
-                        
+
                         div {
+                            &.project_buttons {
+                                position: absolute;
+                                background-color: white;
+                                width: 100%;
+                                bottom: 0;
+                                border-top: 1px solid #999;
+                                
+                                button {
+                                    display: inline-block;
+                                    width: 41%;
+                                    height: 34px;
+                                    margin: 20px 2%;
+                                    cursor: pointer;
+                                    color: #FFF;
+                                    background-color: #0095ff;
+                                    border-color: #07c;
+                                    box-shadow: inset 0 1px 0 #66bfff;
+                                    border: 1px solid transparent;  
+                                    border-radius: 3px;
+                                    
+                                    &:hover {
+                                        background-color: darken(#0095ff, 10%);
+                                    }
+                                }
+                            }
                             
                             &.hidden_card {
                                 position: absolute;
                                 transform: translateY(0px);
-                                top: 100%;
+                                top: 311px;
                                 transition: transform 1s;
                                 width: 100%;
                                 margin: 0;
@@ -231,6 +253,7 @@ html {
                                 height: 311px;
                                 background-color: white;
                                 overflow: scroll;
+                                text-align: left;
                                 
                                 img {
 

@@ -2,15 +2,47 @@ var navHidden = true;
 var showingSrc = false;
 
 function init() {
-    
-//    document.body.onscroll = function(e) {
-//        e.preventDefault();
-//    };
-//    
-//    document.body.onwheel = function(e) {
-//        e.preventDefault();
-//    };
-    
+    viewDetailsBtns = document.getElementsByClassName("view_details_btn");
+    var detailShowingTogglers = [];
+    for(var i = 0; i < viewDetailsBtns.length; i++) {
+        var screenshotCard = viewDetailsBtns[i].parentElement.parentElement;
+        var accomplishmentsCard = screenshotCard.getElementsByClassName("accomplishments")[0];
+        
+        viewDetailsBtns[i].addEventListener("click", toggleDetailsBtn.bind(this, event, viewDetailsBtns[i], accomplishmentsCard.id));
+        
+        detailShowingTogglers[accomplishmentsCard.id] = function() {
+            var showingDetails = false;
+            return function() {
+                if(!showingDetails) {
+                    showingDetails = true;
+                } else {
+                    showingDetails = false;
+                }
+                return showingDetails;
+            }
+        }();
+        
+        function toggleDetailsBtn(event, detailsBtn, cardId) {
+            detailsShowing = detailShowingTogglers[cardId]();
+            if(!detailsShowing) {
+                detailsBtn.innerText = "View Details";
+                slideDown(cardId, event);
+
+            } else {
+                detailsBtn.innerText = "Hide Details";
+                slideUp(cardId, event)
+            }
+        }
+    }
+    detailCloseBtns = document.getElementsByClassName("details close_btn");
+    for(var i = 0; i < detailCloseBtns.length; i++) {
+        var screenshotCard = detailCloseBtns[i].parentElement.parentElement;
+        var detailsBtn = screenshotCard.getElementsByClassName("project_buttons")[0].getElementsByClassName("view_details_btn")[0];
+        var accomplishmentsCard = screenshotCard.getElementsByClassName("accomplishments")[0];
+        
+        detailCloseBtns[i].addEventListener("click", toggleDetailsBtn.bind(this, event, detailsBtn, accomplishmentsCard.id));
+    }
+    onclick="toggleDetailsBtn(event, this, 'pas_accomplishments')"
     document.getElementById("menu_icon").addEventListener("click", function(event) {
         slideOut(event);
     });
@@ -22,11 +54,6 @@ function init() {
         let main = document.getElementsByTagName("main")[0];
         
         if (window.innerWidth >= 1000) {
-//            if (showingSrc) {
-//                main.style.marginLeft = "0";
-//            } else {
-//                main.style.marginLeft = "15%";
-//            }
             slideOut.style.left = "0";
             document.getElementsByTagName("header")[0].style.zIndex = "3";
             if (!showingSrc) {
@@ -34,7 +61,6 @@ function init() {
             }
         }
         if (window.innerWidth < 1000) {
-//            main.style.marginLeft = "0";
             if (navHidden) {
                 slideOut.style.left = "-200px";
             } else {

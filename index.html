@@ -12,6 +12,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="http://bdtripp.com/images/favicon.ico">
     <script src="highlight/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+    <script src="jquery.min.js"></script>
     <script src="main.js" type="text/javascript"></script>
 </head>
 <body onload="init()">
@@ -78,81 +79,77 @@
         <section id="projects">
             <h1>Projects</h1>
             
-            <div id="pas_screenshot_card" class="project screenshot card" onclick="slideUp('pas_accomplishments', event)">
-<!--                <h2>Portland Art Supply</h2>-->
-                <img src="images/pas_screenshot.png">
-                
-                <div id="pas_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('pas_scroll_indicator')">
-                    <h2>Design &amp; Development<br> Features</h2>
-                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('pas_accomplishments', event)">
-                    
-                    <ul>
-                        <li>PHP
-                            <ul>
-                                <li>Sessions
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
-                                </li>
-                                <li>Dynamically Generated HTML
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
-                                </li>
-<!--                                <li>Dynamic Generating image locations</li>-->
-                                <li>GET/POST</li>
-                                <li>User Authentication
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_authentication', 'pas_accomplishments', this, event)">
-                                </li>
-                                <li>Password Hashing</li>
-                                <li>JSON Encoding</li>
-                            </ul>
-                        </li>
-                        
-                        <li>Javascript
-                            <ul>
-                                <li>Event Handling</li>
-                                <li>Dynamic CSS Styling
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
-                                </li>
-                                <li>Input Validation
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_validation', 'pas_accomplishments', this, event)">
-                                </li>
-                                <li>AJAX
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_ajax', 'pas_accomplishments', this, event)">
-                                </li>
-                                <li>Regular Expressions
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_regex', 'pas_accomplishments', this, event)">
-                                </li>
-                            </ul>
-                        </li>
-                        
-                        <li>Database
-                            <ul>
-                                <li>SQL
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
-                                </li>
-                                <li>Data Modeling
-                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
-                                    <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/pas_erd.pdf" target="_blank">
-                                        <img class="src_code_icon" src="images/document.png">
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        
-                        <li>LESS
-                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_less', 'pas_accomplishments', this, event)">
-                        </li>
-                        
-                    </ul>
-                    <a href="http://bdtripp.com/portland_art_supply/" target="_blank">
-                        <img class="link_to_site" src="images/external_link_icon.png">
-                    </a>
-                    <div id="pas_scroll_indicator" class="scroll_indicator">
-                        <img src="images/down_arrow.png">
+                <div id="pas_screenshot_card" class="project screenshot card">
+                    <img src="images/pas_screenshot.png">
+
+                    <div id="pas_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('pas_scroll_indicator')">
+                        <h2>Design &amp; Development<br> Features</h2>
+                        <img class="details close_btn" src="images/close_icon.png">
+
+                        <ul>
+                            <li>PHP
+                                <ul>
+                                    <li>Sessions
+                                        <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
+                                    </li>
+                                    <li>Dynamically Generated HTML
+                                        <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
+                                    </li>
+    <!--                                <li>Dynamic Generating image locations</li>-->
+                                    <li>GET/POST</li>
+                                    <li>User Authentication
+                                        <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_authentication', 'pas_accomplishments', this, event)">
+                                    </li>
+                                    <li>Password Hashing</li>
+                                    <li>JSON Encoding</li>
+                                </ul>
+                            </li>
+
+                            <li>Javascript
+                                <ul>
+                                    <li>Event Handling</li>
+                                    <li>Dynamic CSS Styling
+                                        <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
+                                    </li>
+                                    <li>Input Validation
+                                        <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_validation', 'pas_accomplishments', this, event)">
+                                    </li>
+                                    <li>AJAX
+                                        <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_ajax', 'pas_accomplishments', this, event)">
+                                    </li>
+                                    <li>Regular Expressions
+                                        <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_regex', 'pas_accomplishments', this, event)">
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>Database
+                                <ul>
+                                    <li>SQL
+                                        <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
+                                    </li>
+                                    <li>Data Modeling
+                                        <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
+                                        <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/pas_erd.pdf" target="_blank">
+                                            <img class="src_code_icon" src="images/document.png">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>LESS
+                                <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_less', 'pas_accomplishments', this, event)">
+                            </li>
+
+                        </ul>
+                        <div id="pas_scroll_indicator" class="scroll_indicator">
+                            <img src="images/down_arrow.png">
+                        </div>
                     </div>
-                </div>
-                
-                <div id="pas_src_session" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
-                       
+
+                    <div id="pas_src_session" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
+
 <pre><code class="PHP">/*
     When the user clicks "Add to Cart", the $_SESSION gets updated with an 
     array that contains the items properties. When the user logs out and back in, the session data is
@@ -180,12 +177,12 @@ function addItemToCart($id, $category, $subcategory, $groupCode, $color, $size, 
     }
     save_session();
 }</code></pre>
-                    
-                </div> 
-                
-                <div id="pas_src_generate" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
-                       
+
+                    </div> 
+
+                    <div id="pas_src_generate" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
+
 <pre><code class="PHP">/*
     All of the site's HTML is dynamically generated from PHP. The product information is stored
     in the database and insterted into the html code as needed. 
@@ -206,11 +203,11 @@ function show_subcategories($categoryID, $categoryName, $rowsPerColumn) {
     echo '            &lt;/ul&gt;' . "\n";
     echo '        &lt;/div&gt;' . "\n\n";
 }</code></pre>  
-                </div>
-                
-                <div id="pas_src_authentication" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_authentication', 'pas_accomplishments', this, event)">
-                       
+                    </div>
+
+                    <div id="pas_src_authentication" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_authentication', 'pas_accomplishments', this, event)">
+
 <pre><code class="PHP">/*
     Checks the username and password received from the form on the login page. If there are any issues,
     an error message is returned. Otherwise the user's session data is restored and the user is
@@ -240,38 +237,37 @@ function login($username, $password, $returnToUrl) {
     restore_session();
     return '';
 }</code></pre>
-                    
-                </div>
-                
-                <div id="pas_src_dynamic_styling" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
-                       
+                    </div>
+
+                    <div id="pas_src_dynamic_styling" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
+
 <pre><code class="JavaScript">/*
-    Makes dynamic height adjustments involving calculations that could not be achieved using pure
-    css.
+Makes dynamic height adjustments involving calculations that could not be achieved using pure
+css.
 */
 
-        if (window.innerWidth >= 700 &amp;&amp; window.innerWidth &lt; 1000) {
-            if (colorThumbnails !== null) {
-                let colorThumbnailsStyle = window.getComputedStyle(colorThumbnails);
+if (window.innerWidth >= 700 &amp;&amp; window.innerWidth &lt; 1000) {
+    if (colorThumbnails !== null) {
+        let colorThumbnailsStyle = window.getComputedStyle(colorThumbnails);
 
-                itemOptions.style.height = Math.max(colorThumbnails.clientHeight + parseInt(colorThumbnailsStyle.marginTop) +
-                    parseInt(colorThumbnailsStyle.marginBottom), optionsRightCol.clientHeight +
-                    parseInt(optionsRightColStyle.marginTop) + parseInt(optionsRightColStyle.marginBottom),
-                    itemImage.clientHeight + 40) + "px";
-            } else {
-                itemOptions.style.height = Math.max(optionsRightCol.clientHeight + parseInt(optionsRightColStyle.marginTop) +
-                    parseInt(optionsRightColStyle.marginBottom), itemImage.clientHeight + 40) + "px";
-            }
+        itemOptions.style.height = Math.max(colorThumbnails.clientHeight + parseInt(colorThumbnailsStyle.marginTop) +
+            parseInt(colorThumbnailsStyle.marginBottom), optionsRightCol.clientHeight +
+            parseInt(optionsRightColStyle.marginTop) + parseInt(optionsRightColStyle.marginBottom),
+            itemImage.clientHeight + 40) + "px";
+    } else {
+        itemOptions.style.height = Math.max(optionsRightCol.clientHeight + parseInt(optionsRightColStyle.marginTop) +
+            parseInt(optionsRightColStyle.marginBottom), itemImage.clientHeight + 40) + "px";
+    }
 
-            itemWrapper.style.height = "auto";
-        }</code></pre>
-                    
-                </div>
-                
-                <div id="pas_src_validation" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_validation', 'pas_accomplishments', this, event)">
-                       
+    itemWrapper.style.height = "auto";
+}</code></pre>
+
+                    </div>
+
+                    <div id="pas_src_validation" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_validation', 'pas_accomplishments', this, event)">
+
 <pre><code class="JavaScript">/*
     Checks if password meets requirements on client side before allowing the form to be submitted to
     the server.
@@ -324,12 +320,12 @@ function checkPasswordRequirements(input) {
         return false;
     }
 }</code></pre>
-                    
-                </div>
-                
-                <div id="pas_src_ajax" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_ajax', 'pas_accomplishments', this, event)">
-                       
+
+                    </div>
+
+                    <div id="pas_src_ajax" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_ajax', 'pas_accomplishments', this, event)">
+
 <pre><code class="JavaScript">/*
     When a user adds an item to the cart, AJAX is used to send data about the selection back to the
     server such as the quanity, size, and color selected. The item data is then saved to the user's 
@@ -352,12 +348,12 @@ let xhttp = new XMLHttpRequest();
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send(sendString);
 </code></pre>
-                    
-                </div>
-                
-                <div id="pas_src_regex" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_regex', 'pas_accomplishments', this, event)">
-                       
+
+                    </div>
+
+                    <div id="pas_src_regex" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_regex', 'pas_accomplishments', this, event)">
+
 <pre><code class="JavaScript">/*
     Image paths are dynamically generated from values in the database. Used regular expressions to
     remove quotes, slashes, pound signs, and spaces. Replaced them with either underscores or dashes.
@@ -367,12 +363,12 @@ image.src = IMAGE_FOLDER + category + '/' + subcategory + '/' + groupCode + '-' 
         color.toLowerCase().replace(/\s+(?=[^()]*(\(|$))/g, '-').replace(/"+|#+/g, '_') +
         size.toLowerCase().replace(/\s+(?=[^()]*(\(|$))/g, '-').replace(/"+|#+/g, '_') + '.jpg';
 </code></pre>
-                    
-                </div>
-                
-                <div id="pas_src_sql" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
-                       
+
+                    </div>
+
+                    <div id="pas_src_sql" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
+
 <pre><code class="PHP">/*
     All product information is stored in a database. When the user clicks on a link to view a 
     particular product, a query is sent to the database and an array containing all of the products
@@ -393,19 +389,19 @@ function lookup_items($groupID) {
     };
     return $items;
 }</code></pre>
-                    
-                </div>
-                
-                <div id="pas_erd" class="document hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
-                       
-                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vS6sBk7MWt3fPM8J3yiuAJOh_CjfDS9NuGeFyf5fYwD3vtT0mXXp3m891dhAejNqpUIz209-iO6InqZ/pub?embedded=true"></iframe>
-                    
-                </div>
-                
-                <div id="pas_src_less" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_less', 'pas_accomplishments', this, event)">
-                       
+
+                    </div>
+
+                    <div id="pas_erd" class="document hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
+
+                        <iframe src="https://docs.google.com/document/d/e/2PACX-1vS6sBk7MWt3fPM8J3yiuAJOh_CjfDS9NuGeFyf5fYwD3vtT0mXXp3m891dhAejNqpUIz209-iO6InqZ/pub?embedded=true"></iframe>
+
+                    </div>
+
+                    <div id="pas_src_less" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_less', 'pas_accomplishments', this, event)">
+
 <pre><code class="plaintext">/*
     Most of the CSS for the site is generated from LESS.
 */
@@ -444,17 +440,20 @@ function lookup_items($groupID) {
 }
 
 </code></pre>
-                    
+
+                    </div>
+                    <div class="project_buttons">
+                        <button onclick="window.open('http://bdtripp.com/portland_art_supply/', '_blank');">Visit Site</button>
+                        <button class="view_details_btn">View Details</button>
+                    </div>
                 </div>
-            </div>
             
-            <div id="bm_screenshot_card" class="project screenshot card" onclick="slideUp('bm_accomplishments', event)">
-<!--                <h2>Burrito Masala</h2>-->
+            <div id="bm_screenshot_card" class="project screenshot card">
                 <img src="images/bm_screenshot.png">
                 
                 <div id="bm_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('bm_scroll_indicator')">
                     <h2>Design &amp; Development<br> Features</h2>
-                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('bm_accomplishments', event)">
+                    <img class="details close_btn" src="images/close_icon.png">
                     <ul>
                         <li>Responsive Grid</li>
                         <li>Web Fonts</li>
@@ -499,9 +498,6 @@ function lookup_items($groupID) {
                         </li>
                         
                     </ul>
-                    <a href="http://bdtripp.com/burrito_masala/" target="_blank">
-                        <img class="link_to_site" src="images/external_link_icon.png">
-                    </a>
                     <div id="bm_scroll_indicator" class="scroll_indicator">
                         <img src="images/down_arrow.png">
                     </div>
@@ -527,15 +523,18 @@ function lookup_items($groupID) {
                     <iframe src="https://docs.google.com/document/d/e/2PACX-1vTRw2ofXeXInPQOnuodV_qLQmYHXQ-_wx6m10Dg1jo0utvvbP76icRZXnT2xQoyziNZxa70FcWP6QbS/pub?embedded=true"></iframe>
                     
                 </div> 
+                <div class="project_buttons">
+                    <button onclick="window.open('http://bdtripp.com/burrito_masala/', '_blank');">Visit Site</button>
+                    <button class="view_details_btn">View Details</button>
+                </div>
             </div>
             
-            <div id="ff_screenshot_card" class="project screenshot card" onclick="slideUp('ff_accomplishments', event)">
-<!--                <h2>Fairfield Farm</h2>-->
+            <div id="ff_screenshot_card" class="project screenshot card">
                 <img src="images/ff_screenshot.png">
                 
                 <div id="ff_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('ff_scroll_indicator')">
                     <h2>Design &amp; Development<br> Features</h2>
-                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('ff_accomplishments', event)">
+                    <img class="details close_btn" src="images/close_icon.png">
                     <ul>
                         <li>HTML5</li>
                         <li>CSS3</li>
@@ -547,9 +546,6 @@ function lookup_items($groupID) {
                         <li>HTML &amp; CSS Best Practices</li>
                         <li>Basic SEO Principles</li>
                     </ul>
-                    <a href="http://bdtripp.com/fairfield_farm/" target="_blank">
-                        <img class="link_to_site" src="images/external_link_icon.png">
-                    </a>
                     <div id="ff_scroll_indicator" class="scroll_indicator">
                         <img src="images/down_arrow.png">
                     </div>
@@ -566,15 +562,18 @@ function lookup_items($groupID) {
 -->
                     
 <!--                </div>-->
+                <div class="project_buttons">
+                    <button onclick="window.open('http://bdtripp.com/fairfield_farm/', '_blank');">Visit Site</button>
+                    <button class="view_details_btn">View Details</button>
+                </div>
             </div>
             
-            <div id="bg_screenshot_card" class="project screenshot card" onclick="slideUp('bg_accomplishments', event)">
-<!--                <h2>Bramblewood Guitars</h2>-->
+            <div id="bg_screenshot_card" class="project screenshot card">
                 <img src="images/bg_screenshot.png">
                 
                 <div id="bg_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('bg_scroll_indicator')">
                     <h2>Design &amp; Development<br> Features</h2>
-                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('bg_accomplishments', event)">
+                    <img class="details close_btn" src="images/close_icon.png">
                     <ul>
                         <li>WordPress</li>
                         <li>Custom CSS styles
@@ -588,9 +587,6 @@ function lookup_items($groupID) {
                             <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
                         </li>
                     </ul>
-                    <a href="http://bdtripp.com/bramblewood_guitars/" target="_blank">
-                        <img class="link_to_site" src="images/external_link_icon.png">
-                    </a>
                 </div>
                 
                 <div id="bg_src_custom_css" class="src_code hidden_card">
@@ -630,15 +626,18 @@ function lookup_items($groupID) {
 &lt;/div&gt;
 </code></pre>
                 </div> 
+                <div class="project_buttons">
+                    <button onclick="window.open('http://bdtripp.com/bramblewood_guitars/', '_blank');">Visit Site</button>
+                    <button class="view_details_btn">View Details</button>
+                </div>
             </div>
             
-            <div id="cc_screenshot_card" class="project screenshot card" onclick="slideUp('cc_accomplishments', event)">
-<!--                <h2>Calorie Calculator</h2>-->
+            <div id="cc_screenshot_card" class="project screenshot card">
                 <img src="images/cc_screenshot.png">
                 
                 <div id="cc_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('cc_scroll_indicator')">
                     <h2>Design &amp; Development<br> Features</h2>
-                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('cc_accomplishments', event)">
+                    <img class="details close_btn" src="images/close_icon.png">
                     <ul>
                         <li>App Developed in Android Studio</li>
                         <li>Java
@@ -670,9 +669,6 @@ function lookup_items($groupID) {
                         <li>Tested With Emulators</li>
                         <li>Prepared App for Play Store</li>
                     </ul>
-                    <a href="http://bdtripp.com/app-release.apk" target="_blank">
-                        <img class="link_to_site" src="images/download-btn.png">
-                    </a>
                     <div id="cc_scroll_indicator" class="scroll_indicator">
                         <img src="images/down_arrow.png">
                     </div>
@@ -795,6 +791,10 @@ startActivity(intent);
 
 </code></pre>
                 </div> 
+                <div class="project_buttons">
+                    <button onclick="window.open('http://bdtripp.com/app-release.apk');">Download App</button>
+                    <button class="view_details_btn">View Details</button>
+                </div>
             </div>
             
         </section>
