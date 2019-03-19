@@ -3,14 +3,14 @@ var showingSrc = false;
 
 function init() {
     viewDetailsBtns = document.getElementsByClassName("view_details_btn");
-    var detailShowingTogglers = [];
+    var detailsShowingTogglers = [];
     for(var i = 0; i < viewDetailsBtns.length; i++) {
         var screenshotCard = viewDetailsBtns[i].parentElement.parentElement;
         var accomplishmentsCard = screenshotCard.getElementsByClassName("accomplishments")[0];
         
         viewDetailsBtns[i].addEventListener("click", toggleDetailsBtn.bind(this, event, viewDetailsBtns[i], accomplishmentsCard.id));
         
-        detailShowingTogglers[accomplishmentsCard.id] = function() {
+        detailsShowingTogglers[accomplishmentsCard.id] = function() {
             var showingDetails = false;
             return function() {
                 if(!showingDetails) {
@@ -23,7 +23,7 @@ function init() {
         }();
         
         function toggleDetailsBtn(event, detailsBtn, cardId) {
-            detailsShowing = detailShowingTogglers[cardId]();
+            detailsShowing = detailsShowingTogglers[cardId]();
             if(!detailsShowing) {
                 detailsBtn.innerText = "View Details";
                 slideDown(cardId, event);
@@ -34,13 +34,13 @@ function init() {
             }
         }
     }
-    detailCloseBtns = document.getElementsByClassName("details close_btn");
-    for(var i = 0; i < detailCloseBtns.length; i++) {
-        var screenshotCard = detailCloseBtns[i].parentElement.parentElement;
+    detailsCloseBtns = document.getElementsByClassName("details close_btn");
+    for(var i = 0; i < detailsCloseBtns.length; i++) {
+        var screenshotCard = detailsCloseBtns[i].parentElement.parentElement;
         var detailsBtn = screenshotCard.getElementsByClassName("project_buttons")[0].getElementsByClassName("view_details_btn")[0];
         var accomplishmentsCard = screenshotCard.getElementsByClassName("accomplishments")[0];
         
-        detailCloseBtns[i].addEventListener("click", toggleDetailsBtn.bind(this, event, detailsBtn, accomplishmentsCard.id));
+        detailsCloseBtns[i].addEventListener("click", toggleDetailsBtn.bind(this, event, detailsBtn, accomplishmentsCard.id));
     }
     onclick="toggleDetailsBtn(event, this, 'pas_accomplishments')"
     document.getElementById("menu_icon").addEventListener("click", function(event) {

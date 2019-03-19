@@ -158,9 +158,6 @@ html body main section#projects div.screenshot.card {
   overflow: hidden;
   text-align: center;
 }
-html body main section#projects div.screenshot.card:hover {
-  cursor: pointer;
-}
 html body main section#projects div div.project_buttons {
   position: absolute;
   background-color: white;
