@@ -82,43 +82,25 @@
             <div id="pas_screenshot_card" class="project screenshot card">
                 <img src="images/pas_screenshot.png">
 
-                <div id="pas_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('pas_scroll_indicator')">
-                    <h2>Design &amp; Development<br> Details</h2>
-                    <img class="details close_btn" src="images/close_icon.png">
+                <div id="pas_accomplishments" class="project accomplishments hidden_card">
+                    <h2>Design &amp; Development Details</h2>
 
                     <ul>
                         <li>PHP
-                            <ul>
+                            <ul>    
                                 <li>Sessions
                                     <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
                                 </li>
                                 <li>Dynamically Generated HTML
                                     <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
                                 </li>
-<!--                                <li>Dynamic Generating image locations</li>-->
-                                <li>GET/POST</li>
-                                <li>User Authentication
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_authentication', 'pas_accomplishments', this, event)">
-                                </li>
-                                <li>Password Hashing</li>
-                                <li>JSON Encoding</li>
                             </ul>
                         </li>
 
                         <li>Javascript
                             <ul>
-                                <li>Event Handling</li>
                                 <li>Dynamic CSS Styling
                                     <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
-                                </li>
-                                <li>Input Validation
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_validation', 'pas_accomplishments', this, event)">
-                                </li>
-                                <li>AJAX
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_ajax', 'pas_accomplishments', this, event)">
-                                </li>
-                                <li>Regular Expressions
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_regex', 'pas_accomplishments', this, event)">
                                 </li>
                             </ul>
                         </li>
@@ -136,15 +118,12 @@
                                 </li>
                             </ul>
                         </li>
-
-                        <li>LESS
-                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_less', 'pas_accomplishments', this, event)">
-                        </li>
-
                     </ul>
+<!--
                     <div id="pas_scroll_indicator" class="scroll_indicator">
                         <img src="images/down_arrow.png">
                     </div>
+-->
                 </div>
 
                 <div id="pas_src_session" class="src_code hidden_card">
@@ -205,40 +184,6 @@ echo '        &lt;/div&gt;' . "\n\n";
 }</code></pre>  
                 </div>
 
-                <div id="pas_src_authentication" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_authentication', 'pas_accomplishments', this, event)">
-
-<pre><code class="PHP">/*
-Checks the username and password received from the form on the login page. If there are any issues,
-an error message is returned. Otherwise the user's session data is restored and the user is
-redirected to the page that they were previously viewing.
-*/
-
-function login($username, $password, $returnToUrl) {
-if (empty($username)) {
-    return error_message(E_LOGIN, E_NO_USERNAME);
-}
-
-if (empty($password)) {
-    return error_message(E_LOGIN, E_NO_PASSWORD);
-}
-
-$user = lookup_user($username);
-
-if (!$user) {
-    return error_message(E_LOGIN, E_USERNAME_NOT_FOUND);
-}
-
-if (!password_verify($password, $user[USERS_HASH_FIELD])) {
-    return error_message(E_LOGIN, E_PASSWORD_INCORRECT);
-}
-
-set_user($user[USER_ID_FIELD], $username, $returnToUrl);
-restore_session();
-return '';
-}</code></pre>
-                </div>
-
                 <div id="pas_src_dynamic_styling" class="src_code hidden_card">
                     <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
 
@@ -262,107 +207,6 @@ if (colorThumbnails !== null) {
 
 itemWrapper.style.height = "auto";
 }</code></pre>
-
-                </div>
-
-                <div id="pas_src_validation" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_validation', 'pas_accomplishments', this, event)">
-
-<pre><code class="JavaScript">/*
-Checks if password meets requirements on client side before allowing the form to be submitted to
-the server.
-*/
-
-function isUpper(character) {
-return character &gt;= 'A' &amp;&amp; character &lt;= 'Z';
-}
-
-function isLower(character) {
-return character &gt;= 'a' &amp;&amp; character &lt;= 'z';
-}
-
-function isDigit(character) {
-return character &gt;= 0 &amp;&amp; character &lt;= 9;
-}
-
-function isSpecial(character) {
-return REQUIRED_SPECIAL_CHARACTERS.indexOf(character) &gt;= 0;
-}
-
-function checkPasswordRequirements(input) {
-let hasUpper = false;
-let hasDigit = false;
-let hasSpecial = false;
-
-for (count = 0; count &lt; input.length; count++) {
-    if (isUpper(input.charAt(count))) {
-        hasUpper = true;
-    }
-    if (isDigit(input.charAt(count))) {
-        hasDigit = true;
-    }
-    if (isSpecial(input.charAt(count))) {
-        hasSpecial = true;
-    }
-}
-
-if (!hasUpper) {
-    setErrorMessage(PASSWORD_MESSAGE_ID, PASSWORD_UPPERCASE_ERROR);
-} else if (!hasDigit) {
-    setErrorMessage(PASSWORD_MESSAGE_ID, PASSWORD_DIGIT_ERROR);
-} else if (!hasSpecial) {
-    setErrorMessage(PASSWORD_MESSAGE_ID, PASSWORD_SPECIAL_ERROR);
-}
-
-if (hasUpper &amp;&amp; hasDigit &amp;&amp; hasSpecial) {
-    return true;
-} else {
-    return false;
-}
-}</code></pre>
-
-                </div>
-
-                <div id="pas_src_ajax" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_ajax', 'pas_accomplishments', this, event)">
-
-<pre><code class="JavaScript">/*
-When a user adds an item to the cart, AJAX is used to send data about the selection back to the
-server such as the quanity, size, and color selected. The item data is then saved to the user's 
-session data that is stored in the database. 
-*/
-
-let xhttp = new XMLHttpRequest();
-    let sendString = PRODUCT_ITEM_ID_FIELD + '=' + itemID + '&amp;' + PRODUCT_CATEGORY_NAME_FIELD + '=' + category +
-        '&amp;' + PRODUCT_SUBCATEGORY_NAME_FIELD + '=' + subcategory + '&amp;' + PRODUCT_GROUP_CODE_FIELD + '=' + groupCode +
-        '&amp;' + PRODUCT_COLOR_NAME_FIELD + '=' + currentColorSelection +
-        '&amp;' + PRODUCT_SIZE_DESCRIPTION_FIELD + '=' + currentSizeSelection + '&amp;' + PRODUCT_ITEM_PRICE_FIELD + '=' + currentPrice +
-        '&amp;' + QUANTITY_FIELD + '=' + quantity + '&amp;' + PRODUCT_GROUP_DESCRIPTION_FIELD + '=' + groupDescription;
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 &amp;&amp; this.status == 200) {
-            updateCartCountDisplay(QUANTITY_DROP_DOWN_ID, "+");
-        }
-    }
-    xhttp.open("POST", "product_items.php", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send(sendString);
-</code></pre>
-
-                </div>
-
-                <div id="pas_src_regex" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_regex', 'pas_accomplishments', this, event)">
-
-<pre><code class="JavaScript">/*
-Image paths are dynamically generated from values in the database. Used regular expressions to
-remove quotes, slashes, pound signs, and spaces. Replaced them with either underscores or dashes.
-*/
-
-image.src = IMAGE_FOLDER + category + '/' + subcategory + '/' + groupCode + '-' +
-    color.toLowerCase().replace(/\s+(?=[^()]*(\(|$))/g, '-').replace(/"+|#+/g, '_') +
-    size.toLowerCase().replace(/\s+(?=[^()]*(\(|$))/g, '-').replace(/"+|#+/g, '_') + '.jpg';
-</code></pre>
 
                 </div>
 
@@ -399,49 +243,6 @@ return $items;
 
                 </div>
 
-                <div id="pas_src_less" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_less', 'pas_accomplishments', this, event)">
-
-<pre><code class="plaintext">/*
-Most of the CSS for the site is generated from LESS.
-*/
-</code></pre>
-<pre><code class="Less">&amp;#product_groups {
-
-div {
-
-    &amp;.group_row {
-        overflow: hidden;
-    }
-}
-
-div {
-
-    &amp;.product_group {
-        padding: 20px 0 0 0;
-        box-shadow: 5px 5px 20px #AAA;
-        margin: 15px auto;
-        border-radius: 5px;
-
-        a {
-
-            &amp;.group_description_text {
-                max-width: 97%;
-                margin: 0 auto;
-                text-decoration: none;
-                color: black;
-                font-size: 1.2rem;
-                display: block;
-                padding: 0 0 5px 0;
-            }
-        }
-    }
-}
-}
-
-</code></pre>
-
-                </div>
                 <div class="project_buttons">
                     <button onclick="window.open('http://bdtripp.com/portland_art_supply/', '_blank');">Visit Site</button>
                     <button class="view_details_btn">View Details</button>
@@ -451,38 +252,20 @@ div {
             <div id="aithme_screenshot_card" class="project screenshot card">
                 <img src="images/aithme_screenshot.png">
                 
-                <div id="aithme_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('aithme_scroll_indicator')">
-                    <h2>Design &amp; Development<br> Details</h2>
-                    <img class="details close_btn" src="images/close_icon.png">
+                <div id="aithme_accomplishments" class="project accomplishments hidden_card">
+                    <h2>Design &amp; Development Details</h2>
                     <ul>
-                        <li>Responsive Grid</li>
-                        <li>Web Fonts</li>
-                        <li>UI/UX Design Principles
-                            <ul>
-                                <li>Simple</li>
-                                <li>Consistent</li>
-                                <li>Follows Conventions</li>
-                                <li>Intuitive</li>
-                                <li>Meets User Requirements</li>
-                            </ul>
-                        </li>
-                        <li>Design Processes:
-                            <ul>
-                                <li>Content Reference Wireframe</li>
-                                <li>High Fidelity Wireframe</li>
-                                <li>User Journeys</li>
-                                <li>Mood Board</li>
-                                <li>Color Pallettes</li>
-                                <li>User Personas</li>
-                                <li>Competitive Analysis</li>
-                                <li>Goal and Messaging</li>
-                            </ul>
-                        </li>
-                        
+                        <li>Forms submissions to database</li>
+                        <li>AJAX</li>
+                        <li>Input Validation</li>
+                        <li>JavaScript Image Slider</li>
+                        <li>Embedded Feeds</li>
                     </ul>
+<!--
                     <div id="aithme_scroll_indicator" class="scroll_indicator">
                         <img src="images/down_arrow.png">
                     </div>
+-->
                 </div>
             
                 <div class="project_buttons">
@@ -494,56 +277,38 @@ div {
             <div id="bm_screenshot_card" class="project screenshot card">
                 <img src="images/bm_screenshot.png">
                 
-                <div id="bm_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('bm_scroll_indicator')">
-                    <h2>Design &amp; Development<br> Details</h2>
-                    <img class="details close_btn" src="images/close_icon.png">
+                <div id="bm_accomplishments" class="project accomplishments hidden_card">
+                    <h2>Design &amp; Development Details</h2>
                     <ul>
                         <li>Responsive Grid</li>
-                        <li>Web Fonts</li>
-                        <li>UI/UX Design Principles
-                            <ul>
-                                <li>Simple</li>
-                                <li>Consistent</li>
-                                <li>Follows Conventions</li>
-                                <li>Intuitive</li>
-                                <li>Meets User Requirements</li>
-                            </ul>
+                        <li>UI/UX Design Principles</li>
+                        <li>Content Reference Wireframe</li>
+                        <li>High Fidelity Wireframe</li>
+                        <li>Mood Board</li>
+                        <li>Brand Book
+                            <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
+                            <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/brand_book.pdf" target="_blank">
+                                <img class="src_code_icon" src="images/document.png">
+                            </a>
                         </li>
-                        <li>Design Processes:
-                            <ul>
-                                <li>Content Reference Wireframe</li>
-                                <li>High Fidelity Wireframe</li>
-                                <li>User Journeys</li>
-                                <li>Mood Board</li>
-                                <li>Brand Book
-                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
-                                    <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/brand_book.pdf" target="_blank">
-                                        <img class="src_code_icon" src="images/document.png">
-                                    </a>
-                                </li>
-                                <li>Color Pallettes</li>
-                                <li>User Personas</li>
-                                <li>User Interface Inventory
-                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
-                                   <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/interface_inventory.pdf" target="_blank">
-                                        <img class="src_code_icon" src="images/document.png">
-                                    </a>
-                                </li>
-                                <li>Competitive Analysis</li>
-                                <li>Goal and Messaging</li>
-                                <li>List of Requirements
-                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
-                                    <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/listofrequirements.pdf" target="_blank">
-                                        <img class="src_code_icon" src="images/document.png">
-                                    </a>
-                                </li>
-                            </ul>
+                        <li>User Interface Inventory
+                            <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
+                           <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/interface_inventory.pdf" target="_blank">
+                                <img class="src_code_icon" src="images/document.png">
+                            </a>
                         </li>
-                        
+                        <li>List of Requirements
+                            <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
+                            <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/listofrequirements.pdf" target="_blank">
+                                <img class="src_code_icon" src="images/document.png">
+                            </a>
+                        </li>
                     </ul>
+<!--
                     <div id="bm_scroll_indicator" class="scroll_indicator">
                         <img src="images/down_arrow.png">
                     </div>
+-->
                 </div>
                 
                 <div id="bm_brand_book" class="document hidden_card">
@@ -575,9 +340,8 @@ div {
             <div id="ff_screenshot_card" class="project screenshot card">
                 <img src="images/ff_screenshot.png">
                 
-                <div id="ff_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('ff_scroll_indicator')">
-                    <h2>Design &amp; Development<br> Details</h2>
-                    <img class="details close_btn" src="images/close_icon.png">
+                <div id="ff_accomplishments" class="project accomplishments hidden_card">
+                    <h2>Design &amp; Development Details</h2>
                     <ul>
                         <li>HTML5</li>
                         <li>CSS3</li>
@@ -589,9 +353,11 @@ div {
                         <li>HTML &amp; CSS Best Practices</li>
                         <li>Basic SEO Principles</li>
                     </ul>
+<!--
                     <div id="ff_scroll_indicator" class="scroll_indicator">
                         <img src="images/down_arrow.png">
                     </div>
+-->
                 </div>
                 
 <!--
@@ -614,9 +380,8 @@ div {
             <div id="bg_screenshot_card" class="project screenshot card">
                 <img src="images/bg_screenshot.png">
                 
-                <div id="bg_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('bg_scroll_indicator')">
-                    <h2>Design &amp; Development<br> Details</h2>
-                    <img class="details close_btn" src="images/close_icon.png">
+                <div id="bg_accomplishments" class="project accomplishments hidden_card">
+                    <h2>Design &amp; Development Details</h2>
                     <ul>
                         <li>WordPress</li>
                         <li>Custom CSS styles
@@ -678,11 +443,9 @@ div {
             <div id="cc_screenshot_card" class="project screenshot card">
                 <img src="images/cc_screenshot.png">
                 
-                <div id="cc_accomplishments" class="project accomplishments hidden_card" onscroll="hideElement('cc_scroll_indicator')">
-                    <h2>Design &amp; Development<br> Details</h2>
-                    <img class="details close_btn" src="images/close_icon.png">
+                <div id="cc_accomplishments" class="project accomplishments hidden_card">
+                    <h2>Design &amp; Development Details</h2>
                     <ul>
-                        <li>App Developed in Android Studio</li>
                         <li>Java
                             <ul>
                                 <li>Input Validation
@@ -692,7 +455,6 @@ div {
                                 <li>Intents
                                     <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
                                 </li>
-                                <li>Calculations</li>
                             </ul>
                         </li>
                         <li>Multiple Activities</li>
@@ -700,21 +462,15 @@ div {
                         <li>XML Layouts
                             <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
                         </li>           
-                        <li>Resources that Support Multiple:
-                            <ul>
-                                <li>Languages
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
-                                </li>
-                                <li>Screen Densities</li>
-                                <li>Orientations</li>
-                            </ul>
+                        <li>Support Multiple Languages
+                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
                         </li>
-                        <li>Tested With Emulators</li>
-                        <li>Prepared App for Play Store</li>
                     </ul>
+<!--
                     <div id="cc_scroll_indicator" class="scroll_indicator">
                         <img src="images/down_arrow.png">
                     </div>
+-->
                 </div>
                 
                 <div id="cc_src_validation" class="src_code hidden_card">

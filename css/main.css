@@ -200,7 +200,10 @@ html body main section#projects div div.hidden_card img.close_btn {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 10px 10px 0 0;
+  padding: 10px;
+}
+html body main section#projects div div.hidden_card img.close_btn:hover {
+  cursor: pointer;
 }
 html body main section#projects div div.document {
   overflow: hidden;
@@ -218,6 +221,9 @@ html body main section#projects div div.document iframe {
   margin: 0 auto;
   margin-top: 30px;
   border-top: 1px solid black;
+}
+html body main section#projects div div.accomplishments {
+  overflow: hidden;
 }
 html body main section#projects div div.accomplishments ul {
   width: 90%;
@@ -238,6 +244,9 @@ html body main section#projects div div.accomplishments ul li img.src_code_icon 
   top: 0;
   right: 4%;
   z-index: 1;
+}
+html body main section#projects div div.accomplishments ul li img.src_code_icon:hover {
+  cursor: pointer;
 }
 html body main section#projects div div.accomplishments ul li a img pdf_icon {
   width: 20px;

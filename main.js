@@ -34,15 +34,6 @@ function init() {
             }
         }
     }
-    detailsCloseBtns = document.getElementsByClassName("details close_btn");
-    for(var i = 0; i < detailsCloseBtns.length; i++) {
-        var screenshotCard = detailsCloseBtns[i].parentElement.parentElement;
-        var detailsBtn = screenshotCard.getElementsByClassName("project_buttons")[0].getElementsByClassName("view_details_btn")[0];
-        var accomplishmentsCard = screenshotCard.getElementsByClassName("accomplishments")[0];
-        
-        detailsCloseBtns[i].addEventListener("click", toggleDetailsBtn.bind(this, event, detailsBtn, accomplishmentsCard.id));
-    }
-    onclick="toggleDetailsBtn(event, this, 'pas_accomplishments')"
     document.getElementById("menu_icon").addEventListener("click", function(event) {
         slideOut(event);
     });
