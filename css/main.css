@@ -387,6 +387,7 @@ html body main section#resume div.card div#icons a img#pdf_icon {
   }
   html body main section#skills div ul li {
     width: 33%;
+    min-height: 102px;
   }
 }
 /*===============================
