@@ -78,6 +78,30 @@
         
         <section id="projects">
             <h1>Projects</h1>
+            
+            <div id="wonderland_screenshot_card" class="project screenshot card">
+                <img src="images/wonderland_screenshot.png">
+                
+                <div id="wonderland_accomplishments" class="project accomplishments hidden_card">
+                    <h2>Design &amp; Development Details</h2>
+                    <ul>
+                        <li>Collaborated with a client to:
+                            <ul>
+                                <li>determine user requirements</li>
+                                <li>determine the best layout for the site</li>
+                                <li>ensure that clients expectations were met</li>
+                            </ul>
+                        </li>
+                        <li>Designed with scalability in mind</li>    
+                        <li>Deployed live site</li>
+                    </ul>
+                </div>
+            
+                <div class="project_buttons">
+                    <button onclick="window.open('https://www.wonderlandrunning.com/', '_blank');">Visit Site</button>
+                    <button class="view_details_btn">View Details</button>
+                </div>
+            </div>
 
             <div id="pas_screenshot_card" class="project screenshot card">
                 <img src="images/pas_screenshot.png">
@@ -86,8 +110,8 @@
                     <h2>Design &amp; Development Details</h2>
 
                     <ul>
-                        <li>PHP
-                            <ul>    
+                        <li>PHP &nbsp; <!-- added &nbsp; because the first list item was floating up too high under "PHP" because PHP is such a short word -->
+                            <ul>
                                 <li>Sessions
                                     <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
                                 </li>
