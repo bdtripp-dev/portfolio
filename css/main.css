@@ -15,6 +15,14 @@
 .hide_in_mobile {
   display: none;
 }
+:target::before {
+  content: "";
+  display: block;
+  height: 62px;
+  /* fixed header height*/
+  margin: -62px 0 0;
+  /* negative fixed header height */
+}
 html {
   scroll-behavior: smooth;
 }
@@ -107,7 +115,6 @@ html body main {
 }
 html body main section {
   margin-top: 20px;
-  padding-top: 60px;
 }
 html body main section h1 {
   text-align: center;
@@ -446,8 +453,9 @@ html body main section#resume div.card div#icons a img#pdf_icon {
 ===============================*/
 @media (min-width: 580px) {
   html body main section#about {
-    margin-top: 0;
-    padding-top: 0;
+    margin-top: -62px;
+    padding-top: 62px;
+    overflow: hidden;
   }
   html body main section#about div#portrait_container {
     width: 40%;
@@ -480,7 +488,7 @@ html body main section#resume div.card div#icons a img#pdf_icon {
     font-size: .9rem;
   }
   html body main section#projects {
-    padding: 0;
+    margin-top: 0;
   }
   html body main section#projects div.card {
     width: 47%;
@@ -494,10 +502,6 @@ html body main section#resume div.card div#icons a img#pdf_icon {
 @media (min-width: 750px) {
   html body main section {
     clear: both;
-  }
-  html body main section#about {
-    margin-top: 0;
-    padding-top: 0;
   }
   html body main section#about div#intro_container div.card p {
     max-width: 85%;
@@ -554,6 +558,14 @@ html body main section#resume div.card div#icons a img#pdf_icon {
 ==== 1000PX CSS CODE AND UP =======
 ===============================*/
 @media (min-width: 1000px) {
+  :target::before {
+    content: "";
+    display: block;
+    height: 0;
+    /* fixed header height*/
+    margin: 0;
+    /* negative fixed header height */
+  }
   html body header {
     width: 15%;
     height: 150px;

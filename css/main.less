@@ -18,6 +18,13 @@
     display: none;
 }
 
+:target::before {
+  content: "";
+  display: block;
+  height: 62px; /* fixed header height*/
+  margin: -62px 0 0; /* negative fixed header height */
+}
+
 html {
     scroll-behavior: smooth;
     
@@ -138,8 +145,7 @@ html {
 
             section {
                 margin-top: 20px;
-                padding-top: 60px;
-
+                
                 h1 {
                     text-align: center;
                     font-size: 2.5rem;
@@ -765,8 +771,9 @@ html {
                 section {
                     
                     &#about {
-                        margin-top: 0;
-                        padding-top: 0;
+                        margin-top: -62px;
+                        padding-top: 62px;
+                        overflow: hidden;
                         
                         div {
                             
@@ -818,7 +825,7 @@ html {
                     }
                     
                     &#projects {
-                        padding: 0;
+                        margin-top: 0;
                         
                         h1 {
                             
@@ -938,8 +945,6 @@ html {
                     clear: both;
                     
                     &#about {
-                        margin-top: 0;
-                        padding-top: 0;
 
                         div {
                             
@@ -1187,6 +1192,12 @@ html {
 ===============================*/
 
 @media (min-width: 1000px) {
+    :target::before {
+            content: "";
+            display: block;
+            height: 0; /* fixed header height*/
+            margin: 0; /* negative fixed header height */
+    }
     
     html {
         
