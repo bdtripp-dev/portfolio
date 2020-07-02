@@ -2,8 +2,12 @@ var navHidden = true;
 var showingSrc = false;
 
 function init() {
+    document.getElementById("intro_container").style.visibility = "visible";
+    setIntroContHeight();
+    
     viewDetailsBtns = document.getElementsByClassName("view_details_btn");
     var detailsShowingTogglers = [];
+    
     for(var i = 0; i < viewDetailsBtns.length; i++) {
         var screenshotCard = viewDetailsBtns[i].parentElement.parentElement;
         var accomplishmentsCard = screenshotCard.getElementsByClassName("accomplishments")[0];
@@ -44,6 +48,8 @@ function init() {
         let slideOut = document.getElementById("slide_out");
         let main = document.getElementsByTagName("main")[0];
         
+        setIntroContHeight();
+
         if(showingSrc) {
             adjustDocumentHeight();
         }
@@ -64,6 +70,50 @@ function init() {
         }
     });
 }
+
+function setIntroContHeight() {
+    var introCont = document.getElementById("intro_container");
+    var introContChildren = introCont.children;
+    var portraitCont = document.getElementById("portrait_container");
+    var portraitContSize = window.getComputedStyle(portraitCont).height;
+    var newHeight = 0;
+
+    if(window.innerWidth > 580) {
+        newHeight = portraitContSize;
+    } else {
+        for(var i = 0; i < introContChildren.length; i++) {
+            var compStyle = window.getComputedStyle(introContChildren[i]);
+
+            newHeight += parseInt(compStyle.height);
+            newHeight += parseInt(compStyle.marginTop);
+            newHeight += parseInt(compStyle.marginBottom);
+            newHeight += parseInt(compStyle.paddingTop);
+            newHeight += parseInt(compStyle.paddingBottom);
+        }
+        
+        newHeight += "px";
+    }
+    
+    introCont.style.height = newHeight;
+}
+
+//function setAboutSectHeight() {
+//    var aboutSection = document.getElementById("about");
+//    var aboutSectChildren = aboutSection.children;
+//    var aboutSectHeight = 0;
+//    
+//    for(var i = 0; i < aboutSectChildren.length; i++) {
+//        var compStyle = window.getComputedStyle(aboutSectChildren[i]);
+//        
+//        aboutSectHeight += parseInt(compStyle.height);
+//        aboutSectHeight += parseInt(compStyle.marginTop);
+//        aboutSectHeight += parseInt(compStyle.marginBottom);
+//        aboutSectHeight += parseInt(compStyle.paddingTop);
+//        aboutSectHeight += parseInt(compStyle.paddingBottom);
+//    }
+//    
+//    aboutSection.style.height = aboutSectHeight + "px";
+//}
 
 function adjustDocumentHeight() {
     var documents = document.getElementsByClassName("document");

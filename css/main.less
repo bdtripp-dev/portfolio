@@ -2,10 +2,6 @@
 ==== MOBILE CSS CODE AND UP =======
 ===============================*/
 
-/*************************
-    Header Style
-*************************/
-
 .card {
     width: 93%;
     margin: 0 auto;
@@ -137,16 +133,8 @@ html {
 
         main {
             clear: both;
-            margin-top: 57px;
+            margin-top: 63px;
             background: url("../images/cream_pixels.png");
-
-            
-            img {
-
-                &#portrait {
-                    display: block;
-                }
-            }
 
             section {
                 margin-top: 20px;
@@ -171,22 +159,52 @@ html {
                     margin-top: 0;
                     padding-top: 0;
                     
+                    h1 {
+                        margin: 0;
+                    }
+                    
                     div {
                         
-                        &.card {
-                            padding: 20px 0;
-                            background-color: white;
-                            
-                            p:first-child {
-                                font-weight: bold;
-                                border-left: 4px solid #225568;
-                                margin-left: 13%;
+                        &#portrait_container {
+                            margin: 0 0 15px 0;
+
+                            img {
+
+                                &#portrait_small {
+                                    display: none;
+                                }
+
+                                &#portrait_og {
+                                    display: block;
+                                }
                             }
-                            
-                            p {
-                                font-size: 1.5rem;
-                                padding: 10px 30px;
-                                line-height: 130%;
+                        }
+                    }
+                    
+                    div {
+                        
+                        &#intro_container {
+                            margin-top: 15px;
+                            visibility: hidden; /* javascript sets this to visible after body is loaded */
+                        
+                            div {
+
+                                &.card {
+                                    padding: 20px 0;
+                                    background-color: white;
+
+                                    p:first-child {
+                                        font-weight: bold;
+                                        border-left: 4px solid #225568;
+                                        margin-left: 13%;
+                                    }
+
+                                    p {
+                                        font-size: 1.5rem;
+                                        padding: 10px 30px;
+                                        line-height: 130%;
+                                    }
+                                }
                             }
                         }
                     }
@@ -560,15 +578,20 @@ html {
                     
                     div {
                         
-                        &.card {
-
+                        &#intro_container {
                             
-                            p:first-child {
-                                margin-left: 8%;
-                            }
-                            
-                            p {
+                            div {
+                        
+                                &.card {
 
+                                    p:first-child {
+                                        margin-left: 8%;
+                                    }
+
+                                    p {
+
+                                    }
+                                }    
                             }
                         }
                     }
@@ -624,11 +647,17 @@ html {
                         padding-top: 0;
 
                         div {
+                            
+                            &#intro_container {
+                                
+                                div {
 
-                            &.card {
+                                    &.card {
 
-                                p {
+                                        p {
 
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -738,20 +767,58 @@ html {
                     &#about {
                         margin-top: 0;
                         padding-top: 0;
+                        
+                        div {
+                            
+                            &#portrait_container {
+                                width: 40%;
+                                margin: 0;
+                                float: left;
+                                
+                                img {
+                                
+                                    &#portrait_small {
+                                        display: block;
+                                    }
+
+                                    &#portrait_og {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
 
                         div {
+                            
+                            &#intro_container {
+                                width: 60%;
+                                float: left;    
+                                margin: 0;
+                                position: relative;
+                                background-color: white;
 
-                            &.card {
-                                max-width: 80%;
-                                
-                                p {
+                                div {
 
+                                    &.card {
+                                        border: none;
+                                        border-radius: 0;
+                                        box-shadow: none;
+                                        width: 100%;
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+
+                                        p {
+                                            font-size: .9rem;
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
                     
                     &#projects {
+                        padding: 0;
                         
                         h1 {
                             
@@ -855,7 +922,6 @@ html {
     }
 }
 
-
 /*===============================
 ==== 750PX CSS CODE AND UP =======
 ===============================*/
@@ -876,18 +942,20 @@ html {
                         padding-top: 0;
 
                         div {
+                            
+                            &#intro_container {
+                                
+                                div {
+                                
+                                    &.card {
 
-                            &.card {
-                                max-width: 76%;
-                                
-                                p:first-child {
-                                    
-                                }
-                                
-                                p {
-                                    max-width: 85%;
-                                    margin: 0 auto;
-                                    padding: 15px 30px;
+                                        p {
+                                            max-width: 85%;
+                                            margin: 0 auto;
+                                            padding: 15px 30px;
+                                            font-size: 1.2rem;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1028,7 +1096,22 @@ html {
                 section {
                     
                     &#about {
+                        
+                        div {
+                            
+                            &#intro_container {
+                                
+                                div {
+                                
+                                    &.card {
 
+                                        p {
+                                            font-size: 1.5rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                     
                     &#projects {
@@ -1157,10 +1240,16 @@ html {
                         
                         div {
                             
-                            &.card {
+                            &#intro_container {
                                 
-                                p:first-child {
-                                   
+                                div {
+                                
+                                    &.card {
+
+                                        p {
+                                           font-size: 1.4rem;
+                                        }
+                                    }
                                 }
                             }
                         }

@@ -90,14 +90,17 @@
         </ul>
     </nav>
     <main>
-        <img id="portrait" src="images/portrait.jpg">
         <section id="about">
-            <h1>About</h1>
-            <div class="card">
-                <p>Entry Level Full Stack Developer</p>
-                <p>Building quality websites and applications with HTML, CSS, JavaScript, PHP, Java and SQL.  Finds satisfaction in problem solving, understanding how things work, and making ideas come to fruition.</p>
+            <div id="portrait_container">
+                <img id="portrait_og" class="portrait" src="images/portrait.jpg">
+                <img id="portrait_small" class="portrait" src="images/portrait_small.jpg">
             </div>
-
+            <div id="intro_container">
+                <div class="card">
+                    <p>Entry Level Full Stack Developer</p>
+                    <p>Building quality websites and applications with HTML, CSS, JavaScript, PHP, Java and SQL.  Finds satisfaction in problem solving, understanding how things work, and making ideas come to fruition.</p>
+                </div>
+            </div>
         </section>
         
         <section id="projects">
@@ -326,7 +329,7 @@ return $items;
                 <div id="aithme_accomplishments" class="project accomplishments hidden_card">
                     <h2>Design &amp; Development Details</h2>
                     <ul>
-                        <li>Forms submissions to database</li>
+                        <li>Form submissions to database</li>
                         <li>AJAX</li>
                         <li>Input Validation</li>
                         <li>JavaScript Image Slider</li>

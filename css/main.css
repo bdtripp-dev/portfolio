@@ -2,9 +2,6 @@
 /*===============================
 ==== MOBILE CSS CODE AND UP =======
 ===============================*/
-/*************************
-    Header Style
-*************************/
 .card {
   width: 93%;
   margin: 0 auto;
@@ -105,11 +102,8 @@ html body nav#slide_out ul li img {
 }
 html body main {
   clear: both;
-  margin-top: 57px;
+  margin-top: 63px;
   background: url("../images/cream_pixels.png");
-}
-html body main img#portrait {
-  display: block;
 }
 html body main section {
   margin-top: 20px;
@@ -132,16 +126,33 @@ html body main section#about {
   margin-top: 0;
   padding-top: 0;
 }
-html body main section#about div.card {
+html body main section#about h1 {
+  margin: 0;
+}
+html body main section#about div#portrait_container {
+  margin: 0 0 15px 0;
+}
+html body main section#about div#portrait_container img#portrait_small {
+  display: none;
+}
+html body main section#about div#portrait_container img#portrait_og {
+  display: block;
+}
+html body main section#about div#intro_container {
+  margin-top: 15px;
+  visibility: hidden;
+  /* javascript sets this to visible after body is loaded */
+}
+html body main section#about div#intro_container div.card {
   padding: 20px 0;
   background-color: white;
 }
-html body main section#about div.card p:first-child {
+html body main section#about div#intro_container div.card p:first-child {
   font-weight: bold;
   border-left: 4px solid #225568;
   margin-left: 13%;
 }
-html body main section#about div.card p {
+html body main section#about div#intro_container div.card p {
   font-size: 1.5rem;
   padding: 10px 30px;
   line-height: 130%;
@@ -385,7 +396,7 @@ html body main section#resume div.card div#icons a img#pdf_icon {
 ==== 320PX CSS CODE AND UP =======
 ===============================*/
 @media (min-width: 320px) {
-  html body main section#about div.card p:first-child {
+  html body main section#about div#intro_container div.card p:first-child {
     margin-left: 8%;
   }
   html body main section#skills div ul li {
@@ -438,8 +449,38 @@ html body main section#resume div.card div#icons a img#pdf_icon {
     margin-top: 0;
     padding-top: 0;
   }
-  html body main section#about div.card {
-    max-width: 80%;
+  html body main section#about div#portrait_container {
+    width: 40%;
+    margin: 0;
+    float: left;
+  }
+  html body main section#about div#portrait_container img#portrait_small {
+    display: block;
+  }
+  html body main section#about div#portrait_container img#portrait_og {
+    display: none;
+  }
+  html body main section#about div#intro_container {
+    width: 60%;
+    float: left;
+    margin: 0;
+    position: relative;
+    background-color: white;
+  }
+  html body main section#about div#intro_container div.card {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  html body main section#about div#intro_container div.card p {
+    font-size: .9rem;
+  }
+  html body main section#projects {
+    padding: 0;
   }
   html body main section#projects div.card {
     width: 47%;
@@ -458,13 +499,11 @@ html body main section#resume div.card div#icons a img#pdf_icon {
     margin-top: 0;
     padding-top: 0;
   }
-  html body main section#about div.card {
-    max-width: 76%;
-  }
-  html body main section#about div.card p {
+  html body main section#about div#intro_container div.card p {
     max-width: 85%;
     margin: 0 auto;
     padding: 15px 30px;
+    font-size: 1.2rem;
   }
   html body main section#skills div#languages ul li,
   html body main section#skills div#tools ul li {
@@ -502,6 +541,9 @@ html body main section#resume div.card div#icons a img#pdf_icon {
 ==== 900PX CSS CODE AND UP =======
 ===============================*/
 @media (min-width: 900px) {
+  html body main section#about div#intro_container div.card p {
+    font-size: 1.5rem;
+  }
   html body main section#projects div.card {
     width: 31%;
     float: left;
@@ -539,6 +581,9 @@ html body main section#resume div.card div#icons a img#pdf_icon {
     clear: none;
     margin-left: 15%;
     margin-top: 0px;
+  }
+  html body main section#about div#intro_container div.card p {
+    font-size: 1.4rem;
   }
   html body main section#projects div.project.screenshot div.document {
     overflow: hidden;
