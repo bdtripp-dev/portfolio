@@ -245,6 +245,40 @@ html body main section#projects div div.document iframe {
 }
 html body main section#projects div div.accomplishments {
   overflow: hidden;
+  font-size: .85rem;
+}
+html body main section#projects div div.accomplishments div {
+  clear: both;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+}
+html body main section#projects div div.accomplishments div a {
+  text-decoration: none;
+  border: 2px inset black;
+  height: 25px;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 62%;
+  margin: 0 auto;
+  color: #022735;
+  font-size: .9rem;
+}
+html body main section#projects div div.accomplishments div a:hover {
+  background-color: #e8e8e8;
+}
+html body main section#projects div div.accomplishments div a:focus {
+  border-style: outset;
+}
+html body main section#projects div div.accomplishments div a:active {
+  border-style: inset;
+}
+html body main section#projects div div.accomplishments div a img {
+  width: 25px;
 }
 html body main section#projects div div.accomplishments ul {
   width: 90%;
@@ -254,7 +288,7 @@ html body main section#projects div div.accomplishments ul {
   float: right;
 }
 html body main section#projects div div.accomplishments ul li {
-  margin: 10px 0;
+  margin: 8px 0;
   position: relative;
   clear: both;
   padding-bottom: 5px;

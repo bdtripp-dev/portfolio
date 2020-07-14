@@ -323,7 +323,47 @@ html {
                             
                             &.accomplishments {
                                 overflow: hidden;
+                                font-size: .85rem;
                                 
+                                div {
+                                    clear: both;
+                                    position: absolute;
+                                    bottom: 5px;
+                                    width: 100%;
+                                    
+                                    a {
+                                        text-decoration: none;
+                                        border: 2px inset black;
+                                        height: 25px;
+                                        display: inline-block;
+                                        border-radius: 5px;
+                                        padding: 5px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-evenly;
+                                        width: 62%;
+                                        margin: 0 auto;
+                                        color: #022735;
+                                        font-size: .9rem;
+                                        
+                                        &:hover {
+                                            background-color: darken(white, 9%);
+                                        }
+                                        
+                                        &:focus {
+                                            border-style: outset;
+                                        }
+                                        
+                                        &:active {
+                                            border-style: inset;
+                                        }
+                                        
+                                        img {
+                                            width: 25px;
+                                        }
+                                    }
+                                }
+
                                 ul {
                                     width: 90%;
                                     list-style-type: disc;
@@ -332,7 +372,7 @@ html {
                                     float: right;
 
                                     li {
-                                        margin: 10px 0;
+                                        margin: 8px 0;
                                         position: relative;
                                         clear: both;
                                         padding-bottom: 5px;
