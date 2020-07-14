@@ -263,7 +263,7 @@ html body main section#projects div div.accomplishments div a {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 62%;
+  width: 200px;
   margin: 0 auto;
   color: #022735;
   font-size: .9rem;
