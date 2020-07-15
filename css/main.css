@@ -176,7 +176,7 @@ html body main section#projects div.screenshot.card {
   overflow: hidden;
   text-align: center;
 }
-html body main section#projects div.screenshot.card img:hover {
+html body main section#projects div.screenshot.card > img:hover {
   cursor: pointer;
 }
 html body main section#projects div div.project_buttons {
@@ -201,6 +201,33 @@ html body main section#projects div div.project_buttons button {
 }
 html body main section#projects div div.project_buttons button:hover {
   background-color: #0077cc;
+}
+html body main section#projects div div.language_icons {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  bottom: 85px;
+  left: 10px;
+  opacity: 88%;
+  padding: 8px;
+  color: white;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px #111;
+}
+html body main section#projects div div.language_icons li {
+  font-size: .6rem;
+  display: block;
+  float: left;
+}
+html body main section#projects div div.language_icons li:not(:first-of-type) {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 2px groove #444;
+}
+html body main section#projects div div.language_icons li img {
+  margin: 0 auto 5px auto;
+  width: 25px;
+  display: block;
 }
 html body main section#projects div div.hidden_card {
   position: absolute;
