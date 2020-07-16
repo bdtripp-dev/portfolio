@@ -204,29 +204,43 @@ html body main section#projects div div.project_buttons button:hover {
 }
 html body main section#projects div div.language_icons {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(45, 45, 45, 0.99);
   bottom: 85px;
-  left: 10px;
-  opacity: 88%;
-  padding: 8px;
+  left: 0;
   color: white;
   letter-spacing: 1px;
-  border-radius: 5px;
   box-shadow: 5px 5px 20px #111;
+  width: 100%;
+  height: 75px;
 }
-html body main section#projects div div.language_icons li {
+html body main section#projects div div.language_icons ul {
+  padding: 15px;
+  height: 45px;
+}
+html body main section#projects div div.language_icons ul li {
   font-size: .6rem;
-  display: block;
-  float: left;
+  transition: font-size 0.2s ease-in-out;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
 }
-html body main section#projects div div.language_icons li:not(:first-of-type) {
+html body main section#projects div div.language_icons ul li:hover {
+  font-size: .7rem;
+  transition: font-size 0.2s ease-in-out;
+}
+html body main section#projects div div.language_icons ul li:hover img {
+  width: 30px;
+  transition: width 0.2s ease-in-out;
+}
+html body main section#projects div div.language_icons ul li:not(:first-of-type) {
   margin-left: 10px;
   padding-left: 10px;
   border-left: 2px groove #444;
 }
-html body main section#projects div div.language_icons li img {
+html body main section#projects div div.language_icons ul li img {
   margin: 0 auto 5px auto;
   width: 25px;
+  transition: width 0.2s ease-in-out;
   display: block;
 }
 html body main section#projects div div.hidden_card {
