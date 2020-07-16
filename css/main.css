@@ -172,25 +172,26 @@ html body main section#projects div.screenshot.card {
   position: relative;
   margin-top: 40px;
   background-color: white;
-  height: 386px;
+  height: 427px;
   overflow: hidden;
   text-align: center;
 }
 html body main section#projects div.screenshot.card > img:hover {
   cursor: pointer;
 }
-html body main section#projects div div.project_buttons {
+html body main section#projects div div.project_bottom {
   position: absolute;
   background-color: white;
   width: 100%;
   bottom: 0;
-  border-top: 1px solid #999;
+  border-top: 2px ridge #999;
+  box-shadow: 5px 5px 15px black;
 }
-html body main section#projects div div.project_buttons button {
+html body main section#projects div div.project_bottom button {
   display: inline-block;
   width: 41%;
   height: 34px;
-  margin: 20px 2%;
+  margin: 10px 2%;
   cursor: pointer;
   color: #FFF;
   background-color: #0095ff;
@@ -199,23 +200,22 @@ html body main section#projects div div.project_buttons button {
   border: 1px solid transparent;
   border-radius: 3px;
 }
-html body main section#projects div div.project_buttons button:hover {
+html body main section#projects div div.project_bottom button:hover {
   background-color: #0077cc;
 }
 html body main section#projects div div.language_icons {
-  position: absolute;
-  background-color: rgba(45, 45, 45, 0.99);
-  bottom: 85px;
-  left: 0;
-  color: white;
+  color: black;
   letter-spacing: 1px;
-  box-shadow: 5px 5px 20px #111;
   width: 100%;
-  height: 75px;
 }
 html body main section#projects div div.language_icons ul {
-  padding: 15px;
   height: 45px;
+  padding-top: 10px;
+  border-bottom: 1px solid #BBB;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 4px;
+  border-radius: 5px;
 }
 html body main section#projects div div.language_icons ul li {
   font-size: .6rem;
@@ -233,9 +233,9 @@ html body main section#projects div div.language_icons ul li:hover img {
   transition: width 0.2s ease-in-out;
 }
 html body main section#projects div div.language_icons ul li:not(:first-of-type) {
-  margin-left: 10px;
-  padding-left: 10px;
-  border-left: 2px groove #444;
+  margin-left: 5px;
+  padding-left: 5px;
+  border-left: 1px solid #CCC;
 }
 html body main section#projects div div.language_icons ul li img {
   margin: 0 auto 5px auto;
