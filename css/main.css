@@ -190,7 +190,7 @@ html body main section#projects div div.project_bottom {
 html body main section#projects div div.project_bottom button {
   display: inline-block;
   width: 41%;
-  height: 34px;
+  height: 40px;
   margin: 10px 2%;
   cursor: pointer;
   color: #FFF;
@@ -199,6 +199,7 @@ html body main section#projects div div.project_bottom button {
   box-shadow: inset 0 1px 0 #66bfff;
   border: 1px solid transparent;
   border-radius: 3px;
+  vertical-align: top;
 }
 html body main section#projects div div.project_bottom button:hover {
   background-color: #0077cc;
