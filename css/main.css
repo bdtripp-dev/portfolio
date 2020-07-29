@@ -292,7 +292,7 @@ html body main section#projects div div.accomplishments {
 html body main section#projects div div.accomplishments div {
   clear: both;
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
   width: 100%;
 }
 html body main section#projects div div.accomplishments div a {
