@@ -329,31 +329,196 @@ return $items;
                 <div id="hh_accomplishments" class="project accomplishments hidden_card">
                     <h2>Design &amp; Development Details</h2>
                     <ul>
-                        <li>Developed using object-oriented programming in JavaScript</li>
-                        <li>Utilizes OOP principles including:
+                        <li>Written in Java using object-oriented programming<br/>
                             <ul>
-                                <li>Constructors</li>
-                                <li>Inheritance</li>
-                                <li>Polymorphism</li>
+                                <li>Responsibility-driven design</li>
+                                <li>Loosely coupled classes</li>
+                                <li>Highly cohesive classes and methods</li>
+                                <li>Data hiding and encapsulation</li>
+                                <li>Javadoc comments</li>
                             </ul>
                         </li>
                     </ul>
                     <div>
-                        <a href="https://github.com/bdtripp/chord_and_scale_finder" target="_blank"><img src="images/github.png">View Full Source Code</a>
+                        <a href="https://github.com/bdtripp/haunted_house" target="_blank"><img src="images/github.png">View Full Source Code</a>
                     </div>
                 </div>
             
                 <div class="project_bottom">
                     <div class="language_icons">
                         <ul>
-                            <li><img src="images/javascript.svg">JavaScript</li>
-                            <li><img src="images/html5.svg">HTML5</li>
-                            <li><img src="images/css3.svg">CSS3</li>
+                            <li><img src="images/java.svg">Java</li>
                         </ul>
                     </div>
                     
-                    <button id="hh_visit_site_btn" onclick="window.open('http://bdtripp.com/chord_and_scale_finder/', '_blank');">Visit Site</button>
                     <button id="hh_view_details_btn" class="view_details_btn">View Details</button>
+                </div>
+            </div>
+            
+            <div id="cc_screenshot_card" class="project screenshot card">
+                <img id="cc_screenshot" class="tracked_image" src="images/cc_screenshot.png" onclick="window.open('http://bdtripp.com/app-release.apk');">
+                
+                <div id="cc_accomplishments" class="project accomplishments hidden_card">
+                    <h2>Design &amp; Development Details</h2>
+                    <ul>
+                        <li>Java &nbsp; <!-- added &nbsp; because the first list item was floating up too high under "Java" because Java is such a short word -->
+                            <ul>
+                                <li>Input Validation
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
+                                </li>
+                                <li>Event Handling</li>
+                                <li>Intents
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Multiple Activities</li>
+                        <li>Lifecycle Callbacks</li>      
+                        <li>XML Layouts
+                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
+                        </li>           
+                        <li>Support Multiple Languages
+                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
+                        </li>
+                    </ul>
+                    <div>
+                        <a href="https://github.com/bdtripp/calorie_calculator" target="_blank"><img src="images/github.png">View Full Source Code</a>
+                    </div>
+<!--
+                    <div id="cc_scroll_indicator" class="scroll_indicator">
+                        <img src="images/down_arrow.png">
+                    </div>
+-->
+                </div>
+                
+                <div id="cc_src_validation" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
+                       
+<pre><code class="Java">/*
+    Checking user input and displaying a toast when the input is invalid. 
+*/
+
+try {
+    float f = Float.parseFloat(weightString);
+} catch (NumberFormatException e){
+    Toast.makeText(this, R.string.missingWeight, Toast.LENGTH_LONG).show();
+    return;
+}
+
+try {
+    float f = Float.parseFloat(metString);
+} catch (NumberFormatException e) {
+    Toast.makeText(this, R.string.missingMET, Toast.LENGTH_LONG).show();
+    return;
+}
+
+if (Float.parseFloat(weightString) > 1400f) {
+    Toast.makeText(this, R.string.invalidWeight, Toast.LENGTH_LONG).show();
+    return;
+}
+
+if ((Float.parseFloat(metString) &lt; 0.9f) | (Float.parseFloat(metString) > 23f)) {
+    Toast.makeText(this, R.string.invalidMET, Toast.LENGTH_LONG).show();
+    return;
+}
+</code></pre>
+                </div>
+                
+                <div id="cc_src_intent" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
+                       
+<pre><code class="Java">/*
+    Passing data between activities using an intent. 
+*/
+
+Intent intent = new Intent(this, OutputActivity.class);
+
+intent.putExtra(EXTRA_WEIGHT, Float.parseFloat(weightString));
+intent.putExtra(EXTRA_MET, Float.parseFloat(metString));
+
+startActivity(intent);
+</code></pre>
+                </div> 
+                
+                <div id="cc_src_xml" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
+                       
+<pre><code class="XML">&lt;!--
+    App layout written in XML. 
+--&gt;
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+
+&lt;LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"&gt;
+
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/creator"
+        android:padding="@dimen/small_space"/&gt;
+
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/version"
+        android:padding="@dimen/small_space"/&gt;
+
+    &lt;Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/close"
+        android:onClick="dismiss"
+        android:padding="@dimen/small_space"
+        android:layout_marginBottom="@dimen/small_space" /&gt;
+
+&lt;/LinearLayout&gt;
+</code></pre>
+                </div>
+                
+                <div id="cc_src_languages" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
+                       
+<pre><code class="XML">&lt;!--
+    String resources provided in Spanish. If the user has set their phone's language to Spanish, 
+    the app will use the string resources provided here. 
+--&gt;
+
+&lt;resources&gt;
+    &lt;string name="app_name"&gt;Calculadora de Calorías&lt;/string&gt;
+    &lt;string name="weight_label"&gt;Peso(lbs)&lt;/string&gt;
+    &lt;string name="met_value_label"&gt;Cantidad de MET&lt;/string&gt;
+    &lt;string name="burn_rate_label"&gt;Tasa de Quema:&lt;/string&gt;
+    &lt;string name="weight_amount"&gt;0.00&lt;/string&gt;
+    &lt;string name="met_value"&gt;0.0&lt;/string&gt;
+    &lt;string name="calorie_burn_rate"&gt;0.00&lt;/string&gt;
+    &lt;string name="calories_per_hour_label"&gt;Calorías/hora&lt;/string&gt;
+    &lt;string name="calculate_button"&gt;Calcular&lt;/string&gt;
+    &lt;string name="metDescription"&gt;Las cantidades de MET se pueden encontrar en:
+        https://sites.google.com/site/compendiumofphysicalactivities/Activity-Categories&lt;/string&gt;
+    &lt;string name="missingWeight"&gt;Por favor, introduzca un peso!&lt;/string&gt;
+    &lt;string name="missingMET"&gt;Por favor, introduzca un valor MET!&lt;/string&gt;
+    &lt;string name="invalidWeight"&gt;El peso debe ser inferior a 1400 libras&lt;/string&gt;
+    &lt;string name="invalidMET"&gt;El valor MET debe estar entre 0.9 y 23.0&lt;/string&gt;
+&lt;/resources&gt;
+
+</code></pre>
+                </div> 
+                <div class="project_bottom">
+                    <div class="language_icons">
+                        <ul>
+                            <li><img src="images/android.svg">Android</li>
+                            <li><img src="images/java.svg">Java</li>
+                            <li><img src="images/xml_dark.svg">XML</li>
+                        </ul>
+                    </div>
+                    
+                    <button id="cc_download_app_btn" onclick="window.open('http://bdtripp.com/app-release.apk');">Download Android App</button>
+                    <button id="cc_view_details_btn" class="view_details_btn">View Details</button>
                 </div>
             </div>
             
@@ -611,173 +776,6 @@ return $items;
                     
                     <button id="bg_visit_site_btn" onclick="window.open('http://bdtripp.com/bramblewood_guitars/', '_blank');">Visit Site</button>
                     <button id="bg_view_details_btn" class="view_details_btn">View Details</button>
-                </div>
-            </div>
-            
-            <div id="cc_screenshot_card" class="project screenshot card">
-                <img id="cc_screenshot" class="tracked_image" src="images/cc_screenshot.png" onclick="window.open('http://bdtripp.com/app-release.apk');">
-                
-                <div id="cc_accomplishments" class="project accomplishments hidden_card">
-                    <h2>Design &amp; Development Details</h2>
-                    <ul>
-                        <li>Java &nbsp; <!-- added &nbsp; because the first list item was floating up too high under "Java" because Java is such a short word -->
-                            <ul>
-                                <li>Input Validation
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
-                                </li>
-                                <li>Event Handling</li>
-                                <li>Intents
-                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
-                                </li>
-                            </ul>
-                        </li>
-                        <li>Multiple Activities</li>
-                        <li>Lifecycle Callbacks</li>      
-                        <li>XML Layouts
-                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
-                        </li>           
-                        <li>Support Multiple Languages
-                            <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
-                        </li>
-                    </ul>
-                    <div>
-                        <a href="https://github.com/bdtripp/calorie_calculator" target="_blank"><img src="images/github.png">View Full Source Code</a>
-                    </div>
-<!--
-                    <div id="cc_scroll_indicator" class="scroll_indicator">
-                        <img src="images/down_arrow.png">
-                    </div>
--->
-                </div>
-                
-                <div id="cc_src_validation" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
-                       
-<pre><code class="Java">/*
-    Checking user input and displaying a toast when the input is invalid. 
-*/
-
-try {
-    float f = Float.parseFloat(weightString);
-} catch (NumberFormatException e){
-    Toast.makeText(this, R.string.missingWeight, Toast.LENGTH_LONG).show();
-    return;
-}
-
-try {
-    float f = Float.parseFloat(metString);
-} catch (NumberFormatException e) {
-    Toast.makeText(this, R.string.missingMET, Toast.LENGTH_LONG).show();
-    return;
-}
-
-if (Float.parseFloat(weightString) > 1400f) {
-    Toast.makeText(this, R.string.invalidWeight, Toast.LENGTH_LONG).show();
-    return;
-}
-
-if ((Float.parseFloat(metString) &lt; 0.9f) | (Float.parseFloat(metString) > 23f)) {
-    Toast.makeText(this, R.string.invalidMET, Toast.LENGTH_LONG).show();
-    return;
-}
-</code></pre>
-                </div>
-                
-                <div id="cc_src_intent" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
-                       
-<pre><code class="Java">/*
-    Passing data between activities using an intent. 
-*/
-
-Intent intent = new Intent(this, OutputActivity.class);
-
-intent.putExtra(EXTRA_WEIGHT, Float.parseFloat(weightString));
-intent.putExtra(EXTRA_MET, Float.parseFloat(metString));
-
-startActivity(intent);
-</code></pre>
-                </div> 
-                
-                <div id="cc_src_xml" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
-                       
-<pre><code class="XML">&lt;!--
-    App layout written in XML. 
---&gt;
-
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-
-&lt;LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"&gt;
-
-    &lt;TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/creator"
-        android:padding="@dimen/small_space"/&gt;
-
-    &lt;TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/version"
-        android:padding="@dimen/small_space"/&gt;
-
-    &lt;Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/close"
-        android:onClick="dismiss"
-        android:padding="@dimen/small_space"
-        android:layout_marginBottom="@dimen/small_space" /&gt;
-
-&lt;/LinearLayout&gt;
-</code></pre>
-                </div>
-                
-                <div id="cc_src_languages" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
-                       
-<pre><code class="XML">&lt;!--
-    String resources provided in Spanish. If the user has set their phone's language to Spanish, 
-    the app will use the string resources provided here. 
---&gt;
-
-&lt;resources&gt;
-    &lt;string name="app_name"&gt;Calculadora de Calorías&lt;/string&gt;
-    &lt;string name="weight_label"&gt;Peso(lbs)&lt;/string&gt;
-    &lt;string name="met_value_label"&gt;Cantidad de MET&lt;/string&gt;
-    &lt;string name="burn_rate_label"&gt;Tasa de Quema:&lt;/string&gt;
-    &lt;string name="weight_amount"&gt;0.00&lt;/string&gt;
-    &lt;string name="met_value"&gt;0.0&lt;/string&gt;
-    &lt;string name="calorie_burn_rate"&gt;0.00&lt;/string&gt;
-    &lt;string name="calories_per_hour_label"&gt;Calorías/hora&lt;/string&gt;
-    &lt;string name="calculate_button"&gt;Calcular&lt;/string&gt;
-    &lt;string name="metDescription"&gt;Las cantidades de MET se pueden encontrar en:
-        https://sites.google.com/site/compendiumofphysicalactivities/Activity-Categories&lt;/string&gt;
-    &lt;string name="missingWeight"&gt;Por favor, introduzca un peso!&lt;/string&gt;
-    &lt;string name="missingMET"&gt;Por favor, introduzca un valor MET!&lt;/string&gt;
-    &lt;string name="invalidWeight"&gt;El peso debe ser inferior a 1400 libras&lt;/string&gt;
-    &lt;string name="invalidMET"&gt;El valor MET debe estar entre 0.9 y 23.0&lt;/string&gt;
-&lt;/resources&gt;
-
-</code></pre>
-                </div> 
-                <div class="project_bottom">
-                    <div class="language_icons">
-                        <ul>
-                            <li><img src="images/android.svg">Android</li>
-                            <li><img src="images/java.svg">Java</li>
-                            <li><img src="images/xml_dark.svg">XML</li>
-                        </ul>
-                    </div>
-                    
-                    <button id="cc_download_app_btn" onclick="window.open('http://bdtripp.com/app-release.apk');">Download Android App</button>
-                    <button id="cc_view_details_btn" class="view_details_btn">View Details</button>
                 </div>
             </div>
             <div style="clear: both;"></div>
