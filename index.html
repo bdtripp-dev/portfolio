@@ -328,7 +328,11 @@ return $items;
                 <div id="hh_accomplishments" class="project accomplishments hidden_card">
                     <h2>Design &amp; Development Details</h2>
                     <ul>
-                        <li>Written in Java using object-oriented programming<br/>
+                        <li>Written in Java using<br/>object-oriented programming
+                            <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('hh_class_diagram', 'hh_accomplishments', this, event)">
+                            <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/hh_class_diagram.pdf" target="_blank">
+                                <img class="src_code_icon" src="images/document.png">
+                            </a>
                             <ul>
                                 <li>Responsibility-driven design</li>
                                 <li>Loosely coupled classes</li>
@@ -341,6 +345,13 @@ return $items;
                     <div>
                         <a href="https://github.com/bdtripp/haunted_house" target="_blank"><img src="images/github.png">View Full Source Code</a>
                     </div>
+                </div>
+                
+                <div id="hh_class_diagram" class="document hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_class_diagram', 'hh_accomplishments', this, event)">
+
+                    <iframe src="https://drive.google.com/file/d/1_qD02Fqy-iJdmdWeRtRzSJUiS-NexW6G/preview"></iframe>
+
                 </div>
             
                 <div class="project_bottom">
