@@ -334,7 +334,9 @@ return $items;
                                 <img class="src_code_icon" src="images/document.png">
                             </a>
                             <ul>
-                                <li>Static polymorphism (method overloading) (Room lines 50 -62)</li>
+                                <li>Static polymorphism (method overloading)
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('hh_static_poly', 'hh_accomplishments', this, event)">
+                                </li>
                                 <li>Responsibility-driven design
                                     <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
                                 </li>
@@ -363,6 +365,38 @@ return $items;
 
                 </div>
                 
+                <div id="hh_static_poly" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_static_poly', 'hh_accomplishments', this, event)">
+
+<pre><code class="Java">/*
+    There are two addItem methods in the Room class that have a differing number of arguments. 
+*/
+
+    /**
+     * Create an item that exists in this room
+     * @param name The name of the item
+     * @param description The description of the item
+     * @param weight The weight of the item
+     * @param isEdible The edibility of the item
+     * @param propToAffect The property the item affects
+     * @param affectValue The amount the property will be changed by
+     */
+    public void addItem(String name, String description, int weight, boolean isEdible, String propToAffect, int affectValue)
+    {
+        items.add(new Item(name, description, weight, isEdible, propToAffect, affectValue));
+    }
+
+    /**
+     * Create an item that exists in this room
+     * @param item The item to add
+     */
+    public void addItem(Item item)
+    {
+        items.add(item);
+    }
+</code></pre>
+                </div>
+                
                 <div id="hh_src_rdd" class="src_code hidden_card">
                     <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
 
@@ -373,69 +407,69 @@ return $items;
 
     /* The fields of the Room class */
 
-    private String description;
-    private HashMap<String, Exit> exits;
-    private ArrayList<Item> items;
-    private ArrayList<Character> characters;
+        private String description;
+        private HashMap<String, Exit> exits;
+        private ArrayList<Item> items;
+        private ArrayList<Character> characters;
 
     /* Some of the methods that modify or access the fields of the Room class */
 
-    /**
-     * Create an item that exists in this room
-     * @param item The item to add
-     */
-    public void addItem(Item item)
-    {
-        items.add(item);
-    }
-
-    /**
-     * Remove an item from this room
-     * @param name The name of the item to remove
-     * @return item The item that was removed
-     */
-    public Item removeItemFromRoom(String name)
-    {
-        for(Item item : items) {
-            if(item.getName().equals(name)) {
-                items.remove(item);
-                return item;
-            }
+        /**
+         * Create an item that exists in this room
+         * @param item The item to add
+         */
+        public void addItem(Item item)
+        {
+            items.add(item);
         }
-        return null;
-    }
 
-    /**
-     * Create a character that will exist in this room
-     * @param name The name of the character
-     * @param initialDialog The initial dialog the character will speak
-     * @param acceptanceDialog The dialog the character will speak upon accepting an item
-     * @param itemSought The name of the item that the character is seeking
-     * @param itemForReward The item the character will reward a player
-     */
-    public void addCharacter(String name, String initialDialog,
-                             String acceptanceDialog, String itemSought, Item itemForReward)
-    {
-        characters.add(new Character(
-                name,
-                initialDialog,
-                acceptanceDialog,
-                itemSought,
-                itemForReward
-        ));
-    }
+        /**
+         * Remove an item from this room
+         * @param name The name of the item to remove
+         * @return item The item that was removed
+         */
+        public Item removeItemFromRoom(String name)
+        {
+            for(Item item : items) {
+                if(item.getName().equals(name)) {
+                    items.remove(item);
+                    return item;
+                }
+            }
+            return null;
+        }
 
-    /**
-     * Define an exit from this room.
-     * @param direction The direction of the exit.
-     * @param neighbor The room in the given direction.
-     * @param locked True if the door is locked
-     */
-    public void setExit(String direction, Room neighbor, boolean locked)
-    {
-        Exit exit = new Exit(direction, neighbor, locked);
-        exits.put(direction, exit);
-    }
+        /**
+         * Create a character that will exist in this room
+         * @param name The name of the character
+         * @param initialDialog The initial dialog the character will speak
+         * @param acceptanceDialog The dialog the character will speak upon accepting an item
+         * @param itemSought The name of the item that the character is seeking
+         * @param itemForReward The item the character will reward a player
+         */
+        public void addCharacter(String name, String initialDialog,
+                                 String acceptanceDialog, String itemSought, Item itemForReward)
+        {
+            characters.add(new Character(
+                    name,
+                    initialDialog,
+                    acceptanceDialog,
+                    itemSought,
+                    itemForReward
+            ));
+        }
+
+        /**
+         * Define an exit from this room.
+         * @param direction The direction of the exit.
+         * @param neighbor The room in the given direction.
+         * @param locked True if the door is locked
+         */
+        public void setExit(String direction, Room neighbor, boolean locked)
+        {
+            Exit exit = new Exit(direction, neighbor, locked);
+            exits.put(direction, exit);
+        }
 
 </code></pre>
                 </div>
@@ -472,51 +506,51 @@ return $items;
 
     /* For example, the fields of the Player class: */
 
-    private String name;
-    private int maxCarryWeight;
-    private int health = 100;
-    private int strength = 10;
-    private ArrayList<Item> items;
-    private Room currentRoom;
-    private Stack<Room> roomHistory;
-    private static final int maxMovesAllowed = 30;
-    private Room beamerLocation;
-    private boolean beamerCharged;
+        private String name;
+        private int maxCarryWeight;
+        private int health = 100;
+        private int strength = 10;
+        private ArrayList<Item> items;
+        private Room currentRoom;
+        private Stack<Room> roomHistory;
+        private static final int maxMovesAllowed = 30;
+        private Room beamerLocation;
+        private boolean beamerCharged;
     
     /* And some of the getters and setters of the Player class: */
 
-    /**
-     * Set whether or not the beamer is charged
-     * @param value True if the beamer is charged, otherwise false
-     */
-    public void setBeamerCharge(boolean value) {
-        beamerCharged = value;
-    }
+        /**
+         * Set whether or not the beamer is charged
+         * @param value True if the beamer is charged, otherwise false
+         */
+        public void setBeamerCharge(boolean value) {
+            beamerCharged = value;
+        }
 
-    /**
-     * Get the beamer charge
-     * @return Whether or not the beamer is charged
-     */
-    public boolean getBeamerCharge() {
-        return beamerCharged;
-    }
-    
-    /**
-     * Set the maximum weight that the player can carry at a time
-     */
-    public void setMaxCarryWeight(int max)
-    {
-        maxCarryWeight = max;
-    }
+        /**
+         * Get the beamer charge
+         * @return Whether or not the beamer is charged
+         */
+        public boolean getBeamerCharge() {
+            return beamerCharged;
+        }
 
-    /**
-     * Get the maximum weight that the player can carry at a time
-     * @return The maximum weight the player can carry
-     */
-    public int getMaxCarryWeight()
-    {
-        return maxCarryWeight;
-    }
+        /**
+         * Set the maximum weight that the player can carry at a time
+         */
+        public void setMaxCarryWeight(int max)
+        {
+            maxCarryWeight = max;
+        }
+
+        /**
+         * Get the maximum weight that the player can carry at a time
+         * @return The maximum weight the player can carry
+         */
+        public int getMaxCarryWeight()
+        {
+            return maxCarryWeight;
+        }
 
 </code></pre>
 
