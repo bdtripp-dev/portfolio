@@ -334,11 +334,20 @@ return $items;
                                 <img class="src_code_icon" src="images/document.png">
                             </a>
                             <ul>
-                                <li>Responsibility-driven design</li>
+                                <li>Static polymorphism (method overloading) (Room lines 50 -62)</li>
+                                <li>Responsibility-driven design
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
+                                </li>
                                 <li>Loosely coupled classes</li>
-                                <li>Highly cohesive classes and methods</li>
-                                <li>Data hiding and encapsulation</li>
-                                <li>Javadoc comments</li>
+                                <li>Highly cohesive classes and methods
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('hh_src_cohesive', 'hh_accomplishments', this, event)">
+                                </li>
+                                <li>Data hiding and encapsulation
+                                    <img class="src_code_icon" src="images/source_code_icon.svg" onclick="checkSize('hh_src_dh_and_e', 'hh_accomplishments', this, event)">
+                                </li>
+                                <li>Javadoc comments
+                                    <img class="src_code_icon" src="images/document.png" onclick="checkSize('hh_javadoc', 'hh_accomplishments', this, event)">
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -352,6 +361,171 @@ return $items;
 
                     <iframe src="https://drive.google.com/file/d/1_qD02Fqy-iJdmdWeRtRzSJUiS-NexW6G/preview"></iframe>
 
+                </div>
+                
+                <div id="hh_src_rdd" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
+
+<pre><code class="Java">/*
+    Methods are defined in the same class as the fields that they access or manipulate. Excerpts from
+    the Room class are shown below as an example of this. 
+*/
+
+    /* The fields of the Room class */
+
+    private String description;
+    private HashMap<String, Exit> exits;
+    private ArrayList<Item> items;
+    private ArrayList<Character> characters;
+
+    /* Some of the methods that modify or access the fields of the Room class */
+
+    /**
+     * Create an item that exists in this room
+     * @param item The item to add
+     */
+    public void addItem(Item item)
+    {
+        items.add(item);
+    }
+
+    /**
+     * Remove an item from this room
+     * @param name The name of the item to remove
+     * @return item The item that was removed
+     */
+    public Item removeItemFromRoom(String name)
+    {
+        for(Item item : items) {
+            if(item.getName().equals(name)) {
+                items.remove(item);
+                return item;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Create a character that will exist in this room
+     * @param name The name of the character
+     * @param initialDialog The initial dialog the character will speak
+     * @param acceptanceDialog The dialog the character will speak upon accepting an item
+     * @param itemSought The name of the item that the character is seeking
+     * @param itemForReward The item the character will reward a player
+     */
+    public void addCharacter(String name, String initialDialog,
+                             String acceptanceDialog, String itemSought, Item itemForReward)
+    {
+        characters.add(new Character(
+                name,
+                initialDialog,
+                acceptanceDialog,
+                itemSought,
+                itemForReward
+        ));
+    }
+
+    /**
+     * Define an exit from this room.
+     * @param direction The direction of the exit.
+     * @param neighbor The room in the given direction.
+     * @param locked True if the door is locked
+     */
+    public void setExit(String direction, Room neighbor, boolean locked)
+    {
+        Exit exit = new Exit(direction, neighbor, locked);
+        exits.put(direction, exit);
+    }
+
+</code></pre>
+                </div>
+                
+                <div id="hh_src_cohesive" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_src_cohesive', 'hh_accomplishments', this, event)">
+
+<pre><code class="Java">/*
+    Each class and method has a single, well-defined purpose. For example, the takeItem method of the 
+    Player class simply adds an item to the Player's ArrayList of items. The code that is used to 
+    print a message to the screen when the player picks up an item is defined in a different method 
+    in order to keep high cohesion. Additionally, the print method is defined in the Game class 
+    rather than the Player class in order to keep the Player class highly cohesive. 
+*/
+
+    /**
+     * Adds an item to the list of what the player is carrying
+     * @param item The item to take
+     */
+    public void takeItem(Item item)
+    {
+        items.add(item);
+    }
+</code></pre>
+
+                </div>
+                
+                <div id="hh_src_dh_and_e" class="src_code hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_src_dh_and_e', 'hh_accomplishments', this, event)">
+
+<pre><code class="Java">/*
+    All fields are defined as private and accessed through getters and setters.
+*/
+
+    /* For example, the fields of the Player class: */
+
+    private String name;
+    private int maxCarryWeight;
+    private int health = 100;
+    private int strength = 10;
+    private ArrayList<Item> items;
+    private Room currentRoom;
+    private Stack<Room> roomHistory;
+    private static final int maxMovesAllowed = 30;
+    private Room beamerLocation;
+    private boolean beamerCharged;
+    
+    /* And some of the getters and setters of the Player class: */
+
+    /**
+     * Set whether or not the beamer is charged
+     * @param value True if the beamer is charged, otherwise false
+     */
+    public void setBeamerCharge(boolean value) {
+        beamerCharged = value;
+    }
+
+    /**
+     * Get the beamer charge
+     * @return Whether or not the beamer is charged
+     */
+    public boolean getBeamerCharge() {
+        return beamerCharged;
+    }
+    
+    /**
+     * Set the maximum weight that the player can carry at a time
+     */
+    public void setMaxCarryWeight(int max)
+    {
+        maxCarryWeight = max;
+    }
+
+    /**
+     * Get the maximum weight that the player can carry at a time
+     * @return The maximum weight the player can carry
+     */
+    public int getMaxCarryWeight()
+    {
+        return maxCarryWeight;
+    }
+
+</code></pre>
+
+                </div>
+                
+                <div id="hh_javadoc" class="document hidden_card">
+                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_javadoc', 'hh_accomplishments', this, event)">
+
+                    <iframe src="http://bdtripp.com/documents/hh_javadoc"></iframe>
                 </div>
             
                 <div class="project_bottom">
