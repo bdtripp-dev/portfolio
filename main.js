@@ -197,22 +197,6 @@ function displayFullScreen(inFrontId, accomplishmentsId, event) {
         event.stopPropagation();
     };
     
-//    window.ontouchmove = function(event) {
-//        event.preventDefault();
-//    }
-//    
-//    window.onwheel = function(event) {
-//        event.preventDefault();
-//    }
-//    
-//    window.onscroll = function(event) {
-//        event.preventDefault();
-//    }
-    
-//    document.body.ontouchmove = "event.preventDefault()";
-//    document.body.onwheel = "event.preventDefault()";
-//    document.body.onscroll = "event.preventDefault()";
-    
     for (let card of hiddenCards) {
         card.style.display = "none";
     }
@@ -257,7 +241,7 @@ function closeFullScreen(inFrontId, accomplishmentsId, event) {
     }
     
     document.getElementsByTagName("html")[0].style.overflow = "auto";
-    document.body.style.overflow = "scroll";
+    document.body.style.overflow = "auto";
     inFront.style.width = "100%";
     inFront.style.height = "311px";
     inFront.style.zIndex = "5";
