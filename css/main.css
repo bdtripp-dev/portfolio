@@ -165,7 +165,7 @@ html body main section#about div#intro_container div.card p {
   line-height: 130%;
 }
 html body main section#projects h2 {
-  padding: 10px 0;
+  padding: 15px 0 10px 0;
   margin: 0 auto;
 }
 html body main section#projects div.screenshot.card {
