@@ -1,7 +1,20 @@
 var navHidden = true;
 var showingSrc = false;
+var activeItem = "";
 
 function init() {
+    var listItems = document.querySelectorAll("nav li");
+    
+    for (let item of listItems) {
+        item.children[0].addEventListener("click", function() {
+            if (activeItem !== "") {
+                currentActiveItem = document.getElementsByClassName("active")[0];
+                removeActiveItem(currentActiveItem);
+            }
+            setActiveItem(item);
+        });
+    }
+    
     document.getElementById("intro_container").style.visibility = "visible";
     setIntroContHeight();
     
@@ -96,24 +109,6 @@ function setIntroContHeight() {
     
     introCont.style.height = newHeight;
 }
-
-//function setAboutSectHeight() {
-//    var aboutSection = document.getElementById("about");
-//    var aboutSectChildren = aboutSection.children;
-//    var aboutSectHeight = 0;
-//    
-//    for(var i = 0; i < aboutSectChildren.length; i++) {
-//        var compStyle = window.getComputedStyle(aboutSectChildren[i]);
-//        
-//        aboutSectHeight += parseInt(compStyle.height);
-//        aboutSectHeight += parseInt(compStyle.marginTop);
-//        aboutSectHeight += parseInt(compStyle.marginBottom);
-//        aboutSectHeight += parseInt(compStyle.paddingTop);
-//        aboutSectHeight += parseInt(compStyle.paddingBottom);
-//    }
-//    
-//    aboutSection.style.height = aboutSectHeight + "px";
-//}
 
 function adjustDocumentHeight() {
     var documents = document.getElementsByClassName("document");
@@ -257,4 +252,13 @@ function closeFullScreen(inFrontId, accomplishmentsId, event) {
     overlay.style.zIndex = "3";
     event.stopPropagation();
     showingSrc = false;
+}
+    
+function removeActiveItem(listItem) {
+    listItem.classList.remove("active");
+}
+
+function setActiveItem(listItem) {
+    listItem.className = "active";
+    activeItem = listItem;
 }
