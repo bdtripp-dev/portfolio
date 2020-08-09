@@ -96,7 +96,7 @@ html body nav#slide_out ul {
   width: 100%;
 }
 html body nav#slide_out ul li {
-  border-bottom: 1px ridge #CCC;
+  border-bottom: 1px solid #CCC;
 }
 html body nav#slide_out ul li.active {
   border-left: 3px groove #CCC;
