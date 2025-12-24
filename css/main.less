@@ -213,7 +213,6 @@ html {
                         
                         &#intro_container {
                             margin-top: 15px;
-                            visibility: hidden; /* javascript sets this to visible after body is loaded */
                         
                             div {
 
@@ -896,13 +895,13 @@ html {
                         margin-top: -62px;
                         padding-top: 62px;
                         overflow: hidden;
+                        display: flex;
                         
                         div {
                             
                             &#portrait_container {
                                 width: 40%;
                                 margin: 0;
-                                float: left;
                                 
                                 img {
                                 
@@ -920,10 +919,10 @@ html {
                         div {
                             
                             &#intro_container {
-                                width: 60%;
-                                float: left;    
+                                width: 60%;   
                                 margin: 0;
-                                position: relative;
+                                display: flex;
+                                align-items: center;
                                 background-color: white;
 
                                 div {
@@ -933,9 +932,6 @@ html {
                                         border-radius: 0;
                                         box-shadow: none;
                                         width: 100%;
-                                        position: absolute;
-                                        top: 50%;
-                                        transform: translateY(-50%);
 
                                         p {
                                             font-size: .9rem;
@@ -1064,7 +1060,6 @@ html {
             main {
                 
                 section {
-                    clear: both;
                     
                     &#about {
 
