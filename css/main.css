@@ -68,7 +68,7 @@ html body header div.header_text {
   position: absolute;
   width: 100%;
 }
-html body header div.header_text p#name {
+html body header div.header_text h1 {
   font-size: 1.4rem;
   margin-bottom: 5px;
   color: #225568;
@@ -131,16 +131,16 @@ html body main {
 html body main section {
   margin-top: 20px;
 }
-html body main section h1 {
+html body main section h3 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 20px;
-  background-color: #022735;
+  background-image: linear-gradient(45deg, #022735, #165269);
   padding: 10px 0;
   color: white;
   letter-spacing: 0.1rem;
 }
-html body main section h2 {
+html body main section h4 {
   text-align: center;
   font-size: 1.2rem;
 }
@@ -148,7 +148,7 @@ html body main section#about {
   margin-top: 0;
   padding-top: 0;
 }
-html body main section#about h1 {
+html body main section#about h3 {
   margin: 0;
 }
 html body main section#about div#portrait_container {
@@ -177,7 +177,7 @@ html body main section#about div#intro_container div.card p {
   padding: 10px 30px;
   line-height: 130%;
 }
-html body main section#projects h2 {
+html body main section#projects h4 {
   padding: 15px 0 10px 0;
   margin: 0 auto;
 }
@@ -405,7 +405,7 @@ html body main section#projects div div.src_code pre code {
   line-height: 130%;
   font-family: 'Source Code Pro', Consolas, monospace;
 }
-html body main section#skills h2 {
+html body main section#skills h4 {
   font-size: 1.7rem;
   border-bottom: 1px solid #CCC;
   padding: 10px 0;
@@ -438,7 +438,7 @@ html body main section#education div.card {
   padding: 20px 0;
   background-color: white;
 }
-html body main section#education div.card h2 {
+html body main section#education div.card h4 {
   padding: 2%;
   font-weight: bold;
 }
