@@ -1,3 +1,9 @@
+@primary-color: #165269;
+@secondary-color: #0095ff;
+// @secondary-color2: 
+@secondary-color3: #022735;
+@accent-color: #A64531;
+
 /*===============================
 ==== MOBILE CSS CODE AND UP =======
 ===============================*/
@@ -8,6 +14,7 @@
     border: 1px solid #DDD;
     border-radius: 5px;
     box-shadow: 5px 5px 20px #AAA;
+    transition: all .3s ease;
 }
 
 .clear_float {
@@ -83,7 +90,11 @@ html {
                     h1 {
                         font-size: 1.4rem;
                         margin-bottom: 5px;
-                        color: #225568;
+                        color: @primary-color;
+                    }
+
+                    h2 {
+
                     }
                 }
             }
@@ -96,7 +107,7 @@ html {
                         width: 190px;
                         background-color: white;
                         left: -200px;
-                        transition: left .5s;
+                        transition: left .7s;
                         height: 100vh;
                         top: 0;
                         z-index: 4;
@@ -169,7 +180,7 @@ html {
                     text-align: center;
                     font-size: 2.5rem;
                     margin-bottom: 20px;
-                    background-image: linear-gradient(45deg, #022735, #165269);
+                    background-image: linear-gradient(45deg, @secondary-color3, @primary-color);
                     padding: 10px 0;
                     color: white;
                     letter-spacing: 0.1rem;
@@ -219,7 +230,7 @@ html {
 
                                     p:first-child {
                                         font-weight: bold;
-                                        border-left: 4px solid #225568;
+                                        border-left: 4px solid @accent-color;
                                         margin-left: 13%;
                                     }
 
@@ -286,15 +297,17 @@ html {
                                     margin: 10px 2%;
                                     cursor: pointer;
                                     color: #FFF;
-                                    background-color: #0095ff;
+                                    background-color: @secondary-color;
                                     border-color: #07c;
                                     box-shadow: inset 0 1px 0 #66bfff;
                                     border: 1px solid transparent;  
                                     border-radius: 3px;
                                     vertical-align: top;
+                                    transition: background-color .3s ease;
                                     
                                     &:hover {
-                                        background-color: darken(#0095ff, 10%);
+                                        background-color: darken(@secondary-color, 10%);
+                                        transition: background-color .3s ease;
                                     }
                                 }
                             }
@@ -307,7 +320,7 @@ html {
                                 ul {
                                     height: 45px;
                                     padding-top: 10px;
-                                    border-bottom: 1px solid #BBB;
+                                    border-bottom: 1px solid @accent-color;
                                     width: 90%;
                                     margin: 0 auto;
                                     padding-bottom: 4px;
@@ -333,7 +346,7 @@ html {
                                         &:not(:first-of-type) {
                                             margin-left: 5px;
                                             padding-left: 5px;
-                                            border-left: 1px solid #CCC;
+                                            border-left: 1px solid @accent-color;
                                         }
 
                                         img {
@@ -421,7 +434,7 @@ html {
                                         justify-content: space-evenly;
                                         width: 200px;
                                         margin: 0 auto;
-                                        color: #022735;
+                                        color: @primary-color;
                                         font-size: .9rem;
                                         
                                         &:hover {
@@ -551,7 +564,7 @@ html {
                     
                     h4 {
                         font-size: 1.7rem;                            
-                        border-bottom: 1px solid #CCC;
+                        border-bottom: 1px solid @accent-color;
                         padding: 10px 0;   
                     }
                     
@@ -608,6 +621,10 @@ html {
 
                                 li {
                                     margin-bottom: 10px;
+
+                                    &::marker {
+                                        color: @accent-color;
+                                    }
                                 }
                             }
                         }

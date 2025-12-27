@@ -7,6 +7,7 @@
   border: 1px solid #DDD;
   border-radius: 5px;
   box-shadow: 5px 5px 20px #AAA;
+  transition: all 0.3s ease;
 }
 .clear_float {
   clear: both;
@@ -71,14 +72,14 @@ html body header div.header_text {
 html body header div.header_text h1 {
   font-size: 1.4rem;
   margin-bottom: 5px;
-  color: #225568;
+  color: #165269;
 }
 html body nav#slide_out {
   position: fixed;
   width: 190px;
   background-color: white;
   left: -200px;
-  transition: left 0.5s;
+  transition: left 0.7s;
   height: 100vh;
   top: 0;
   z-index: 4;
@@ -169,7 +170,7 @@ html body main section#about div#intro_container div.card {
 }
 html body main section#about div#intro_container div.card p:first-child {
   font-weight: bold;
-  border-left: 4px solid #225568;
+  border-left: 4px solid #A64531;
   margin-left: 13%;
 }
 html body main section#about div#intro_container div.card p {
@@ -216,9 +217,11 @@ html body main section#projects div div.project_bottom button {
   border: 1px solid transparent;
   border-radius: 3px;
   vertical-align: top;
+  transition: background-color 0.3s ease;
 }
 html body main section#projects div div.project_bottom button:hover {
   background-color: #0077cc;
+  transition: background-color 0.3s ease;
 }
 html body main section#projects div div.language_icons {
   color: black;
@@ -228,7 +231,7 @@ html body main section#projects div div.language_icons {
 html body main section#projects div div.language_icons ul {
   height: 45px;
   padding-top: 10px;
-  border-bottom: 1px solid #BBB;
+  border-bottom: 1px solid #A64531;
   width: 90%;
   margin: 0 auto;
   padding-bottom: 4px;
@@ -252,7 +255,7 @@ html body main section#projects div div.language_icons ul li:hover img {
 html body main section#projects div div.language_icons ul li:not(:first-of-type) {
   margin-left: 5px;
   padding-left: 5px;
-  border-left: 1px solid #CCC;
+  border-left: 1px solid #A64531;
 }
 html body main section#projects div div.language_icons ul li img {
   margin: 0 auto 5px auto;
@@ -323,7 +326,7 @@ html body main section#projects div div.accomplishments div a {
   justify-content: space-evenly;
   width: 200px;
   margin: 0 auto;
-  color: #022735;
+  color: #165269;
   font-size: 0.9rem;
 }
 html body main section#projects div div.accomplishments div a:hover {
@@ -407,7 +410,7 @@ html body main section#projects div div.src_code pre code {
 }
 html body main section#skills h4 {
   font-size: 1.7rem;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #A64531;
   padding: 10px 0;
 }
 html body main section#skills div ul {
@@ -449,6 +452,9 @@ html body main section#education div.card ul {
 }
 html body main section#education div.card ul li {
   margin-bottom: 10px;
+}
+html body main section#education div.card ul li::marker {
+  color: #A64531;
 }
 html body main section#contact div.card {
   background-color: white;
