@@ -15,9 +15,6 @@ function init() {
         });
     }
     
-    document.getElementById("intro_container").style.visibility = "visible";
-    setIntroContHeight();
-    
     viewDetailsBtns = document.getElementsByClassName("view_details_btn");
     var detailsShowingTogglers = [];
     
@@ -60,8 +57,6 @@ function init() {
     window.addEventListener("resize", function() {
         let slideOut = document.getElementById("slide_out");
         let main = document.getElementsByTagName("main")[0];
-        
-        setIntroContHeight();
 
         if(showingSrc) {
             adjustDocumentHeight();
@@ -82,32 +77,6 @@ function init() {
             document.getElementsByTagName("header")[0].style.zIndex = "2";
         }
     });
-}
-
-function setIntroContHeight() {
-    var introCont = document.getElementById("intro_container");
-    var introContChildren = introCont.children;
-    var portraitCont = document.getElementById("portrait_container");
-    var portraitContSize = window.getComputedStyle(portraitCont).height;
-    var newHeight = 0;
-
-    if(window.innerWidth > 580) {
-        newHeight = portraitContSize;
-    } else {
-        for(var i = 0; i < introContChildren.length; i++) {
-            var compStyle = window.getComputedStyle(introContChildren[i]);
-
-            newHeight += parseInt(compStyle.height);
-            newHeight += parseInt(compStyle.marginTop);
-            newHeight += parseInt(compStyle.marginBottom);
-            newHeight += parseInt(compStyle.paddingTop);
-            newHeight += parseInt(compStyle.paddingBottom);
-        }
-        
-        newHeight += "px";
-    }
-    
-    introCont.style.height = newHeight;
 }
 
 function adjustDocumentHeight() {
