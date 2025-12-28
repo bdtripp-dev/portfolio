@@ -2,7 +2,10 @@
 @secondary-color: #0095ff;
 // @secondary-color2: 
 @secondary-color3: #022735;
-@accent-color: #A64531;
+@accent-color: #C7523A;
+
+@serif_font: "Libre Baskerville", serif;
+@sans-serif-font: "Lato", sans-serif;
 
 /*===============================
 ==== MOBILE CSS CODE AND UP =======
@@ -32,11 +35,15 @@
   margin: -62px 0 0; /* negative fixed header height */
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: @serif_font;
+}
+
 html {
     scroll-behavior: smooth;
     
     body {
-        font-family: "Roboto", sans-serif;
+        font-family: @sans-serif-font;
         
         div {
             
@@ -181,7 +188,7 @@ html {
                     font-size: 2.5rem;
                     margin-bottom: 20px;
                     background-image: linear-gradient(45deg, @secondary-color3, @primary-color);
-                    padding: 10px 0;
+                    padding: 13px 0;
                     color: white;
                     letter-spacing: 0.1rem;
                 }
@@ -232,6 +239,16 @@ html {
                                         font-weight: bold;
                                         border-left: 4px solid @accent-color;
                                         margin-left: 13%;
+                                        border-radius: 8px;
+                                    }
+
+                                    p:last-child::first-letter {
+                                        font-family: @serif_font;
+                                        float: left; 
+                                        font-size: 2.7em; 
+                                        margin-right: .05em; 
+                                        margin-top: .11em;
+                                        color: @secondary-color3;
                                     }
 
                                     p {
@@ -643,9 +660,13 @@ html {
                                 margin: 20px auto;
                                 display: inline-block;
                                 text-align: left;
+                                border-left: 2px solid @accent-color;
+                                border-right: 2px solid @accent-color;
+                                border-radius: 15px;
+                                padding: 0 13% 0 13%;
                                 
                                 li {
-                                    margin: 10px auto;
+                                    margin: 20px auto;
 
                                     img {
                                         width: 25px;
@@ -655,6 +676,8 @@ html {
                                     a {
                                         display: table-cell;
                                         vertical-align: middle;
+                                        color: @primary-color;
+                                        text-decoration: none;
                                     }
                                 }
                             } 
