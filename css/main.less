@@ -655,6 +655,7 @@ html {
                         &.card {
                             background-color: white;
                             text-align: center;
+                            box-sizing: border-box;
                             
                             ul {
                                 margin: 20px auto;
@@ -667,6 +668,12 @@ html {
                                 
                                 li {
                                     margin: 20px auto;
+                                    
+
+                                    &:hover {
+                                            transform: scale(1.1);
+                                            transition: transform .3s ease;
+                                        }
 
                                     img {
                                         width: 25px;
@@ -1159,7 +1166,7 @@ html {
                         div {
                             
                             &.card {
-                                max-width: 45%;
+                                max-width: 55%;
                             }
                         }
                     }
@@ -1169,7 +1176,7 @@ html {
                         div {
                             
                             &.card {
-                                max-width: 35%;
+                                max-width: 55%;
                             }
                         }
                     }

@@ -476,6 +476,7 @@ html body main section#education div.card ul li::marker {
 html body main section#contact div.card {
   background-color: white;
   text-align: center;
+  box-sizing: border-box;
 }
 html body main section#contact div.card ul {
   margin: 20px auto;
@@ -488,6 +489,10 @@ html body main section#contact div.card ul {
 }
 html body main section#contact div.card ul li {
   margin: 20px auto;
+}
+html body main section#contact div.card ul li:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 html body main section#contact div.card ul li img {
   width: 25px;
@@ -629,10 +634,10 @@ html body main section#resume div.card div#icons a img#pdf_icon {
     width: 20%;
   }
   html body main section#education div.card {
-    max-width: 45%;
+    max-width: 55%;
   }
   html body main section#contact div.card {
-    max-width: 35%;
+    max-width: 55%;
   }
   html body main section#resume div.card {
     position: relative;
