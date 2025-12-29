@@ -4,6 +4,9 @@
 @secondary-color3: #022735;
 @accent-color: #C7523A;
 
+@main-text-color: #333333;
+@main-background-color: #F2F2F2;
+
 @serif_font: "Libre Baskerville", serif;
 @sans-serif-font: "Lato", sans-serif;
 
@@ -44,6 +47,8 @@ html {
     
     body {
         font-family: @sans-serif-font;
+        color: @main-text-color;
+        background-color: @main-background-color;
         
         div {
             
@@ -74,7 +79,7 @@ html {
             position: fixed;
             width: 100%;
             top: 0;
-            background-color: white;
+            background-color: @main-background-color;
             z-index: 2;
             
             img {
@@ -128,7 +133,7 @@ html {
                 &#slide_out {   
                         position: fixed;
                         width: 190px;
-                        background-color: white;
+                        background-color: @main-background-color;
                         left: -200px;
                         transition: left .7s;
                         height: 100vh;
@@ -164,7 +169,7 @@ html {
                             }
                             
                             a {
-                                color: black; 
+                                color: inherit;
                                 text-decoration: none;
                                 display: flex;
                                 align-items: center;
@@ -249,7 +254,7 @@ html {
 
                                 &.card {
                                     padding: 20px 0;
-                                    background-color: white;
+                                    background-color: @main-background-color;
 
                                     p:first-child {
                                         font-weight: bold;
@@ -298,7 +303,6 @@ html {
                         &.screenshot.card {
                             position: relative;
                             margin-top: 40px;
-                            background-color: white;
                             height: 427px;
                             overflow: hidden;
                             text-align: center;
@@ -325,7 +329,7 @@ html {
                             
                             &.project_bottom {
                                 position: absolute;
-                                background-color: white;
+                                background-color: @main-background-color;
                                 width: 100%;
                                 bottom: 0;
                                 border-top: 2px ridge #999;
@@ -354,7 +358,6 @@ html {
                             }
                             
                             &.language_icons {
-                                color: black;
                                 letter-spacing: 1px;
                                 width: 100%;
                                 
@@ -410,7 +413,7 @@ html {
                                 border: 1px solid #DDD;
                                 border-radius: 2px;
                                 height: 311px;
-                                background-color: white;
+                                background-color: @main-background-color;
                                 overflow: scroll;
                                 text-align: left;
                                 
@@ -465,7 +468,7 @@ html {
                                     
                                     a {
                                         text-decoration: none;
-                                        border: 2px inset black;
+                                        border: 2px inset @main-text-color;
                                         height: 25px;
                                         display: inline-block;
                                         border-radius: 5px;
@@ -477,9 +480,10 @@ html {
                                         margin: 0 auto;
                                         color: @primary-color;
                                         font-size: .9rem;
+                                        transition: background-color .3s;
                                         
                                         &:hover {
-                                            background-color: darken(white, 9%);
+                                            background-color: darken(@main-background-color, 9%);
                                         }
                                         
                                         &:focus {
@@ -632,12 +636,12 @@ html {
                         }
                         
                         &#languages {
-                            background-color: white;
+                            background-color: @main-background-color;
                         }
                         
                         &#tools {
                             margin: 30px auto 0 auto;
-                            background-color: white;
+                            background-color: @main-background-color;
                         }
                     }
                 }
@@ -648,7 +652,7 @@ html {
 
                         &.card {
                             padding: 20px 0;
-                            background-color: white;
+                            background-color: @main-background-color;
                             
                             h4 {
                                 padding: 2% 2% 1% 2%;
@@ -687,7 +691,7 @@ html {
                     div {
                         
                         &.card {
-                            background-color: white;
+                            background-color: @main-background-color;
                             text-align: center;
                             box-sizing: border-box;
                             
@@ -999,7 +1003,7 @@ html {
                                 margin: 0;
                                 display: flex;
                                 align-items: center;
-                                background-color: white;
+                                background-color: @main-background-color;
 
                                 div {
 
