@@ -4,8 +4,8 @@
 @secondary-color3: #022735;
 @accent-color: #C7523A;
 
-@main-text-color: #333333;
-@main-background-color: #F2F2F2;
+@dark-grey: #333333;
+@off-white: #F2F2F2;
 
 @serif_font: "Libre Baskerville", serif;
 @sans-serif-font: "Lato", sans-serif;
@@ -47,8 +47,8 @@ html {
     
     body {
         font-family: @sans-serif-font;
-        color: @main-text-color;
-        background-color: @main-background-color;
+        color: @dark-grey;
+        background-color: @off-white;
         
         div {
             
@@ -79,7 +79,7 @@ html {
             position: fixed;
             width: 100%;
             top: 0;
-            background-color: @main-background-color;
+            background-color: @off-white;
             z-index: 2;
             
             img {
@@ -133,7 +133,7 @@ html {
                 &#slide_out {   
                         position: fixed;
                         width: 190px;
-                        background-color: @main-background-color;
+                        background-color: @off-white;
                         left: -200px;
                         transition: left .7s;
                         height: 100vh;
@@ -254,7 +254,7 @@ html {
 
                                 &.card {
                                     padding: 20px 0;
-                                    background-color: @main-background-color;
+                                    background-color: @off-white;
 
                                     p:first-child {
                                         font-weight: bold;
@@ -329,7 +329,7 @@ html {
                             
                             &.project_bottom {
                                 position: absolute;
-                                background-color: @main-background-color;
+                                background-color: @off-white;
                                 width: 100%;
                                 bottom: 0;
                                 border-top: 2px ridge #999;
@@ -413,7 +413,7 @@ html {
                                 border: 1px solid #DDD;
                                 border-radius: 2px;
                                 height: 311px;
-                                background-color: @main-background-color;
+                                background-color: @off-white;
                                 overflow: scroll;
                                 text-align: left;
                                 
@@ -468,7 +468,7 @@ html {
                                     
                                     a {
                                         text-decoration: none;
-                                        border: 2px inset @main-text-color;
+                                        border: 2px inset @dark-grey;
                                         height: 25px;
                                         display: inline-block;
                                         border-radius: 5px;
@@ -483,7 +483,7 @@ html {
                                         transition: background-color .3s;
                                         
                                         &:hover {
-                                            background-color: darken(@main-background-color, 9%);
+                                            background-color: darken(@off-white, 9%);
                                         }
                                         
                                         &:focus {
@@ -636,12 +636,12 @@ html {
                         }
                         
                         &#languages {
-                            background-color: @main-background-color;
+                            background-color: @off-white;
                         }
                         
                         &#tools {
                             margin: 30px auto 0 auto;
-                            background-color: @main-background-color;
+                            background-color: @off-white;
                         }
                     }
                 }
@@ -652,7 +652,7 @@ html {
 
                         &.card {
                             padding: 20px 0;
-                            background-color: @main-background-color;
+                            background-color: @off-white;
                             
                             h4 {
                                 padding: 2% 2% 1% 2%;
@@ -691,7 +691,7 @@ html {
                     div {
                         
                         &.card {
-                            background-color: @main-background-color;
+                            background-color: @off-white;
                             text-align: center;
                             box-sizing: border-box;
                             
@@ -1003,7 +1003,7 @@ html {
                                 margin: 0;
                                 display: flex;
                                 align-items: center;
-                                background-color: @main-background-color;
+                                background-color: @off-white;
 
                                 div {
 

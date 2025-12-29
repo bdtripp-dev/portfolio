@@ -22,7 +22,7 @@ function init() {
         var screenshotCard = viewDetailsBtns[i].parentElement.parentElement;
         var accomplishmentsCard = screenshotCard.getElementsByClassName("accomplishments")[0];
         
-        viewDetailsBtns[i].addEventListener("click", toggleDetailsBtn.bind(this, event, viewDetailsBtns[i], accomplishmentsCard.id));
+        viewDetailsBtns[i].addEventListener("click", toggleDetailsBtn.bind(this, viewDetailsBtns[i], accomplishmentsCard.id));
         
         detailsShowingTogglers[accomplishmentsCard.id] = function() {
             var showingDetails = false;
@@ -36,7 +36,7 @@ function init() {
             }
         }();
         
-        function toggleDetailsBtn(event, detailsBtn, cardId) {
+        function toggleDetailsBtn(detailsBtn, cardId, event) {
             detailsShowing = detailsShowingTogglers[cardId]();
             if(!detailsShowing) {
                 detailsBtn.innerText = "View Details";
