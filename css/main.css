@@ -23,11 +23,19 @@
   margin: -62px 0 0;
   /* negative fixed header height */
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Libre Baskerville", serif;
+}
 html {
   scroll-behavior: smooth;
 }
 html body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 html body div#overlay {
   position: fixed;
@@ -71,8 +79,22 @@ html body header div.header_text {
 }
 html body header div.header_text h1 {
   font-size: 1.4rem;
-  margin-bottom: 5px;
   color: #165269;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  max-width: 185px;
+  margin: 0 auto 7px;
+}
+html body header div.header_text h1 span {
+  margin-right: -1.6px;
+  margin-left: -1.6px;
+  display: inline-block;
+  transition: all 0.3s ease-out;
+}
+html body header div.header_text h1 span:hover {
+  transform: scale(1.5);
+  color: #2383a8;
 }
 html body nav#slide_out {
   position: fixed;
@@ -111,10 +133,10 @@ html body nav#slide_out ul li a {
   align-items: center;
   line-height: 1.6rem;
   padding: 15px 0 15px 15px;
+  transition: font-size ease-in 0.1s;
 }
 html body nav#slide_out ul li a:hover {
   font-size: 1.1rem;
-  transition: font-size ease-in 0.1s;
 }
 html body nav#slide_out ul li a:hover img {
   width: 25px;
@@ -137,7 +159,7 @@ html body main section h3 {
   font-size: 2.5rem;
   margin-bottom: 20px;
   background-image: linear-gradient(45deg, #022735, #165269);
-  padding: 10px 0;
+  padding: 13px 0;
   color: white;
   letter-spacing: 0.1rem;
 }
@@ -170,8 +192,23 @@ html body main section#about div#intro_container div.card {
 }
 html body main section#about div#intro_container div.card p:first-child {
   font-weight: bold;
-  border-left: 4px solid #A64531;
+  border-left: 2px solid #C7523A;
   margin-left: 13%;
+  border-radius: 8px;
+}
+html body main section#about div#intro_container div.card p:last-child {
+  transition: color 0.3s ease;
+}
+html body main section#about div#intro_container div.card p:last-child:hover {
+  color: #022735;
+}
+html body main section#about div#intro_container div.card p:last-child::first-letter {
+  font-family: "Libre Baskerville", serif;
+  float: left;
+  font-size: 2.7em;
+  margin-right: 0.05em;
+  margin-top: 0.11em;
+  color: #022735;
 }
 html body main section#about div#intro_container div.card p {
   font-size: 1.5rem;
@@ -231,7 +268,7 @@ html body main section#projects div div.language_icons {
 html body main section#projects div div.language_icons ul {
   height: 45px;
   padding-top: 10px;
-  border-bottom: 1px solid #A64531;
+  border-bottom: 1px solid #C7523A;
   width: 90%;
   margin: 0 auto;
   padding-bottom: 4px;
@@ -255,7 +292,7 @@ html body main section#projects div div.language_icons ul li:hover img {
 html body main section#projects div div.language_icons ul li:not(:first-of-type) {
   margin-left: 5px;
   padding-left: 5px;
-  border-left: 1px solid #A64531;
+  border-left: 1px solid #C7523A;
 }
 html body main section#projects div div.language_icons ul li img {
   margin: 0 auto 5px auto;
@@ -410,7 +447,7 @@ html body main section#projects div div.src_code pre code {
 }
 html body main section#skills h4 {
   font-size: 1.7rem;
-  border-bottom: 1px solid #A64531;
+  border-bottom: 1px solid #C7523A;
   padding: 10px 0;
 }
 html body main section#skills div ul {
@@ -442,31 +479,48 @@ html body main section#education div.card {
   background-color: white;
 }
 html body main section#education div.card h4 {
-  padding: 2%;
+  padding: 2% 2% 1% 2%;
   font-weight: bold;
+  line-height: 1.5em;
+  border-bottom: 1px solid #C7523A;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+html body main section#education div.card h4 span {
+  color: #165269;
+  font-size: 1.3rem;
 }
 html body main section#education div.card ul {
   margin: 20px auto;
-  list-style-type: disc;
   padding-left: 25px;
+  list-style-type: circle;
 }
 html body main section#education div.card ul li {
   margin-bottom: 10px;
 }
 html body main section#education div.card ul li::marker {
-  color: #A64531;
+  color: #C7523A;
 }
 html body main section#contact div.card {
   background-color: white;
   text-align: center;
+  box-sizing: border-box;
 }
 html body main section#contact div.card ul {
   margin: 20px auto;
   display: inline-block;
   text-align: left;
+  border-left: 2px solid #C7523A;
+  border-radius: 15px;
+  padding: 0 13% 0 13%;
 }
 html body main section#contact div.card ul li {
-  margin: 10px auto;
+  margin: 20px auto;
+  transition: transform 0.3s ease;
+}
+html body main section#contact div.card ul li:hover {
+  transform: scale(1.1);
 }
 html body main section#contact div.card ul li img {
   width: 25px;
@@ -475,6 +529,8 @@ html body main section#contact div.card ul li img {
 html body main section#contact div.card ul li a {
   display: table-cell;
   vertical-align: middle;
+  color: #165269;
+  text-decoration: none;
 }
 html body main section#resume div.card {
   background-color: white;
@@ -538,7 +594,6 @@ html body main section#resume div.card div#icons a img#pdf_icon {
   }
   html body main section#education div.card ul {
     margin: 20px auto;
-    list-style-type: disc;
     padding-left: 25px;
     width: 300px;
   }
@@ -606,10 +661,10 @@ html body main section#resume div.card div#icons a img#pdf_icon {
     width: 20%;
   }
   html body main section#education div.card {
-    max-width: 45%;
+    max-width: 55%;
   }
   html body main section#contact div.card {
-    max-width: 35%;
+    max-width: 55%;
   }
   html body main section#resume div.card {
     position: relative;
