@@ -79,8 +79,22 @@ html body header div.header_text {
 }
 html body header div.header_text h1 {
   font-size: 1.4rem;
-  margin-bottom: 5px;
   color: #165269;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  max-width: 185px;
+  margin: 0 auto 7px;
+}
+html body header div.header_text h1 span {
+  margin-right: -1.6px;
+  margin-left: -1.6px;
+  display: inline-block;
+  transition: all 0.3s ease-out;
+}
+html body header div.header_text h1 span:hover {
+  transform: scale(1.5);
+  color: #2383a8;
 }
 html body nav#slide_out {
   position: fixed;
@@ -119,10 +133,10 @@ html body nav#slide_out ul li a {
   align-items: center;
   line-height: 1.6rem;
   padding: 15px 0 15px 15px;
+  transition: font-size ease-in 0.1s;
 }
 html body nav#slide_out ul li a:hover {
   font-size: 1.1rem;
-  transition: font-size ease-in 0.1s;
 }
 html body nav#slide_out ul li a:hover img {
   width: 25px;
@@ -178,9 +192,15 @@ html body main section#about div#intro_container div.card {
 }
 html body main section#about div#intro_container div.card p:first-child {
   font-weight: bold;
-  border-left: 4px solid #C7523A;
+  border-left: 2px solid #C7523A;
   margin-left: 13%;
   border-radius: 8px;
+}
+html body main section#about div#intro_container div.card p:last-child {
+  transition: color 0.3s ease;
+}
+html body main section#about div#intro_container div.card p:last-child:hover {
+  color: #022735;
 }
 html body main section#about div#intro_container div.card p:last-child::first-letter {
   font-family: "Libre Baskerville", serif;
@@ -459,13 +479,22 @@ html body main section#education div.card {
   background-color: white;
 }
 html body main section#education div.card h4 {
-  padding: 2%;
+  padding: 2% 2% 1% 2%;
   font-weight: bold;
+  line-height: 1.5em;
+  border-bottom: 1px solid #C7523A;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+html body main section#education div.card h4 span {
+  color: #165269;
+  font-size: 1.3rem;
 }
 html body main section#education div.card ul {
   margin: 20px auto;
-  list-style-type: disc;
   padding-left: 25px;
+  list-style-type: circle;
 }
 html body main section#education div.card ul li {
   margin-bottom: 10px;
@@ -483,16 +512,15 @@ html body main section#contact div.card ul {
   display: inline-block;
   text-align: left;
   border-left: 2px solid #C7523A;
-  border-right: 2px solid #C7523A;
   border-radius: 15px;
   padding: 0 13% 0 13%;
 }
 html body main section#contact div.card ul li {
   margin: 20px auto;
+  transition: transform 0.3s ease;
 }
 html body main section#contact div.card ul li:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease;
 }
 html body main section#contact div.card ul li img {
   width: 25px;
@@ -566,7 +594,6 @@ html body main section#resume div.card div#icons a img#pdf_icon {
   }
   html body main section#education div.card ul {
     margin: 20px auto;
-    list-style-type: disc;
     padding-left: 25px;
     width: 300px;
   }
