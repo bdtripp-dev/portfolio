@@ -9,7 +9,7 @@
   box-shadow: 5px 5px 20px #AAA;
   transition: all 0.3s ease;
 }
-.clear_float {
+c .clear_float {
   clear: both;
 }
 .hide_in_mobile {
@@ -151,7 +151,7 @@ html body nav#slide_out ul li img {
 html body main {
   clear: both;
   margin-top: 63px;
-  background: url("../images/cream_pixels.png");
+  background-color: #f7f7f7;
 }
 html body main section {
   margin-top: 20px;
@@ -453,20 +453,20 @@ html body main section#skills h4 {
 }
 html body main section#skills div ul {
   overflow: hidden;
-  padding: 15px;
+  padding: 15px 15px 30px 15px;
+  margin-top: -30px;
 }
 html body main section#skills div ul li {
   width: 50%;
   float: left;
   text-align: center;
-  margin: 10px auto;
+  margin: 0 auto;
 }
 html body main section#skills div ul li img {
   max-height: 60px;
   max-width: 60px;
   display: block;
-  margin: 0 auto;
-  margin-bottom: 25px;
+  margin: 45px auto 25px;
 }
 html body main section#skills div#languages {
   background-color: #F2F2F2;
@@ -525,7 +525,7 @@ html body main section#contact div.card ul li:hover {
 }
 html body main section#contact div.card ul li img {
   width: 25px;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 html body main section#contact div.card ul li a {
   display: table-cell;
@@ -549,6 +549,10 @@ html body main section#resume div.card div#icons a {
 }
 html body main section#resume div.card div#icons a img {
   padding: 10px 0;
+  transition: transform 0.3s;
+}
+html body main section#resume div.card div#icons a img:hover {
+  transform: scale(1.1);
 }
 html body main section#resume div.card div#icons a img#pdf_icon {
   width: 40px;
