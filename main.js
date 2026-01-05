@@ -1,5 +1,5 @@
 var navHidden = true;
-var showingSrc = false;
+var showingModal = false;
 var activeItem = "";
 
 function init() {
@@ -58,13 +58,13 @@ function init() {
         let slideOut = document.getElementById("slide_out");
         let main = document.getElementsByTagName("main")[0];
 
-        if(showingSrc) {
+        if(showingModal) {
             adjustDocumentHeight();
         }
         if (window.innerWidth >= 1000) {
             slideOut.style.left = "0";
             document.getElementsByTagName("header")[0].style.zIndex = "3";
-            if (!showingSrc) {
+            if (!showingModal) {
                 document.getElementById("overlay").style.display = "none";
             }
         }
@@ -93,13 +93,19 @@ function adjustDocumentHeight() {
 
 function checkSize(inFrontId, accomplishmentsId, btn, event) {
     if (window.innerWidth >= 580 && (btn.className === 'src_code_icon hide_in_mobile') || (btn.className === 'src_code_icon')) {
-        displayFullScreen(inFrontId, accomplishmentsId, event);
+        displayAccomplishmentModal(inFrontId, accomplishmentsId, event);
+    } else if (btn.id === 'credits_btn') {
+        displayFullScreen(inFrontId, event);
     } else if (btn.className === 'src_code_icon') {
         slideUp(inFrontId, event)
     } else if (window.innerWidth >= 580 && btn.className === 'close_btn') {
-        closeFullScreen(inFrontId, accomplishmentsId, event);
-    } else if (btn.className === 'close_btn' && showingSrc) {
-        closeFullScreen(inFrontId, accomplishmentsId, event);   
+        accomplishmentsId ?
+        closeAccomplishmentModal(inFrontId, accomplishmentsId, event) :
+        closeFullScreen(inFrontId, event);
+    } else if (btn.className === 'close_btn' && showingModal) {
+        accomplishmentsId ?
+        closeAccomplishmentModal(inFrontId, accomplishmentsId, event) :
+        closeFullScreen(inFrontId, event);
     } else if (btn.className === 'close_btn') {
         slideDown(inFrontId, event);
     }
@@ -124,7 +130,7 @@ function slideIn(event) {
     
     if (window.innerWidth > 1000) {
         document.getElementById("slide_out").style.left = "0";
-        if (!showingSrc) {
+        if (!showingModal) {
             document.getElementById("overlay").style.display = "none";
         }
     }
@@ -149,21 +155,29 @@ function hideElement(id) {
     document.getElementById(id).style.opacity = 0;
 }
 
-function displayFullScreen(inFrontId, accomplishmentsId, event) { 
-    let inFront = document.getElementById(inFrontId);
-    let parent = inFront.parentElement;
+function displayAccomplishmentModal(inFrontId, accomplishmentsId, event) { 
     let accomplishments = document.getElementById(accomplishmentsId);
     let overlay = document.getElementById("overlay");
-    let main = document.getElementsByTagName("main")[0];
+
+    accomplishments.style.display = "none";
+    overlay.addEventListener("click", closeAccomplishmentModal.bind(null, inFrontId, accomplishmentsId));
+
+    displayFullScreen(inFrontId, event)
+}
+
+function displayFullScreen(inFrontId, event) {
+    let inFront = document.getElementById(inFrontId);
+    let parent = inFront.parentElement;
+    let overlay = document.getElementById("overlay");
     let hiddenCards = document.getElementsByClassName("hidden_card");
-    
-    inFront.ontouchmove = function(event) {
-        event.stopPropagation();
-    };
-    
+
     for (let card of hiddenCards) {
         card.style.display = "none";
     }
+
+    inFront.ontouchmove = function(event) {
+        event.stopPropagation();
+    };
     
     document.getElementsByTagName("html")[0].style.overflow = "hidden";
     document.body.style.overflow = "hidden";
@@ -180,28 +194,35 @@ function displayFullScreen(inFrontId, accomplishmentsId, event) {
     inFront.style.transform = "translate(-50%, -50%)";
     inFront.style.transition = "all 0s ease 0s";
     parent.style.position = "static";
-    accomplishments.style.display = "none";
     overlay.style.display = "block";
     overlay.style.zIndex = "5";
     
-    overlay.addEventListener("click", closeFullScreen.bind(this, inFrontId, accomplishmentsId, event))
     event.stopPropagation();
-//    main.style.marginLeft = "0";
     
-    showingSrc = true;
+    showingModal = true;
     adjustDocumentHeight();
 }
 
-function closeFullScreen(inFrontId, accomplishmentsId, event) {
+function closeAccomplishmentModal(inFrontId, accomplishmentsId, event) { 
+    let accomplishments = document.getElementById(accomplishmentsId);
+
+    accomplishments.style.display = "block";
+
+    closeFullScreen(inFrontId, event)
+}
+
+function closeFullScreen(inFrontId, event) {
     let inFront = document.getElementById(inFrontId);
     let parent = inFront.parentElement;
-    let accomplishments = document.getElementById(accomplishmentsId);
     let overlay = document.getElementById("overlay");
-    let main = document.getElementsByTagName("main")[0];
     let hiddenCards = document.getElementsByClassName("hidden_card");
     
     for (let card of hiddenCards) {
         card.style.display = "block";
+    }
+
+    if (inFrontId === 'image_credits') {
+        inFront.style.display = "none";
     }
     
     document.getElementsByTagName("html")[0].style.overflow = "auto";
@@ -216,11 +237,10 @@ function closeFullScreen(inFrontId, accomplishmentsId, event) {
     inFront.style.maxHeight = "none";
     inFront.style.zIndex = "1";
     parent.style.position = "relative";
-    accomplishments.style.display = "block";
     overlay.style.display = "none";
     overlay.style.zIndex = "3";
     event.stopPropagation();
-    showingSrc = false;
+    showingModal = false;
 }
     
 function removeActiveItem(listItem) {
