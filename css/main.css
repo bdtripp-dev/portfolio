@@ -31,6 +31,47 @@ h5,
 h6 {
   font-family: "Libre Baskerville", serif;
 }
+.hidden_card {
+  position: absolute;
+  transform: translateY(0px);
+  top: 311px;
+  transition: transform 1s;
+  width: 100%;
+  margin: 0;
+  border: 1px solid #DDD;
+  border-radius: 2px;
+  height: 311px;
+  background-color: #F2F2F2;
+  overflow: scroll;
+  text-align: left;
+}
+.hidden_card img.close_btn {
+  width: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+.hidden_card img.close_btn:hover {
+  cursor: pointer;
+}
+.document {
+  overflow: hidden;
+  width: 100%;
+  max-width: 858px;
+}
+.document img.close_btn {
+  padding: 7px 7px 0 0;
+}
+.document iframe {
+  height: 500px;
+  display: block;
+  width: 100%;
+  max-width: 858px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-top: 1px solid black;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -152,6 +193,7 @@ html body main {
   clear: both;
   margin-top: 63px;
   background-color: #f7f7f7;
+  margin-bottom: 20px;
 }
 html body main section {
   margin-top: 20px;
@@ -299,47 +341,6 @@ html body main section#projects div div.language_icons ul li img {
   width: 25px;
   transition: width 0.2s ease-in-out;
   display: block;
-}
-html body main section#projects div div.hidden_card {
-  position: absolute;
-  transform: translateY(0px);
-  top: 311px;
-  transition: transform 1s;
-  width: 100%;
-  margin: 0;
-  border: 1px solid #DDD;
-  border-radius: 2px;
-  height: 311px;
-  background-color: #F2F2F2;
-  overflow: scroll;
-  text-align: left;
-}
-html body main section#projects div div.hidden_card img.close_btn {
-  width: 25px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10px;
-}
-html body main section#projects div div.hidden_card img.close_btn:hover {
-  cursor: pointer;
-}
-html body main section#projects div div.document {
-  overflow: hidden;
-  width: 100%;
-  max-width: 858px;
-}
-html body main section#projects div div.document img.close_btn {
-  padding: 7px 7px 0 0;
-}
-html body main section#projects div div.document iframe {
-  height: 500px;
-  display: block;
-  width: 100%;
-  max-width: 858px;
-  margin: 0 auto;
-  margin-top: 30px;
-  border-top: 1px solid black;
 }
 html body main section#projects div div.accomplishments {
   overflow: hidden;
@@ -557,6 +558,27 @@ html body main section#resume div.card div#icons a img:hover {
 html body main section#resume div.card div#icons a img#pdf_icon {
   width: 40px;
   margin: 0 auto;
+}
+html body footer {
+  background-color: #333333;
+  color: #F2F2F2;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clear: both;
+  position: relative;
+  z-index: 4;
+}
+html body footer button {
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+html body footer button:hover {
+  transform: scale(1.1);
+}
+html body footer div#image_credits {
+  display: none;
 }
 /*===============================
 ==== 320PX CSS CODE AND UP =======

@@ -42,6 +42,59 @@ h1, h2, h3, h4, h5, h6 {
     font-family: @serif_font;
 }
 
+.hidden_card {
+    position: absolute;
+    transform: translateY(0px);
+    top: 311px;
+    transition: transform 1s;
+    width: 100%;
+    margin: 0;
+    border: 1px solid #DDD;
+    border-radius: 2px;
+    height: 311px;
+    background-color: @off-white;
+    overflow: scroll;
+    text-align: left;
+
+    img {
+
+        &.close_btn {
+            width: 25px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+&.document {
+    overflow:hidden;
+    width: 100%;
+    max-width: 858px;
+
+    img {
+
+        &.close_btn {
+            padding: 7px 7px 0 0;
+        }
+    }
+
+    iframe {
+        height: 500px;
+        display: block;
+        width: 100%;
+        max-width: 858px;
+        margin: 0 auto;
+        margin-top: 30px;
+        border-top: 1px solid black;
+    }
+}
+
 html {
     scroll-behavior: smooth;
     
@@ -200,6 +253,7 @@ html {
             clear: both;
             margin-top: 63px;
             background-color: lighten(#f2f2f2, 2%);
+            margin-bottom: 20px;
 
             section {
                 margin-top: 20px;
@@ -400,59 +454,6 @@ html {
                                             display: block;
                                         }
                                     }
-                                }
-                            }
-                            
-                            &.hidden_card {
-                                position: absolute;
-                                transform: translateY(0px);
-                                top: 311px;
-                                transition: transform 1s;
-                                width: 100%;
-                                margin: 0;
-                                border: 1px solid #DDD;
-                                border-radius: 2px;
-                                height: 311px;
-                                background-color: @off-white;
-                                overflow: scroll;
-                                text-align: left;
-                                
-                                img {
-
-                                    &.close_btn {
-                                        width: 25px;
-                                        position: absolute;
-                                        top: 0;
-                                        right: 0;
-                                        padding: 10px;
-                                        
-                                        &:hover {
-                                            cursor: pointer;
-                                        }
-                                    }
-                                }
-                            }
-                            
-                            &.document {
-                                overflow:hidden;
-                                width: 100%;
-                                max-width: 858px;
-
-                                img {
-
-                                    &.close_btn {
-                                        padding: 7px 7px 0 0;
-                                    }
-                                }
-
-                                iframe {
-                                    height: 500px;
-                                    display: block;
-                                    width: 100%;
-                                    max-width: 858px;
-                                    margin: 0 auto;
-                                    margin-top: 30px;
-                                    border-top: 1px solid black;
                                 }
                             }
                             
@@ -768,6 +769,34 @@ html {
                             } 
                         }
                     } 
+                }
+            }
+        }
+
+        footer {
+            background-color: @dark-grey;
+            color: @off-white;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            clear: both;
+            position: relative;
+            z-index: 4;
+
+            button {
+                transition: transform .3s;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            div {
+
+                &#image_credits {
+                    display: none;
                 }
             }
         }
