@@ -9,7 +9,7 @@
   box-shadow: 5px 5px 20px #AAA;
   transition: all 0.3s ease;
 }
-c .clear_float {
+.clear_float {
   clear: both;
 }
 .hide_in_mobile {
