@@ -9,7 +9,7 @@
   box-shadow: 5px 5px 20px #AAA;
   transition: all 0.3s ease;
 }
-c .clear_float {
+.clear_float {
   clear: both;
 }
 .hide_in_mobile {
@@ -560,7 +560,7 @@ html body main section#resume div.card div#icons a img#pdf_icon {
   margin: 0 auto;
 }
 html body footer {
-  background-color: #333333;
+  background-color: #022735;
   color: #F2F2F2;
   height: 100px;
   display: flex;
@@ -573,12 +573,51 @@ html body footer {
 html body footer button {
   transition: transform 0.3s;
   cursor: pointer;
+  border: none;
+  padding: 10px;
+  background-color: inherit;
+  border-radius: 5px;
+  color: #F2F2F2;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 2px;
 }
 html body footer button:hover {
   transform: scale(1.1);
 }
 html body footer div#image_credits {
   display: none;
+  overflow: scroll;
+}
+html body footer div#image_credits img {
+  position: sticky;
+  float: right;
+}
+html body footer div#image_credits table {
+  color: #333333;
+  width: 80%;
+  border-radius: 10px;
+  margin: 25px auto;
+  clear: both;
+}
+html body footer div#image_credits table thead {
+  text-align: center;
+  font-size: 2.6em;
+  font-weight: 900;
+}
+html body footer div#image_credits table thead th {
+  padding: 20px;
+  border-collapse: collapse;
+  border: 1px solid #333333;
+}
+html body footer div#image_credits table tbody tr th {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+html body footer div#image_credits table tbody tr td,
+html body footer div#image_credits table tbody tr th {
+  border-collapse: collapse;
+  border: 1px solid #333333;
+  padding: 10px;
 }
 /*===============================
 ==== 320PX CSS CODE AND UP =======

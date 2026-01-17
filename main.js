@@ -84,6 +84,9 @@ function adjustDocumentHeight() {
     
     for(i = 0; i < documents.length; i++) {
         var iframe = documents[i].getElementsByTagName("iframe")[0];
+        if (!iframe) {
+            return;
+        }
         var iframeMarginTop = window.getComputedStyle(iframe).marginTop;
         var documentHeight = window.getComputedStyle(documents[i]).height; 
         
@@ -196,11 +199,18 @@ function displayFullScreen(inFrontId, event) {
     parent.style.position = "static";
     overlay.style.display = "block";
     overlay.style.zIndex = "5";
-    
+
+    if (inFrontId === "image_credits") {
+        overlay.addEventListener("click", closeFullScreen.bind(null, inFrontId));
+    }
+
     event.stopPropagation();
     
     showingModal = true;
-    adjustDocumentHeight();
+
+    if (inFrontId !== "image_credits") {
+        adjustDocumentHeight();
+    }
 }
 
 function closeAccomplishmentModal(inFrontId, accomplishmentsId, event) { 
@@ -218,7 +228,9 @@ function closeFullScreen(inFrontId, event) {
     let hiddenCards = document.getElementsByClassName("hidden_card");
     
     for (let card of hiddenCards) {
-        card.style.display = "block";
+        if(card.id !== "image_credits") {
+            card.style.display = "block";
+        }
     }
 
     if (inFrontId === 'image_credits') {
