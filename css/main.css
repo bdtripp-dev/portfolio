@@ -259,100 +259,42 @@ html body main section#about div#intro_container div.card p {
   padding: 10px 30px;
   line-height: 130%;
 }
-html body main section#projects h4 {
-  padding: 15px 0 10px 0;
-  margin: 0 auto;
+html body main section#projects div#projects_wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin: 60px 20px 0 20px;
 }
-html body main section#projects div.screenshot.card {
+html body main section#projects div#projects_wrapper div.screenshot.card {
   position: relative;
   margin-top: 40px;
   height: 427px;
   overflow: hidden;
   text-align: center;
+  width: 100%;
+  margin: 0;
 }
-html body main section#projects div.screenshot.card > img:hover {
+html body main section#projects div#projects_wrapper div.screenshot.card > img:hover {
   cursor: pointer;
 }
-html body main section#projects div.screenshot.card#hh_screenshot_card > img:hover {
+html body main section#projects div#projects_wrapper div.screenshot.card#hh_screenshot_card > img:hover {
   cursor: auto;
 }
-html body main section#projects div div.project_bottom {
-  position: absolute;
-  background-color: #F2F2F2;
-  width: 100%;
-  bottom: 0;
-  border-top: 2px ridge #999;
-  box-shadow: 5px 5px 15px black;
-}
-html body main section#projects div div.project_bottom button {
-  display: inline-block;
-  width: 41%;
-  height: 40px;
-  margin: 10px 2%;
-  cursor: pointer;
-  color: #FFF;
-  background-color: #0095ff;
-  border-color: #07c;
-  box-shadow: inset 0 1px 0 #66bfff;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  vertical-align: top;
-  transition: background-color 0.3s ease;
-}
-html body main section#projects div div.project_bottom button:hover {
-  background-color: #0077cc;
-  transition: background-color 0.3s ease;
-}
-html body main section#projects div div.language_icons {
-  letter-spacing: 1px;
-  width: 100%;
-}
-html body main section#projects div div.language_icons ul {
-  height: 45px;
-  padding-top: 10px;
-  border-bottom: 1px solid #C7523A;
-  width: 90%;
-  margin: 0 auto;
-  padding-bottom: 4px;
-  border-radius: 5px;
-}
-html body main section#projects div div.language_icons ul li {
-  font-size: 0.6rem;
-  transition: font-size 0.2s ease-in-out;
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-}
-html body main section#projects div div.language_icons ul li:hover {
-  font-size: 0.7rem;
-  transition: font-size 0.2s ease-in-out;
-}
-html body main section#projects div div.language_icons ul li:hover img {
-  width: 30px;
-  transition: width 0.2s ease-in-out;
-}
-html body main section#projects div div.language_icons ul li:not(:first-of-type) {
-  margin-left: 5px;
-  padding-left: 5px;
-  border-left: 1px solid #C7523A;
-}
-html body main section#projects div div.language_icons ul li img {
-  margin: 0 auto 5px auto;
-  width: 25px;
-  transition: width 0.2s ease-in-out;
-  display: block;
-}
-html body main section#projects div div.accomplishments {
-  overflow: hidden;
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments {
+  overflow: scroll;
   font-size: 0.85rem;
 }
-html body main section#projects div div.accomplishments div {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments h4 {
+  padding: 15px 0 10px 0;
+  margin: 0 auto;
+}
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div {
   clear: both;
-  position: absolute;
   bottom: 10px;
   width: 100%;
+  padding: 20px 0 30px 0;
 }
-html body main section#projects div div.accomplishments div a {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div a {
   text-decoration: none;
   border: 2px inset #333333;
   height: 25px;
@@ -368,64 +310,64 @@ html body main section#projects div div.accomplishments div a {
   font-size: 0.9rem;
   transition: background-color 0.3s;
 }
-html body main section#projects div div.accomplishments div a:hover {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div a:hover {
   background-color: #dbdbdb;
 }
-html body main section#projects div div.accomplishments div a:focus {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div a:focus {
   border-style: outset;
 }
-html body main section#projects div div.accomplishments div a:active {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div a:active {
   border-style: inset;
 }
-html body main section#projects div div.accomplishments div a img {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div a img {
   width: 25px;
 }
-html body main section#projects div div.accomplishments ul {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul {
   width: 90%;
   list-style-type: disc;
   clear: both;
   margin-top: 5px;
   float: right;
 }
-html body main section#projects div div.accomplishments ul li {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li {
   margin: 8px 0;
   position: relative;
   clear: both;
   padding-bottom: 5px;
 }
-html body main section#projects div div.accomplishments ul li img.src_code_icon {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li img.src_code_icon {
   width: 20px;
   position: absolute;
   top: 0;
   right: 4%;
   z-index: 1;
 }
-html body main section#projects div div.accomplishments ul li img.src_code_icon:hover {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li img.src_code_icon:hover {
   cursor: pointer;
 }
-html body main section#projects div div.accomplishments ul li a img pdf_icon {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li a img pdf_icon {
   width: 20px;
   position: absolute;
   top: 0;
   right: 4%;
   z-index: 1;
 }
-html body main section#projects div div.accomplishments ul li ul {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li ul {
   width: 90%;
 }
-html body main section#projects div div.accomplishments ul li ul li {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li ul li {
   padding-right: 40px;
 }
-html body main section#projects div div.accomplishments a {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments a {
   clear: both;
 }
-html body main section#projects div div.accomplishments a img.link_to_site {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments a img.link_to_site {
   width: 30px;
   position: absolute;
   top: 3%;
   left: 2%;
 }
-html body main section#projects div div.accomplishments div.scroll_indicator {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div.scroll_indicator {
   height: 23px;
   clear: both;
   position: fixed;
@@ -436,16 +378,82 @@ html body main section#projects div div.accomplishments div.scroll_indicator {
   opacity: 1;
   transition: opacity 0.1s;
 }
-html body main section#projects div div.accomplishments div.scroll_indicator img {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div.scroll_indicator img {
   width: 23px;
 }
-html body main section#projects div div.src_code {
+html body main section#projects div#projects_wrapper div.screenshot.card div.src_code {
   overflow: scroll;
   border-radius: 5px;
 }
-html body main section#projects div div.src_code pre code {
+html body main section#projects div#projects_wrapper div.screenshot.card div.src_code pre code {
   line-height: 130%;
   font-family: 'Source Code Pro', Consolas, monospace;
+}
+html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom {
+  position: absolute;
+  background-color: #F2F2F2;
+  width: 100%;
+  bottom: 0;
+  border-top: 2px ridge #999;
+  box-shadow: 5px 5px 15px black;
+}
+html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons {
+  letter-spacing: 1px;
+  width: 100%;
+}
+html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul {
+  height: 45px;
+  padding-top: 10px;
+  border-bottom: 1px solid #C7523A;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 4px;
+  border-radius: 5px;
+}
+html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li {
+  font-size: 0.6rem;
+  transition: font-size 0.2s ease-in-out;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li:hover {
+  font-size: 0.7rem;
+  transition: font-size 0.2s ease-in-out;
+}
+html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li:hover img {
+  width: 30px;
+  transition: width 0.2s ease-in-out;
+}
+html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li:not(:first-of-type) {
+  margin-left: 5px;
+  padding-left: 5px;
+  border-left: 1px solid #C7523A;
+}
+html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li img {
+  margin: 0 auto 5px auto;
+  width: 25px;
+  transition: width 0.2s ease-in-out;
+  display: block;
+}
+html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom button {
+  display: inline-block;
+  width: 41%;
+  height: 40px;
+  margin: 10px 2%;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #0095ff;
+  border-color: #07c;
+  box-shadow: inset 0 1px 0 #66bfff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  vertical-align: top;
+  transition: background-color 0.3s ease;
+}
+html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom button:hover {
+  background-color: #0077cc;
+  transition: background-color 0.3s ease;
 }
 html body main section#skills h4 {
   font-size: 1.7rem;
@@ -648,6 +656,9 @@ html body footer div#image_credits table tbody tr th {
     margin-top: 0;
     padding-top: 0;
   }
+  html body main section#projects div#projects_wrapper {
+    margin: 60px 80px 0 80px;
+  }
   html body main section#skills div#languages ul li,
   html body main section#skills div#tools ul li {
     width: 25%;
@@ -710,6 +721,15 @@ html body footer div#image_credits table tbody tr th {
     width: 47%;
     float: left;
     margin: 40px 1% 0 1%;
+  }
+}
+/*===============================
+==== 650PX CSS CODE AND UP =======
+===============================*/
+@media (min-width: 650px) {
+  html body main section#projects div#projects_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 60px 20px 0 20px;
   }
 }
 /*===============================
@@ -837,5 +857,29 @@ html body footer div#image_credits table tbody tr th {
   html body main section#skills div#tools ul li img {
     max-height: 80px;
     max-width: 80px;
+  }
+}
+/*===============================
+==== 1200PX CSS CODE AND UP =======
+===============================*/
+@media (min-width: 1200px) {
+  html body main section#projects div#projects_wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/*===============================
+==== 1500PX CSS CODE AND UP =======
+===============================*/
+@media (min-width: 1500px) {
+  html body main section#projects div#projects_wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/*===============================
+==== 1950PX CSS CODE AND UP =======
+===============================*/
+@media (min-width: 1950px) {
+  html body main section#projects div#projects_wrapper {
+    grid-template-columns: repeat(5, 1fr);
   }
 }

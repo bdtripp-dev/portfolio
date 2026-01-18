@@ -120,54 +120,55 @@
         <section id="projects">
             <h3>Projects</h3>
 
-            <div id="pas_screenshot_card" class="project screenshot card">
-                <img id="pas_screenshot" class="tracked_image" src="images/screenshots/pas_screenshot.png" onclick="window.open('http://bdtripp.com/portland_art_supply/', '_blank');">
+            <div id="projects_wrapper">
+                <div id="pas_screenshot_card" class="project screenshot card">
+                    <img id="pas_screenshot" class="tracked_image" src="images/screenshots/pas_screenshot.png" onclick="window.open('http://bdtripp.com/portland_art_supply/', '_blank');">
 
-                
-                
-                <div id="pas_accomplishments" class="project accomplishments hidden_card">
-                    <h4>Design &amp; Development Details</h4>
-                    <ul>
-                        <li>PHP &nbsp; <!-- added &nbsp; because the first list item was floating up too high under "PHP" because PHP is such a short word -->
-                            <ul>
-                                <li>Sessions
-                                    <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
-                                </li>
-                                <li>Dynamically Generated HTML
-                                    <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
-                                </li>
-                            </ul>
-                        </li>
+                    
+                    
+                    <div id="pas_accomplishments" class="project accomplishments hidden_card">
+                        <h4>Design &amp; Development Details</h4>
+                        <ul>
+                            <li>PHP &nbsp; <!-- added &nbsp; because the first list item was floating up too high under "PHP" because PHP is such a short word -->
+                                <ul>
+                                    <li>Sessions
+                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
+                                    </li>
+                                    <li>Dynamically Generated HTML
+                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
+                                    </li>
+                                </ul>
+                            </li>
 
-                        <li>JavaScript
-                            <ul>
-                                <li>Dynamic CSS Styling
-                                    <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
-                                </li>
-                            </ul>
-                        </li>
+                            <li>JavaScript
+                                <ul>
+                                    <li>Dynamic CSS Styling
+                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
+                                    </li>
+                                </ul>
+                            </li>
 
-                        <li>Database
-                            <ul>
-                                <li>SQL
-                                    <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
-                                </li>
-                                <li>Data Modeling
-                                    <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
-                                    <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/pas_erd.pdf" target="_blank">
-                                        <img class="src_code_icon" src="images/document.png">
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div>
-                        <a href="https://github.com/bdtripp/portland_art_supply" target="_blank"><img src="images/github.png">View Full Source Code</a>
+                            <li>Database
+                                <ul>
+                                    <li>SQL
+                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
+                                    </li>
+                                    <li>Data Modeling
+                                        <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
+                                        <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/pas_erd.pdf" target="_blank">
+                                            <img class="src_code_icon" src="images/document.png">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div>
+                            <a href="https://github.com/bdtripp/portland_art_supply" target="_blank"><img src="images/github.png">View Full Source Code</a>
+                        </div>
                     </div>
-                </div>
 
-                <div id="pas_src_session" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
+                    <div id="pas_src_session" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
 
 <pre><code class="PHP">/*
 When the user clicks "Add to Cart", the $_SESSION gets updated with an 
@@ -197,10 +198,10 @@ if ($newItem) {
 save_session();
 }</code></pre>
 
-                </div> 
+                    </div> 
 
-                <div id="pas_src_generate" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
+                    <div id="pas_src_generate" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
 
 <pre><code class="PHP">/*
 All of the site's HTML is dynamically generated from PHP. The product information is stored
@@ -215,17 +216,17 @@ echo '            &lt;ul>' . "\n";
 for ($i = $rowsPerColumn - ROWS_PER_COLUMN; ($i &lt; $rowsPerColumn) &amp;&amp; ($i &lt; sizeof($subcategories)); $i++) {
     echo '                &lt;li class="' . SUBCATEGORY_BUTTON_CLASS . '"&gt;' . "\n";
     echo '                    &lt;a href="' . GROUP_PRODUCTS_PAGE . "?" . PRODUCT_CATEGORY_NAME_FIELD . "=" . $categoryName . "&amp;" .
-                                  PRODUCT_SUBCATEGORY_NAME_FIELD . "=" . $subcategories[$i][PRODUCT_SUBCATEGORY_NAME_FIELD] . '"&gt;'
-                                  . ucfirst($subcategories[$i][PRODUCT_SUBCATEGORY_NAME_FIELD]) . '&lt;/a>' . "\n";
+                                PRODUCT_SUBCATEGORY_NAME_FIELD . "=" . $subcategories[$i][PRODUCT_SUBCATEGORY_NAME_FIELD] . '"&gt;'
+                                . ucfirst($subcategories[$i][PRODUCT_SUBCATEGORY_NAME_FIELD]) . '&lt;/a>' . "\n";
     echo '                &lt;/li&gt;' . "\n";
 }
 echo '            &lt;/ul&gt;' . "\n";
 echo '        &lt;/div&gt;' . "\n\n";
 }</code></pre>  
-                </div>
+                    </div>
 
-                <div id="pas_src_dynamic_styling" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
+                    <div id="pas_src_dynamic_styling" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
 
 <pre><code class="JavaScript">/*
 Makes dynamic height adjustments involving calculations that could not be achieved using pure
@@ -248,10 +249,10 @@ if (colorThumbnails !== null) {
 itemWrapper.style.height = "auto";
 }</code></pre>
 
-                </div>
+                    </div>
 
-                <div id="pas_src_sql" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
+                    <div id="pas_src_sql" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
 
 <pre><code class="PHP">/*
 All product information is stored in a database. When the user clicks on a link to view a 
@@ -274,141 +275,141 @@ while($item = $result->fetch_array(MYSQLI_ASSOC)) {
 return $items;
 }</code></pre>
 
-                </div>
-
-                <div id="pas_erd" class="document hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
-
-                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vS6sBk7MWt3fPM8J3yiuAJOh_CjfDS9NuGeFyf5fYwD3vtT0mXXp3m891dhAejNqpUIz209-iO6InqZ/pub?embedded=true"></iframe>
-
-                </div>
-
-                <div class="project_bottom">
-                    <div class="language_icons">
-                        <ul>
-                            <li><img src="images/php.svg">PHP</li>
-                            <li><img src="images/sql.svg">SQL</li>
-                            <li><img src="images/javascript.svg">JavaScript</li>
-                            <li><img src="images/html5.svg">HTML5</li>
-                            <li><img src="images/less.svg">Less</li>
-                        </ul>
                     </div>
-                    <button id="pas_visit_site_btn" onclick="window.open('http://bdtripp.com/portland_art_supply/', '_blank');">Visit Site</button>
-                    <button id="pas_view_details_btn" class="view_details_btn">View Details</button>                        
-                </div>
-            </div>
-            
-            <div id="casf_screenshot_card" class="project screenshot card">
-                <img id="casf_screenshot" class="tracked_image" src="images/screenshots/casf_screenshot.png" onclick="window.open('http://bdtripp.com/chord_and_scale_finder/', '_blank');">
-                
-                <div id="casf_accomplishments" class="project accomplishments hidden_card">
-                    <h4>Design &amp; Development Details</h4>
-                    <ul>
-                        <li>Developed using object-oriented programming in JavaScript</li>
-                        <li>Utilizes OOP principles including:
+
+                    <div id="pas_erd" class="document hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
+
+                        <iframe src="https://docs.google.com/document/d/e/2PACX-1vS6sBk7MWt3fPM8J3yiuAJOh_CjfDS9NuGeFyf5fYwD3vtT0mXXp3m891dhAejNqpUIz209-iO6InqZ/pub?embedded=true"></iframe>
+
+                    </div>
+
+                    <div class="project_bottom">
+                        <div class="language_icons">
                             <ul>
-                                <li>Inheritance</li>
-                                <li>Polymorphism</li>
+                                <li><img src="images/php.svg">PHP</li>
+                                <li><img src="images/sql.svg">SQL</li>
+                                <li><img src="images/javascript.svg">JavaScript</li>
+                                <li><img src="images/html5.svg">HTML5</li>
+                                <li><img src="images/less.svg">Less</li>
                             </ul>
-                        </li>
-                    </ul>
-                    <div>
-                        <a href="https://github.com/bdtripp/chord_and_scale_finder" target="_blank"><img src="images/github.png">View Full Source Code</a>
+                        </div>
+                        <button id="pas_visit_site_btn" onclick="window.open('http://bdtripp.com/portland_art_supply/', '_blank');">Visit Site</button>
+                        <button id="pas_view_details_btn" class="view_details_btn">View Details</button>                        
                     </div>
                 </div>
-            
-                <div class="project_bottom">
-                    <div class="language_icons">
+                
+                <div id="casf_screenshot_card" class="project screenshot card">
+                    <img id="casf_screenshot" class="tracked_image" src="images/screenshots/casf_screenshot.png" onclick="window.open('http://bdtripp.com/chord_and_scale_finder/', '_blank');">
+                    
+                    <div id="casf_accomplishments" class="project accomplishments hidden_card">
+                        <h4>Design &amp; Development Details</h4>
                         <ul>
-                            <li><img src="images/javascript.svg">JavaScript</li>
-                            <li><img src="images/html5.svg">HTML5</li>
-                            <li><img src="images/css3.svg">CSS3</li>
+                            <li>Developed using object-oriented programming in JavaScript</li>
+                            <li>Utilizes OOP principles including:
+                                <ul>
+                                    <li>Inheritance</li>
+                                    <li>Polymorphism</li>
+                                </ul>
+                            </li>
                         </ul>
+                        <div>
+                            <a href="https://github.com/bdtripp/chord_and_scale_finder" target="_blank"><img src="images/github.png">View Full Source Code</a>
+                        </div>
+                    </div>
+                
+                    <div class="project_bottom">
+                        <div class="language_icons">
+                            <ul>
+                                <li><img src="images/javascript.svg">JavaScript</li>
+                                <li><img src="images/html5.svg">HTML5</li>
+                                <li><img src="images/css3.svg">CSS3</li>
+                            </ul>
+                        </div>
+                        
+                        <button id="casf_visit_site_btn" onclick="window.open('http://bdtripp.com/chord_and_scale_finder/', '_blank');">Visit Site</button>
+                        <button id="casf_view_details_btn" class="view_details_btn">View Details</button>
+                    </div>
+                </div>
+                
+                <div id="hh_screenshot_card" class="project screenshot card">
+                    <img id="hh_screenshot" class="tracked_image" src="images/screenshots/hh_screenshot.png">
+                    
+                    <div id="hh_accomplishments" class="project accomplishments hidden_card">
+                        <h4>Design &amp; Development Details</h4>
+                        <ul>
+                            <li>Written in Java using<br/>object-oriented programming
+                                <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('hh_class_diagram', 'hh_accomplishments', this, event)">
+                                <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/hh_class_diagram.pdf" target="_blank">
+                                    <img class="src_code_icon" src="images/document.png">
+                                </a>
+                                <ul>
+                                    <li>Static polymorphism (method overloading)
+                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('hh_static_poly', 'hh_accomplishments', this, event)">
+                                    </li>
+                                    <li>Responsibility-driven design
+                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
+                                    </li>
+                                    <li>Highly cohesive classes and methods
+                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('hh_src_cohesive', 'hh_accomplishments', this, event)">
+                                    </li>
+                                    <li>Data hiding and encapsulation to promote loose coupling
+                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('hh_src_dh_and_e', 'hh_accomplishments', this, event)">
+                                    </li>
+    <!--
+                                    <li>Javadoc comments
+                                        <img class="src_code_icon" src="images/document.png" onclick="checkSize('hh_javadoc', 'hh_accomplishments', this, event)">
+                                    </li>
+    -->
+                                </ul>
+                            </li>
+                        </ul>
+                        <div>
+                            <a href="https://github.com/bdtripp/haunted_house" target="_blank"><img src="images/github.png">View Full Source Code</a>
+                        </div>
                     </div>
                     
-                    <button id="casf_visit_site_btn" onclick="window.open('http://bdtripp.com/chord_and_scale_finder/', '_blank');">Visit Site</button>
-                    <button id="casf_view_details_btn" class="view_details_btn">View Details</button>
-                </div>
-            </div>
-            
-            <div id="hh_screenshot_card" class="project screenshot card">
-                <img id="hh_screenshot" class="tracked_image" src="images/screenshots/hh_screenshot.png">
-                
-                <div id="hh_accomplishments" class="project accomplishments hidden_card">
-                    <h4>Design &amp; Development Details</h4>
-                    <ul>
-                        <li>Written in Java using<br/>object-oriented programming
-                            <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('hh_class_diagram', 'hh_accomplishments', this, event)">
-                            <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/hh_class_diagram.pdf" target="_blank">
-                                <img class="src_code_icon" src="images/document.png">
-                            </a>
-                            <ul>
-                                <li>Static polymorphism (method overloading)
-                                    <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('hh_static_poly', 'hh_accomplishments', this, event)">
-                                </li>
-                                <li>Responsibility-driven design
-                                    <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
-                                </li>
-                                <li>Highly cohesive classes and methods
-                                    <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('hh_src_cohesive', 'hh_accomplishments', this, event)">
-                                </li>
-                                <li>Data hiding and encapsulation to promote loose coupling
-                                    <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('hh_src_dh_and_e', 'hh_accomplishments', this, event)">
-                                </li>
-<!--
-                                <li>Javadoc comments
-                                    <img class="src_code_icon" src="images/document.png" onclick="checkSize('hh_javadoc', 'hh_accomplishments', this, event)">
-                                </li>
--->
-                            </ul>
-                        </li>
-                    </ul>
-                    <div>
-                        <a href="https://github.com/bdtripp/haunted_house" target="_blank"><img src="images/github.png">View Full Source Code</a>
+                    <div id="hh_class_diagram" class="document hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_class_diagram', 'hh_accomplishments', this, event)">
+
+                        <iframe src="https://drive.google.com/file/d/1_qD02Fqy-iJdmdWeRtRzSJUiS-NexW6G/preview"></iframe>
+
                     </div>
-                </div>
-                
-                <div id="hh_class_diagram" class="document hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_class_diagram', 'hh_accomplishments', this, event)">
-
-                    <iframe src="https://drive.google.com/file/d/1_qD02Fqy-iJdmdWeRtRzSJUiS-NexW6G/preview"></iframe>
-
-                </div>
-                
-                <div id="hh_static_poly" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_static_poly', 'hh_accomplishments', this, event)">
+                    
+                    <div id="hh_static_poly" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_static_poly', 'hh_accomplishments', this, event)">
 
 <pre><code class="Java">/*
     There are two addItem methods in the Room class that have a differing number of arguments. 
 */
 
     /**
-     * Create an item that exists in this room
-     * @param name The name of the item
-     * @param description The description of the item
-     * @param weight The weight of the item
-     * @param isEdible The edibility of the item
-     * @param propToAffect The property the item affects
-     * @param affectValue The amount the property will be changed by
-     */
+    * Create an item that exists in this room
+    * @param name The name of the item
+    * @param description The description of the item
+    * @param weight The weight of the item
+    * @param isEdible The edibility of the item
+    * @param propToAffect The property the item affects
+    * @param affectValue The amount the property will be changed by
+    */
     public void addItem(String name, String description, int weight, boolean isEdible, String propToAffect, int affectValue)
     {
         items.add(new Item(name, description, weight, isEdible, propToAffect, affectValue));
     }
 
     /**
-     * Create an item that exists in this room
-     * @param item The item to add
-     */
+    * Create an item that exists in this room
+    * @param item The item to add
+    */
     public void addItem(Item item)
     {
         items.add(item);
     }
 </code></pre>
-                </div>
-                
-                <div id="hh_src_rdd" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
+                    </div>
+                    
+                    <div id="hh_src_rdd" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
 
 <pre><code class="Java">/*
     Methods are defined in the same class as the fields that they access or manipulate. Excerpts from
@@ -425,19 +426,19 @@ return $items;
     /* Some of the methods that modify or access the fields of the Room class */
 
         /**
-         * Create an item that exists in this room
-         * @param item The item to add
-         */
+        * Create an item that exists in this room
+        * @param item The item to add
+        */
         public void addItem(Item item)
         {
             items.add(item);
         }
 
         /**
-         * Remove an item from this room
-         * @param name The name of the item to remove
-         * @return item The item that was removed
-         */
+        * Remove an item from this room
+        * @param name The name of the item to remove
+        * @return item The item that was removed
+        */
         public Item removeItemFromRoom(String name)
         {
             for(Item item : items) {
@@ -450,15 +451,15 @@ return $items;
         }
 
         /**
-         * Create a character that will exist in this room
-         * @param name The name of the character
-         * @param initialDialog The initial dialog the character will speak
-         * @param acceptanceDialog The dialog the character will speak upon accepting an item
-         * @param itemSought The name of the item that the character is seeking
-         * @param itemForReward The item the character will reward a player
-         */
+        * Create a character that will exist in this room
+        * @param name The name of the character
+        * @param initialDialog The initial dialog the character will speak
+        * @param acceptanceDialog The dialog the character will speak upon accepting an item
+        * @param itemSought The name of the item that the character is seeking
+        * @param itemForReward The item the character will reward a player
+        */
         public void addCharacter(String name, String initialDialog,
-                                 String acceptanceDialog, String itemSought, Item itemForReward)
+                                String acceptanceDialog, String itemSought, Item itemForReward)
         {
             characters.add(new Character(
                     name,
@@ -470,11 +471,11 @@ return $items;
         }
 
         /**
-         * Define an exit from this room.
-         * @param direction The direction of the exit.
-         * @param neighbor The room in the given direction.
-         * @param locked True if the door is locked
-         */
+        * Define an exit from this room.
+        * @param direction The direction of the exit.
+        * @param neighbor The room in the given direction.
+        * @param locked True if the door is locked
+        */
         public void setExit(String direction, Room neighbor, boolean locked)
         {
             Exit exit = new Exit(direction, neighbor, locked);
@@ -482,10 +483,10 @@ return $items;
         }
 
 </code></pre>
-                </div>
-                
-                <div id="hh_src_cohesive" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_src_cohesive', 'hh_accomplishments', this, event)">
+                    </div>
+                    
+                    <div id="hh_src_cohesive" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_src_cohesive', 'hh_accomplishments', this, event)">
 
 <pre><code class="Java">/*
     Each class and method has a single, well-defined purpose. For example, the takeItem method of the 
@@ -496,19 +497,19 @@ return $items;
 */
 
     /**
-     * Adds an item to the list of what the player is carrying
-     * @param item The item to take
-     */
+    * Adds an item to the list of what the player is carrying
+    * @param item The item to take
+    */
     public void takeItem(Item item)
     {
         items.add(item);
     }
 </code></pre>
 
-                </div>
-                
-                <div id="hh_src_dh_and_e" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_src_dh_and_e', 'hh_accomplishments', this, event)">
+                    </div>
+                    
+                    <div id="hh_src_dh_and_e" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_src_dh_and_e', 'hh_accomplishments', this, event)">
 
 <pre><code class="Java">/*
     All fields are defined as private and accessed through getters and setters.
@@ -530,33 +531,33 @@ return $items;
     /* And some of the getters and setters of the Player class: */
 
         /**
-         * Set whether or not the beamer is charged
-         * @param value True if the beamer is charged, otherwise false
-         */
+        * Set whether or not the beamer is charged
+        * @param value True if the beamer is charged, otherwise false
+        */
         public void setBeamerCharge(boolean value) {
             beamerCharged = value;
         }
 
         /**
-         * Get the beamer charge
-         * @return Whether or not the beamer is charged
-         */
+        * Get the beamer charge
+        * @return Whether or not the beamer is charged
+        */
         public boolean getBeamerCharge() {
             return beamerCharged;
         }
 
         /**
-         * Set the maximum weight that the player can carry at a time
-         */
+        * Set the maximum weight that the player can carry at a time
+        */
         public void setMaxCarryWeight(int max)
         {
             maxCarryWeight = max;
         }
 
         /**
-         * Get the maximum weight that the player can carry at a time
-         * @return The maximum weight the player can carry
-         */
+        * Get the maximum weight that the player can carry at a time
+        * @return The maximum weight the player can carry
+        */
         public int getMaxCarryWeight()
         {
             return maxCarryWeight;
@@ -564,61 +565,61 @@ return $items;
 
 </code></pre>
 
-                </div>
-                
-<!--
-                <div id="hh_javadoc" class="document hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_javadoc', 'hh_accomplishments', this, event)">
-
-                    <iframe src="http://bdtripp.com/documents/hh_javadoc"></iframe>
-                </div>
--->
-            
-                <div class="project_bottom">
-                    <div class="language_icons">
-                        <ul>
-                            <li><img src="images/duke.svg">Java®</li>
-                        </ul>
                     </div>
                     
-                    <button id="hh_view_details_btn" class="view_details_btn">View Details</button>
-                </div>
-            </div>
-            
-            <div id="cc_screenshot_card" class="project screenshot card">
-                <img id="cc_screenshot" class="tracked_image" src="images/screenshots/cc_screenshot.png" onclick="window.open('http://bdtripp.com/app-release.apk');">
+    <!--
+                    <div id="hh_javadoc" class="document hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_javadoc', 'hh_accomplishments', this, event)">
+
+                        <iframe src="http://bdtripp.com/documents/hh_javadoc"></iframe>
+                    </div>
+    -->
                 
-                <div id="cc_accomplishments" class="project accomplishments hidden_card">
-                    <h4>Design &amp; Development Details</h4>
-                    <ul>
-                        <li>Java &nbsp; <!-- added &nbsp; because the first list item was floating up too high under "Java" because Java is such a short word -->
+                    <div class="project_bottom">
+                        <div class="language_icons">
                             <ul>
-                                <li>Input Validation
-                                    <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
-                                </li>
-                                <li>Event Handling</li>
-                                <li>Intents
-                                    <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
-                                </li>
+                                <li><img src="images/duke.svg">Java®</li>
                             </ul>
-                        </li>
-                        <li>Multiple Activities</li>
-                        <li>Lifecycle Callbacks</li>      
-                        <li>XML Layouts
-                            <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
-                        </li>           
-                        <li>Support Multiple Languages
-                            <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
-                        </li>
-                    </ul>
-                    <div>
-                        <a href="https://github.com/bdtripp/calorie_calculator" target="_blank"><img src="images/github.png">View Full Source Code</a>
+                        </div>
+                        
+                        <button id="hh_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
                 </div>
                 
-                <div id="cc_src_validation" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
-                       
+                <div id="cc_screenshot_card" class="project screenshot card">
+                    <img id="cc_screenshot" class="tracked_image" src="images/screenshots/cc_screenshot.png" onclick="window.open('http://bdtripp.com/app-release.apk');">
+                    
+                    <div id="cc_accomplishments" class="project accomplishments hidden_card">
+                        <h4>Design &amp; Development Details</h4>
+                        <ul>
+                            <li>Java &nbsp; <!-- added &nbsp; because the first list item was floating up too high under "Java" because Java is such a short word -->
+                                <ul>
+                                    <li>Input Validation
+                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
+                                    </li>
+                                    <li>Event Handling</li>
+                                    <li>Intents
+                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Multiple Activities</li>
+                            <li>Lifecycle Callbacks</li>      
+                            <li>XML Layouts
+                                <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
+                            </li>           
+                            <li>Support Multiple Languages
+                                <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
+                            </li>
+                        </ul>
+                        <div>
+                            <a href="https://github.com/bdtripp/calorie_calculator" target="_blank"><img src="images/github.png">View Full Source Code</a>
+                        </div>
+                    </div>
+                    
+                    <div id="cc_src_validation" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
+                        
 <pre><code class="Java">/*
     Checking user input and displaying a toast when the input is invalid. 
 */
@@ -647,11 +648,11 @@ if ((Float.parseFloat(metString) &lt; 0.9f) | (Float.parseFloat(metString) > 23f
     return;
 }
 </code></pre>
-                </div>
-                
-                <div id="cc_src_intent" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
-                       
+                    </div>
+                    
+                    <div id="cc_src_intent" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
+                        
 <pre><code class="Java">/*
     Passing data between activities using an intent. 
 */
@@ -663,11 +664,11 @@ intent.putExtra(EXTRA_MET, Float.parseFloat(metString));
 
 startActivity(intent);
 </code></pre>
-                </div> 
-                
-                <div id="cc_src_xml" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
-                       
+                    </div> 
+                    
+                    <div id="cc_src_xml" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
+                        
 <pre><code class="XML">&lt;!--
     App layout written in XML. 
 --&gt;
@@ -703,11 +704,11 @@ startActivity(intent);
 
 &lt;/LinearLayout&gt;
 </code></pre>
-                </div>
-                
-                <div id="cc_src_languages" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
-                       
+                    </div>
+                    
+                    <div id="cc_src_languages" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
+                        
 <pre><code class="XML">&lt;!--
     String resources provided in Spanish. If the user has set their phone's language to Spanish, 
     the app will use the string resources provided here. 
@@ -732,237 +733,226 @@ startActivity(intent);
 &lt;/resources&gt;
 
 </code></pre>
-                </div> 
-                <div class="project_bottom">
-                    <div class="language_icons">
-                        <ul>
-                            <li><img src="images/android.svg">Android™</li>
-                            <li><img src="images/duke.svg">Java®</li>
-                            <li><img src="images/xml.svg">XML</li>
-                        </ul>
-                    </div>
-                    
-                    <button id="cc_download_app_btn" onclick="window.open('http://bdtripp.com/app-release.apk');">Download Android App</button>
-                    <button id="cc_view_details_btn" class="view_details_btn">View Details</button>
-                </div>
-            </div>
-            
-            <div id="aithme_screenshot_card" class="project screenshot card">
-                <img id="aithme_screenshot" class="tracked_image" src="images/screenshots/aithme_screenshot.png" onclick="window.open('http://bdtripp.com/ace_in_the_hole/', '_blank');">
-                
-                <div id="aithme_accomplishments" class="project accomplishments hidden_card">
-                    <h4>Design &amp; Development Details</h4>
-                    <ul>
-                        <li>Form submissions to database</li>
-                        <li>AJAX</li>
-                        <li>Input Validation</li>
-                        <li>JavaScript Image Slider</li>
-                        <li>Embedded Feeds</li>
-                    </ul>
-
-                    <div>
-                        <a href="https://github.com/bdtripp/ace_in_the_hole" target="_blank"><img src="images/github.png">View Full Source Code</a>
-                    </div>
-                </div>
-            
-                <div class="project_bottom">
-                    <div class="language_icons">
-                        <ul>
-                            <li><img src="images/php.svg">PHP</li>
-                            <li><img src="images/sql.svg">SQL</li>
-                            <li><img src="images/javascript.svg">JavaScript</li>
-                            <li><img src="images/html5.svg">HTML5</li>
-                            <li><img src="images/less.svg">Less</li>
-                        </ul>
-                    </div>
-                    
-                    <button id="aithme_visit_site_btn" onclick="window.open('http://bdtripp.com/ace_in_the_hole/', '_blank');">Visit Site</button>
-                    <button id="aithme_view_details_btn" class="view_details_btn">View Details</button>
-                </div>
-            </div>
-            
-            <div id="bm_screenshot_card" class="project screenshot card">
-                <img id="bm_screenshot" class="tracked_image" src="images/screenshots/bm_screenshot.png" onclick="window.open('http://bdtripp.com/burrito_masala/', '_blank');">
-                
-                <div id="bm_accomplishments" class="project accomplishments hidden_card">
-                    <h4>Design &amp; Development Details</h4>
-                    <ul>
-                        <li>Responsive Grid</li>
-                        <li>UI/UX Design Principles</li>
-                        <li>Content Reference Wireframe</li>
-                        <li>High Fidelity Wireframe</li>
-                        <li>Mood Board</li>
-                        <li>Brand Book
-                            <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
-                            <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/brand_book.pdf" target="_blank">
-                                <img class="src_code_icon" src="images/document.png">
-                            </a>
-                        </li>
-                        <li>User Interface Inventory
-                            <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
-                           <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/interface_inventory.pdf" target="_blank">
-                                <img class="src_code_icon" src="images/document.png">
-                            </a>
-                        </li>
-                        <li>List of Requirements
-                            <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
-                            <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/listofrequirements.pdf" target="_blank">
-                                <img class="src_code_icon" src="images/document.png">
-                            </a>
-                        </li>
-                    </ul>
-
-                </div>
-                
-                <div id="bm_brand_book" class="document hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
-                       
-                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vSVYWG12T2JgcXCFsrPxet9D9kibx8qJfTrcS64IAoYO7qE5tKKIaoufJPD9ODEsH-rG96uPIcxflB0/pub?embedded=true"></iframe>
-                    
-                </div>
-                
-                <div id="bm_interface_inventory" class="document hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
-                       
-                    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDYEJkA2k0XaDg_6wWrJFUtG6E4XmKMIzDfftJpz3zDgzvv_th2JjLKvpbt0vn1pjyk7qu4Frc48Hn/pubhtml?widget=true&amp;headers=false"></iframe>
-                    
-                </div> 
-                
-                <div id="bm_requirements" class="document hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
-                       
-                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vTRw2ofXeXInPQOnuodV_qLQmYHXQ-_wx6m10Dg1jo0utvvbP76icRZXnT2xQoyziNZxa70FcWP6QbS/pub?embedded=true"></iframe>
-                    
-                </div> 
-                <div class="project_bottom">
-                    
-                    <div class="language_icons">
-                        <ul>
-                            <li><img src="images/html5.svg">HTML5</li>
-                            <li><img src="images/css3.svg">CSS3</li>
-                        </ul>
-                    </div>
-                    
-                    <button id="bm_visit_site_btn" onclick="window.open('http://bdtripp.com/burrito_masala/', '_blank');">Visit Site</button>
-                    <button id="bm_view_details_btn" class="view_details_btn">View Details</button>
-                </div>
-            </div>
-            
-            <div id="wr_screenshot_card" class="project screenshot card">
-                <img id="wr_screenshot" class="tracked_image" src="images/screenshots/wonderland_screenshot.png" onclick="window.open('https://www.wonderlandrunning.com/', '_blank');">
-                
-                <div id="wr_accomplishments" class="project accomplishments hidden_card">
-                    <h4>Design &amp; Development Details</h4>
-                    <ul>
-                        <li>Collaborated with a client to:
+                    </div> 
+                    <div class="project_bottom">
+                        <div class="language_icons">
                             <ul>
-                                <li>determine user requirements</li>
-                                <li>determine the best layout for the site</li>
-                                <li>ensure that client's expectations were met</li>
+                                <li><img src="images/android.svg">Android™</li>
+                                <li><img src="images/duke.svg">Java®</li>
+                                <li><img src="images/xml.svg">XML</li>
                             </ul>
-                        </li>
-                        <li>Designed with scalability in mind</li>    
-                        <li>Deployed live site</li>
-                    </ul>
+                        </div>
+                        
+                        <button id="cc_download_app_btn" onclick="window.open('http://bdtripp.com/app-release.apk');">Download Android App</button>
+                        <button id="cc_view_details_btn" class="view_details_btn">View Details</button>
+                    </div>
                 </div>
-            
-                <div class="project_bottom">
-                    <div class="language_icons">
+                
+                <div id="aithme_screenshot_card" class="project screenshot card">
+                    <img id="aithme_screenshot" class="tracked_image" src="images/screenshots/aithme_screenshot.png" onclick="window.open('http://bdtripp.com/ace_in_the_hole/', '_blank');">
+                    
+                    <div id="aithme_accomplishments" class="project accomplishments hidden_card">
+                        <h4>Design &amp; Development Details</h4>
                         <ul>
-                            <li><img src="images/html5.svg">HTML5</li>
-                            <li><img src="images/css3.svg">CSS3</li>
+                            <li>Form submissions to database</li>
+                            <li>AJAX</li>
+                            <li>Input Validation</li>
+                            <li>JavaScript Image Slider</li>
+                            <li>Embedded Feeds</li>
+                        </ul>
+
+                        <div>
+                            <a href="https://github.com/bdtripp/ace_in_the_hole" target="_blank"><img src="images/github.png">View Full Source Code</a>
+                        </div>
+                    </div>
+                
+                    <div class="project_bottom">
+                        <div class="language_icons">
+                            <ul>
+                                <li><img src="images/php.svg">PHP</li>
+                                <li><img src="images/sql.svg">SQL</li>
+                                <li><img src="images/javascript.svg">JavaScript</li>
+                                <li><img src="images/html5.svg">HTML5</li>
+                                <li><img src="images/less.svg">Less</li>
+                            </ul>
+                        </div>
+                        
+                        <button id="aithme_visit_site_btn" onclick="window.open('http://bdtripp.com/ace_in_the_hole/', '_blank');">Visit Site</button>
+                        <button id="aithme_view_details_btn" class="view_details_btn">View Details</button>
+                    </div>
+                </div>
+                
+                <div id="bm_screenshot_card" class="project screenshot card">
+                    <img id="bm_screenshot" class="tracked_image" src="images/screenshots/bm_screenshot.png" onclick="window.open('http://bdtripp.com/burrito_masala/', '_blank');">
+                    
+                    <div id="bm_accomplishments" class="project accomplishments hidden_card">
+                        <h4>Design &amp; Development Details</h4>
+                        <ul>
+                            <li>Responsive Grid</li>
+                            <li>UI/UX Design Principles</li>
+                            <li>Content Reference Wireframe</li>
+                            <li>High Fidelity Wireframe</li>
+                            <li>Mood Board</li>
+                            <li>Brand Book
+                                <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
+                                <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/brand_book.pdf" target="_blank">
+                                    <img class="src_code_icon" src="images/document.png">
+                                </a>
+                            </li>
+                            <li>User Interface Inventory
+                                <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
+                            <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/interface_inventory.pdf" target="_blank">
+                                    <img class="src_code_icon" src="images/document.png">
+                                </a>
+                            </li>
+                            <li>List of Requirements
+                                <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
+                                <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/listofrequirements.pdf" target="_blank">
+                                    <img class="src_code_icon" src="images/document.png">
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    
+                    <div id="bm_brand_book" class="document hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
+                        
+                        <iframe src="https://docs.google.com/document/d/e/2PACX-1vSVYWG12T2JgcXCFsrPxet9D9kibx8qJfTrcS64IAoYO7qE5tKKIaoufJPD9ODEsH-rG96uPIcxflB0/pub?embedded=true"></iframe>
+                        
+                    </div>
+                    
+                    <div id="bm_interface_inventory" class="document hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
+                        
+                        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDYEJkA2k0XaDg_6wWrJFUtG6E4XmKMIzDfftJpz3zDgzvv_th2JjLKvpbt0vn1pjyk7qu4Frc48Hn/pubhtml?widget=true&amp;headers=false"></iframe>
+                        
+                    </div> 
+                    
+                    <div id="bm_requirements" class="document hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
+                        
+                        <iframe src="https://docs.google.com/document/d/e/2PACX-1vTRw2ofXeXInPQOnuodV_qLQmYHXQ-_wx6m10Dg1jo0utvvbP76icRZXnT2xQoyziNZxa70FcWP6QbS/pub?embedded=true"></iframe>
+                        
+                    </div> 
+                    <div class="project_bottom">
+                        
+                        <div class="language_icons">
+                            <ul>
+                                <li><img src="images/html5.svg">HTML5</li>
+                                <li><img src="images/css3.svg">CSS3</li>
+                            </ul>
+                        </div>
+                        
+                        <button id="bm_visit_site_btn" onclick="window.open('http://bdtripp.com/burrito_masala/', '_blank');">Visit Site</button>
+                        <button id="bm_view_details_btn" class="view_details_btn">View Details</button>
+                    </div>
+                </div>
+                
+                <div id="wr_screenshot_card" class="project screenshot card">
+                    <img id="wr_screenshot" class="tracked_image" src="images/screenshots/wonderland_screenshot.png" onclick="window.open('https://www.wonderlandrunning.com/', '_blank');">
+                    
+                    <div id="wr_accomplishments" class="project accomplishments hidden_card">
+                        <h4>Design &amp; Development Details</h4>
+                        <ul>
+                            <li>Collaborated with a client to:
+                                <ul>
+                                    <li>determine user requirements</li>
+                                    <li>determine the best layout for the site</li>
+                                    <li>ensure that client's expectations were met</li>
+                                </ul>
+                            </li>
+                            <li>Designed with scalability in mind</li>    
+                            <li>Deployed live site</li>
+                        </ul>
+                    </div>
+                
+                    <div class="project_bottom">
+                        <div class="language_icons">
+                            <ul>
+                                <li><img src="images/html5.svg">HTML5</li>
+                                <li><img src="images/css3.svg">CSS3</li>
+                            </ul>
+                        </div>
+                        
+                        <button id="wr_visit_site_btn" onclick="window.open('https://www.wonderlandrunning.com/', '_blank');">Visit Site</button>
+                        <button id="wr_view_details_btn" class="view_details_btn">View Details</button>
+                    </div>
+                </div>
+                
+                <div id="ff_screenshot_card" class="project screenshot card">
+                    <img id="ff_screenshot" class="tracked_image" src="images/screenshots/ff_screenshot.png" onclick="window.open('http://bdtripp.com/fairfield_farm/', '_blank');">
+                    
+                    <div id="ff_accomplishments" class="project accomplishments hidden_card">
+                        <h4>Design &amp; Development Details</h4>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Mobile First
+                            </li>
+                            <li>Responsive Design</li>
+                            <li>Semantic HTML</li>
+                            <li>Accessibility</li>
+                            <li>HTML &amp; CSS Best Practices</li>
+                            <li>Basic SEO Principles</li>
+                        </ul>
+                    </div>
+
+                    <div class="project_bottom">
+                        <div class="language_icons">
+                            <ul>
+                                <li><img src="images/html5.svg">HTML5</li>
+                                <li><img src="images/css3.svg">CSS3</li>
+                            </ul>
+                        </div>
+                        <button id="ff_visit_site_btn" onclick="window.open('http://bdtripp.com/fairfield_farm/', '_blank');">Visit Site</button>
+                        <button id="ff_view_details_btn" class="view_details_btn">View Details</button>
+                    </div>
+                </div>
+                
+                <div id="bg_screenshot_card" class="project screenshot card">
+                    <img id="bg_screenshot" class="tracked_image" src="images/screenshots/bg_screenshot.png" onclick="window.open('http://bdtripp.com/bramblewood_guitars/', '_blank');">
+                    
+                    <div id="bg_accomplishments" class="project accomplishments hidden_card">
+                        <h4>Design &amp; Development Details</h4>
+                        <ul>
+                            <li>WordPress</li>
+                            <li>Custom CSS styles
+                                <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this, event)">
+                            </li>
+                            <li>User Roles</li>
+                            <li>Default and Custom Widgets</li>
+                            <li>Display Plugins</li>
+                            <li>Photo Editing with GIMP</li>
+                            <li>Embedded Google Map and<br> Youtube Video
+                                <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
+                            </li>
                         </ul>
                     </div>
                     
-                    <button id="wr_visit_site_btn" onclick="window.open('https://www.wonderlandrunning.com/', '_blank');">Visit Site</button>
-                    <button id="wr_view_details_btn" class="view_details_btn">View Details</button>
-                </div>
-            </div>
-            
-            <div id="ff_screenshot_card" class="project screenshot card">
-                <img id="ff_screenshot" class="tracked_image" src="images/screenshots/ff_screenshot.png" onclick="window.open('http://bdtripp.com/fairfield_farm/', '_blank');">
-                
-                <div id="ff_accomplishments" class="project accomplishments hidden_card">
-                    <h4>Design &amp; Development Details</h4>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>Mobile First
-                        </li>
-                        <li>Responsive Design</li>
-                        <li>Semantic HTML</li>
-                        <li>Accessibility</li>
-                        <li>HTML &amp; CSS Best Practices</li>
-                        <li>Basic SEO Principles</li>
-                    </ul>
-                </div>
-                
-<!--
-                <div id="ff_src_code" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="slideDown('ff_src_code', event)">
--->
-                       
-<!--
-<pre><code class="plaintext">
-</code></pre>
--->
-                    
-<!--                </div>-->
-                <div class="project_bottom">
-                    <div class="language_icons">
-                        <ul>
-                            <li><img src="images/html5.svg">HTML5</li>
-                            <li><img src="images/css3.svg">CSS3</li>
-                        </ul>
-                    </div>
-                    <button id="ff_visit_site_btn" onclick="window.open('http://bdtripp.com/fairfield_farm/', '_blank');">Visit Site</button>
-                    <button id="ff_view_details_btn" class="view_details_btn">View Details</button>
-                </div>
-            </div>
-            
-            <div id="bg_screenshot_card" class="project screenshot card">
-                <img id="bg_screenshot" class="tracked_image" src="images/screenshots/bg_screenshot.png" onclick="window.open('http://bdtripp.com/bramblewood_guitars/', '_blank');">
-                
-                <div id="bg_accomplishments" class="project accomplishments hidden_card">
-                    <h4>Design &amp; Development Details</h4>
-                    <ul>
-                        <li>WordPress</li>
-                        <li>Custom CSS styles
-                            <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this, event)">
-                        </li>
-                        <li>User Roles</li>
-                        <li>Default and Custom Widgets</li>
-                        <li>Display Plugins</li>
-                        <li>Photo Editing with GIMP</li>
-                        <li>Embedded Google Map and<br> Youtube Video
-                            <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
-                        </li>
-                    </ul>
-                </div>
-                
-                <div id="bg_src_custom_css" class="src_code hidden_card">
-                    <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this, event)">
-                       
+                    <div id="bg_src_custom_css" class="src_code hidden_card">
+                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this, event)">
+                        
 <pre><code class="CSS">/*
     CSS to customize the style of the Contact Form 7 pluglin for WordPress
 */
 
 .wpcf7 label {
-      display: block;
+    display: block;
 }
 
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
 .wpcf7 textarea { 
     width: 100%;
-	border: 1px solid #ccc;
+    border: 1px solid #ccc;
 }
 </code></pre>
-                </div>    
-                
-                    <div id="bg_src_map" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
-                       
+                    </div>    
+                    
+                        <div id="bg_src_map" class="src_code hidden_card">
+                            <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
+                        
 <pre><code class="HTML">/*
     HTML to embed a google map.
 */
@@ -976,21 +966,22 @@ startActivity(intent);
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-                </div> 
-                <div class="project_bottom">
-                    <div class="language_icons">
-                        <ul>
-                            <li><img src="images/wordpress.svg">WordPress</li>
-                            <li><img src="images/html5.svg">HTML5</li>
-                            <li><img src="images/css3.svg">CSS3</li>
-                        </ul>
+                    </div> 
+                    <div class="project_bottom">
+                        <div class="language_icons">
+                            <ul>
+                                <li><img src="images/wordpress.svg">WordPress</li>
+                                <li><img src="images/html5.svg">HTML5</li>
+                                <li><img src="images/css3.svg">CSS3</li>
+                            </ul>
+                        </div>
+                        
+                        <button id="bg_visit_site_btn" onclick="window.open('http://bdtripp.com/bramblewood_guitars/', '_blank');">Visit Site</button>
+                        <button id="bg_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
-                    
-                    <button id="bg_visit_site_btn" onclick="window.open('http://bdtripp.com/bramblewood_guitars/', '_blank');">Visit Site</button>
-                    <button id="bg_view_details_btn" class="view_details_btn">View Details</button>
                 </div>
+                <div style="clear: both;"></div>
             </div>
-            <div style="clear: both;"></div>
         </section>
         
         <section id="skills">
