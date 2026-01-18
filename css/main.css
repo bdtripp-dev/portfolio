@@ -281,7 +281,7 @@ html body main section#projects div#projects_wrapper div.screenshot.card#hh_scre
   cursor: auto;
 }
 html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments {
-  overflow: hidden;
+  overflow: scroll;
   font-size: 0.85rem;
 }
 html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments h4 {
@@ -290,9 +290,9 @@ html body main section#projects div#projects_wrapper div.screenshot.card div.acc
 }
 html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div {
   clear: both;
-  position: absolute;
   bottom: 10px;
   width: 100%;
+  padding: 20px 0 30px 0;
 }
 html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div a {
   text-decoration: none;
