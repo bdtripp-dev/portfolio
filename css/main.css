@@ -461,21 +461,21 @@ html body main section#skills h4 {
   padding: 10px 0;
 }
 html body main section#skills div ul {
-  overflow: hidden;
-  padding: 15px 15px 30px 15px;
-  margin-top: -30px;
+  margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 80px));
+  column-gap: 30px;
+  row-gap: 45px;
+  justify-content: space-around;
 }
 html body main section#skills div ul li {
-  width: 50%;
-  float: left;
   text-align: center;
-  margin: 0 auto;
 }
 html body main section#skills div ul li img {
   height: 60px;
   width: 60px;
   display: block;
-  margin: 45px auto 25px;
+  margin: 0 auto 25px;
 }
 html body main section#skills div#languages {
   background-color: #F2F2F2;
@@ -633,10 +633,6 @@ html body footer div#image_credits table tbody tr th {
 @media (min-width: 320px) {
   html body main section#about div#intro_container div.card p:first-child {
     margin-left: 8%;
-  }
-  html body main section#skills div ul li {
-    width: 33%;
-    min-height: 102px;
   }
 }
 /*===============================
