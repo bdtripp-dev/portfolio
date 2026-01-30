@@ -624,14 +624,17 @@ html {
                     }
                     
                     div {
-
+                        max-width: 1360px;
+                        margin: 0 auto;
+                        
                         ul {
                             margin: 30px;
                             display: grid;
                             grid-template-columns: repeat(auto-fill, minmax(min-content, 80px));
                             column-gap: 30px;
-                            row-gap: 45px;
+                            row-gap: 30px;
                             justify-content: space-around;
+                            grid-auto-rows: 142px;
 
                             li {
                                 text-align: center;
@@ -992,7 +995,6 @@ html {
                                     
                                     li {
                                         
-                                        width: 25%;
                                     }
                                 }
                             }
@@ -1294,7 +1296,6 @@ html {
                                 ul {
                                     
                                     li {
-                                        width: 20%;
                                         
                                         img {
                                             
@@ -1628,9 +1629,11 @@ html {
                             &#languages, &#tools {
                                 
                                 ul {
+                                    column-gap: 70px;
+                                    row-gap: 30px;
+                                    grid-auto-rows: 158px;
                                     
                                     li {
-                                        width: 20%;
                                         
                                         img {
                                             height: 80px;

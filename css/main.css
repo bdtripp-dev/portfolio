@@ -460,13 +460,18 @@ html body main section#skills h4 {
   border-bottom: 1px solid #C7523A;
   padding: 10px 0;
 }
+html body main section#skills div {
+  max-width: 1360px;
+  margin: 0 auto;
+}
 html body main section#skills div ul {
   margin: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min-content, 80px));
   column-gap: 30px;
-  row-gap: 45px;
+  row-gap: 30px;
   justify-content: space-around;
+  grid-auto-rows: 142px;
 }
 html body main section#skills div ul li {
   text-align: center;
@@ -655,10 +660,6 @@ html body footer div#image_credits table tbody tr th {
   html body main section#projects div#projects_wrapper {
     margin: 60px 80px 0 80px;
   }
-  html body main section#skills div#languages ul li,
-  html body main section#skills div#tools ul li {
-    width: 25%;
-  }
   html body main section#education div.card {
     padding: 20px 0;
   }
@@ -737,10 +738,6 @@ html body footer div#image_credits table tbody tr th {
     margin: 0 auto;
     padding: 15px 30px;
     font-size: 1.2rem;
-  }
-  html body main section#skills div#languages ul li,
-  html body main section#skills div#tools ul li {
-    width: 20%;
   }
   html body main section#education div.card {
     max-width: 55%;
@@ -845,9 +842,11 @@ html body footer div#image_credits table tbody tr th {
   html body main section#projects div.project.screenshot div#pas_erd iframe {
     max-width: 1200px;
   }
-  html body main section#skills div#languages ul li,
-  html body main section#skills div#tools ul li {
-    width: 20%;
+  html body main section#skills div#languages ul,
+  html body main section#skills div#tools ul {
+    column-gap: 70px;
+    row-gap: 30px;
+    grid-auto-rows: 158px;
   }
   html body main section#skills div#languages ul li img,
   html body main section#skills div#tools ul li img {
