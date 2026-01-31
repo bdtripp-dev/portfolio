@@ -485,7 +485,7 @@ html body main section#skills div ul li img {
 html body main section#skills div#languages {
   background-color: #F2F2F2;
 }
-html body main section#skills div#tools {
+html body main section#skills div#tools_and_technologies {
   margin: 30px auto 0 auto;
   background-color: #F2F2F2;
 }
@@ -843,13 +843,13 @@ html body footer div#image_credits table tbody tr th {
     max-width: 1200px;
   }
   html body main section#skills div#languages ul,
-  html body main section#skills div#tools ul {
+  html body main section#skills div#tools_and_technologies ul {
     column-gap: 70px;
     row-gap: 30px;
     grid-auto-rows: 158px;
   }
   html body main section#skills div#languages ul li img,
-  html body main section#skills div#tools ul li img {
+  html body main section#skills div#tools_and_technologies ul li img {
     height: 80px;
     width: 80px;
   }
