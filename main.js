@@ -187,7 +187,8 @@ function displayFullScreen(inFrontId, event) {
     inFront.style.display = "block";
     inFront.style.position = "fixed";
     if (inFront.className === "src_code hidden_card") {
-        inFront.style.maxWidth = "90%";
+        inFront.style.width = "90%";
+        inFront.style.maxWidth = "1500px"
     }
     inFront.style.height = "auto";
     inFront.style.height = "90vh";
