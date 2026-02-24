@@ -1,7 +1,7 @@
 services:
   # Web Application
   web: # Other services could be db, api, or app
-    image: bdtrippdev/porfolio:${TAG}
+    image: bdtrippdev/portfolio:${TAG}
     restart: always
     labels:
       - "deunhealth.restart=true"
