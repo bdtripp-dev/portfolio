@@ -37,9 +37,9 @@
     <link href="css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <script src="highlight/highlight.pack.js"></script>
+    <script src="vendor/highlight/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="main.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
 </head>
 <body onload="init()">
     
@@ -629,7 +629,7 @@ return $items;
                 </div>
                 
                 <div id="cc_screenshot_card" class="project screenshot card">
-                    <img id="cc_screenshot" class="tracked_image" src="images/screenshots/cc_screenshot.png" onclick="window.open('http://bdtripp.com/app-release.apk');">
+                    <img id="cc_screenshot" class="tracked_image" src="images/screenshots/cc_screenshot.png" onclick="window.open('http://bdtripp.com/documents/app-release.apk');">
                     
                     <div id="cc_accomplishments" class="project accomplishments hidden_card">
                         <h4>Design &amp; Development Details</h4>
