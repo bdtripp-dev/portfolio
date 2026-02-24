@@ -1,0 +1,22 @@
+services:
+  # Web Application
+  web: # Other services could be db, api, or app
+    image: bdtrippdev/porfolio:${TAG}
+    restart: always
+    labels:
+      - "deunhealth.restart=true"
+    environment:
+      - VIRTUAL_HOST=${FQDN}
+      - ENV_NAME=${ENV_NAME}
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost/ || exit 1"]
+      interval: 30s
+      start_period: 20s
+    networks:
+      - public_net # Connected to Proxy
+networks:
+  # Public network must match what the proxy uses
+  public_net:
+    name: ${ENV_NAME}_public
+    external: true
+    
