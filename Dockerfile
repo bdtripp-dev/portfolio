@@ -1,4 +1,5 @@
 FROM php:8.2-apache
+# Remove default Apache placeholder
 RUN rm -f /var/www/html/index.html
-COPY index.php /var/www/html/index.php
+COPY public/ /var/www/html/
 EXPOSE 80
