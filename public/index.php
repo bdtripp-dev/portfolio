@@ -35,9 +35,9 @@
         &family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="js/vendor/highlight/styles/atom-one-light.css">
+    <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <script src="js/vendor/highlight/highlight.pack.js"></script>
+    <script src="vendor/highlight/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="js/main.js" type="text/javascript"></script>
 </head>
