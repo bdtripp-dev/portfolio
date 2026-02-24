@@ -25,7 +25,9 @@
     <link href="css/reset.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?
+        family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900
+        &family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
@@ -305,7 +307,12 @@ return $items;
                         <h4>Design &amp; Development Details</h4>
                         <ul>
                             <li>Developed with React</li>
-                            <li>Content dynamically generated from a CSV file.</li>
+                            <li>Content dynamically generated from a CSV file:
+                                <ul>
+                                    <li>Parsed CSV file using PapaParse</li>
+                                    <li>Used JavaScript Promises to wait until CSV is parsed before rendering React components</li>
+                                </ul>
+                            </li>
                             <li>Styled using CSS Grid</li>
                         </ul>
                         <div>
