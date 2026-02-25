@@ -34,12 +34,12 @@
         family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900
         &family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/main.css?v=<?php echo filemtime(__DIR__ . '/css/main.css'); ?>" rel="stylesheet">
     <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <script src="vendor/highlight/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/main.js?v=<?php echo filemtime(__DIR__ . '/js/main.js'); ?>" type="text/javascript"></script>
 </head>
 <body onload="init()">
     
@@ -1087,8 +1087,8 @@ startActivity(intent);
             <div class="card">
                 <ul>
                     <li>
-                        <a href="mailto:btripp365@gmail.com"><img src="images/email_icon.png"></a>
-                        <a href="mailto:btripp365@gmail.com">btripp365@gmail.com</a>
+                        <a href="mailto:dev@bdtripp.com"><img src="images/email_icon.png"></a>
+                        <a href="mailto:dev@bdtripp.com">dev@bdtripp.com</a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/bdtripp" target="_blank"><img src="images/linkedin.png"></a>

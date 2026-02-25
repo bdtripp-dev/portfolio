@@ -506,6 +506,7 @@ html body main section#skills div#tools_and_technologies {
 html body main section#education div.card {
   padding: 20px 0;
   background-color: #F2F2F2;
+  display: grid;
 }
 html body main section#education div.card h4 {
   padding: 2% 2% 1% 2%;
@@ -521,9 +522,10 @@ html body main section#education div.card h4 span {
   font-size: 1.3rem;
 }
 html body main section#education div.card ul {
-  margin: 20px auto;
+  margin: 20px;
   padding-left: 25px;
   list-style-type: circle;
+  justify-self: center;
 }
 html body main section#education div.card ul li {
   margin-bottom: 10px;
@@ -679,11 +681,6 @@ html body footer div#image_credits table tbody tr th {
   }
   html body main section#education div.card h2 {
     padding: 2%;
-  }
-  html body main section#education div.card ul {
-    margin: 20px auto;
-    padding-left: 25px;
-    width: 300px;
   }
   html body main section#education div.card ul li {
     margin-bottom: 10px;
