@@ -479,6 +479,7 @@ html body main section#skills div ul li {
 html body main section#skills div ul li img {
   height: 60px;
   width: 60px;
+  object-fit: contain;
   display: block;
   margin: 0 auto 25px;
 }
