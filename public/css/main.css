@@ -254,6 +254,16 @@ html body main section#about div#intro_container div.card p:last-child::first-le
   margin-top: 0.11em;
   color: #022735;
 }
+@supports (initial-letter: 3) or (-webkit-initial-letter: 3) {
+  html body main section#about div#intro_container div.card p:last-child::first-letter {
+    /* Reset the hacks */
+    float: none;
+    margin-top: 0;
+    /* For Chrome and Safari (Not supported by Firefox)*/
+    initial-letter: 2;
+    -webkit-initial-letter: 2;
+  }
+}
 html body main section#about div#intro_container div.card p {
   font-size: 1.5rem;
   padding: 10px 30px;
@@ -423,6 +433,7 @@ html body main section#projects div#projects_wrapper div.screenshot.card div.pro
 }
 html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li:hover img {
   width: 30px;
+  height: 30px;
   transition: width 0.2s ease-in-out;
 }
 html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li:not(:first-of-type) {
@@ -433,6 +444,8 @@ html body main section#projects div#projects_wrapper div.screenshot.card div.pro
 html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li img {
   margin: 0 auto 5px auto;
   width: 25px;
+  height: 25px;
+  object-fit: contain;
   transition: width 0.2s ease-in-out;
   display: block;
 }
