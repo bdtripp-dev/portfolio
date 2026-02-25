@@ -297,7 +297,7 @@ return $items;
                         <div class="language_icons">
                             <ul>
                                 <li><img src="images/php.svg">PHP</li>
-                                <li><img src="images/sql.svg">SQL</li>
+                                <li><img src="images/sql.png">SQL</li>
                                 <li><img src="images/javascript.svg">JavaScript</li>
                                 <li><img src="images/html5.svg">HTML5</li>
                                 <li><img src="images/less.svg">Less</li>
@@ -620,7 +620,7 @@ return $items;
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
-                                <li><img src="images/duke.svg">Java®</li>
+                                <li><img src="images/duke.png">Java®</li>
                             </ul>
                         </div>
                         
@@ -780,7 +780,7 @@ startActivity(intent);
                         <div class="language_icons">
                             <ul>
                                 <li><img src="images/android.svg">Android™</li>
-                                <li><img src="images/duke.svg">Java®</li>
+                                <li><img src="images/duke.png">Java®</li>
                                 <li><img src="images/xml.svg">XML</li>
                             </ul>
                         </div>
@@ -812,7 +812,7 @@ startActivity(intent);
                         <div class="language_icons">
                             <ul>
                                 <li><img src="images/php.svg">PHP</li>
-                                <li><img src="images/sql.svg">SQL</li>
+                                <li><img src="images/sql.png">SQL</li>
                                 <li><img src="images/javascript.svg">JavaScript</li>
                                 <li><img src="images/html5.svg">HTML5</li>
                                 <li><img src="images/less.svg">Less</li>
@@ -1012,7 +1012,7 @@ startActivity(intent);
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
-                                <li><img src="images/wordpress.svg">WordPress</li>
+                                <li><img src="images/wordpress.png">WordPress</li>
                                 <li><img src="images/html5.svg">HTML5</li>
                                 <li><img src="images/css3.svg">CSS3</li>
                             </ul>
@@ -1033,11 +1033,11 @@ startActivity(intent);
                 <ul>
                     <li><img src="images/javascript.svg">JavaScript</li>
                     <li><img src="images/php.svg">PHP</li>
-                    <li><img src="images/sql.svg">SQL</li>
+                    <li><img src="images/sql.png">SQL</li>
                     <li><img src="images/html5.svg">HTML5</li>
                     <li><img src="images/css3.svg">CSS3</li>
                     <li><img src="images/less.svg">Less</li>
-                    <li><img src="images/duke.svg">Java®</li>
+                    <li><img src="images/duke.png">Java®</li>
                     <li><img src="images/python.svg">Python®</li>
                     <li><img src="images/bash.svg">Bash</li>
                     <li><img src="images/powershell.png">PowerShell</li>
@@ -1055,13 +1055,13 @@ startActivity(intent);
                     <li><a href="https://httpd.apache.org/" target="_blank"></a><img src="images/httpd.svg"></a>Apache HTTP Server</li>
                     <li><img src="images/react.png">React</li>
                     <li><img src="images/jquery.svg">jQuery</li>
-                    <li><img src="images/wordpress.svg">WordPress</li>
+                    <li><img src="images/wordpress.png">WordPress</li>
                     <li><img src="images/craft_cms.svg">Craft CMS</li>
                     <li><img src="images/cpanel.svg">cPanel®</li>
                     <li><img src="images/phpmyadmin.svg">phpMyAdmin</li>
                     <li><img src="images/gimp.svg">GIMP</li>
                     <li><img src="images/vscode.svg">Visual Studio Code™</li>
-                    <li><img src="images/android_studio.svg">Android Studio™</li>
+                    <li><img src="images/android_studio.png">Android Studio™</li>
                     <li><a href="https://www.jetbrains.com" target="_blank"><img src="images/phpstorm.svg"></a>PHPStorm</li>
                     <li><a href="https://www.jetbrains.com" target="_blank"><img src="images/pycharm.svg"></a>PyCharm</li>
                     <li><a href="https://www.jetbrains.com" target="_blank"><img src="images/intellij.svg"></a>IntelliJ</li>
@@ -1231,7 +1231,7 @@ startActivity(intent);
                     <tr>
                         <td>phpMyAdmin</td>
                         <td>phpMyAdmin logo by phpMyAdmin contributors, used under CC BY-SA 3.0.</td>
-                        <td>The phpMyAdmin Project, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons</td>
+                        <td>Michael Keck, the phpMyAdmin Project, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons</td>
                     </tr>
                     <tr>
                         <td>cPanel</td>
