@@ -254,6 +254,16 @@ html body main section#about div#intro_container div.card p:last-child::first-le
   margin-top: 0.11em;
   color: #022735;
 }
+@supports (initial-letter: 3) or (-webkit-initial-letter: 3) {
+  html body main section#about div#intro_container div.card p:last-child::first-letter {
+    /* Reset the hacks */
+    float: none;
+    margin-top: 0;
+    /* For Chrome and Safari (Not supported by Firefox)*/
+    initial-letter: 2;
+    -webkit-initial-letter: 2;
+  }
+}
 html body main section#about div#intro_container div.card p {
   font-size: 1.5rem;
   padding: 10px 30px;
