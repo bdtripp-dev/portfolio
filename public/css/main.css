@@ -423,6 +423,7 @@ html body main section#projects div#projects_wrapper div.screenshot.card div.pro
 }
 html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li:hover img {
   width: 30px;
+  height: 30px;
   transition: width 0.2s ease-in-out;
 }
 html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li:not(:first-of-type) {
@@ -433,6 +434,8 @@ html body main section#projects div#projects_wrapper div.screenshot.card div.pro
 html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li img {
   margin: 0 auto 5px auto;
   width: 25px;
+  height: 25px;
+  object-fit: contain;
   transition: width 0.2s ease-in-out;
   display: block;
 }
