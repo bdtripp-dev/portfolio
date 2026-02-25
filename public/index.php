@@ -1087,8 +1087,8 @@ startActivity(intent);
             <div class="card">
                 <ul>
                     <li>
-                        <a href="mailto:btripp365@gmail.com"><img src="images/email_icon.png"></a>
-                        <a href="mailto:btripp365@gmail.com">btripp365@gmail.com</a>
+                        <a href="mailto:dev@bdtripp.com"><img src="images/email_icon.png"></a>
+                        <a href="mailto:dev@bdtripp.com">dev@bdtripp.com</a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/bdtripp" target="_blank"><img src="images/linkedin.png"></a>
