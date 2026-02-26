@@ -1106,13 +1106,11 @@ startActivity(intent);
             <h3>Resume</h3>
             <div class="card">
                 <div id="icons">
-                    <a href="https://bdtripp.com/documents/brian_tripp_resume.pdf" target="_blank">
+                    <a href="documents/brian_tripp_resume.pdf" target="_blank">
                         <img id="pdf_icon" src="images/pdf_icon.png">
                     </a>
                 </div>
-                
-                <iframe src="https://docs.google.com/document/d/e/2PACX-1vQdm9djtp5BHVigdVoj8cQUTbraw3pse1RJZJMBYnBVx5Vbie39yac-zjno2cteWg/pub?embedded=true"></iframe>
-                
+                <img src="documents/resume_preview.png" alt="Resume preview">
             </div>
         </section>
         

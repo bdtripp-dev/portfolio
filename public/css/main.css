@@ -565,20 +565,18 @@ html body main section#contact div.card ul li a {
 }
 html body main section#resume div.card {
   background-color: white;
-}
-html body main section#resume div.card iframe {
-  display: none;
+  position: relative;
 }
 html body main section#resume div.card div#icons {
-  width: 120px;
-  margin: 0 auto;
-  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 html body main section#resume div.card div#icons a {
   text-decoration: none;
 }
 html body main section#resume div.card div#icons a img {
-  padding: 10px 0;
+  padding: 20px 15px 0 0;
   transition: transform 0.3s;
 }
 html body main section#resume div.card div#icons a img:hover {
@@ -755,27 +753,6 @@ html body footer div#image_credits table tbody tr th {
   }
   html body main section#contact div.card {
     max-width: 55%;
-  }
-  html body main section#resume div.card {
-    position: relative;
-  }
-  html body main section#resume div.card iframe {
-    display: block;
-    width: 100%;
-    max-width: 858px;
-    height: 940px;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-  html body main section#resume div.card div#icons {
-    width: 100%;
-    text-align: right;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  html body main section#resume div.card div#icons a img {
-    padding: 20px 15px 0 0;
   }
 }
 /*===============================
