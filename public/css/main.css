@@ -566,17 +566,18 @@ html body main section#contact div.card ul li a {
 html body main section#resume div.card {
   background-color: white;
   position: relative;
+  margin-bottom: 65px;
 }
 html body main section#resume div.card div#icons {
   position: absolute;
-  top: 0;
-  right: 0;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 html body main section#resume div.card div#icons a {
   text-decoration: none;
 }
 html body main section#resume div.card div#icons a img {
-  padding: 20px 15px 0 0;
   transition: transform 0.3s;
 }
 html body main section#resume div.card div#icons a img:hover {
@@ -727,6 +728,12 @@ html body footer div#image_credits table tbody tr th {
     width: 47%;
     float: left;
     margin: 40px 1% 0 1%;
+  }
+  html body main section#resume div.card div#icons {
+    transform: initial;
+    left: initial;
+    top: 10px;
+    right: 10px;
   }
 }
 /*===============================
