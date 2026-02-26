@@ -50,7 +50,7 @@
     
     <div id="overlay"></div>
     <header>
-        <img id="menu_icon" src="images/menu_icon.png">
+        <img id="menu_icon" src="images/icons/menu_icon.png">
         <div class="header_text">
             <h1>
                 <span>B</span>
@@ -69,41 +69,41 @@
         </div>
     </header>
     <nav id="slide_out">
-        <img class="close_btn" src="images/close_icon.png" onclick="slideIn(event)">
+        <img class="close_btn" src="images/icons/close_icon.png" onclick="slideIn(event)">
         <ul>
             <li>
                 <a href="#about" onclick="slideIn(event)">
-                    <img src="images/menu_icons/about_menu_icon.png">
+                    <img src="images/icons/menu_icons/about_menu_icon.png">
                     About
                 </a> 
             </li>
             <li> 
                 <a href="#projects" onclick="slideIn(event)">
-                    <img src="images/menu_icons/projects_menu_icon.png">
+                    <img src="images/icons/menu_icons/projects_menu_icon.png">
                     Projects
                 </a>
             </li>
             <li>
                 <a href="#skills" onclick="slideIn(event)">
-                    <img src="images/menu_icons/skills_menu_icon.png">
+                    <img src="images/icons/menu_icons/skills_menu_icon.png">
                     Skills
                 </a>
             </li>
             <li>
                 <a href="#education" onclick="slideIn(event)">
-                    <img src="images/menu_icons/education_menu_icon.png">
+                    <img src="images/icons/menu_icons/education_menu_icon.png">
                     Education
                 </a>
             </li>
             <li>
                 <a href="#contact" onclick="slideIn(event)">
-                    <img src="images/menu_icons/contact_menu_icon.png">
+                    <img src="images/icons/menu_icons/contact_menu_icon.png">
                     Contact
                 </a>
             </li>
             <li>                 
                 <a href="#resume" onclick="slideIn(event)">
-                    <img src="images/menu_icons/resume_menu_icon.png">
+                    <img src="images/icons/menu_icons/resume_menu_icon.png">
                     Resume
                 </a>
             </li>
@@ -141,10 +141,10 @@
                             <li>PHP &nbsp; <!-- added &nbsp; because the first list item was floating up too high under "PHP" because PHP is such a short word -->
                                 <ul>
                                     <li>Sessions
-                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
+                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
                                     </li>
                                     <li>Dynamically Generated HTML
-                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
+                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
                                     </li>
                                 </ul>
                             </li>
@@ -152,7 +152,7 @@
                             <li>JavaScript
                                 <ul>
                                     <li>Dynamic CSS Styling
-                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
+                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
                                     </li>
                                 </ul>
                             </li>
@@ -160,24 +160,24 @@
                             <li>Database
                                 <ul>
                                     <li>SQL
-                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
+                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
                                     </li>
                                     <li>Data Modeling
-                                        <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
+                                        <img class="src_code_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
                                         <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/pas_erd.pdf" target="_blank">
-                                            <img class="src_code_icon" src="images/document.png">
+                                            <img class="src_code_icon" src="images/icons/document.png">
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                         <div>
-                            <a href="https://github.com/bdtripp/portland_art_supply" target="_blank"><img src="images/github.svg">View Full Source Code</a>
+                            <a href="https://github.com/bdtripp/portland_art_supply" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
                         </div>
                     </div>
 
                     <div id="pas_src_session" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
 
 <pre><code class="PHP">/*
 When the user clicks "Add to Cart", the $_SESSION gets updated with an 
@@ -210,7 +210,7 @@ save_session();
                     </div> 
 
                     <div id="pas_src_generate" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
 
 <pre><code class="PHP">/*
 All of the site's HTML is dynamically generated from PHP. The product information is stored
@@ -235,7 +235,7 @@ echo '        &lt;/div&gt;' . "\n\n";
                     </div>
 
                     <div id="pas_src_dynamic_styling" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
 
 <pre><code class="JavaScript">/*
 Makes dynamic height adjustments involving calculations that could not be achieved using pure
@@ -261,7 +261,7 @@ itemWrapper.style.height = "auto";
                     </div>
 
                     <div id="pas_src_sql" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
 
 <pre><code class="PHP">/*
 All product information is stored in a database. When the user clicks on a link to view a 
@@ -287,7 +287,7 @@ return $items;
                     </div>
 
                     <div id="pas_erd" class="document hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
 
                         <iframe src="https://docs.google.com/document/d/e/2PACX-1vS6sBk7MWt3fPM8J3yiuAJOh_CjfDS9NuGeFyf5fYwD3vtT0mXXp3m891dhAejNqpUIz209-iO6InqZ/pub?embedded=true"></iframe>
 
@@ -296,11 +296,11 @@ return $items;
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
-                                <li><img src="images/php.svg">PHP</li>
-                                <li><img src="images/sql.png">SQL</li>
-                                <li><img src="images/javascript.svg">JavaScript</li>
-                                <li><img src="images/html5.svg">HTML5</li>
-                                <li><img src="images/less.svg">Less</li>
+                                <li><img src="images/logos/php.svg">PHP</li>
+                                <li><img src="images/logos/sql.png">SQL</li>
+                                <li><img src="images/logos/javascript.svg">JavaScript</li>
+                                <li><img src="images/logos/html5.svg">HTML5</li>
+                                <li><img src="images/logos/less.svg">Less</li>
                             </ul>
                         </div>
                         <button id="pas_visit_site_btn" onclick="window.open('http://bdtripp.com/portland_art_supply/', '_blank');">Visit Site</button>
@@ -324,15 +324,15 @@ return $items;
                             <li>Styled using CSS Grid</li>
                         </ul>
                         <div>
-                            <a href="https://github.com/bdtripp/world_war_2_archive" target="_blank"><img src="images/github.svg">View Full Source Code</a>
+                            <a href="https://github.com/bdtripp/world_war_2_archive" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
                         </div>
                     </div>
                 
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
-                                <li><img src="images/react.png">React</li>
-                                <li><img src="images/less.svg">Less</li>
+                                <li><img src="images/logos/react.png">React</li>
+                                <li><img src="images/logos/less.svg">Less</li>
                             </ul>
                         </div>
                         
@@ -356,16 +356,16 @@ return $items;
                             </li>
                         </ul>
                         <div>
-                            <a href="https://github.com/bdtripp/chord_and_scale_finder" target="_blank"><img src="images/github.svg">View Full Source Code</a>
+                            <a href="https://github.com/bdtripp/chord_and_scale_finder" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
                         </div>
                     </div>
                 
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
-                                <li><img src="images/javascript.svg">JavaScript</li>
-                                <li><img src="images/html5.svg">HTML5</li>
-                                <li><img src="images/css3.svg">CSS3</li>
+                                <li><img src="images/logos/javascript.svg">JavaScript</li>
+                                <li><img src="images/logos/html5.svg">HTML5</li>
+                                <li><img src="images/logos/css3.svg">CSS3</li>
                             </ul>
                         </div>
                         
@@ -381,22 +381,22 @@ return $items;
                         <h4>Design &amp; Development Details</h4>
                         <ul>
                             <li>Written in Java using<br/>object-oriented programming
-                                <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('hh_class_diagram', 'hh_accomplishments', this, event)">
+                                <img class="src_code_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('hh_class_diagram', 'hh_accomplishments', this, event)">
                                 <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/hh_class_diagram.pdf" target="_blank">
-                                    <img class="src_code_icon" src="images/document.png">
+                                    <img class="src_code_icon" src="images/icons/document.png">
                                 </a>
                                 <ul>
                                     <li>Static polymorphism (method overloading)
-                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('hh_static_poly', 'hh_accomplishments', this, event)">
+                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_static_poly', 'hh_accomplishments', this, event)">
                                     </li>
                                     <li>Responsibility-driven design
-                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
+                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
                                     </li>
                                     <li>Highly cohesive classes and methods
-                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('hh_src_cohesive', 'hh_accomplishments', this, event)">
+                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_src_cohesive', 'hh_accomplishments', this, event)">
                                     </li>
                                     <li>Data hiding and encapsulation to promote loose coupling
-                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('hh_src_dh_and_e', 'hh_accomplishments', this, event)">
+                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_src_dh_and_e', 'hh_accomplishments', this, event)">
                                     </li>
     <!--
                                     <li>Javadoc comments
@@ -407,19 +407,19 @@ return $items;
                             </li>
                         </ul>
                         <div>
-                            <a href="https://github.com/bdtripp/haunted_house" target="_blank"><img src="images/github.svg">View Full Source Code</a>
+                            <a href="https://github.com/bdtripp/haunted_house" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
                         </div>
                     </div>
                     
                     <div id="hh_class_diagram" class="document hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_class_diagram', 'hh_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('hh_class_diagram', 'hh_accomplishments', this, event)">
 
                         <iframe src="https://drive.google.com/file/d/1_qD02Fqy-iJdmdWeRtRzSJUiS-NexW6G/preview"></iframe>
 
                     </div>
                     
                     <div id="hh_static_poly" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_static_poly', 'hh_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('hh_static_poly', 'hh_accomplishments', this, event)">
 
 <pre><code class="Java">/*
     There are two addItem methods in the Room class that have a differing number of arguments. 
@@ -451,7 +451,7 @@ return $items;
                     </div>
                     
                     <div id="hh_src_rdd" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
 
 <pre><code class="Java">/*
     Methods are defined in the same class as the fields that they access or manipulate. Excerpts from
@@ -528,7 +528,7 @@ return $items;
                     </div>
                     
                     <div id="hh_src_cohesive" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_src_cohesive', 'hh_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('hh_src_cohesive', 'hh_accomplishments', this, event)">
 
 <pre><code class="Java">/*
     Each class and method has a single, well-defined purpose. For example, the takeItem method of the 
@@ -551,7 +551,7 @@ return $items;
                     </div>
                     
                     <div id="hh_src_dh_and_e" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_src_dh_and_e', 'hh_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('hh_src_dh_and_e', 'hh_accomplishments', this, event)">
 
 <pre><code class="Java">/*
     All fields are defined as private and accessed through getters and setters.
@@ -620,7 +620,7 @@ return $items;
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
-                                <li><img src="images/duke.png">Java®</li>
+                                <li><img src="images/logos/duke.png">Java®</li>
                             </ul>
                         </div>
                         
@@ -637,30 +637,30 @@ return $items;
                             <li>Java &nbsp; <!-- added &nbsp; because the first list item was floating up too high under "Java" because Java is such a short word -->
                                 <ul>
                                     <li>Input Validation
-                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
+                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
                                     </li>
                                     <li>Event Handling</li>
                                     <li>Intents
-                                        <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
+                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
                                     </li>
                                 </ul>
                             </li>
                             <li>Multiple Activities</li>
                             <li>Lifecycle Callbacks</li>      
                             <li>XML Layouts
-                                <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
+                                <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
                             </li>           
                             <li>Support Multiple Languages
-                                <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
+                                <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
                             </li>
                         </ul>
                         <div>
-                            <a href="https://github.com/bdtripp/calorie_calculator" target="_blank"><img src="images/github.svg">View Full Source Code</a>
+                            <a href="https://github.com/bdtripp/calorie_calculator" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
                         </div>
                     </div>
                     
                     <div id="cc_src_validation" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
                         
 <pre><code class="Java">/*
     Checking user input and displaying a toast when the input is invalid. 
@@ -693,7 +693,7 @@ if ((Float.parseFloat(metString) &lt; 0.9f) | (Float.parseFloat(metString) > 23f
                     </div>
                     
                     <div id="cc_src_intent" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
                         
 <pre><code class="Java">/*
     Passing data between activities using an intent. 
@@ -709,7 +709,7 @@ startActivity(intent);
                     </div> 
                     
                     <div id="cc_src_xml" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
                         
 <pre><code class="XML">&lt;!--
     App layout written in XML. 
@@ -749,7 +749,7 @@ startActivity(intent);
                     </div>
                     
                     <div id="cc_src_languages" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
                         
 <pre><code class="XML">&lt;!--
     String resources provided in Spanish. If the user has set their phone's language to Spanish, 
@@ -779,9 +779,9 @@ startActivity(intent);
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
-                                <li><img src="images/android.svg">Android™</li>
-                                <li><img src="images/duke.png">Java®</li>
-                                <li><img src="images/xml.svg">XML</li>
+                                <li><img src="images/logos/android.svg">Android™</li>
+                                <li><img src="images/logos/duke.png">Java®</li>
+                                <li><img src="images/logos/xml.svg">XML</li>
                             </ul>
                         </div>
                         
@@ -804,18 +804,18 @@ startActivity(intent);
                         </ul>
 
                         <div>
-                            <a href="https://github.com/bdtripp/ace_in_the_hole" target="_blank"><img src="images/github.svg">View Full Source Code</a>
+                            <a href="https://github.com/bdtripp/ace_in_the_hole" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
                         </div>
                     </div>
                 
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
-                                <li><img src="images/php.svg">PHP</li>
-                                <li><img src="images/sql.png">SQL</li>
-                                <li><img src="images/javascript.svg">JavaScript</li>
-                                <li><img src="images/html5.svg">HTML5</li>
-                                <li><img src="images/less.svg">Less</li>
+                                <li><img src="images/logos/php.svg">PHP</li>
+                                <li><img src="images/logos/sql.png">SQL</li>
+                                <li><img src="images/logos/javascript.svg">JavaScript</li>
+                                <li><img src="images/logos/html5.svg">HTML5</li>
+                                <li><img src="images/logos/less.svg">Less</li>
                             </ul>
                         </div>
                         
@@ -836,21 +836,21 @@ startActivity(intent);
                             <li>High Fidelity Wireframe</li>
                             <li>Mood Board</li>
                             <li>Brand Book
-                                <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
+                                <img class="src_code_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
                                 <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/brand_book.pdf" target="_blank">
-                                    <img class="src_code_icon" src="images/document.png">
+                                    <img class="src_code_icon" src="images/icons/document.png">
                                 </a>
                             </li>
                             <li>User Interface Inventory
-                                <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
+                                <img class="src_code_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
                             <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/interface_inventory.pdf" target="_blank">
-                                    <img class="src_code_icon" src="images/document.png">
+                                    <img class="src_code_icon" src="images/icons/document.png">
                                 </a>
                             </li>
                             <li>List of Requirements
-                                <img class="src_code_icon hide_in_mobile" src="images/document.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
+                                <img class="src_code_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
                                 <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/listofrequirements.pdf" target="_blank">
-                                    <img class="src_code_icon" src="images/document.png">
+                                    <img class="src_code_icon" src="images/icons/document.png">
                                 </a>
                             </li>
                         </ul>
@@ -858,21 +858,21 @@ startActivity(intent);
                     </div>
                     
                     <div id="bm_brand_book" class="document hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
                         
                         <iframe src="https://docs.google.com/document/d/e/2PACX-1vSVYWG12T2JgcXCFsrPxet9D9kibx8qJfTrcS64IAoYO7qE5tKKIaoufJPD9ODEsH-rG96uPIcxflB0/pub?embedded=true"></iframe>
                         
                     </div>
                     
                     <div id="bm_interface_inventory" class="document hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
                         
                         <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDYEJkA2k0XaDg_6wWrJFUtG6E4XmKMIzDfftJpz3zDgzvv_th2JjLKvpbt0vn1pjyk7qu4Frc48Hn/pubhtml?widget=true&amp;headers=false"></iframe>
                         
                     </div> 
                     
                     <div id="bm_requirements" class="document hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
                         
                         <iframe src="https://docs.google.com/document/d/e/2PACX-1vTRw2ofXeXInPQOnuodV_qLQmYHXQ-_wx6m10Dg1jo0utvvbP76icRZXnT2xQoyziNZxa70FcWP6QbS/pub?embedded=true"></iframe>
                         
@@ -881,8 +881,8 @@ startActivity(intent);
                         
                         <div class="language_icons">
                             <ul>
-                                <li><img src="images/html5.svg">HTML5</li>
-                                <li><img src="images/css3.svg">CSS3</li>
+                                <li><img src="images/logos/html5.svg">HTML5</li>
+                                <li><img src="images/logos/css3.svg">CSS3</li>
                             </ul>
                         </div>
                         
@@ -912,8 +912,8 @@ startActivity(intent);
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
-                                <li><img src="images/html5.svg">HTML5</li>
-                                <li><img src="images/css3.svg">CSS3</li>
+                                <li><img src="images/logos/html5.svg">HTML5</li>
+                                <li><img src="images/logos/css3.svg">CSS3</li>
                             </ul>
                         </div>
                         
@@ -943,8 +943,8 @@ startActivity(intent);
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
-                                <li><img src="images/html5.svg">HTML5</li>
-                                <li><img src="images/css3.svg">CSS3</li>
+                                <li><img src="images/logos/html5.svg">HTML5</li>
+                                <li><img src="images/logos/css3.svg">CSS3</li>
                             </ul>
                         </div>
                         <button id="ff_visit_site_btn" onclick="window.open('http://bdtripp.com/fairfield_farm/', '_blank');">Visit Site</button>
@@ -960,20 +960,20 @@ startActivity(intent);
                         <ul>
                             <li>WordPress</li>
                             <li>Custom CSS styles
-                                <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this, event)">
+                                <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this, event)">
                             </li>
                             <li>User Roles</li>
                             <li>Default and Custom Widgets</li>
                             <li>Display Plugins</li>
                             <li>Photo Editing with GIMP</li>
                             <li>Embedded Google Map and<br> Youtube Video
-                                <img class="src_code_icon" src="images/source_code_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
+                                <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
                             </li>
                         </ul>
                     </div>
                     
                     <div id="bg_src_custom_css" class="src_code hidden_card">
-                        <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this, event)">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this, event)">
                         
 <pre><code class="CSS">/*
     CSS to customize the style of the Contact Form 7 pluglin for WordPress
@@ -993,7 +993,7 @@ startActivity(intent);
                     </div>    
                     
                         <div id="bg_src_map" class="src_code hidden_card">
-                            <img class="close_btn" src="images/close_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
+                            <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
                         
 <pre><code class="HTML">/*
     HTML to embed a google map.
@@ -1012,9 +1012,9 @@ startActivity(intent);
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
-                                <li><img src="images/wordpress.png">WordPress</li>
-                                <li><img src="images/html5.svg">HTML5</li>
-                                <li><img src="images/css3.svg">CSS3</li>
+                                <li><img src="images/logos/wordpress.png">WordPress</li>
+                                <li><img src="images/logos/html5.svg">HTML5</li>
+                                <li><img src="images/logos/css3.svg">CSS3</li>
                             </ul>
                         </div>
                         
@@ -1031,40 +1031,40 @@ startActivity(intent);
             <div id="languages" class="card">
                 <h4>Languages</h4>
                 <ul>
-                    <li><img src="images/javascript.svg">JavaScript</li>
-                    <li><img src="images/php.svg">PHP</li>
-                    <li><img src="images/sql.png">SQL</li>
-                    <li><img src="images/html5.svg">HTML5</li>
-                    <li><img src="images/css3.svg">CSS3</li>
-                    <li><img src="images/less.svg">Less</li>
-                    <li><img src="images/duke.png">Java®</li>
-                    <li><img src="images/python.svg">Python®</li>
-                    <li><img src="images/bash.svg">Bash</li>
-                    <li><img src="images/powershell.png">PowerShell</li>
-                    <li><img src="images/yaml.svg">YAML</li>
-                    <li><img src="images/xml.svg">XML</li>
+                    <li><img src="images/logos/javascript.svg">JavaScript</li>
+                    <li><img src="images/logos/php.svg">PHP</li>
+                    <li><img src="images/logos/sql.png">SQL</li>
+                    <li><img src="images/logos/html5.svg">HTML5</li>
+                    <li><img src="images/logos/css3.svg">CSS3</li>
+                    <li><img src="images/logos/less.svg">Less</li>
+                    <li><img src="images/logos/duke.png">Java®</li>
+                    <li><img src="images/logos/python.svg">Python®</li>
+                    <li><img src="images/logos/bash.svg">Bash</li>
+                    <li><img src="images/logos/powershell.png">PowerShell</li>
+                    <li><img src="images/logos/yaml.svg">YAML</li>
+                    <li><img src="images/logos/xml.svg">XML</li>
                 </ul>
             </div>
             
             <div id="tools_and_technologies" class="card">
                 <h4>Tools & Technologies</h4>
                 <ul>
-                    <li><img src="images/git.svg">Git™</li>
-                    <li><img src="images/github.svg">GitHub / GitHub Actions</li>
-                    <li><img src="images/docker.svg">Docker</li>
-                    <li><a href="https://httpd.apache.org/" target="_blank"></a><img src="images/httpd.svg"></a>Apache HTTP Server</li>
-                    <li><img src="images/react.png">React</li>
-                    <li><img src="images/jquery.svg">jQuery</li>
-                    <li><img src="images/wordpress.png">WordPress</li>
-                    <li><img src="images/craft_cms.svg">Craft CMS</li>
-                    <li><img src="images/cpanel.svg">cPanel®</li>
-                    <li><img src="images/phpmyadmin.svg">phpMyAdmin</li>
-                    <li><img src="images/gimp.svg">GIMP</li>
-                    <li><img src="images/vscode.svg">Visual Studio Code™</li>
-                    <li><img src="images/android_studio.png">Android Studio™</li>
-                    <li><a href="https://www.jetbrains.com" target="_blank"><img src="images/phpstorm.svg"></a>PHPStorm</li>
-                    <li><a href="https://www.jetbrains.com" target="_blank"><img src="images/pycharm.svg"></a>PyCharm</li>
-                    <li><a href="https://www.jetbrains.com" target="_blank"><img src="images/intellij.svg"></a>IntelliJ</li>
+                    <li><img src="images/logos/git.svg">Git™</li>
+                    <li><img src="images/logos/github.svg">GitHub / GitHub Actions</li>
+                    <li><img src="images/logos/docker.svg">Docker</li>
+                    <li><a href="https://httpd.apache.org/" target="_blank"></a><img src="images/logos/httpd.svg"></a>Apache HTTP Server</li>
+                    <li><img src="images/logos/react.png">React</li>
+                    <li><img src="images/logos/jquery.svg">jQuery</li>
+                    <li><img src="images/logos/wordpress.png">WordPress</li>
+                    <li><img src="images/logos/craft_cms.svg">Craft CMS</li>
+                    <li><img src="images/logos/cpanel.svg">cPanel®</li>
+                    <li><img src="images/logos/phpmyadmin.svg">phpMyAdmin</li>
+                    <li><img src="images/logos/gimp.svg">GIMP</li>
+                    <li><img src="images/logos/vscode.svg">Visual Studio Code™</li>
+                    <li><img src="images/logos/android_studio.png">Android Studio™</li>
+                    <li><a href="https://www.jetbrains.com" target="_blank"><img src="images/logos/phpstorm.svg"></a>PHPStorm</li>
+                    <li><a href="https://www.jetbrains.com" target="_blank"><img src="images/logos/pycharm.svg"></a>PyCharm</li>
+                    <li><a href="https://www.jetbrains.com" target="_blank"><img src="images/logos/intellij.svg"></a>IntelliJ</li>
                 </ul>
             </div>
         </section>
@@ -1087,15 +1087,15 @@ startActivity(intent);
             <div class="card">
                 <ul>
                     <li>
-                        <a href="mailto:dev@bdtripp.com"><img src="images/email_icon.png"></a>
+                        <a href="mailto:dev@bdtripp.com"><img src="images/icons/email_icon.png"></a>
                         <a href="mailto:dev@bdtripp.com">dev@bdtripp.com</a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/bdtripp" target="_blank"><img src="images/linkedin.png"></a>
+                        <a href="https://www.linkedin.com/in/bdtripp" target="_blank"><img src="images/social/linkedin.png"></a>
                         <a href="https://www.linkedin.com/in/bdtripp" target="_blank">linkedin.com/in/bdtripp</a>
                     </li>
                     <li>
-                        <a href="https://github.com/bdtripp" target="_blank"><img src="images/github.svg"></a>
+                        <a href="https://github.com/bdtripp" target="_blank"><img src="images/logos/github.svg"></a>
                         <a href="https://github.com/bdtripp" target="_blank">github.com/bdtripp</a>
                     </li>
                 </ul>
@@ -1107,7 +1107,7 @@ startActivity(intent);
             <div class="card">
                 <div id="icons">
                     <a href="documents/brian_tripp_resume.pdf" target="_blank">
-                        <img id="pdf_icon" src="images/pdf_icon.png">
+                        <img id="pdf_icon" src="images/icons/pdf_icon.png">
                     </a>
                 </div>
                 <img src="documents/resume_preview.png" alt="Resume preview">
@@ -1119,7 +1119,7 @@ startActivity(intent);
         <button id="credits_btn" onclick="checkSize('image_credits', null, this, event)">Image Credits</button>
 
         <div id="image_credits" class="document hidden_card">
-            <img class="close_btn" src="images/close_icon.png" onclick="checkSize('image_credits', null, this, event)">
+            <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('image_credits', null, this, event)">
 
             <table>
                 <thead>

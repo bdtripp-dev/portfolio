@@ -193,7 +193,6 @@ html body main {
   clear: both;
   margin-top: 63px;
   background-color: #f7f7f7;
-  margin-bottom: 20px;
 }
 html body main section {
   margin-top: 20px;
@@ -507,6 +506,7 @@ html body main section#education div.card {
   padding: 20px 0;
   background-color: #F2F2F2;
   display: grid;
+  max-width: 500px;
 }
 html body main section#education div.card h4 {
   padding: 2% 2% 1% 2%;
@@ -537,6 +537,7 @@ html body main section#contact div.card {
   background-color: #F2F2F2;
   text-align: center;
   box-sizing: border-box;
+  max-width: 500px;
 }
 html body main section#contact div.card ul {
   margin: 20px auto;
@@ -567,6 +568,7 @@ html body main section#resume div.card {
   background-color: white;
   position: relative;
   margin-bottom: 65px;
+  max-width: 1050px;
 }
 html body main section#resume div.card div#icons {
   position: absolute;
@@ -729,11 +731,14 @@ html body footer div#image_credits table tbody tr th {
     float: left;
     margin: 40px 1% 0 1%;
   }
+  html body main section#resume div.card {
+    margin-bottom: 20px;
+  }
   html body main section#resume div.card div#icons {
     transform: initial;
     left: initial;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
   }
 }
 /*===============================
@@ -754,12 +759,6 @@ html body footer div#image_credits table tbody tr th {
     margin: 0 auto;
     padding: 15px 30px;
     font-size: 1.2rem;
-  }
-  html body main section#education div.card {
-    max-width: 55%;
-  }
-  html body main section#contact div.card {
-    max-width: 55%;
   }
 }
 /*===============================
