@@ -1116,11 +1116,9 @@ startActivity(intent);
         
     </main>
     <footer>
-        <button id="credits_btn" onclick="checkSize('image_credits', null, this, event)">Image Credits</button>
-
-        <div id="image_credits" class="document hidden_card">
-            <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('image_credits', null, this, event)">
-
+        <button id="credits_btn">Image Credits</button>
+        <dialog id="credits_dialog">
+            <img class="close_btn" src="images/icons/close_icon.png" />
             <table>
                 <thead>
                     <th colspan="3">Image Credits</th>
@@ -1268,7 +1266,7 @@ startActivity(intent);
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </dialog>
     </footer>
 </body>
 </html>

@@ -4,6 +4,9 @@ var activeItem = "";
 
 function init() {
     var listItems = document.querySelectorAll("nav li");
+    const imageCredits = document.querySelector('#credits_dialog');
+    const creditsOpenBtn = document.querySelector('#credits_btn');
+    const creditsCloseBtn = document.querySelector('#credits_dialog .close_btn');
     
     for (let item of listItems) {
         item.children[0].addEventListener("click", function() {
@@ -35,18 +38,6 @@ function init() {
                 return showingDetails;
             }
         }();
-        
-        function toggleDetailsBtn(detailsBtn, cardId, event) {
-            detailsShowing = detailsShowingTogglers[cardId]();
-            if(!detailsShowing) {
-                detailsBtn.innerText = "View Details";
-                slideDown(cardId, event);
-
-            } else {
-                detailsBtn.innerText = "Hide Details";
-                slideUp(cardId, event)
-            }
-        }
     }
     document.getElementById("menu_icon").addEventListener("click", function(event) {
         slideOut(event);
@@ -77,6 +68,27 @@ function init() {
             document.getElementsByTagName("header")[0].style.zIndex = "2";
         }
     });
+
+    creditsOpenBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        imageCredits.showModal();
+    });
+
+    creditsCloseBtn.addEventListener('click', () => {
+        imageCredits.close();
+    });
+}
+
+function toggleDetailsBtn(detailsBtn, cardId, event) {
+    detailsShowing = detailsShowingTogglers[cardId]();
+    if(!detailsShowing) {
+        detailsBtn.innerText = "View Details";
+        slideDown(cardId, event);
+
+    } else {
+        detailsBtn.innerText = "Hide Details";
+        slideUp(cardId, event)
+    }
 }
 
 function adjustDocumentHeight() {
