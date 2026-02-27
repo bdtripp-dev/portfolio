@@ -182,7 +182,7 @@
                                         <img 
                                             class="modal_icon hide_in_mobile" 
                                             src="images/icons/document.png" 
-                                            data-dialog="'pas_erd"
+                                            data-dialog="pas_erd"
                                         />
                                         <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/pas_erd.pdf" target="_blank">
                                             <img class="modal_icon" src="images/icons/document.png">
@@ -196,8 +196,8 @@
                         </div>
                     </div>
 
-                    <dialog id="pas_src_session" class="src_code hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
+                    <dialog id="pas_src_session" class="src_code">
+                        <img class="close_btn" src="images/icons/close_icon.png">
 
 <pre><code class="PHP">/*
 When the user clicks "Add to Cart", the $_SESSION gets updated with an 
@@ -229,8 +229,8 @@ save_session();
 
                     </dialog> 
 
-                    <dialog id="pas_src_generate" class="src_code hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
+                    <dialog id="pas_src_generate" class="src_code">
+                        <img class="close_btn" src="images/icons/close_icon.png">
 
 <pre><code class="PHP">/*
 All of the site's HTML is dynamically generated from PHP. The product information is stored
@@ -254,8 +254,8 @@ echo '        &lt;/div&gt;' . "\n\n";
 }</code></pre>  
                     </dialog>
 
-                    <div id="pas_src_dynamic_styling" class="src_code hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
+                    <dialog id="pas_src_dynamic_styling" class="src_code">
+                        <img class="close_btn" src="images/icons/close_icon.png">
 
 <pre><code class="JavaScript">/*
 Makes dynamic height adjustments involving calculations that could not be achieved using pure
@@ -278,10 +278,10 @@ if (colorThumbnails !== null) {
 itemWrapper.style.height = "auto";
 }</code></pre>
 
-                    </div>
+                    </dialog>
 
-                    <div id="pas_src_sql" class="src_code hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
+                    <dialog id="pas_src_sql" class="src_code">
+                        <img class="close_btn" src="images/icons/close_icon.png">
 
 <pre><code class="PHP">/*
 All product information is stored in a database. When the user clicks on a link to view a 
@@ -304,14 +304,14 @@ while($item = $result->fetch_array(MYSQLI_ASSOC)) {
 return $items;
 }</code></pre>
 
-                    </div>
+                    </dialog>
 
-                    <div id="pas_erd" class="document hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
+                    <dialog id="pas_erd" class="document">
+                        <img class="close_btn" src="images/icons/close_icon.png">
 
                         <iframe src="https://docs.google.com/document/d/e/2PACX-1vS6sBk7MWt3fPM8J3yiuAJOh_CjfDS9NuGeFyf5fYwD3vtT0mXXp3m891dhAejNqpUIz209-iO6InqZ/pub?embedded=true"></iframe>
 
-                    </div>
+                    </dialog>
 
                     <div class="project_bottom">
                         <div class="language_icons">
@@ -319,8 +319,6 @@ return $items;
                                 <li><img src="images/logos/php.svg">PHP</li>
                                 <li><img src="images/logos/sql.png">SQL</li>
                                 <li><img src="images/logos/javascript.svg">JavaScript</li>
-                                <li><img src="images/logos/html5.svg">HTML5</li>
-                                <li><img src="images/logos/less.svg">Less</li>
                             </ul>
                         </div>
                         <button id="pas_visit_site_btn" onclick="window.open('http://bdtripp.com/portland_art_supply/', '_blank');">Visit Site</button>
@@ -401,22 +399,42 @@ return $items;
                         <h4>Design &amp; Development Details</h4>
                         <ul>
                             <li>Written in Java using<br/>object-oriented programming
-                                <img class="modal_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('hh_class_diagram', 'hh_accomplishments', this, event)">
+                                <img 
+                                    class="modal_icon hide_in_mobile" 
+                                    src="images/icons/document.png" 
+                                    data-dialog="hh_class_diagram"
+                                />
                                 <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/hh_class_diagram.pdf" target="_blank">
                                     <img class="modal_icon" src="images/icons/document.png">
                                 </a>
                                 <ul>
                                     <li>Static polymorphism (method overloading)
-                                        <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_static_poly', 'hh_accomplishments', this, event)">
+                                        <img 
+                                            class="modal_icon" 
+                                            src="images/icons/source_code_icon.png" 
+                                            data-dialog="hh_static_poly"
+                                        />
                                     </li>
                                     <li>Responsibility-driven design
-                                        <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
+                                        <img 
+                                            class="modal_icon" 
+                                            src="images/icons/source_code_icon.png" 
+                                            data-dialog="hh_src_rdd"
+                                        />
                                     </li>
                                     <li>Highly cohesive classes and methods
-                                        <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_src_cohesive', 'hh_accomplishments', this, event)">
+                                        <img 
+                                            class="modal_icon" 
+                                            src="images/icons/source_code_icon.png" 
+                                            data-dialog="hh_src_cohesive"
+                                        />
                                     </li>
                                     <li>Data hiding and encapsulation to promote loose coupling
-                                        <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_src_dh_and_e', 'hh_accomplishments', this, event)">
+                                        <img 
+                                            class="modal_icon" 
+                                            src="images/icons/source_code_icon.png" 
+                                            data-dialog="hh_src_dh_and_e"
+                                        />
                                     </li>
     <!--
                                     <li>Javadoc comments
@@ -431,15 +449,15 @@ return $items;
                         </div>
                     </div>
                     
-                    <div id="hh_class_diagram" class="document hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('hh_class_diagram', 'hh_accomplishments', this, event)">
+                    <dialog id="hh_class_diagram" class="document">
+                        <img class="close_btn" src="images/icons/close_icon.png">
 
                         <iframe src="https://drive.google.com/file/d/1_qD02Fqy-iJdmdWeRtRzSJUiS-NexW6G/preview"></iframe>
 
-                    </div>
+                    </dialog>
                     
-                    <div id="hh_static_poly" class="src_code hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('hh_static_poly', 'hh_accomplishments', this, event)">
+                    <dialog id="hh_static_poly" class="src_code">
+                        <img class="close_btn" src="images/icons/close_icon.png">
 
 <pre><code class="Java">/*
     There are two addItem methods in the Room class that have a differing number of arguments. 
@@ -468,10 +486,10 @@ return $items;
         items.add(item);
     }
 </code></pre>
-                    </div>
+                    </dialog>
                     
-                    <div id="hh_src_rdd" class="src_code hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
+                    <dialog id="hh_src_rdd" class="src_code">
+                        <img class="close_btn" src="images/icons/close_icon.png">
 
 <pre><code class="Java">/*
     Methods are defined in the same class as the fields that they access or manipulate. Excerpts from
@@ -545,10 +563,10 @@ return $items;
         }
 
 </code></pre>
-                    </div>
+                    </dialog>
                     
-                    <div id="hh_src_cohesive" class="src_code hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('hh_src_cohesive', 'hh_accomplishments', this, event)">
+                    <dialog id="hh_src_cohesive" class="src_code">
+                        <img class="close_btn" src="images/icons/close_icon.png">
 
 <pre><code class="Java">/*
     Each class and method has a single, well-defined purpose. For example, the takeItem method of the 
@@ -568,10 +586,10 @@ return $items;
     }
 </code></pre>
 
-                    </div>
+                    </dialog>
                     
-                    <div id="hh_src_dh_and_e" class="src_code hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('hh_src_dh_and_e', 'hh_accomplishments', this, event)">
+                    <dialog id="hh_src_dh_and_e" class="src_code">
+                        <img class="close_btn" src="images/icons/close_icon.png">
 
 <pre><code class="Java">/*
     All fields are defined as private and accessed through getters and setters.
@@ -627,10 +645,10 @@ return $items;
 
 </code></pre>
 
-                    </div>
+                    </dialog>
                     
     <!--
-                    <div id="hh_javadoc" class="document hidden_card">
+                    <div id="hh_javadoc" class="document">
                         <img class="close_btn" src="images/close_icon.png" onclick="checkSize('hh_javadoc', 'hh_accomplishments', this, event)">
 
                         <iframe src="http://bdtripp.com/documents/hh_javadoc"></iframe>
@@ -657,21 +675,37 @@ return $items;
                             <li>Java &nbsp; <!-- added &nbsp; because the first list item was floating up too high under "Java" because Java is such a short word -->
                                 <ul>
                                     <li>Input Validation
-                                        <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
+                                        <img 
+                                            class="modal_icon" 
+                                            src="images/icons/source_code_icon.png" 
+                                            data-dialog="cc_src_validation" 
+                                        />
                                     </li>
                                     <li>Event Handling</li>
                                     <li>Intents
-                                        <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
+                                        <img 
+                                            class="modal_icon" 
+                                            src="images/icons/source_code_icon.png" 
+                                            data-dialog="cc_src_intent"
+                                        />
                                     </li>
                                 </ul>
                             </li>
                             <li>Multiple Activities</li>
                             <li>Lifecycle Callbacks</li>      
                             <li>XML Layouts
-                                <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
+                                <img 
+                                    class="modal_icon" 
+                                    src="images/icons/source_code_icon.png" 
+                                    data-dialog="cc_src_xml"
+                                />
                             </li>           
                             <li>Support Multiple Languages
-                                <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
+                                <img 
+                                    class="modal_icon" 
+                                    src="images/icons/source_code_icon.png" 
+                                    data-dialog="cc_src_languages"
+                                />
                             </li>
                         </ul>
                         <div>
@@ -679,8 +713,8 @@ return $items;
                         </div>
                     </div>
                     
-                    <div id="cc_src_validation" class="src_code hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
+                    <dialog id="cc_src_validation" class="src_code">
+                        <img class="close_btn" src="images/icons/close_icon.png">
                         
 <pre><code class="Java">/*
     Checking user input and displaying a toast when the input is invalid. 
@@ -710,10 +744,10 @@ if ((Float.parseFloat(metString) &lt; 0.9f) | (Float.parseFloat(metString) > 23f
     return;
 }
 </code></pre>
-                    </div>
+                    </dialog>
                     
-                    <div id="cc_src_intent" class="src_code hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
+                    <dialog id="cc_src_intent" class="src_code">
+                        <img class="close_btn" src="images/icons/close_icon.png">
                         
 <pre><code class="Java">/*
     Passing data between activities using an intent. 
@@ -726,10 +760,10 @@ intent.putExtra(EXTRA_MET, Float.parseFloat(metString));
 
 startActivity(intent);
 </code></pre>
-                    </div> 
+                    </dialog> 
                     
-                    <div id="cc_src_xml" class="src_code hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
+                    <dialog id="cc_src_xml" class="src_code">
+                        <img class="close_btn" src="images/icons/close_icon.png">
                         
 <pre><code class="XML">&lt;!--
     App layout written in XML. 
@@ -766,10 +800,10 @@ startActivity(intent);
 
 &lt;/LinearLayout&gt;
 </code></pre>
-                    </div>
+                    </dialog>
                     
-                    <div id="cc_src_languages" class="src_code hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
+                    <dialog id="cc_src_languages" class="src_code">
+                        <img class="close_btn" src="images/icons/close_icon.png">
                         
 <pre><code class="XML">&lt;!--
     String resources provided in Spanish. If the user has set their phone's language to Spanish, 
@@ -795,7 +829,7 @@ startActivity(intent);
 &lt;/resources&gt;
 
 </code></pre>
-                    </div> 
+                    </dialog> 
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
@@ -810,7 +844,7 @@ startActivity(intent);
                     </div>
                 </div>
                 
-                <div id="aithme_screenshot_card" class="project screenshot card">
+                <!-- <div id="aithme_screenshot_card" class="project screenshot card">
                     <img id="aithme_screenshot" class="tracked_image" src="images/screenshots/aithme_screenshot.png" onclick="window.open('http://bdtripp.com/ace_in_the_hole/', '_blank');">
                     
                     <div id="aithme_accomplishments" class="project accomplishments hidden_card">
@@ -877,21 +911,21 @@ startActivity(intent);
 
                     </div>
                     
-                    <div id="bm_brand_book" class="document hidden_card">
+                    <div id="bm_brand_book" class="document">
                         <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
                         
                         <iframe src="https://docs.google.com/document/d/e/2PACX-1vSVYWG12T2JgcXCFsrPxet9D9kibx8qJfTrcS64IAoYO7qE5tKKIaoufJPD9ODEsH-rG96uPIcxflB0/pub?embedded=true"></iframe>
                         
                     </div>
                     
-                    <div id="bm_interface_inventory" class="document hidden_card">
+                    <div id="bm_interface_inventory" class="document">
                         <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
                         
                         <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDYEJkA2k0XaDg_6wWrJFUtG6E4XmKMIzDfftJpz3zDgzvv_th2JjLKvpbt0vn1pjyk7qu4Frc48Hn/pubhtml?widget=true&amp;headers=false"></iframe>
                         
                     </div> 
                     
-                    <div id="bm_requirements" class="document hidden_card">
+                    <div id="bm_requirements" class="document">
                         <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
                         
                         <iframe src="https://docs.google.com/document/d/e/2PACX-1vTRw2ofXeXInPQOnuodV_qLQmYHXQ-_wx6m10Dg1jo0utvvbP76icRZXnT2xQoyziNZxa70FcWP6QbS/pub?embedded=true"></iframe>
@@ -970,30 +1004,47 @@ startActivity(intent);
                         <button id="ff_visit_site_btn" onclick="window.open('http://bdtripp.com/fairfield_farm/', '_blank');">Visit Site</button>
                         <button id="ff_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
-                </div>
+                </div> -->
                 
                 <div id="bg_screenshot_card" class="project screenshot card">
-                    <img id="bg_screenshot" class="tracked_image" src="images/screenshots/bg_screenshot.png" onclick="window.open('http://bdtripp.com/bramblewood_guitars/', '_blank');">
+                    <img 
+                        id="bg_screenshot" 
+                        class="tracked_image" 
+                        src="images/screenshots/bg_screenshot.png" 
+                        onclick="window.open('http://bdtripp.com/bramblewood_guitars/', '_blank');"
+                    />
                     
                     <div id="bg_accomplishments" class="project accomplishments hidden_card">
                         <h4>Design &amp; Development Details</h4>
                         <ul>
                             <li>WordPress</li>
                             <li>Custom CSS styles
-                                <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this, event)">
+                                <img 
+                                    class="modal_icon" 
+                                    src="images/icons/source_code_icon.png" 
+                                    data-dialog="bg_src_custom_css"
+                                />
                             </li>
                             <li>User Roles</li>
                             <li>Default and Custom Widgets</li>
                             <li>Display Plugins</li>
                             <li>Photo Editing with GIMP</li>
                             <li>Embedded Google Map and<br> Youtube Video
-                                <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
+                                <img 
+                                    class="modal_icon" 
+                                    src="images/icons/source_code_icon.png" 
+                                    data-dialog="bg_src_map"
+                                />
                             </li>
                         </ul>
                     </div>
                     
-                    <div id="bg_src_custom_css" class="src_code hidden_card">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this, event)">
+                    <dialog id="bg_src_custom_css" class="src_code">
+                        <img 
+                            class="close_btn" 
+                            src="images/icons/close_icon.png" 
+                            data-dialog="bg_src_custom_css"
+                        />
                         
 <pre><code class="CSS">/*
     CSS to customize the style of the Contact Form 7 pluglin for WordPress
@@ -1010,10 +1061,10 @@ startActivity(intent);
     border: 1px solid #ccc;
 }
 </code></pre>
-                    </div>    
+                    </dialog>    
                     
-                        <div id="bg_src_map" class="src_code hidden_card">
-                            <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
+                    <dialog id="bg_src_map" class="src_code">
+                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
                         
 <pre><code class="HTML">/*
     HTML to embed a google map.
@@ -1028,7 +1079,7 @@ startActivity(intent);
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-                    </div> 
+                    </dialog> 
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
