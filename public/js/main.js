@@ -1,6 +1,7 @@
 var navHidden = true;
 var showingModal = false;
 var activeItem = "";
+const detailsShowingTogglers = [];
 
 function init() {
     var listItems = document.querySelectorAll("nav li");
@@ -20,7 +21,6 @@ function init() {
     }
     
     viewDetailsBtns = document.getElementsByClassName("view_details_btn");
-    var detailsShowingTogglers = [];
     
     for(var i = 0; i < viewDetailsBtns.length; i++) {
         var screenshotCard = viewDetailsBtns[i].parentElement.parentElement;
@@ -68,6 +68,19 @@ function init() {
             }
             document.getElementsByTagName("header")[0].style.zIndex = "2";
         }
+    });
+
+    document.querySelectorAll('.modal_icon').forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            const id = icon.dataset.dialog;
+            const dialog = document.getElementById(id);
+            e.preventDefault();
+            dialog.showModal();
+        });
+    });
+
+    document.querySelectorAll('dialog .close_btn').forEach(btn => {
+        btn.addEventListener('click', () => btn.closest('dialog').close());
     });
 
     creditsOpenBtn.addEventListener('click', (e) => {

@@ -141,10 +141,18 @@
                             <li>PHP &nbsp; <!-- added &nbsp; because the first list item was floating up too high under "PHP" because PHP is such a short word -->
                                 <ul>
                                     <li>Sessions
-                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
+                                        <img 
+                                            class="modal_icon" 
+                                            src="images/icons/source_code_icon.png" 
+                                            data-dialog="pas_src_session" 
+                                        />
                                     </li>
                                     <li>Dynamically Generated HTML
-                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
+                                        <img 
+                                            class="modal_icon" 
+                                            src="images/icons/source_code_icon.png" 
+                                            data-dialog="pas_src_generate"
+                                        />
                                     </li>
                                 </ul>
                             </li>
@@ -152,7 +160,11 @@
                             <li>JavaScript
                                 <ul>
                                     <li>Dynamic CSS Styling
-                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
+                                        <img 
+                                            class="modal_icon" 
+                                            src="images/icons/source_code_icon.png" 
+                                            data-dialog="pas_src_dynamic_styling"
+                                        />
                                     </li>
                                 </ul>
                             </li>
@@ -160,12 +172,20 @@
                             <li>Database
                                 <ul>
                                     <li>SQL
-                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('pas_src_sql', 'pas_accomplishments', this, event)">
+                                        <img 
+                                            class="modal_icon" 
+                                            src="images/icons/source_code_icon.png" 
+                                            data-dialog="pas_src_sql"
+                                        />
                                     </li>
                                     <li>Data Modeling
-                                        <img class="src_code_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('pas_erd', 'pas_accomplishments', this, event)">
+                                        <img 
+                                            class="modal_icon hide_in_mobile" 
+                                            src="images/icons/document.png" 
+                                            data-dialog="'pas_erd"
+                                        />
                                         <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/pas_erd.pdf" target="_blank">
-                                            <img class="src_code_icon" src="images/icons/document.png">
+                                            <img class="modal_icon" src="images/icons/document.png">
                                         </a>
                                     </li>
                                 </ul>
@@ -176,7 +196,7 @@
                         </div>
                     </div>
 
-                    <div id="pas_src_session" class="src_code hidden_card">
+                    <dialog id="pas_src_session" class="src_code hidden_card">
                         <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('pas_src_session', 'pas_accomplishments', this, event)">
 
 <pre><code class="PHP">/*
@@ -207,9 +227,9 @@ if ($newItem) {
 save_session();
 }</code></pre>
 
-                    </div> 
+                    </dialog> 
 
-                    <div id="pas_src_generate" class="src_code hidden_card">
+                    <dialog id="pas_src_generate" class="src_code hidden_card">
                         <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('pas_src_generate', 'pas_accomplishments', this, event)">
 
 <pre><code class="PHP">/*
@@ -232,7 +252,7 @@ for ($i = $rowsPerColumn - ROWS_PER_COLUMN; ($i &lt; $rowsPerColumn) &amp;&amp; 
 echo '            &lt;/ul&gt;' . "\n";
 echo '        &lt;/div&gt;' . "\n\n";
 }</code></pre>  
-                    </div>
+                    </dialog>
 
                     <div id="pas_src_dynamic_styling" class="src_code hidden_card">
                         <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('pas_src_dynamic_styling', 'pas_accomplishments', this, event)">
@@ -381,26 +401,26 @@ return $items;
                         <h4>Design &amp; Development Details</h4>
                         <ul>
                             <li>Written in Java using<br/>object-oriented programming
-                                <img class="src_code_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('hh_class_diagram', 'hh_accomplishments', this, event)">
+                                <img class="modal_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('hh_class_diagram', 'hh_accomplishments', this, event)">
                                 <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/hh_class_diagram.pdf" target="_blank">
-                                    <img class="src_code_icon" src="images/icons/document.png">
+                                    <img class="modal_icon" src="images/icons/document.png">
                                 </a>
                                 <ul>
                                     <li>Static polymorphism (method overloading)
-                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_static_poly', 'hh_accomplishments', this, event)">
+                                        <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_static_poly', 'hh_accomplishments', this, event)">
                                     </li>
                                     <li>Responsibility-driven design
-                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
+                                        <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_src_rdd', 'hh_accomplishments', this, event)">
                                     </li>
                                     <li>Highly cohesive classes and methods
-                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_src_cohesive', 'hh_accomplishments', this, event)">
+                                        <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_src_cohesive', 'hh_accomplishments', this, event)">
                                     </li>
                                     <li>Data hiding and encapsulation to promote loose coupling
-                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_src_dh_and_e', 'hh_accomplishments', this, event)">
+                                        <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('hh_src_dh_and_e', 'hh_accomplishments', this, event)">
                                     </li>
     <!--
                                     <li>Javadoc comments
-                                        <img class="src_code_icon" src="images/document.png" onclick="checkSize('hh_javadoc', 'hh_accomplishments', this, event)">
+                                        <img class="modal_icon" src="images/document.png" onclick="checkSize('hh_javadoc', 'hh_accomplishments', this, event)">
                                     </li>
     -->
                                 </ul>
@@ -637,21 +657,21 @@ return $items;
                             <li>Java &nbsp; <!-- added &nbsp; because the first list item was floating up too high under "Java" because Java is such a short word -->
                                 <ul>
                                     <li>Input Validation
-                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
+                                        <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_validation', 'cc_accomplishments', this, event)">
                                     </li>
                                     <li>Event Handling</li>
                                     <li>Intents
-                                        <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
+                                        <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_intent', 'cc_accomplishments', this, event)">
                                     </li>
                                 </ul>
                             </li>
                             <li>Multiple Activities</li>
                             <li>Lifecycle Callbacks</li>      
                             <li>XML Layouts
-                                <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
+                                <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_xml', 'cc_accomplishments', this, event)">
                             </li>           
                             <li>Support Multiple Languages
-                                <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
+                                <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('cc_src_languages', 'cc_accomplishments', this, event)">
                             </li>
                         </ul>
                         <div>
@@ -836,21 +856,21 @@ startActivity(intent);
                             <li>High Fidelity Wireframe</li>
                             <li>Mood Board</li>
                             <li>Brand Book
-                                <img class="src_code_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
+                                <img class="modal_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('bm_brand_book', 'bm_accomplishments', this, event)">
                                 <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/brand_book.pdf" target="_blank">
-                                    <img class="src_code_icon" src="images/icons/document.png">
+                                    <img class="modal_icon" src="images/icons/document.png">
                                 </a>
                             </li>
                             <li>User Interface Inventory
-                                <img class="src_code_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
+                                <img class="modal_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('bm_interface_inventory', 'bm_accomplishments', this, event)">
                             <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/interface_inventory.pdf" target="_blank">
-                                    <img class="src_code_icon" src="images/icons/document.png">
+                                    <img class="modal_icon" src="images/icons/document.png">
                                 </a>
                             </li>
                             <li>List of Requirements
-                                <img class="src_code_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
+                                <img class="modal_icon hide_in_mobile" src="images/icons/document.png" onclick="checkSize('bm_requirements', 'bm_accomplishments', this, event)">
                                 <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/listofrequirements.pdf" target="_blank">
-                                    <img class="src_code_icon" src="images/icons/document.png">
+                                    <img class="modal_icon" src="images/icons/document.png">
                                 </a>
                             </li>
                         </ul>
@@ -960,14 +980,14 @@ startActivity(intent);
                         <ul>
                             <li>WordPress</li>
                             <li>Custom CSS styles
-                                <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this, event)">
+                                <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('bg_src_custom_css', 'bg_accomplishments', this, event)">
                             </li>
                             <li>User Roles</li>
                             <li>Default and Custom Widgets</li>
                             <li>Display Plugins</li>
                             <li>Photo Editing with GIMP</li>
                             <li>Embedded Google Map and<br> Youtube Video
-                                <img class="src_code_icon" src="images/icons/source_code_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
+                                <img class="modal_icon" src="images/icons/source_code_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
                             </li>
                         </ul>
                     </div>
@@ -1118,158 +1138,154 @@ startActivity(intent);
     <footer>
         <button id="credits_btn">Image Credits</button>
         <dialog id="credits_dialog">
-            <div class="modal_frame">
-                <img class="close_btn" src="images/icons/close_icon.png" />
-                <div class="credits_content">
-                    <table>
-                        <thead>
-                            <th colspan="3">Image Credits</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>Logo</th>
-                                <th>Attribution for the creater of the original logo</th>
-                                <th>Attribution for the specific source of the image</th>
-                            </tr>
-                            <tr>
-                                <td>HTML5</td>
-                                <td>HTML5 Logo by W3C, used under CC BY 3.0</td>
-                                <td>W3C, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons</td>
-                            </tr>
-                            <tr>
-                                <td>CSS3</td>
-                                <td>CSS3 Logo by W3C, used under CC BY 3.0</td>
-                                <td>By Bjorn Lammers, https://dashboardicons.com/icons/css</td>
-                            </tr>
-                            <tr>
-                                <td>LESS</td>
-                                <td>Less Logo by The Less Core Team, used under CC BY 3.0</td>
-                                <td>Font Awesome Free 5.4.1 by @fontawesome - https://fontawesome.com, CC BY 4.0 <https://creativecommons.org/licenses/by/4.0>, via Wikimedia Commons</td>
-                            </tr>
-                            <tr>
-                                <td>Java</td>
-                                <td>Java is a registered trademark of Oracle and/or its affiliates.</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>Javascript</td>
-                                <td>Copyright (c) 2011 Christopher Williams</td>
-                                <td>By Bjorn Lammers, https://dashboardicons.com/icons/javascript</td>
-                            </tr>
-                            <tr>
-                                <td>PHP</td>
-                                <td>PHP Logo by Colin Viebrock, used under CC BY-SA 4.0.</td>
-                                <td>By Bjorn Lammers, https://dashboardicons.com/icons/php</td>
-                            </tr>
-                            <tr>
-                                <td>SQL</td>
-                                <td>n/a</td>
-                                <td>alaa kaddour, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons</td>
-                            </tr>
-                            <tr>
-                                <td>jQuery</td>
-                                <td>jQuery and the jQuery logo are trademarks of the OpenJS Foundation</td>
-                                <td>jQuery Team, Public domain, via Wikimedia Commons</td>
-                            </tr>
-                            <tr>
-                                <td>Python</td>
-                                <td>"Python" and the Python logo are trademarks or registered trademarks of the Python Software Foundation.</td>
-                                <td>www.python.org, GPL <http://www.gnu.org/licenses/gpl.html>, via Wikimedia Commons</td>
-                            </tr>
-                            <tr>
-                                <td>XML</td>
-                                <td>none required</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>Git</td>
-                                <td>Git Logo by Jason Long, used under CC BY 3.0. Also must link to https://git-scm.com/community/logos somewhere. Also: Git and the Git logo are trademarks of Software Freedom Conservancy, Inc., corporate home of the Git Project</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>Wordpress</td>
-                                <td>WordPress and the WordPress logo are trademarks of the WordPress Foundation</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>Craft</td>
-                                <td>"Craft CMS" and its logo are trademarks of Pixel & Tonic, Inc. DBA Craft CMS.</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>PHPStorm</td>
-                                <td>Copyright © 2026 JetBrains s.r.o. PhpStorm and the PhpStorm logo are trademarks of JetBrains s.r.o.</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>PyCharm</td>
-                                <td>Copyright © 2026 JetBrains s.r.o. PyCharm and the PyCharm logo are trademarks of JetBrains s.r.o.</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>IntelliJ</td>
-                                <td>Copyright © 2026 JetBrains s.r.o. IntelliJ IDEA and the IntelliJ IDEA logo are trademarks of JetBrains s.r.o.</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>Android Studio</td>
-                                <td>Android is a trademark of Google LLC. Android Studio and its logo are trademarks of Google LLC.</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>Visual Studio Code</td>
-                                <td>Visual Studio Code and the Visual Studio Code logo are trademarks of the Microsoft group of companies.</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>GIMP</td>
-                                <td>GIMP Logo by Aryeom Han and the GIMP Team, used under CC BY-SA 4.0.</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>phpMyAdmin</td>
-                                <td>phpMyAdmin logo by phpMyAdmin contributors, used under CC BY-SA 3.0.</td>
-                                <td>Michael Keck, the phpMyAdmin Project, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons</td>
-                            </tr>
-                            <tr>
-                                <td>cPanel</td>
-                                <td>cPanel® is a trademark of WebPros International LLC.</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>React</td>
-                                <td>React logo by Meta Platforms, Inc., used under CC BY 4.0. <a href="https://github.com/reactjs/react.dev/blob/main/LICENSE-DOCS.md" target="_blank">License</a> React and the React logo are trademarks of Meta Platforms, Inc.</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>Docker</td>
-                                <td>Docker and the Docker logo are trademarks or registered trademarks of Docker, Inc. in the United States and/or other countries. Docker, Inc. and other parties may also have trademark rights in other terms used herein.</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>Android</td>
-                                <td>The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>LinkedIn</td>
-                                <td>LinkedIn, the LinkedIn logo, the [in] logo and InMail are registered trademarks or trademarks of LinkedIn Corporation and its affiliates in the United States and/or other countries</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>GitHub</td>
-                                <td>GitHub, the GitHub logo, and the Invertocat are trademarks of GitHub, Inc., registered in the U.S. and other countries.</td>
-                                <td>n/a</td>
-                            </tr>
-                            <tr>
-                                <td>Apache</td>
-                                <td>"Apache®, and the Apache feather logo are either registered trademarks or trademarks of The Apache Software Foundation in the United States and/or other countries."</td>
-                                <td>n/a</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            <img class="close_btn" src="images/icons/close_icon.png" />
+            <table>
+                <thead>
+                    <th colspan="3">Image Credits</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Logo</th>
+                        <th>Attribution for the creater of the original logo</th>
+                        <th>Attribution for the specific source of the image</th>
+                    </tr>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>HTML5 Logo by W3C, used under CC BY 3.0</td>
+                        <td>W3C, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons</td>
+                    </tr>
+                    <tr>
+                        <td>CSS3</td>
+                        <td>CSS3 Logo by W3C, used under CC BY 3.0</td>
+                        <td>By Bjorn Lammers, https://dashboardicons.com/icons/css</td>
+                    </tr>
+                    <tr>
+                        <td>LESS</td>
+                        <td>Less Logo by The Less Core Team, used under CC BY 3.0</td>
+                        <td>Font Awesome Free 5.4.1 by @fontawesome - https://fontawesome.com, CC BY 4.0 <https://creativecommons.org/licenses/by/4.0>, via Wikimedia Commons</td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td>Java is a registered trademark of Oracle and/or its affiliates.</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>Javascript</td>
+                        <td>Copyright (c) 2011 Christopher Williams</td>
+                        <td>By Bjorn Lammers, https://dashboardicons.com/icons/javascript</td>
+                    </tr>
+                    <tr>
+                        <td>PHP</td>
+                        <td>PHP Logo by Colin Viebrock, used under CC BY-SA 4.0.</td>
+                        <td>By Bjorn Lammers, https://dashboardicons.com/icons/php</td>
+                    </tr>
+                    <tr>
+                        <td>SQL</td>
+                        <td>n/a</td>
+                        <td>alaa kaddour, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons</td>
+                    </tr>
+                    <tr>
+                        <td>jQuery</td>
+                        <td>jQuery and the jQuery logo are trademarks of the OpenJS Foundation</td>
+                        <td>jQuery Team, Public domain, via Wikimedia Commons</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>"Python" and the Python logo are trademarks or registered trademarks of the Python Software Foundation.</td>
+                        <td>www.python.org, GPL <http://www.gnu.org/licenses/gpl.html>, via Wikimedia Commons</td>
+                    </tr>
+                    <tr>
+                        <td>XML</td>
+                        <td>none required</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>Git</td>
+                        <td>Git Logo by Jason Long, used under CC BY 3.0. Also must link to https://git-scm.com/community/logos somewhere. Also: Git and the Git logo are trademarks of Software Freedom Conservancy, Inc., corporate home of the Git Project</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>Wordpress</td>
+                        <td>WordPress and the WordPress logo are trademarks of the WordPress Foundation</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>Craft</td>
+                        <td>"Craft CMS" and its logo are trademarks of Pixel & Tonic, Inc. DBA Craft CMS.</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>PHPStorm</td>
+                        <td>Copyright © 2026 JetBrains s.r.o. PhpStorm and the PhpStorm logo are trademarks of JetBrains s.r.o.</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>PyCharm</td>
+                        <td>Copyright © 2026 JetBrains s.r.o. PyCharm and the PyCharm logo are trademarks of JetBrains s.r.o.</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>IntelliJ</td>
+                        <td>Copyright © 2026 JetBrains s.r.o. IntelliJ IDEA and the IntelliJ IDEA logo are trademarks of JetBrains s.r.o.</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>Android Studio</td>
+                        <td>Android is a trademark of Google LLC. Android Studio and its logo are trademarks of Google LLC.</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>Visual Studio Code</td>
+                        <td>Visual Studio Code and the Visual Studio Code logo are trademarks of the Microsoft group of companies.</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>GIMP</td>
+                        <td>GIMP Logo by Aryeom Han and the GIMP Team, used under CC BY-SA 4.0.</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>phpMyAdmin</td>
+                        <td>phpMyAdmin logo by phpMyAdmin contributors, used under CC BY-SA 3.0.</td>
+                        <td>Michael Keck, the phpMyAdmin Project, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons</td>
+                    </tr>
+                    <tr>
+                        <td>cPanel</td>
+                        <td>cPanel® is a trademark of WebPros International LLC.</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>React</td>
+                        <td>React logo by Meta Platforms, Inc., used under CC BY 4.0. <a href="https://github.com/reactjs/react.dev/blob/main/LICENSE-DOCS.md" target="_blank">License</a> React and the React logo are trademarks of Meta Platforms, Inc.</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>Docker</td>
+                        <td>Docker and the Docker logo are trademarks or registered trademarks of Docker, Inc. in the United States and/or other countries. Docker, Inc. and other parties may also have trademark rights in other terms used herein.</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>Android</td>
+                        <td>The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>LinkedIn</td>
+                        <td>LinkedIn, the LinkedIn logo, the [in] logo and InMail are registered trademarks or trademarks of LinkedIn Corporation and its affiliates in the United States and/or other countries</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>GitHub</td>
+                        <td>GitHub, the GitHub logo, and the Invertocat are trademarks of GitHub, Inc., registered in the U.S. and other countries.</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>Apache</td>
+                        <td>"Apache®, and the Apache feather logo are either registered trademarks or trademarks of The Apache Software Foundation in the United States and/or other countries."</td>
+                        <td>n/a</td>
+                    </tr>
+                </tbody>
+            </table>
         </dialog>
     </footer>
 </body>

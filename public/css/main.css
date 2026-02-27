@@ -55,10 +55,6 @@ h6 {
 .hidden_card img.close_btn:hover {
   cursor: pointer;
 }
-.modal_open {
-  overflow: hidden;
-  height: 100%;
-}
 .document {
   overflow: hidden;
   width: 100%;
@@ -348,14 +344,14 @@ html body main section#projects div#projects_wrapper div.screenshot.card div.acc
   clear: both;
   padding-bottom: 5px;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li img.src_code_icon {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li img.modal_icon {
   width: 20px;
   position: absolute;
   top: 0;
   right: 4%;
   z-index: 1;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li img.src_code_icon:hover {
+html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li img.modal_icon:hover {
   cursor: pointer;
 }
 html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li a img pdf_icon {
