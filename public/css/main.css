@@ -55,6 +55,10 @@ h6 {
 .hidden_card img.close_btn:hover {
   cursor: pointer;
 }
+.modal_open {
+  overflow: hidden;
+  height: 100%;
+}
 .document {
   overflow: hidden;
   width: 100%;
@@ -614,37 +618,51 @@ html body footer button {
 html body footer button:hover {
   transform: scale(1.1);
 }
-html body footer dialog#credits_dialog img {
-  position: fixed;
+html body footer dialog#credits_dialog {
+  max-width: min(80vw, 1050px);
+  height: 90vh;
+}
+html body footer dialog#credits_dialog .modal_frame {
+  position: relative;
+  height: 100%;
+}
+html body footer dialog#credits_dialog .modal_frame .close_btn {
+  position: absolute;
   top: 10px;
   right: 10px;
   width: initial;
   backdrop-filter: blur(5px);
   border-radius: 5px;
 }
-html body footer dialog#credits_dialog table {
+html body footer dialog#credits_dialog .modal_frame .close_btn:hover {
+  cursor: pointer;
+}
+html body footer dialog#credits_dialog .modal_frame .credits_content {
+  overflow: auto;
+  height: 100%;
+}
+html body footer dialog#credits_dialog .modal_frame .credits_content table {
   color: #333333;
   width: 80%;
   border-radius: 10px;
   margin: 25px auto;
-  clear: both;
 }
-html body footer dialog#credits_dialog table thead {
+html body footer dialog#credits_dialog .modal_frame .credits_content table thead {
   text-align: center;
   font-size: 2.6em;
   font-weight: 900;
 }
-html body footer dialog#credits_dialog table thead th {
+html body footer dialog#credits_dialog .modal_frame .credits_content table thead th {
   padding: 20px;
   border-collapse: collapse;
   border: 1px solid #333333;
 }
-html body footer dialog#credits_dialog table tbody tr th {
+html body footer dialog#credits_dialog .modal_frame .credits_content table tbody tr th {
   font-weight: 900;
   font-size: 1.2em;
 }
-html body footer dialog#credits_dialog table tbody tr td,
-html body footer dialog#credits_dialog table tbody tr th {
+html body footer dialog#credits_dialog .modal_frame .credits_content table tbody tr td,
+html body footer dialog#credits_dialog .modal_frame .credits_content table tbody tr th {
   border-collapse: collapse;
   border: 1px solid #333333;
   padding: 10px;

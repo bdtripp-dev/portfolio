@@ -4,7 +4,8 @@ var activeItem = "";
 
 function init() {
     var listItems = document.querySelectorAll("nav li");
-    const imageCredits = document.querySelector('#credits_dialog');
+    const creditsDialog = document.querySelector('#credits_dialog');
+    const creditsContent = document.querySelector('.credits_content');
     const creditsOpenBtn = document.querySelector('#credits_btn');
     const creditsCloseBtn = document.querySelector('#credits_dialog .close_btn');
     
@@ -71,11 +72,11 @@ function init() {
 
     creditsOpenBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        imageCredits.showModal();
+        creditsDialog.showModal();
     });
 
     creditsCloseBtn.addEventListener('click', () => {
-        imageCredits.close();
+        creditsDialog.close();
     });
 }
 
