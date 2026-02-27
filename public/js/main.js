@@ -73,6 +73,9 @@ function init() {
     creditsOpenBtn.addEventListener('click', (e) => {
         e.preventDefault();
         creditsDialog.showModal();
+        requestAnimationFrame(() => {
+            creditsContent.scrollTop = 0;
+        });
     });
 
     creditsCloseBtn.addEventListener('click', () => {
