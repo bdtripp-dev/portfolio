@@ -80,6 +80,38 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+dialog {
+    max-width: min(80vw, 1050px);
+    height: 90vh;
+    border: 1px solid #DDD;
+    background-color: @off-white;
+    border-radius: 5px;
+    padding-bottom: 0;
+
+    .modal_frame {
+        position: relative;
+        height: 100%;
+
+        .close_btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: initial;
+            backdrop-filter: blur(5px);
+            border-radius: 5px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .dialog_content {
+            overflow: auto;
+            height: 100%;
+        }
+    }
+}
+
 html {
     scroll-behavior: smooth;
     
@@ -512,29 +544,13 @@ html {
                                 }
 
                                 dialog {
-                                    border: 1px solid #DDD;
-                                    background-color: @off-white;
                                     padding: 0;
-                                    width: min(90vw, 1050px);
+                                    width: min(90vw, 1300px);
                                     text-align: left;
-                                    overflow: scroll;
-                                    border-radius: 5px;
 
                                     code {
                                         line-height: 130%;
                                         font-family: 'Source Code Pro', Consolas, monospace;
-                                    }
-
-                                    .close_btn {
-                                        width: 25px;
-                                        position: absolute;
-                                        top: 0;
-                                        right: 0;
-                                        padding: 10px;
-                                        
-                                        &:hover {
-                                            cursor: pointer;
-                                        }  
                                     }
                                 }
 
@@ -825,68 +841,37 @@ html {
                 }
             }
 
-            dialog {
+            table {
+                color: @dark-grey;
+                width: 80%;
+                border-radius: 10px;
+                margin: 25px auto;
 
-                &#credits_dialog {
-                    max-width: min(80vw, 1050px);
-                    height: 90vh;
+                thead {
+                    text-align: center;
+                    font-size: 2.6em;
+                    font-weight: 900;
+                    
+                    th {
+                        padding: 20px;
+                        border-collapse: collapse;
+                        border: 1px solid @dark-grey;
+                    }
+                }
 
-                    .modal_frame {
-                        position: relative;
-                        height: 100%;
+                tbody {
 
-                        .close_btn {
-                            position: absolute;
-                            top: 10px;
-                            right: 10px;
-                            width: initial;
-                            backdrop-filter: blur(5px);
-                            border-radius: 5px;
+                    tr {
 
-                            &:hover {
-                                cursor: pointer;
-                            }
+                        th {
+                            font-weight: 900;
+                            font-size: 1.2em;
                         }
 
-                        .credits_content {
-                            overflow: auto;
-                            height: 100%;
-
-                            table {
-                                color: @dark-grey;
-                                width: 80%;
-                                border-radius: 10px;
-                                margin: 25px auto;
-
-                                thead {
-                                    text-align: center;
-                                    font-size: 2.6em;
-                                    font-weight: 900;
-                                    
-                                    th {
-                                        padding: 20px;
-                                        border-collapse: collapse;
-                                        border: 1px solid @dark-grey;
-                                    }
-                                }
-
-                                tbody {
-
-                                    tr {
-
-                                        th {
-                                            font-weight: 900;
-                                            font-size: 1.2em;
-                                        }
-
-                                        td, th {
-                                            border-collapse: collapse;
-                                            border: 1px solid @dark-grey;
-                                            padding: 10px;
-                                        }
-                                    }
-                                }
-                            }
+                        td, th {
+                            border-collapse: collapse;
+                            border: 1px solid @dark-grey;
+                            padding: 10px;
                         }
                     }
                 }

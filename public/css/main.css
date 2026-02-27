@@ -62,6 +62,33 @@ h6 {
   margin-top: 30px;
   border-top: 1px solid black;
 }
+dialog {
+  max-width: min(80vw, 1050px);
+  height: 90vh;
+  border: 1px solid #DDD;
+  background-color: #F2F2F2;
+  border-radius: 5px;
+  padding-bottom: 0;
+}
+dialog .modal_frame {
+  position: relative;
+  height: 100%;
+}
+dialog .modal_frame .close_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: initial;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+dialog .modal_frame .close_btn:hover {
+  cursor: pointer;
+}
+dialog .modal_frame .dialog_content {
+  overflow: auto;
+  height: 100%;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -381,27 +408,13 @@ html body main section#projects div#projects_wrapper div.screenshot.card .accomp
   width: 23px;
 }
 html body main section#projects div#projects_wrapper div.screenshot.card dialog {
-  border: 1px solid #DDD;
-  background-color: #F2F2F2;
   padding: 0;
-  width: min(90vw, 1050px);
+  width: min(90vw, 1300px);
   text-align: left;
-  overflow: scroll;
-  border-radius: 5px;
 }
 html body main section#projects div#projects_wrapper div.screenshot.card dialog code {
   line-height: 130%;
   font-family: 'Source Code Pro', Consolas, monospace;
-}
-html body main section#projects div#projects_wrapper div.screenshot.card dialog .close_btn {
-  width: 25px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10px;
-}
-html body main section#projects div#projects_wrapper div.screenshot.card dialog .close_btn:hover {
-  cursor: pointer;
 }
 html body main section#projects div#projects_wrapper div.screenshot.card .project_bottom {
   position: absolute;
@@ -619,51 +632,28 @@ html body footer button {
 html body footer button:hover {
   transform: scale(1.1);
 }
-html body footer dialog#credits_dialog {
-  max-width: min(80vw, 1050px);
-  height: 90vh;
-}
-html body footer dialog#credits_dialog .modal_frame {
-  position: relative;
-  height: 100%;
-}
-html body footer dialog#credits_dialog .modal_frame .close_btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: initial;
-  backdrop-filter: blur(5px);
-  border-radius: 5px;
-}
-html body footer dialog#credits_dialog .modal_frame .close_btn:hover {
-  cursor: pointer;
-}
-html body footer dialog#credits_dialog .modal_frame .credits_content {
-  overflow: auto;
-  height: 100%;
-}
-html body footer dialog#credits_dialog .modal_frame .credits_content table {
+html body footer table {
   color: #333333;
   width: 80%;
   border-radius: 10px;
   margin: 25px auto;
 }
-html body footer dialog#credits_dialog .modal_frame .credits_content table thead {
+html body footer table thead {
   text-align: center;
   font-size: 2.6em;
   font-weight: 900;
 }
-html body footer dialog#credits_dialog .modal_frame .credits_content table thead th {
+html body footer table thead th {
   padding: 20px;
   border-collapse: collapse;
   border: 1px solid #333333;
 }
-html body footer dialog#credits_dialog .modal_frame .credits_content table tbody tr th {
+html body footer table tbody tr th {
   font-weight: 900;
   font-size: 1.2em;
 }
-html body footer dialog#credits_dialog .modal_frame .credits_content table tbody tr td,
-html body footer dialog#credits_dialog .modal_frame .credits_content table tbody tr th {
+html body footer table tbody tr td,
+html body footer table tbody tr th {
   border-collapse: collapse;
   border: 1px solid #333333;
   padding: 10px;

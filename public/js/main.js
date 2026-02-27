@@ -70,7 +70,7 @@ function init() {
         }
     });
 
-    document.querySelectorAll('.modal_icon').forEach(icon => {
+    document.querySelectorAll('.modal_icon[data-dialog]').forEach(icon => {
         icon.addEventListener('click', (e) => {
             const id = icon.dataset.dialog;
             const dialog = document.getElementById(id);
@@ -84,10 +84,11 @@ function init() {
     });
 
     creditsOpenBtn.addEventListener('click', (e) => {
+        const dialogContent = creditsDialog.querySelector('.dialog_content');
         e.preventDefault();
         creditsDialog.showModal();
         requestAnimationFrame(() => {
-            creditsContent.scrollTop = 0;
+            dialogContent.scrollTop = 0;
         });
     });
 

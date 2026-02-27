@@ -184,7 +184,7 @@
                                             src="images/icons/document.png" 
                                             data-dialog="pas_erd"
                                         />
-                                        <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/pas_erd.pdf" target="_blank">
+                                        <a class="show_in_mobile" href="documents/pas_erd.pdf" target="_blank">
                                             <img class="modal_icon" src="images/icons/document.png">
                                         </a>
                                     </li>
@@ -197,7 +197,9 @@
                     </div>
 
                     <dialog id="pas_src_session" class="src_code">
-                        <img class="close_btn" src="images/icons/close_icon.png">
+                        <div class="modal_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                                <div class="dialog_content">
 
 <pre><code class="PHP">/*
 When the user clicks "Add to Cart", the $_SESSION gets updated with an 
@@ -226,7 +228,8 @@ if ($newItem) {
 }
 save_session();
 }</code></pre>
-
+                            </div>
+                        </div>
                     </dialog> 
 
                     <dialog id="pas_src_generate" class="src_code">
@@ -309,7 +312,7 @@ return $items;
                     <dialog id="pas_erd" class="document">
                         <img class="close_btn" src="images/icons/close_icon.png">
 
-                        <iframe src="https://docs.google.com/document/d/e/2PACX-1vS6sBk7MWt3fPM8J3yiuAJOh_CjfDS9NuGeFyf5fYwD3vtT0mXXp3m891dhAejNqpUIz209-iO6InqZ/pub?embedded=true"></iframe>
+                        <img src="documents/pas_erd.png"></iframe>
 
                     </dialog>
 
@@ -404,7 +407,7 @@ return $items;
                                     src="images/icons/document.png" 
                                     data-dialog="hh_class_diagram"
                                 />
-                                <a class="show_in_mobile" href="https://bdtripp.com/portfolio/documents/hh_class_diagram.pdf" target="_blank">
+                                <a class="show_in_mobile" href="documents/hh_class_diagram.pdf" target="_blank">
                                     <img class="modal_icon" src="images/icons/document.png">
                                 </a>
                                 <ul>
@@ -452,7 +455,7 @@ return $items;
                     <dialog id="hh_class_diagram" class="document">
                         <img class="close_btn" src="images/icons/close_icon.png">
 
-                        <iframe src="https://drive.google.com/file/d/1_qD02Fqy-iJdmdWeRtRzSJUiS-NexW6G/preview"></iframe>
+                        <img src="documents/hh_class_diagram.png"></iframe>
 
                     </dialog>
                     
@@ -489,8 +492,9 @@ return $items;
                     </dialog>
                     
                     <dialog id="hh_src_rdd" class="src_code">
-                        <img class="close_btn" src="images/icons/close_icon.png">
-
+                        <div class="modal_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
 <pre><code class="Java">/*
     Methods are defined in the same class as the fields that they access or manipulate. Excerpts from
     the Room class are shown below as an example of this. 
@@ -561,8 +565,9 @@ return $items;
             Exit exit = new Exit(direction, neighbor, locked);
             exits.put(direction, exit);
         }
-
 </code></pre>
+                            </div>
+                        </div>
                     </dialog>
                     
                     <dialog id="hh_src_cohesive" class="src_code">
@@ -1189,154 +1194,158 @@ startActivity(intent);
     <footer>
         <button id="credits_btn">Image Credits</button>
         <dialog id="credits_dialog">
-            <img class="close_btn" src="images/icons/close_icon.png" />
-            <table>
-                <thead>
-                    <th colspan="3">Image Credits</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Logo</th>
-                        <th>Attribution for the creater of the original logo</th>
-                        <th>Attribution for the specific source of the image</th>
-                    </tr>
-                    <tr>
-                        <td>HTML5</td>
-                        <td>HTML5 Logo by W3C, used under CC BY 3.0</td>
-                        <td>W3C, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons</td>
-                    </tr>
-                    <tr>
-                        <td>CSS3</td>
-                        <td>CSS3 Logo by W3C, used under CC BY 3.0</td>
-                        <td>By Bjorn Lammers, https://dashboardicons.com/icons/css</td>
-                    </tr>
-                    <tr>
-                        <td>LESS</td>
-                        <td>Less Logo by The Less Core Team, used under CC BY 3.0</td>
-                        <td>Font Awesome Free 5.4.1 by @fontawesome - https://fontawesome.com, CC BY 4.0 <https://creativecommons.org/licenses/by/4.0>, via Wikimedia Commons</td>
-                    </tr>
-                    <tr>
-                        <td>Java</td>
-                        <td>Java is a registered trademark of Oracle and/or its affiliates.</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Javascript</td>
-                        <td>Copyright (c) 2011 Christopher Williams</td>
-                        <td>By Bjorn Lammers, https://dashboardicons.com/icons/javascript</td>
-                    </tr>
-                    <tr>
-                        <td>PHP</td>
-                        <td>PHP Logo by Colin Viebrock, used under CC BY-SA 4.0.</td>
-                        <td>By Bjorn Lammers, https://dashboardicons.com/icons/php</td>
-                    </tr>
-                    <tr>
-                        <td>SQL</td>
-                        <td>n/a</td>
-                        <td>alaa kaddour, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons</td>
-                    </tr>
-                    <tr>
-                        <td>jQuery</td>
-                        <td>jQuery and the jQuery logo are trademarks of the OpenJS Foundation</td>
-                        <td>jQuery Team, Public domain, via Wikimedia Commons</td>
-                    </tr>
-                    <tr>
-                        <td>Python</td>
-                        <td>"Python" and the Python logo are trademarks or registered trademarks of the Python Software Foundation.</td>
-                        <td>www.python.org, GPL <http://www.gnu.org/licenses/gpl.html>, via Wikimedia Commons</td>
-                    </tr>
-                    <tr>
-                        <td>XML</td>
-                        <td>none required</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Git</td>
-                        <td>Git Logo by Jason Long, used under CC BY 3.0. Also must link to https://git-scm.com/community/logos somewhere. Also: Git and the Git logo are trademarks of Software Freedom Conservancy, Inc., corporate home of the Git Project</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Wordpress</td>
-                        <td>WordPress and the WordPress logo are trademarks of the WordPress Foundation</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Craft</td>
-                        <td>"Craft CMS" and its logo are trademarks of Pixel & Tonic, Inc. DBA Craft CMS.</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>PHPStorm</td>
-                        <td>Copyright © 2026 JetBrains s.r.o. PhpStorm and the PhpStorm logo are trademarks of JetBrains s.r.o.</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>PyCharm</td>
-                        <td>Copyright © 2026 JetBrains s.r.o. PyCharm and the PyCharm logo are trademarks of JetBrains s.r.o.</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>IntelliJ</td>
-                        <td>Copyright © 2026 JetBrains s.r.o. IntelliJ IDEA and the IntelliJ IDEA logo are trademarks of JetBrains s.r.o.</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Android Studio</td>
-                        <td>Android is a trademark of Google LLC. Android Studio and its logo are trademarks of Google LLC.</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Visual Studio Code</td>
-                        <td>Visual Studio Code and the Visual Studio Code logo are trademarks of the Microsoft group of companies.</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>GIMP</td>
-                        <td>GIMP Logo by Aryeom Han and the GIMP Team, used under CC BY-SA 4.0.</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>phpMyAdmin</td>
-                        <td>phpMyAdmin logo by phpMyAdmin contributors, used under CC BY-SA 3.0.</td>
-                        <td>Michael Keck, the phpMyAdmin Project, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons</td>
-                    </tr>
-                    <tr>
-                        <td>cPanel</td>
-                        <td>cPanel® is a trademark of WebPros International LLC.</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>React</td>
-                        <td>React logo by Meta Platforms, Inc., used under CC BY 4.0. <a href="https://github.com/reactjs/react.dev/blob/main/LICENSE-DOCS.md" target="_blank">License</a> React and the React logo are trademarks of Meta Platforms, Inc.</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Docker</td>
-                        <td>Docker and the Docker logo are trademarks or registered trademarks of Docker, Inc. in the United States and/or other countries. Docker, Inc. and other parties may also have trademark rights in other terms used herein.</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Android</td>
-                        <td>The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>LinkedIn</td>
-                        <td>LinkedIn, the LinkedIn logo, the [in] logo and InMail are registered trademarks or trademarks of LinkedIn Corporation and its affiliates in the United States and/or other countries</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>GitHub</td>
-                        <td>GitHub, the GitHub logo, and the Invertocat are trademarks of GitHub, Inc., registered in the U.S. and other countries.</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Apache</td>
-                        <td>"Apache®, and the Apache feather logo are either registered trademarks or trademarks of The Apache Software Foundation in the United States and/or other countries."</td>
-                        <td>n/a</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="modal_frame">
+                <img class="close_btn" src="images/icons/close_icon.png" />
+                <div class="dialog_content">
+                    <table>
+                        <thead>
+                            <th colspan="3">Image Credits</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Logo</th>
+                                <th>Attribution for the creater of the original logo</th>
+                                <th>Attribution for the specific source of the image</th>
+                            </tr>
+                            <tr>
+                                <td>HTML5</td>
+                                <td>HTML5 Logo by W3C, used under CC BY 3.0</td>
+                                <td>W3C, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons</td>
+                            </tr>
+                            <tr>
+                                <td>CSS3</td>
+                                <td>CSS3 Logo by W3C, used under CC BY 3.0</td>
+                                <td>By Bjorn Lammers, https://dashboardicons.com/icons/css</td>
+                            </tr>
+                            <tr>
+                                <td>LESS</td>
+                                <td>Less Logo by The Less Core Team, used under CC BY 3.0</td>
+                                <td>Font Awesome Free 5.4.1 by @fontawesome - https://fontawesome.com, CC BY 4.0 <https://creativecommons.org/licenses/by/4.0>, via Wikimedia Commons</td>
+                            </tr>
+                            <tr>
+                                <td>Java</td>
+                                <td>Java is a registered trademark of Oracle and/or its affiliates.</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Javascript</td>
+                                <td>Copyright (c) 2011 Christopher Williams</td>
+                                <td>By Bjorn Lammers, https://dashboardicons.com/icons/javascript</td>
+                            </tr>
+                            <tr>
+                                <td>PHP</td>
+                                <td>PHP Logo by Colin Viebrock, used under CC BY-SA 4.0.</td>
+                                <td>By Bjorn Lammers, https://dashboardicons.com/icons/php</td>
+                            </tr>
+                            <tr>
+                                <td>SQL</td>
+                                <td>n/a</td>
+                                <td>alaa kaddour, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons</td>
+                            </tr>
+                            <tr>
+                                <td>jQuery</td>
+                                <td>jQuery and the jQuery logo are trademarks of the OpenJS Foundation</td>
+                                <td>jQuery Team, Public domain, via Wikimedia Commons</td>
+                            </tr>
+                            <tr>
+                                <td>Python</td>
+                                <td>"Python" and the Python logo are trademarks or registered trademarks of the Python Software Foundation.</td>
+                                <td>www.python.org, GPL <http://www.gnu.org/licenses/gpl.html>, via Wikimedia Commons</td>
+                            </tr>
+                            <tr>
+                                <td>XML</td>
+                                <td>none required</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Git</td>
+                                <td>Git Logo by Jason Long, used under CC BY 3.0. Also must link to https://git-scm.com/community/logos somewhere. Also: Git and the Git logo are trademarks of Software Freedom Conservancy, Inc., corporate home of the Git Project</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Wordpress</td>
+                                <td>WordPress and the WordPress logo are trademarks of the WordPress Foundation</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Craft</td>
+                                <td>"Craft CMS" and its logo are trademarks of Pixel & Tonic, Inc. DBA Craft CMS.</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>PHPStorm</td>
+                                <td>Copyright © 2026 JetBrains s.r.o. PhpStorm and the PhpStorm logo are trademarks of JetBrains s.r.o.</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>PyCharm</td>
+                                <td>Copyright © 2026 JetBrains s.r.o. PyCharm and the PyCharm logo are trademarks of JetBrains s.r.o.</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>IntelliJ</td>
+                                <td>Copyright © 2026 JetBrains s.r.o. IntelliJ IDEA and the IntelliJ IDEA logo are trademarks of JetBrains s.r.o.</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Android Studio</td>
+                                <td>Android is a trademark of Google LLC. Android Studio and its logo are trademarks of Google LLC.</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Visual Studio Code</td>
+                                <td>Visual Studio Code and the Visual Studio Code logo are trademarks of the Microsoft group of companies.</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>GIMP</td>
+                                <td>GIMP Logo by Aryeom Han and the GIMP Team, used under CC BY-SA 4.0.</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>phpMyAdmin</td>
+                                <td>phpMyAdmin logo by phpMyAdmin contributors, used under CC BY-SA 3.0.</td>
+                                <td>Michael Keck, the phpMyAdmin Project, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons</td>
+                            </tr>
+                            <tr>
+                                <td>cPanel</td>
+                                <td>cPanel® is a trademark of WebPros International LLC.</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>React</td>
+                                <td>React logo by Meta Platforms, Inc., used under CC BY 4.0. <a href="https://github.com/reactjs/react.dev/blob/main/LICENSE-DOCS.md" target="_blank">License</a> React and the React logo are trademarks of Meta Platforms, Inc.</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Docker</td>
+                                <td>Docker and the Docker logo are trademarks or registered trademarks of Docker, Inc. in the United States and/or other countries. Docker, Inc. and other parties may also have trademark rights in other terms used herein.</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Android</td>
+                                <td>The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>LinkedIn</td>
+                                <td>LinkedIn, the LinkedIn logo, the [in] logo and InMail are registered trademarks or trademarks of LinkedIn Corporation and its affiliates in the United States and/or other countries</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>GitHub</td>
+                                <td>GitHub, the GitHub logo, and the Invertocat are trademarks of GitHub, Inc., registered in the U.S. and other countries.</td>
+                                <td>n/a</td>
+                            </tr>
+                            <tr>
+                                <td>Apache</td>
+                                <td>"Apache®, and the Apache feather logo are either registered trademarks or trademarks of The Apache Software Foundation in the United States and/or other countries."</td>
+                                <td>n/a</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </dialog>
     </footer>
 </body>
