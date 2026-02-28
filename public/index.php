@@ -197,9 +197,9 @@
                     </div>
 
                     <dialog id="pas_src_session" class="src_code">
-                        <div class="modal_frame">
+                        <div class="dialog_frame">
                             <img class="close_btn" src="images/icons/close_icon.png">
-                                <div class="dialog_content">
+                            <div class="dialog_content">
 
 <pre><code class="PHP">/*
 When the user clicks "Add to Cart", the $_SESSION gets updated with an 
@@ -233,7 +233,9 @@ save_session();
                     </dialog> 
 
                     <dialog id="pas_src_generate" class="src_code">
-                        <img class="close_btn" src="images/icons/close_icon.png">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
 
 <pre><code class="PHP">/*
 All of the site's HTML is dynamically generated from PHP. The product information is stored
@@ -255,10 +257,14 @@ for ($i = $rowsPerColumn - ROWS_PER_COLUMN; ($i &lt; $rowsPerColumn) &amp;&amp; 
 echo '            &lt;/ul&gt;' . "\n";
 echo '        &lt;/div&gt;' . "\n\n";
 }</code></pre>  
+                            </div>
+                        </div>
                     </dialog>
 
                     <dialog id="pas_src_dynamic_styling" class="src_code">
-                        <img class="close_btn" src="images/icons/close_icon.png">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
 
 <pre><code class="JavaScript">/*
 Makes dynamic height adjustments involving calculations that could not be achieved using pure
@@ -280,11 +286,14 @@ if (colorThumbnails !== null) {
 
 itemWrapper.style.height = "auto";
 }</code></pre>
-
+                            </div>
+                        </div>
                     </dialog>
 
                     <dialog id="pas_src_sql" class="src_code">
-                        <img class="close_btn" src="images/icons/close_icon.png">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
 
 <pre><code class="PHP">/*
 All product information is stored in a database. When the user clicks on a link to view a 
@@ -306,14 +315,17 @@ while($item = $result->fetch_array(MYSQLI_ASSOC)) {
 };
 return $items;
 }</code></pre>
-
+                            </div>
+                        </div>
                     </dialog>
 
                     <dialog id="pas_erd" class="document">
-                        <img class="close_btn" src="images/icons/close_icon.png">
-
-                        <img src="documents/pas_erd.png"></iframe>
-
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
+                                <img src="documents/pas_erd.png"></iframe>
+                            </div>
+                        </div>
                     </dialog>
 
                     <div class="project_bottom">
@@ -453,14 +465,18 @@ return $items;
                     </div>
                     
                     <dialog id="hh_class_diagram" class="document">
-                        <img class="close_btn" src="images/icons/close_icon.png">
-
-                        <img src="documents/hh_class_diagram.png"></iframe>
-
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
+                                <img src="documents/hh_class_diagram.png"></img>
+                            </div>
+                        </div>
                     </dialog>
                     
                     <dialog id="hh_static_poly" class="src_code">
-                        <img class="close_btn" src="images/icons/close_icon.png">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
 
 <pre><code class="Java">/*
     There are two addItem methods in the Room class that have a differing number of arguments. 
@@ -489,10 +505,12 @@ return $items;
         items.add(item);
     }
 </code></pre>
+                            </div>
+                        </div>
                     </dialog>
                     
                     <dialog id="hh_src_rdd" class="src_code">
-                        <div class="modal_frame">
+                        <div class="dialog_frame">
                             <img class="close_btn" src="images/icons/close_icon.png">
                             <div class="dialog_content">
 <pre><code class="Java">/*
@@ -571,7 +589,9 @@ return $items;
                     </dialog>
                     
                     <dialog id="hh_src_cohesive" class="src_code">
-                        <img class="close_btn" src="images/icons/close_icon.png">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
 
 <pre><code class="Java">/*
     Each class and method has a single, well-defined purpose. For example, the takeItem method of the 
@@ -590,11 +610,14 @@ return $items;
         items.add(item);
     }
 </code></pre>
-
+                            </div>
+                        </div>
                     </dialog>
                     
                     <dialog id="hh_src_dh_and_e" class="src_code">
-                        <img class="close_btn" src="images/icons/close_icon.png">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
 
 <pre><code class="Java">/*
     All fields are defined as private and accessed through getters and setters.
@@ -649,7 +672,8 @@ return $items;
         }
 
 </code></pre>
-
+                            </div>
+                        </div>
                     </dialog>
                     
     <!--
@@ -719,7 +743,9 @@ return $items;
                     </div>
                     
                     <dialog id="cc_src_validation" class="src_code">
-                        <img class="close_btn" src="images/icons/close_icon.png">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
                         
 <pre><code class="Java">/*
     Checking user input and displaying a toast when the input is invalid. 
@@ -749,10 +775,14 @@ if ((Float.parseFloat(metString) &lt; 0.9f) | (Float.parseFloat(metString) > 23f
     return;
 }
 </code></pre>
+                            </div>
+                        </div>
                     </dialog>
                     
                     <dialog id="cc_src_intent" class="src_code">
-                        <img class="close_btn" src="images/icons/close_icon.png">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
                         
 <pre><code class="Java">/*
     Passing data between activities using an intent. 
@@ -765,10 +795,14 @@ intent.putExtra(EXTRA_MET, Float.parseFloat(metString));
 
 startActivity(intent);
 </code></pre>
-                    </dialog> 
+                            </div>
+                        </div>
+                    </dialog>
                     
                     <dialog id="cc_src_xml" class="src_code">
-                        <img class="close_btn" src="images/icons/close_icon.png">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
                         
 <pre><code class="XML">&lt;!--
     App layout written in XML. 
@@ -805,10 +839,14 @@ startActivity(intent);
 
 &lt;/LinearLayout&gt;
 </code></pre>
+                            </div>
+                        </div>
                     </dialog>
                     
                     <dialog id="cc_src_languages" class="src_code">
-                        <img class="close_btn" src="images/icons/close_icon.png">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
                         
 <pre><code class="XML">&lt;!--
     String resources provided in Spanish. If the user has set their phone's language to Spanish, 
@@ -834,7 +872,10 @@ startActivity(intent);
 &lt;/resources&gt;
 
 </code></pre>
-                    </dialog> 
+                            </div>
+                        </div>
+                    </dialog>
+
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
@@ -1045,11 +1086,9 @@ startActivity(intent);
                     </div>
                     
                     <dialog id="bg_src_custom_css" class="src_code">
-                        <img 
-                            class="close_btn" 
-                            src="images/icons/close_icon.png" 
-                            data-dialog="bg_src_custom_css"
-                        />
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
                         
 <pre><code class="CSS">/*
     CSS to customize the style of the Contact Form 7 pluglin for WordPress
@@ -1066,10 +1105,14 @@ startActivity(intent);
     border: 1px solid #ccc;
 }
 </code></pre>
-                    </dialog>    
+                            </div>
+                        </div>
+                    </dialog>   
                     
                     <dialog id="bg_src_map" class="src_code">
-                        <img class="close_btn" src="images/icons/close_icon.png" onclick="checkSize('bg_src_map', 'bg_accomplishments', this, event)">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
                         
 <pre><code class="HTML">/*
     HTML to embed a google map.
@@ -1084,7 +1127,9 @@ startActivity(intent);
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-                    </dialog> 
+                            </div>
+                        </div>
+                    </dialog>
                     <div class="project_bottom">
                         <div class="language_icons">
                             <ul>
@@ -1194,7 +1239,7 @@ startActivity(intent);
     <footer>
         <button id="credits_btn">Image Credits</button>
         <dialog id="credits_dialog">
-            <div class="modal_frame">
+            <div class="dialog_frame">
                 <img class="close_btn" src="images/icons/close_icon.png" />
                 <div class="dialog_content">
                     <table>

@@ -81,16 +81,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 dialog {
-    max-width: min(80vw, 1050px);
-    height: 90vh;
+    max-width: min(90vw, 1050px);
+    max-height: 90vh; // crucial for scrolling behavior to work properly
     border: 1px solid #DDD;
     background-color: @off-white;
     border-radius: 5px;
     padding-bottom: 0;
+    
 
-    .modal_frame {
+    .dialog_frame {
         position: relative;
         height: 100%;
+        display: flex; // Needs to be flex in order to not have to set an explicit height on dialog, do not remove
+        flex-direction: column; // crucial for scrolling behavior to work properly
+        max-height: inherit; // crucial for scrolling behavior to work properly
 
         .close_btn {
             position: absolute;
@@ -105,9 +109,12 @@ dialog {
             }
         }
 
-        .dialog_content {
+        // this must be the scrollable container in order for the close button to stay fixed in the top right corner
+        .dialog_content { 
             overflow: auto;
             height: 100%;
+            flex: 1; // crucial for scrolling behavior to work properly
+            min-height: 0; // crucial for scrolling behavior to work properly
         }
     }
 }
@@ -942,14 +949,6 @@ html {
 
 @media (min-width: 500px) {
     
-    .hide_in_mobile {
-        display: block;
-    }
-    
-    .show_in_mobile {
-        display: none;
-    }
-    
     html {
         
         body {
@@ -1258,6 +1257,14 @@ html {
 ===============================*/
 
 @media (min-width: 750px) {
+
+    .hide_in_mobile {
+        display: block;
+    }
+    
+    .show_in_mobile {
+        display: none;
+    }
     
     html {
         

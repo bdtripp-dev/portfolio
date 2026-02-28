@@ -63,18 +63,21 @@ h6 {
   border-top: 1px solid black;
 }
 dialog {
-  max-width: min(80vw, 1050px);
-  height: 90vh;
+  max-width: min(90vw, 1050px);
+  max-height: 90vh;
   border: 1px solid #DDD;
   background-color: #F2F2F2;
   border-radius: 5px;
   padding-bottom: 0;
 }
-dialog .modal_frame {
+dialog .dialog_frame {
   position: relative;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: inherit;
 }
-dialog .modal_frame .close_btn {
+dialog .dialog_frame .close_btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -82,12 +85,14 @@ dialog .modal_frame .close_btn {
   backdrop-filter: blur(5px);
   border-radius: 5px;
 }
-dialog .modal_frame .close_btn:hover {
+dialog .dialog_frame .close_btn:hover {
   cursor: pointer;
 }
-dialog .modal_frame .dialog_content {
+dialog .dialog_frame .dialog_content {
   overflow: auto;
   height: 100%;
+  flex: 1;
+  min-height: 0;
 }
 html {
   scroll-behavior: smooth;
@@ -670,12 +675,6 @@ html body footer table tbody tr th {
 ==== 500PX CSS CODE AND UP =======
 ===============================*/
 @media (min-width: 500px) {
-  .hide_in_mobile {
-    display: block;
-  }
-  .show_in_mobile {
-    display: none;
-  }
   html body main section {
     clear: both;
   }
@@ -763,6 +762,12 @@ html body footer table tbody tr th {
 ==== 750PX CSS CODE AND UP =======
 ===============================*/
 @media (min-width: 750px) {
+  .hide_in_mobile {
+    display: block;
+  }
+  .show_in_mobile {
+    display: none;
+  }
   html body main section#about div#intro_container div.card p {
     max-width: 85%;
     margin: 0 auto;
