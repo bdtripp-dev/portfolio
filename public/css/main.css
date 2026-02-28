@@ -45,20 +45,6 @@ h6 {
   overflow: scroll;
   text-align: left;
 }
-.hidden_card img.close_btn {
-  width: 25px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10px;
-}
-.hidden_card img.close_btn:hover {
-  cursor: pointer;
-}
-.modal_open {
-  overflow: hidden;
-  height: 100%;
-}
 .document {
   overflow: hidden;
   width: 100%;
@@ -75,6 +61,38 @@ h6 {
   margin: 0 auto;
   margin-top: 30px;
   border-top: 1px solid black;
+}
+dialog {
+  max-width: min(90vw, 1050px);
+  max-height: 90vh;
+  border: 1px solid #DDD;
+  background-color: #F2F2F2;
+  border-radius: 5px;
+  padding-bottom: 0;
+}
+dialog .dialog_frame {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: inherit;
+}
+dialog .dialog_frame .close_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: initial;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+dialog .dialog_frame .close_btn:hover {
+  cursor: pointer;
+}
+dialog .dialog_frame .dialog_content {
+  overflow: auto;
+  height: 100%;
+  flex: 1;
+  min-height: 0;
 }
 html {
   scroll-behavior: smooth;
@@ -293,21 +311,21 @@ html body main section#projects div#projects_wrapper div.screenshot.card > img:h
 html body main section#projects div#projects_wrapper div.screenshot.card#hh_screenshot_card > img:hover {
   cursor: auto;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments {
   overflow: scroll;
   font-size: 0.85rem;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments h4 {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments h4 {
   padding: 15px 0 10px 0;
   margin: 0 auto;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments div {
   clear: both;
   bottom: 10px;
   width: 100%;
   padding: 20px 0 30px 0;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div a {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments div a {
   text-decoration: none;
   border: 2px inset #333333;
   height: 25px;
@@ -323,64 +341,64 @@ html body main section#projects div#projects_wrapper div.screenshot.card div.acc
   font-size: 0.9rem;
   transition: background-color 0.3s;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div a:hover {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments div a:hover {
   background-color: #dbdbdb;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div a:focus {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments div a:focus {
   border-style: outset;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div a:active {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments div a:active {
   border-style: inset;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div a img {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments div a img {
   width: 25px;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments ul {
   width: 90%;
   list-style-type: disc;
   clear: both;
   margin-top: 5px;
   float: right;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments ul li {
   margin: 8px 0;
   position: relative;
   clear: both;
   padding-bottom: 5px;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li img.src_code_icon {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments ul li img.modal_icon {
   width: 20px;
   position: absolute;
   top: 0;
   right: 4%;
   z-index: 1;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li img.src_code_icon:hover {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments ul li img.modal_icon:hover {
   cursor: pointer;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li a img pdf_icon {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments ul li a img pdf_icon {
   width: 20px;
   position: absolute;
   top: 0;
   right: 4%;
   z-index: 1;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li ul {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments ul li ul {
   width: 90%;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments ul li ul li {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments ul li ul li {
   padding-right: 40px;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments a {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments a {
   clear: both;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments a img.link_to_site {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments a img.link_to_site {
   width: 30px;
   position: absolute;
   top: 3%;
   left: 2%;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div.scroll_indicator {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments div.scroll_indicator {
   height: 23px;
   clear: both;
   position: fixed;
@@ -391,18 +409,19 @@ html body main section#projects div#projects_wrapper div.screenshot.card div.acc
   opacity: 1;
   transition: opacity 0.1s;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.accomplishments div.scroll_indicator img {
+html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments div.scroll_indicator img {
   width: 23px;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.src_code {
-  overflow: scroll;
-  border-radius: 5px;
+html body main section#projects div#projects_wrapper div.screenshot.card dialog {
+  padding: 0;
+  width: min(90vw, 1300px);
+  text-align: left;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.src_code pre code {
+html body main section#projects div#projects_wrapper div.screenshot.card dialog code {
   line-height: 130%;
   font-family: 'Source Code Pro', Consolas, monospace;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom {
+html body main section#projects div#projects_wrapper div.screenshot.card .project_bottom {
   position: absolute;
   background-color: #F2F2F2;
   width: 100%;
@@ -410,11 +429,11 @@ html body main section#projects div#projects_wrapper div.screenshot.card div.pro
   border-top: 2px ridge #999;
   box-shadow: 5px 5px 15px black;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons {
+html body main section#projects div#projects_wrapper div.screenshot.card .project_bottom div.language_icons {
   letter-spacing: 1px;
   width: 100%;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul {
+html body main section#projects div#projects_wrapper div.screenshot.card .project_bottom div.language_icons ul {
   height: 45px;
   padding-top: 10px;
   border-bottom: 1px solid #C7523A;
@@ -423,28 +442,28 @@ html body main section#projects div#projects_wrapper div.screenshot.card div.pro
   padding-bottom: 4px;
   border-radius: 5px;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li {
+html body main section#projects div#projects_wrapper div.screenshot.card .project_bottom div.language_icons ul li {
   font-size: 0.6rem;
   transition: font-size 0.2s ease-in-out;
   display: inline-block;
   text-align: center;
   vertical-align: top;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li:hover {
+html body main section#projects div#projects_wrapper div.screenshot.card .project_bottom div.language_icons ul li:hover {
   font-size: 0.7rem;
   transition: font-size 0.2s ease-in-out;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li:hover img {
+html body main section#projects div#projects_wrapper div.screenshot.card .project_bottom div.language_icons ul li:hover img {
   width: 30px;
   height: 30px;
   transition: width 0.2s ease-in-out;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li:not(:first-of-type) {
+html body main section#projects div#projects_wrapper div.screenshot.card .project_bottom div.language_icons ul li:not(:first-of-type) {
   margin-left: 5px;
   padding-left: 5px;
   border-left: 1px solid #C7523A;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom div.language_icons ul li img {
+html body main section#projects div#projects_wrapper div.screenshot.card .project_bottom div.language_icons ul li img {
   margin: 0 auto 5px auto;
   width: 25px;
   height: 25px;
@@ -452,7 +471,7 @@ html body main section#projects div#projects_wrapper div.screenshot.card div.pro
   transition: width 0.2s ease-in-out;
   display: block;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom button {
+html body main section#projects div#projects_wrapper div.screenshot.card .project_bottom button {
   display: inline-block;
   width: 41%;
   height: 40px;
@@ -467,7 +486,7 @@ html body main section#projects div#projects_wrapper div.screenshot.card div.pro
   vertical-align: top;
   transition: background-color 0.3s ease;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card div.project_bottom button:hover {
+html body main section#projects div#projects_wrapper div.screenshot.card .project_bottom button:hover {
   background-color: #0077cc;
   transition: background-color 0.3s ease;
 }
@@ -618,51 +637,28 @@ html body footer button {
 html body footer button:hover {
   transform: scale(1.1);
 }
-html body footer dialog#credits_dialog {
-  max-width: min(80vw, 1050px);
-  height: 90vh;
-}
-html body footer dialog#credits_dialog .modal_frame {
-  position: relative;
-  height: 100%;
-}
-html body footer dialog#credits_dialog .modal_frame .close_btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: initial;
-  backdrop-filter: blur(5px);
-  border-radius: 5px;
-}
-html body footer dialog#credits_dialog .modal_frame .close_btn:hover {
-  cursor: pointer;
-}
-html body footer dialog#credits_dialog .modal_frame .credits_content {
-  overflow: auto;
-  height: 100%;
-}
-html body footer dialog#credits_dialog .modal_frame .credits_content table {
+html body footer table {
   color: #333333;
   width: 80%;
   border-radius: 10px;
   margin: 25px auto;
 }
-html body footer dialog#credits_dialog .modal_frame .credits_content table thead {
+html body footer table thead {
   text-align: center;
   font-size: 2.6em;
   font-weight: 900;
 }
-html body footer dialog#credits_dialog .modal_frame .credits_content table thead th {
+html body footer table thead th {
   padding: 20px;
   border-collapse: collapse;
   border: 1px solid #333333;
 }
-html body footer dialog#credits_dialog .modal_frame .credits_content table tbody tr th {
+html body footer table tbody tr th {
   font-weight: 900;
   font-size: 1.2em;
 }
-html body footer dialog#credits_dialog .modal_frame .credits_content table tbody tr td,
-html body footer dialog#credits_dialog .modal_frame .credits_content table tbody tr th {
+html body footer table tbody tr td,
+html body footer table tbody tr th {
   border-collapse: collapse;
   border: 1px solid #333333;
   padding: 10px;
@@ -679,12 +675,6 @@ html body footer dialog#credits_dialog .modal_frame .credits_content table tbody
 ==== 500PX CSS CODE AND UP =======
 ===============================*/
 @media (min-width: 500px) {
-  .hide_in_mobile {
-    display: block;
-  }
-  .show_in_mobile {
-    display: none;
-  }
   html body main section {
     clear: both;
   }
@@ -772,6 +762,12 @@ html body footer dialog#credits_dialog .modal_frame .credits_content table tbody
 ==== 750PX CSS CODE AND UP =======
 ===============================*/
 @media (min-width: 750px) {
+  .hide_in_mobile {
+    display: block;
+  }
+  .show_in_mobile {
+    display: none;
+  }
   html body main section#about div#intro_container div.card p {
     max-width: 85%;
     margin: 0 auto;
