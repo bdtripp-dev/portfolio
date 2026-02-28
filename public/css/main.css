@@ -167,7 +167,10 @@ html body nav#slide_out {
   background-color: #F2F2F2;
   left: -200px;
   transition: left 0.7s;
+  /* Fallback for older browsers */
   height: 100vh;
+  /* The modern fix */
+  height: 100dvh;
   top: 0;
   z-index: 4;
 }
