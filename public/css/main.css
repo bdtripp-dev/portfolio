@@ -295,7 +295,8 @@ html body main section#about div#intro_container div.card p {
 }
 html body main section#projects div#projects_wrapper {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+  justify-content: center;
   gap: 40px;
   margin: 60px 20px 0 20px;
   max-width: 1360px;
@@ -686,9 +687,6 @@ html body footer table tbody tr th {
     margin-top: 0;
     padding-top: 0;
   }
-  html body main section#projects div#projects_wrapper {
-    margin: 60px 80px 0 80px;
-  }
   html body main section#education div.card {
     padding: 20px 0;
   }
@@ -751,17 +749,6 @@ html body footer table tbody tr th {
     left: initial;
     top: 15px;
     right: 15px;
-  }
-}
-/*===============================
-==== 650PX CSS CODE AND UP =======
-===============================*/
-@media (min-width: 650px) {
-  html body main section#projects div#projects_wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
-    justify-content: center;
-    max-width: 1360px;
-    margin: 0 auto;
   }
 }
 /*===============================
@@ -866,5 +853,13 @@ html body footer table tbody tr th {
   html body main section#skills div#tools_and_technologies ul li img {
     height: 80px;
     width: 80px;
+  }
+}
+/*===============================
+==== 1600PX CSS CODE AND UP =======
+===============================*/
+@media (min-width: 1600px) {
+  html body main section#projects div#projects_wrapper {
+    margin: 0 auto;
   }
 }
