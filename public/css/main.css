@@ -298,6 +298,7 @@ html body main section#projects div#projects_wrapper {
   grid-template-columns: 1fr;
   gap: 40px;
   margin: 60px 20px 0 20px;
+  max-width: 1360px;
 }
 html body main section#projects div#projects_wrapper div.screenshot.card {
   position: relative;
@@ -757,8 +758,10 @@ html body footer table tbody tr th {
 ===============================*/
 @media (min-width: 650px) {
   html body main section#projects div#projects_wrapper {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 60px 20px 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+    justify-content: center;
+    max-width: 1360px;
+    margin: 0 auto;
   }
 }
 /*===============================
@@ -863,29 +866,5 @@ html body footer table tbody tr th {
   html body main section#skills div#tools_and_technologies ul li img {
     height: 80px;
     width: 80px;
-  }
-}
-/*===============================
-==== 1200PX CSS CODE AND UP =======
-===============================*/
-@media (min-width: 1200px) {
-  html body main section#projects div#projects_wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-/*===============================
-==== 1500PX CSS CODE AND UP =======
-===============================*/
-@media (min-width: 1500px) {
-  html body main section#projects div#projects_wrapper {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-/*===============================
-==== 1950PX CSS CODE AND UP =======
-===============================*/
-@media (min-width: 1950px) {
-  html body main section#projects div#projects_wrapper {
-    grid-template-columns: repeat(5, 1fr);
   }
 }

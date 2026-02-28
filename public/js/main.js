@@ -70,6 +70,7 @@ function init() {
         }
     });
 
+    // refactor this to join with the creditsOpenBtn below instead of separately?
     document.querySelectorAll('.modal_icon[data-dialog]').forEach(icon => {
         icon.addEventListener('click', (e) => {
             const id = icon.dataset.dialog;
