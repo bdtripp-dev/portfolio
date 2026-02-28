@@ -64,7 +64,7 @@ h6 {
 }
 dialog {
   max-width: min(90vw, 1050px);
-  max-height: 90vh;
+  max-height: 80vh;
   border: 1px solid #DDD;
   background-color: #F2F2F2;
   border-radius: 5px;
