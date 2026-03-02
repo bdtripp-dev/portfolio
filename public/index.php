@@ -394,7 +394,7 @@ return $items;
                             </li>
                         </ul>
                         <div>
-                            <a href="<?= "https://{$prefix}chordandscalefinder.bdtripp.com/" ?>" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
+                            <a href="https://github.com/bdtripp/chord_and_scale_finder" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
                         </div>
                     </div>
                 
@@ -407,7 +407,7 @@ return $items;
                             </ul>
                         </div>
                         
-                        <button id="casf_visit_site_btn" onclick="window.open('http://bdtripp.com/chord_and_scale_finder/', '_blank');">Visit Site</button>
+                        <button id="casf_visit_site_btn" onclick="window.open('<?= "https://{$prefix}chordandscalefinder.bdtripp.com/" ?>', '_blank');">Visit Site</button>
                         <button id="casf_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
                 </div>
