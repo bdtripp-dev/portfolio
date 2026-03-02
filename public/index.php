@@ -375,7 +375,12 @@ return $items;
                 </div>
 
                 <div id="casf_screenshot_card" class="project screenshot card">
-                    <img id="casf_screenshot" class="tracked_image" src="images/screenshots/casf_screenshot.png" onclick="window.open('http://bdtripp.com/chord_and_scale_finder/', '_blank');">
+                    <img 
+                        id="casf_screenshot" 
+                        class="tracked_image" 
+                        src="images/screenshots/casf_screenshot.png" 
+                        onclick="window.open('<?= "https://{$prefix}chordandscalefinder.bdtripp.com/" ?>', '_blank');"
+                    />
                     
                     <div id="casf_accomplishments" class="project accomplishments hidden_card">
                         <h4>Design &amp; Development Details</h4>
