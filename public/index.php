@@ -394,7 +394,7 @@ return $items;
                             </li>
                         </ul>
                         <div>
-                            <a href="https://github.com/bdtripp/chord_and_scale_finder" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
+                            <a href="<?= "https://{$prefix}chordandscalefinder.bdtripp.com/" ?>" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
                         </div>
                     </div>
                 
