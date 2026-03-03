@@ -313,9 +313,6 @@ html body main section#projects div#projects_wrapper div.screenshot.card {
 html body main section#projects div#projects_wrapper div.screenshot.card > img:hover {
   cursor: pointer;
 }
-html body main section#projects div#projects_wrapper div.screenshot.card#hh_screenshot_card > img:hover {
-  cursor: auto;
-}
 html body main section#projects div#projects_wrapper div.screenshot.card .accomplishments {
   overflow: scroll;
   font-size: 0.85rem;
