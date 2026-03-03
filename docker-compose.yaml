@@ -1,6 +1,5 @@
 services:
-  # Web Application
-  web: # Other services could be db, api, or app
+  portfolio: # Other services could be db, api, or app
     image: bdtrippdev/portfolio:${TAG}
     restart: always
     labels:
@@ -13,9 +12,8 @@ services:
       interval: 30s
       start_period: 20s
     networks:
-      - public_net # Connected to Proxy
+      - public_net
 networks:
-  # Public network must match what the proxy uses
   public_net:
     name: ${ENV_NAME}_public
     external: true

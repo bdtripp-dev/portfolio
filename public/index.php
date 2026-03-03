@@ -407,13 +407,21 @@ return $items;
                             </ul>
                         </div>
                         
-                        <button id="casf_visit_site_btn" onclick="window.open('<?= "https://{$prefix}chordandscalefinder.bdtripp.com/" ?>', '_blank');">Visit Site</button>
+                        <button 
+                            id="casf_visit_site_btn" 
+                            onclick="window.open('<?= "https://{$prefix}chordandscalefinder.bdtripp.com/" ?>', '_blank');"
+                        >Visit Site</button>
                         <button id="casf_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
                 </div>
                 
                 <div id="hh_screenshot_card" class="project screenshot card">
-                    <img id="hh_screenshot" class="tracked_image" src="images/screenshots/hh_screenshot.png">
+                    <img 
+                        id="hh_screenshot" 
+                        class="tracked_image" 
+                        src="images/screenshots/hh_screenshot.png"
+                        onclick="window.open('<?= "https://{$prefix}hauntedhouse.bdtripp.com/" ?>', '_blank');"
+                    />
                     
                     <div id="hh_accomplishments" class="project accomplishments hidden_card">
                         <h4>Design &amp; Development Details</h4>
@@ -696,6 +704,10 @@ return $items;
                             </ul>
                         </div>
                         
+                        <button 
+                            id="casf_visit_site_btn" 
+                            onclick="window.open('<?= "https://{$prefix}hauntedhouse.bdtripp.com/" ?>', '_blank');"
+                        >Visit Site</button>
                         <button id="hh_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
                 </div>
