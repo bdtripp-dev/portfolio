@@ -342,7 +342,12 @@ return $items;
                 </div>
                 
                 <div id="ww2_screenshot_card" class="project screenshot card">
-                    <img id="ww2_screenshot" class="tracked_image" src="images/screenshots/ww2_screenshot.png" onclick="window.open('http://bdtripp.com/ww2/', '_blank');">
+                    <img 
+                        id="ww2_screenshot" 
+                        class="tracked_image" 
+                        src="images/screenshots/ww2_screenshot.png" 
+                        onclick="window.open('<?= "https://{$prefix}wwii-soldier-surveys.bdtripp.com/" ?>', '_blank');"
+                    />
                     
                     <div id="ww2_accomplishments" class="project accomplishments hidden_card">
                         <h4>Design &amp; Development Details</h4>
@@ -357,7 +362,9 @@ return $items;
                             <li>Styled using CSS Grid</li>
                         </ul>
                         <div>
-                            <a href="https://github.com/bdtripp/world_war_2_archive" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
+                            <a href="https://github.com/bdtripp-dev/wwii-soldier-surveys" target="_blank">
+                                <img src="images/logos/github.svg">View Full Source Code
+                            </a>
                         </div>
                     </div>
                 
@@ -369,7 +376,10 @@ return $items;
                             </ul>
                         </div>
                         
-                        <button id="ww2_visit_site_btn" onclick="window.open('http://bdtripp.com/ww2/', '_blank');">Visit Site</button>
+                        <button 
+                            id="ww2_visit_site_btn" 
+                            onclick="window.open('<?= "https://{$prefix}wwii-soldier-surveys.bdtripp.com/" ?>', '_blank');">Visit Site
+                        </button>
                         <button id="ww2_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
                 </div>
@@ -379,7 +389,7 @@ return $items;
                         id="casf_screenshot" 
                         class="tracked_image" 
                         src="images/screenshots/casf_screenshot.png" 
-                        onclick="window.open('<?= "https://{$prefix}chordandscalefinder.bdtripp.com/" ?>', '_blank');"
+                        onclick="window.open('<?= "https://{$prefix}chord-and-scale-finder.bdtripp.com/" ?>', '_blank');"
                     />
                     
                     <div id="casf_accomplishments" class="project accomplishments hidden_card">
@@ -394,7 +404,9 @@ return $items;
                             </li>
                         </ul>
                         <div>
-                            <a href="https://github.com/bdtripp/chord_and_scale_finder" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
+                            <a href="https://github.com/bdtripp-dev/chord-and-scale-finder" target="_blank">
+                                <img src="images/logos/github.svg">View Full Source Code
+                            </a>
                         </div>
                     </div>
                 
@@ -409,8 +421,8 @@ return $items;
                         
                         <button 
                             id="casf_visit_site_btn" 
-                            onclick="window.open('<?= "https://{$prefix}chordandscalefinder.bdtripp.com/" ?>', '_blank');"
-                        >Visit Site</button>
+                            onclick="window.open('<?= "https://{$prefix}chord-and-scale-finder.bdtripp.com/" ?>', '_blank');">Visit Site
+                        </button>
                         <button id="casf_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
                 </div>
@@ -420,7 +432,7 @@ return $items;
                         id="hh_screenshot" 
                         class="tracked_image" 
                         src="images/screenshots/hh_screenshot.png"
-                        onclick="window.open('<?= "https://{$prefix}hauntedhouse.bdtripp.com/" ?>', '_blank');"
+                        onclick="window.open('<?= "https://{$prefix}haunted-house.bdtripp.com/" ?>', '_blank');"
                     />
                     
                     <div id="hh_accomplishments" class="project accomplishments hidden_card">
@@ -473,7 +485,9 @@ return $items;
                             </li>
                         </ul>
                         <div>
-                            <a href="https://github.com/bdtripp/haunted_house" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
+                            <a href="https://github.com/bdtripp-dev/haunted-house" target="_blank">
+                                <img src="images/logos/github.svg">View Full Source Code
+                            </a>
                         </div>
                     </div>
                     
@@ -706,7 +720,7 @@ return $items;
                         
                         <button 
                             id="casf_visit_site_btn" 
-                            onclick="window.open('<?= "https://{$prefix}hauntedhouse.bdtripp.com/" ?>', '_blank');"
+                            onclick="window.open('<?= "https://{$prefix}haunted-house.bdtripp.com/" ?>', '_blank');"
                         >Visit Site</button>
                         <button id="hh_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
