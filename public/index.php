@@ -1083,15 +1083,15 @@ startActivity(intent);
                     </div>
                 </div> -->
                 
-                <div id="bg_screenshot_card" class="project screenshot card">
+                <div id="sg_screenshot_card" class="project screenshot card">
                     <img 
-                        id="bg_screenshot" 
+                        id="sg_screenshot" 
                         class="tracked_image" 
-                        src="images/screenshots/bg_screenshot.png" 
-                        onclick="window.open('http://bdtripp.com/bramblewood_guitars/', '_blank');"
+                        src="images/screenshots/sg_screenshot.png" 
+                        onclick="window.open('<?= "https://{$prefix}sitka-guitars.bdtripp.com/" ?>', '_blank');" 
                     />
                     
-                    <div id="bg_accomplishments" class="project accomplishments hidden_card">
+                    <div id="sg_accomplishments" class="project accomplishments hidden_card">
                         <h4>Design &amp; Development Details</h4>
                         <ul>
                             <li>WordPress</li>
@@ -1099,7 +1099,7 @@ startActivity(intent);
                                 <img 
                                     class="modal_icon" 
                                     src="images/icons/source_code_icon.png" 
-                                    data-dialog="bg_src_custom_css"
+                                    data-dialog="sg_src_custom_css"
                                 />
                             </li>
                             <li>User Roles</li>
@@ -1110,13 +1110,13 @@ startActivity(intent);
                                 <img 
                                     class="modal_icon" 
                                     src="images/icons/source_code_icon.png" 
-                                    data-dialog="bg_src_map"
+                                    data-dialog="sg_src_map"
                                 />
                             </li>
                         </ul>
                     </div>
                     
-                    <dialog id="bg_src_custom_css" class="src_code">
+                    <dialog id="sg_src_custom_css" class="src_code">
                         <div class="dialog_frame">
                             <img class="close_btn" src="images/icons/close_icon.png">
                             <div class="dialog_content">
@@ -1140,7 +1140,7 @@ startActivity(intent);
                         </div>
                     </dialog>   
                     
-                    <dialog id="bg_src_map" class="src_code">
+                    <dialog id="sg_src_map" class="src_code">
                         <div class="dialog_frame">
                             <img class="close_btn" src="images/icons/close_icon.png">
                             <div class="dialog_content">
@@ -1170,8 +1170,11 @@ startActivity(intent);
                             </ul>
                         </div>
                         
-                        <button id="bg_visit_site_btn" onclick="window.open('http://bdtripp.com/bramblewood_guitars/', '_blank');">Visit Site</button>
-                        <button id="bg_view_details_btn" class="view_details_btn">View Details</button>
+                        <button 
+                            id="sg_visit_site_btn" 
+                            onclick="window.open('<?= "https://{$prefix}sitka-guitars.bdtripp.com/" ?>', '_blank');"
+                        >Visit Site</button>
+                        <button id="sg_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
                 </div>
                 <div style="clear: both;"></div>
