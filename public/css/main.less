@@ -55,21 +55,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: @off-white;
     overflow: scroll;
     text-align: left;
-
-    img {
-
-        &.close_btn {
-            width: 25px;
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 10px;
-            
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
 }
 
 &.document {
@@ -92,6 +77,45 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0 auto;
         margin-top: 30px;
         border-top: 1px solid black;
+    }
+}
+
+dialog {
+    max-width: min(90vw, 1050px);
+    max-height: 80vh; // crucial for scrolling behavior to work properly
+    border: 1px solid #DDD;
+    background-color: @off-white;
+    border-radius: 5px;
+    padding-bottom: 0;
+    
+
+    .dialog_frame {
+        position: relative;
+        height: 100%;
+        display: flex; // Needs to be flex in order to not have to set an explicit height on dialog, do not remove
+        flex-direction: column; // crucial for scrolling behavior to work properly
+        max-height: inherit; // crucial for scrolling behavior to work properly
+
+        .close_btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: initial;
+            backdrop-filter: blur(5px);
+            border-radius: 5px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        // this must be the scrollable container in order for the close button to stay fixed in the top right corner
+        .dialog_content { 
+            overflow: auto;
+            height: 100%;
+            flex: 1; // crucial for scrolling behavior to work properly
+            min-height: 0; // crucial for scrolling behavior to work properly
+        }
     }
 }
 
@@ -189,7 +213,10 @@ html {
                         background-color: @off-white;
                         left: -200px;
                         transition: left .7s;
-                        height: 100vh;
+                        /* Fallback for older browsers */
+                        height: 100vh; 
+                        /* The modern fix */
+                        height: 100dvh;
                         top: 0;
                         z-index: 4;
                     
@@ -253,7 +280,6 @@ html {
             clear: both;
             margin-top: 63px;
             background-color: lighten(#f2f2f2, 2%);
-            margin-bottom: 20px;
 
             section {
                 margin-top: 20px;
@@ -332,6 +358,17 @@ html {
                                             margin-top: .11em;
                                             color: @secondary-color3;
                                         }
+
+                                        @supports (initial-letter: 3) or (-webkit-initial-letter: 3) {
+                                            &::first-letter {
+                                                /* Reset the hacks */
+                                                float: none;
+                                                margin-top: 0;                                       
+                                                /* For Chrome and Safari (Not supported by Firefox)*/
+                                                initial-letter: 2;
+                                                -webkit-initial-letter: 2;
+                                            }
+                                        }
                                     }
 
                                     p {
@@ -349,9 +386,11 @@ html {
 
                     div#projects_wrapper {
                         display: grid;
-                        grid-template-columns: 1fr;
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+                        justify-content: center;
                         gap: 40px;
                         margin: 60px 20px 0 20px;
+                        max-width: 1360px;
 
                         div {
         
@@ -370,243 +409,231 @@ html {
                                         cursor: pointer;
                                     }
                                 }
-                                
-                                &#hh_screenshot_card {
-                                    
-                                    &>img {
-                                    
-                                        &:hover {
-                                            cursor: auto;
-                                        }
+
+                                .accomplishments {
+                                    overflow: scroll;
+                                    font-size: .85rem;
+
+                                    h4 {
+                                        padding: 15px 0 10px 0;
+                                        margin: 0 auto;
                                     }
-                                }
-
-                                div {
-
-                                    &.accomplishments {
-                                        overflow: scroll;
-                                        font-size: .85rem;
-
-                                        h4 {
-                                            padding: 15px 0 10px 0;
-                                            margin: 0 auto;
-                                        }
+                                    
+                                    div {
+                                        clear: both;
+                                        bottom: 10px;
+                                        width: 100%;
+                                        padding: 20px 0 30px 0;
                                         
-                                        div {
-                                            clear: both;
-                                            bottom: 10px;
-                                            width: 100%;
-                                            padding: 20px 0 30px 0;
+                                        a {
+                                            text-decoration: none;
+                                            border: 2px inset @dark-grey;
+                                            height: 25px;
+                                            display: inline-block;
+                                            border-radius: 5px;
+                                            padding: 5px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-evenly;
+                                            width: 200px;
+                                            margin: 0 auto;
+                                            color: @primary-color;
+                                            font-size: .9rem;
+                                            transition: background-color .3s;
                                             
-                                            a {
-                                                text-decoration: none;
-                                                border: 2px inset @dark-grey;
-                                                height: 25px;
-                                                display: inline-block;
-                                                border-radius: 5px;
-                                                padding: 5px;
-                                                display: flex;
-                                                align-items: center;
-                                                justify-content: space-evenly;
-                                                width: 200px;
-                                                margin: 0 auto;
-                                                color: @primary-color;
-                                                font-size: .9rem;
-                                                transition: background-color .3s;
-                                                
-                                                &:hover {
-                                                    background-color: darken(@off-white, 9%);
-                                                }
-                                                
-                                                &:focus {
-                                                    border-style: outset;
-                                                }
-                                                
-                                                &:active {
-                                                    border-style: inset;
-                                                }
-                                                
-                                                img {
-                                                    width: 25px;
-                                                }
+                                            &:hover {
+                                                background-color: darken(@off-white, 9%);
+                                            }
+                                            
+                                            &:focus {
+                                                border-style: outset;
+                                            }
+                                            
+                                            &:active {
+                                                border-style: inset;
+                                            }
+                                            
+                                            img {
+                                                width: 25px;
                                             }
                                         }
+                                    }
 
-                                        ul {
-                                            width: 90%;
-                                            list-style-type: disc;
+                                    ul {
+                                        width: 90%;
+                                        list-style-type: disc;
+                                        clear: both;
+                                        margin-top: 5px;
+                                        float: right;
+
+                                        li {
+                                            margin: 8px 0;
+                                            position: relative;
                                             clear: both;
-                                            margin-top: 5px;
-                                            float: right;
+                                            padding-bottom: 5px;
 
-                                            li {
-                                                margin: 8px 0;
-                                                position: relative;
-                                                clear: both;
-                                                padding-bottom: 5px;
+                                            img {
 
+                                                &.modal_icon {
+                                                    width: 20px;
+                                                    position: absolute;
+                                                    top: 0;
+                                                    right: 4%;
+                                                    z-index: 1;
+                                                    
+                                                    &:hover {
+                                                        cursor: pointer;
+                                                    }
+                                                }
+                                            }
+                                            
+                                            a {
+                                                
                                                 img {
-
-                                                    &.src_code_icon {
+                                                    
+                                                    pdf_icon {
                                                         width: 20px;
                                                         position: absolute;
                                                         top: 0;
                                                         right: 4%;
                                                         z-index: 1;
-                                                        
-                                                        &:hover {
-                                                            cursor: pointer;
-                                                        }
-                                                    }
-                                                }
-                                                
-                                                a {
-                                                    
-                                                    img {
-                                                        
-                                                        pdf_icon {
-                                                            width: 20px;
-                                                            position: absolute;
-                                                            top: 0;
-                                                            right: 4%;
-                                                            z-index: 1;
-                                                        }
-                                                    }
-                                                }
-                                                
-                                                ul {
-                                                    width: 90%;
-                                                    
-                                                    li {
-                                                        padding-right: 40px;
                                                     }
                                                 }
                                             }
+                                            
+                                            ul {
+                                                width: 90%;
+                                                
+                                                li {
+                                                    padding-right: 40px;
+                                                }
+                                            }
                                         }
+                                    }
 
-                                        a {
+                                    a {
+                                        clear: both;
+
+                                        img {
+
+                                            &.link_to_site {
+                                                width: 30px;
+                                                position: absolute;
+                                                top: 3%;
+                                                left: 2%;
+                                            }
+                                        }
+                                    }
+                                    
+                                    div {
+                                        
+                                        &.scroll_indicator {
+                                            height: 23px;
                                             clear: both;
-
+                                            position: fixed;
+                                            bottom: 0;
+                                            background-color: white;
+                                            width: 100%;
+                                            text-align: center;
+                                            opacity: 1;
+                                            transition: opacity .1s;
+                                            
                                             img {
-
-                                                &.link_to_site {
-                                                    width: 30px;
-                                                    position: absolute;
-                                                    top: 3%;
-                                                    left: 2%;
-                                                }
-                                            }
-                                        }
-                                        
-                                        div {
-                                            
-                                            &.scroll_indicator {
-                                                height: 23px;
-                                                clear: both;
-                                                position: fixed;
-                                                bottom: 0;
-                                                background-color: white;
-                                                width: 100%;
-                                                text-align: center;
-                                                opacity: 1;
-                                                transition: opacity .1s;
-                                                
-                                                img {
-                                                    width: 23px;
-                                                }
+                                                width: 23px;
                                             }
                                         }
                                     }
+                                }
 
-                                    &.src_code {
-                                        overflow: scroll;
-                                        border-radius: 5px;
-                                        
-                                        pre {
-                                            
-                                            code {
-                                                line-height: 130%;
-                                                font-family: 'Source Code Pro', Consolas, monospace;
-                                            }
-                                        }
+                                dialog {
+                                    padding: 0;
+                                    width: min(90vw, 1300px);
+                                    text-align: left;
+
+                                    code {
+                                        line-height: 130%;
+                                        font-family: 'Source Code Pro', Consolas, monospace;
                                     }
+                                }
 
-                                    &.project_bottom {
-                                        position: absolute;
-                                        background-color: @off-white;
-                                        width: 100%;
-                                        bottom: 0;
-                                        border-top: 2px ridge #999;
-                                        box-shadow: 5px 5px 15px black;
-                                        
-                                        div {
+                                .project_bottom {
+                                    position: absolute;
+                                    background-color: @off-white;
+                                    width: 100%;
+                                    bottom: 0;
+                                    border-top: 2px ridge #999;
+                                    box-shadow: 5px 5px 15px black;
+                                    
+                                    div {
 
-                                            &.language_icons {
-                                                letter-spacing: 1px;
-                                                width: 100%;
+                                        &.language_icons {
+                                            letter-spacing: 1px;
+                                            width: 100%;
+                                            
+                                            ul {
+                                                height: 45px;
+                                                padding-top: 10px;
+                                                border-bottom: 1px solid @accent-color;
+                                                width: 90%;
+                                                margin: 0 auto;
+                                                padding-bottom: 4px;
+                                                border-radius: 5px;
                                                 
-                                                ul {
-                                                    height: 45px;
-                                                    padding-top: 10px;
-                                                    border-bottom: 1px solid @accent-color;
-                                                    width: 90%;
-                                                    margin: 0 auto;
-                                                    padding-bottom: 4px;
-                                                    border-radius: 5px;
+                                                li {
+                                                    font-size: .6rem;
+                                                    transition: font-size .2s ease-in-out;
+                                                    display: inline-block;
+                                                    text-align: center;
+                                                    vertical-align: top;
                                                     
-                                                    li {
-                                                        font-size: .6rem;
+                                                    &:hover {
+                                                        font-size: .7rem;
                                                         transition: font-size .2s ease-in-out;
-                                                        display: inline-block;
-                                                        text-align: center;
-                                                        vertical-align: top;
                                                         
-                                                        &:hover {
-                                                            font-size: .7rem;
-                                                            transition: font-size .2s ease-in-out;
-                                                            
-                                                            img {
-                                                                width: 30px;
-                                                                transition: width .2s ease-in-out;
-                                                            }
-                                                        }
-
-                                                        &:not(:first-of-type) {
-                                                            margin-left: 5px;
-                                                            padding-left: 5px;
-                                                            border-left: 1px solid @accent-color;
-                                                        }
-
                                                         img {
-                                                            margin: 0 auto 5px auto;
-                                                            width: 25px;
+                                                            width: 30px;
+                                                            height: 30px;
                                                             transition: width .2s ease-in-out;
-                                                            display: block;
                                                         }
+                                                    }
+
+                                                    &:not(:first-of-type) {
+                                                        margin-left: 5px;
+                                                        padding-left: 5px;
+                                                        border-left: 1px solid @accent-color;
+                                                    }
+
+                                                    img {
+                                                        margin: 0 auto 5px auto;
+                                                        width: 25px;
+                                                        height: 25px;
+                                                        object-fit: contain;
+                                                        transition: width .2s ease-in-out;
+                                                        display: block;
                                                     }
                                                 }
                                             }
                                         }
+                                    }
 
-                                        button {
-                                            display: inline-block;
-                                            width: 41%;
-                                            height: 40px;
-                                            margin: 10px 2%;
-                                            cursor: pointer;
-                                            color: #FFF;
-                                            background-color: @secondary-color;
-                                            border-color: #07c;
-                                            box-shadow: inset 0 1px 0 #66bfff;
-                                            border: 1px solid transparent;  
-                                            border-radius: 3px;
-                                            vertical-align: top;
+                                    button {
+                                        display: inline-block;
+                                        width: 41%;
+                                        height: 40px;
+                                        margin: 10px 2%;
+                                        cursor: pointer;
+                                        color: #FFF;
+                                        background-color: @secondary-color;
+                                        border-color: #07c;
+                                        box-shadow: inset 0 1px 0 #66bfff;
+                                        border: 1px solid transparent;  
+                                        border-radius: 3px;
+                                        vertical-align: top;
+                                        transition: background-color .3s ease;
+                                        
+                                        &:hover {
+                                            background-color: darken(@secondary-color, 10%);
                                             transition: background-color .3s ease;
-                                            
-                                            &:hover {
-                                                background-color: darken(@secondary-color, 10%);
-                                                transition: background-color .3s ease;
-                                            }
                                         }
                                     }
                                 }
@@ -642,6 +669,7 @@ html {
                                 img {
                                     height: 60px;
                                     width: 60px;
+                                    object-fit: contain;
                                     display: block;
                                     margin: 0 auto 25px;
                                 }
@@ -666,6 +694,8 @@ html {
                         &.card {
                             padding: 20px 0;
                             background-color: @off-white;
+                            display: grid;
+                            max-width: 500px;
                             
                             h4 {
                                 padding: 2% 2% 1% 2%;
@@ -683,9 +713,10 @@ html {
                             }
                             
                             ul {
-                                margin: 20px auto;
+                                margin: 20px;
                                 padding-left: 25px;
                                 list-style-type: circle;
+                                justify-self: center;
 
                                 li {
                                     margin-bottom: 10px;
@@ -707,6 +738,7 @@ html {
                             background-color: @off-white;
                             text-align: center;
                             box-sizing: border-box;
+                            max-width: 500px;
                             
                             ul {
                                 margin: 20px auto;
@@ -748,23 +780,22 @@ html {
                         
                         &.card {
                             background-color: white;
-                            
-                            iframe {
-                                display: none;
-                            }
+                            position: relative;
+                            margin-bottom: 65px;
+                            max-width: 1050px;
                             
                             div {
                                 
                                 &#icons {
-                                    width: 120px;
-                                    margin: 0 auto;
-                                    text-align: center;
+                                    position: absolute;
+                                    bottom: -55px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
                                     
                                     a {
                                         text-decoration: none;
                                         
                                         img {
-                                            padding: 10px 0;
                                             transition: transform .3s;
                                             
                                             &:hover {
@@ -812,51 +843,37 @@ html {
                 }
             }
 
-            div {
+            table {
+                color: @dark-grey;
+                width: 80%;
+                border-radius: 10px;
+                margin: 25px auto;
 
-                &#image_credits {
-                    display: none;
-                    overflow: scroll;
-
-                    img {
-                        position: sticky;
-                        float: right;
+                thead {
+                    text-align: center;
+                    font-size: 2.6em;
+                    font-weight: 900;
+                    
+                    th {
+                        padding: 20px;
+                        border-collapse: collapse;
+                        border: 1px solid @dark-grey;
                     }
+                }
 
-                    table {
-                        color: @dark-grey;
-                        width: 80%;
-                        border-radius: 10px;
-                        margin: 25px auto;
-                        clear: both;
+                tbody {
 
-                        thead {
-                            text-align: center;
-                            font-size: 2.6em;
+                    tr {
+
+                        th {
                             font-weight: 900;
-                            
-                            th {
-                                padding: 20px;
-                                border-collapse: collapse;
-                                border: 1px solid @dark-grey;
-                            }
+                            font-size: 1.2em;
                         }
 
-                        tbody {
-
-                            tr {
-
-                                th {
-                                    font-weight: 900;
-                                    font-size: 1.2em;
-                                }
-
-                                td, th {
-                                    border-collapse: collapse;
-                                    border: 1px solid @dark-grey;
-                                    padding: 10px;
-                                }
-                            }
+                        td, th {
+                            border-collapse: collapse;
+                            border: 1px solid @dark-grey;
+                            padding: 10px;
                         }
                     }
                 }
@@ -927,14 +944,6 @@ html {
 
 @media (min-width: 500px) {
     
-    .hide_in_mobile {
-        display: block;
-    }
-    
-    .show_in_mobile {
-        display: none;
-    }
-    
     html {
         
         body {
@@ -972,7 +981,6 @@ html {
                         }
 
                         div#projects_wrapper {
-                            margin: 60px 80px 0 80px;
 
                             div {
                             
@@ -1013,9 +1021,6 @@ html {
                                 }
 
                                 ul {
-                                    margin: 20px auto;
-                                    padding-left: 25px;
-                                    width: 300px;
 
                                     li {
                                         margin-bottom: 10px;
@@ -1200,6 +1205,7 @@ html {
                         div {
                         
                             &.card {
+                                margin-bottom: 20px;
 
                                 iframe {
                                    
@@ -1208,7 +1214,10 @@ html {
                                 div {
                                     
                                     &#icons {
-                                        
+                                        transform: initial;
+                                        left: initial;
+                                        top: 15px;
+                                        right: 15px;
                                         a {
                                             
                                             img {
@@ -1227,21 +1236,18 @@ html {
 }
 
 /*===============================
-==== 650PX CSS CODE AND UP =======
-===============================*/
-
-@media (min-width: 650px) {
-    html body main section#projects div#projects_wrapper {
-        grid-template-columns: repeat(2, 1fr);
-        margin: 60px 20px 0 20px;
-    }
-}
-
-/*===============================
 ==== 750PX CSS CODE AND UP =======
 ===============================*/
 
 @media (min-width: 750px) {
+
+    .hide_in_mobile {
+        display: block;
+    }
+    
+    .show_in_mobile {
+        display: none;
+    }
     
     html {
         
@@ -1311,7 +1317,7 @@ html {
                         div {
                             
                             &.card {
-                                max-width: 55%;
+                                
                             }
                         }
                     }
@@ -1321,7 +1327,7 @@ html {
                         div {
                             
                             &.card {
-                                max-width: 55%;
+
                             }
                         }
                     }
@@ -1331,31 +1337,15 @@ html {
                         div {
                         
                             &.card {
-                                position: relative;
-
-                                iframe {
-                                    display: block;
-                                    width: 100%;
-                                    max-width: 858px;
-                                    height: 940px;
-                                    overflow: hidden;
-                                    margin: 0 auto;
-                                   
-                                }
                                 
                                 div {
                                     
                                     &#icons {
-                                        width: 100%;
-                                        text-align: right;
-                                        position: absolute;
-                                        top: 0;
-                                        right: 0;
                                         
                                         a {
                                             
                                             img {
-                                                padding: 20px 15px 0 0;
+                                                
                                             }  
                                         }
                                     }
@@ -1678,31 +1668,11 @@ html {
 }
 
 /*===============================
-==== 1200PX CSS CODE AND UP =======
+==== 1600PX CSS CODE AND UP =======
 ===============================*/
 
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
     html body main section#projects div#projects_wrapper {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/*===============================
-==== 1500PX CSS CODE AND UP =======
-===============================*/
-
-@media (min-width: 1500px) {
-    html body main section#projects div#projects_wrapper {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-/*===============================
-==== 1950PX CSS CODE AND UP =======
-===============================*/
-
-@media (min-width: 1950px) {
-    html body main section#projects div#projects_wrapper {
-        grid-template-columns: repeat(5, 1fr);
+        margin: 0 auto;
     }
 }

@@ -1,9 +1,14 @@
 var navHidden = true;
 var showingModal = false;
 var activeItem = "";
+const detailsShowingTogglers = [];
 
 function init() {
     var listItems = document.querySelectorAll("nav li");
+    const creditsDialog = document.querySelector('#credits_dialog');
+    const creditsContent = document.querySelector('.credits_content');
+    const creditsOpenBtn = document.querySelector('#credits_btn');
+    const creditsCloseBtn = document.querySelector('#credits_dialog .close_btn');
     
     for (let item of listItems) {
         item.children[0].addEventListener("click", function() {
@@ -16,7 +21,6 @@ function init() {
     }
     
     viewDetailsBtns = document.getElementsByClassName("view_details_btn");
-    var detailsShowingTogglers = [];
     
     for(var i = 0; i < viewDetailsBtns.length; i++) {
         var screenshotCard = viewDetailsBtns[i].parentElement.parentElement;
@@ -35,18 +39,6 @@ function init() {
                 return showingDetails;
             }
         }();
-        
-        function toggleDetailsBtn(detailsBtn, cardId, event) {
-            detailsShowing = detailsShowingTogglers[cardId]();
-            if(!detailsShowing) {
-                detailsBtn.innerText = "View Details";
-                slideDown(cardId, event);
-
-            } else {
-                detailsBtn.innerText = "Hide Details";
-                slideUp(cardId, event)
-            }
-        }
     }
     document.getElementById("menu_icon").addEventListener("click", function(event) {
         slideOut(event);
@@ -77,6 +69,45 @@ function init() {
             document.getElementsByTagName("header")[0].style.zIndex = "2";
         }
     });
+
+    // refactor this to join with the creditsOpenBtn below instead of separately?
+    document.querySelectorAll('.modal_icon[data-dialog]').forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            const id = icon.dataset.dialog;
+            const dialog = document.getElementById(id);
+            e.preventDefault();
+            dialog.showModal();
+        });
+    });
+
+    document.querySelectorAll('dialog .close_btn').forEach(btn => {
+        btn.addEventListener('click', () => btn.closest('dialog').close());
+    });
+
+    creditsOpenBtn.addEventListener('click', (e) => {
+        const dialogContent = creditsDialog.querySelector('.dialog_content');
+        e.preventDefault();
+        creditsDialog.showModal();
+        requestAnimationFrame(() => {
+            dialogContent.scrollTop = 0;
+        });
+    });
+
+    creditsCloseBtn.addEventListener('click', () => {
+        creditsDialog.close();
+    });
+}
+
+function toggleDetailsBtn(detailsBtn, cardId, event) {
+    detailsShowing = detailsShowingTogglers[cardId]();
+    if(!detailsShowing) {
+        detailsBtn.innerText = "View Details";
+        slideDown(cardId, event);
+
+    } else {
+        detailsBtn.innerText = "Hide Details";
+        slideUp(cardId, event)
+    }
 }
 
 function adjustDocumentHeight() {
