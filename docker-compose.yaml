@@ -1,5 +1,5 @@
 services:
-  portfolio: # Other services could be db, api, or app
+  portfolio:
     image: bdtrippdev/portfolio:${TAG}
     restart: always
     labels:
@@ -17,4 +17,3 @@ networks:
   public_net:
     name: ${ENV_NAME}_public
     external: true
-    
