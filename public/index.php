@@ -132,7 +132,7 @@
                         id="pas_screenshot" 
                         class="tracked_image" 
                         src="images/screenshots/pas_screenshot.png" 
-                        onclick="window.open('<?= "https://{$prefix}portlandartsupply.bdtripp.com/" ?>', '_blank');"
+                        onclick="window.open('<?= "https://{$prefix}portland-art-supply.bdtripp.com/" ?>', '_blank');"
                     />
    
                     <div id="pas_accomplishments" class="project accomplishments hidden_card">
@@ -336,7 +336,10 @@ return $items;
                                 <li><img src="images/logos/javascript.svg">JavaScript</li>
                             </ul>
                         </div>
-                        <button id="pas_visit_site_btn" onclick="window.open('http://bdtripp.com/portland_art_supply/', '_blank');">Visit Site</button>
+                        <button 
+                            id="pas_visit_site_btn" 
+                            onclick="window.open('<?= "https://{$prefix}portland-art-supply.bdtripp.com/" ?>', '_blank');">Visit Site
+                        </button>
                         <button id="pas_view_details_btn" class="view_details_btn">View Details</button>                        
                     </div>
                 </div>
