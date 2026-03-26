@@ -1,8 +1,21 @@
 <?php
-    $env_name = getenv('ENV_NAME');
-    $prefix = $env_name == 'prod' ? '' : $env_name . '-';
+
+function project_url($project_slug) {
+    $env = getenv('ENV_NAME');
+
+    if ($project_slug === 'portfolio') {
+        return $env === 'prod'
+            ? "https://bdtripp.com"
+            : "https://{$env}.bdtripp.com";
+    }
+
+    return $env === 'prod'
+        ? "https://{$project_slug}.bdtripp.com"
+        : "https://{$env}-{$project_slug}.bdtripp.com";
+}
+
 ?>
-<!-- Test -->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -132,7 +145,7 @@
                         id="pas_screenshot" 
                         class="tracked_image" 
                         src="images/screenshots/pas_screenshot.png?v=20260326" 
-                        onclick="window.open('<?= "https://{$prefix}portland-art-supply.bdtripp.com/" ?>', '_blank');"
+                        onclick="window.open('<?= project_url('portland-art-supply') ?>', '_blank');"
                     />
    
                     <div id="pas_accomplishments" class="project accomplishments hidden_card">
@@ -338,7 +351,7 @@ return $items;
                         </div>
                         <button 
                             id="pas_visit_site_btn" 
-                            onclick="window.open('<?= "https://{$prefix}portland-art-supply.bdtripp.com/" ?>', '_blank');"
+                            onclick="window.open('<?= project_url('portland-art-supply') ?>', '_blank');"
                         >
                             Visit Site
                         </button>
@@ -351,7 +364,7 @@ return $items;
                         id="ww2_screenshot" 
                         class="tracked_image" 
                         src="images/screenshots/ww2_screenshot.png" 
-                        onclick="window.open('<?= "https://{$prefix}wwii-soldier-surveys.bdtripp.com/" ?>', '_blank');"
+                        onclick="window.open('<?= project_url('wwii-soldier-surveys') ?>', '_blank');"
                     />
                     
                     <div id="ww2_accomplishments" class="project accomplishments hidden_card">
@@ -383,7 +396,7 @@ return $items;
                         
                         <button 
                             id="ww2_visit_site_btn" 
-                            onclick="window.open('<?= "https://{$prefix}wwii-soldier-surveys.bdtripp.com/" ?>', '_blank');"
+                            onclick="window.open('<?= project_url('wwii-soldier-surveys') ?>', '_blank');"
                         >
                             Visit Site
                         </button>
@@ -396,7 +409,7 @@ return $items;
                         id="casf_screenshot" 
                         class="tracked_image" 
                         src="images/screenshots/casf_screenshot.png" 
-                        onclick="window.open('<?= "https://{$prefix}chord-and-scale-finder.bdtripp.com/" ?>', '_blank');"
+                        onclick="window.open('<?= project_url('chord-and-scale-finder') ?>', '_blank');"
                     />
                     
                     <div id="casf_accomplishments" class="project accomplishments hidden_card">
@@ -428,7 +441,7 @@ return $items;
                         
                         <button 
                             id="casf_visit_site_btn" 
-                            onclick="window.open('<?= "https://{$prefix}chord-and-scale-finder.bdtripp.com/" ?>', '_blank');"
+                            onclick="window.open('<?= project_url('chord-and-scale-finder') ?>', '_blank');"
                         >
                             Visit Site
                         </button>
@@ -441,7 +454,7 @@ return $items;
                         id="hh_screenshot" 
                         class="tracked_image" 
                         src="images/screenshots/hh_screenshot.png"
-                        onclick="window.open('<?= "https://{$prefix}haunted-house.bdtripp.com/" ?>', '_blank');"
+                        onclick="window.open('<?= project_url('haunted-house') ?>', '_blank');"
                     />
                     
                     <div id="hh_accomplishments" class="project accomplishments hidden_card">
@@ -729,7 +742,7 @@ return $items;
                         
                         <button 
                             id="casf_visit_site_btn" 
-                            onclick="window.open('<?= "https://{$prefix}haunted-house.bdtripp.com/" ?>', '_blank');"
+                            onclick="window.open('<?= project_url('haunted-house') ?>', '_blank');"
                         >
                             Visit Site
                         </button>
@@ -742,7 +755,7 @@ return $items;
                         id="cc_screenshot" 
                         class="tracked_image" 
                         src="images/screenshots/cc_screenshot.png" 
-                        onclick="window.open('<?= "https://{$prefix}bdtripp.com/downloads/app-release.apk" ?>', '_blank');"
+                        onclick="window.open('<?= project_url('portfolio') ?>/downloads/app-release.apk', '_blank');"
                     />
                     
                     <div id="cc_accomplishments" class="project accomplishments hidden_card">
@@ -934,7 +947,7 @@ startActivity(intent);
                         
                         <button 
                             id="cc_download_app_btn" 
-                            onclick="window.open('<?= "https://{$prefix}bdtripp.com/downloads/app-release.apk" ?>', '_blank');"
+                            onclick="window.open('<?= project_url('portfolio') ?>/downloads/app-release.apk', '_blank');"
                         >
                             Download Android App
                         </button>
@@ -1110,7 +1123,7 @@ startActivity(intent);
                         id="sg_screenshot" 
                         class="tracked_image" 
                         src="images/screenshots/sg_screenshot.png" 
-                        onclick="window.open('<?= "https://{$prefix}sitka-guitars.bdtripp.com/" ?>', '_blank');" 
+                        onclick="window.open('<?= project_url('sitka-guitars') ?>', '_blank');"
                     />
                     
                     <div id="sg_accomplishments" class="project accomplishments hidden_card">
@@ -1194,7 +1207,7 @@ startActivity(intent);
                         
                         <button 
                             id="sg_visit_site_btn" 
-                            onclick="window.open('<?= "https://{$prefix}sitka-guitars.bdtripp.com/" ?>', '_blank');"
+                            onclick="window.open('<?= project_url('sitka-guitars') ?>', '_blank');"
                         >
                             Visit Site
                         </button>
