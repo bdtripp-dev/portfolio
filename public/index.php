@@ -338,7 +338,9 @@ return $items;
                         </div>
                         <button 
                             id="pas_visit_site_btn" 
-                            onclick="window.open('<?= "https://{$prefix}portland-art-supply.bdtripp.com/" ?>', '_blank');">Visit Site
+                            onclick="window.open('<?= "https://{$prefix}portland-art-supply.bdtripp.com/" ?>', '_blank');"
+                        >
+                            Visit Site
                         </button>
                         <button id="pas_view_details_btn" class="view_details_btn">View Details</button>                        
                     </div>
@@ -381,7 +383,9 @@ return $items;
                         
                         <button 
                             id="ww2_visit_site_btn" 
-                            onclick="window.open('<?= "https://{$prefix}wwii-soldier-surveys.bdtripp.com/" ?>', '_blank');">Visit Site
+                            onclick="window.open('<?= "https://{$prefix}wwii-soldier-surveys.bdtripp.com/" ?>', '_blank');"
+                        >
+                            Visit Site
                         </button>
                         <button id="ww2_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
@@ -424,7 +428,9 @@ return $items;
                         
                         <button 
                             id="casf_visit_site_btn" 
-                            onclick="window.open('<?= "https://{$prefix}chord-and-scale-finder.bdtripp.com/" ?>', '_blank');">Visit Site
+                            onclick="window.open('<?= "https://{$prefix}chord-and-scale-finder.bdtripp.com/" ?>', '_blank');"
+                        >
+                            Visit Site
                         </button>
                         <button id="casf_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
@@ -724,13 +730,20 @@ return $items;
                         <button 
                             id="casf_visit_site_btn" 
                             onclick="window.open('<?= "https://{$prefix}haunted-house.bdtripp.com/" ?>', '_blank');"
-                        >Visit Site</button>
+                        >
+                            Visit Site
+                        </button>
                         <button id="hh_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
                 </div>
                 
                 <div id="cc_screenshot_card" class="project screenshot card">
-                    <img id="cc_screenshot" class="tracked_image" src="images/screenshots/cc_screenshot.png" onclick="window.open('http://bdtripp.com/documents/app-release.apk');">
+                    <img 
+                        id="cc_screenshot" 
+                        class="tracked_image" 
+                        src="images/screenshots/cc_screenshot.png" 
+                        onclick="window.open('<?= "https://{$prefix}bdtripp.com/downloads/app-release.apk" ?>', '_blank');"
+                    />
                     
                     <div id="cc_accomplishments" class="project accomplishments hidden_card">
                         <h4>Design &amp; Development Details</h4>
@@ -919,7 +932,13 @@ startActivity(intent);
                             </ul>
                         </div>
                         
-                        <button id="cc_download_app_btn" onclick="window.open('http://bdtripp.com/app-release.apk');">Download Android App</button>
+                        <button 
+                            id="cc_download_app_btn" 
+                            onclick="window.open('<?= "https://{$prefix}bdtripp.com/downloads/app-release.apk" ?>', '_blank');"
+                        >
+                            Download Android App
+                        </button>
+                        
                         <button id="cc_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
                 </div>
@@ -1176,7 +1195,9 @@ startActivity(intent);
                         <button 
                             id="sg_visit_site_btn" 
                             onclick="window.open('<?= "https://{$prefix}sitka-guitars.bdtripp.com/" ?>', '_blank');"
-                        >Visit Site</button>
+                        >
+                            Visit Site
+                        </button>
                         <button id="sg_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
                 </div>
