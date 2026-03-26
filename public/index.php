@@ -131,7 +131,7 @@
                     <img 
                         id="pas_screenshot" 
                         class="tracked_image" 
-                        src="images/screenshots/pas_screenshot.png" 
+                        src="images/screenshots/pas_screenshot.png?v=20260326" 
                         onclick="window.open('<?= "https://{$prefix}portland-art-supply.bdtripp.com/" ?>', '_blank');"
                     />
    
