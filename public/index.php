@@ -39,13 +39,18 @@ function project_url($project_slug) {
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Brian Tripp</title>
+    <meta name="description" content="Full Stack Developer skilled in Java, JavaScript, PHP, SQL, and React, with 
+    hands-on experience in Docker-based deployments, CI/CD pipelines, and CMS development.">
+    <title>Brian Tripp – Full Stack Developer</title>
+    <meta name="description" content="Full Stack Developer specializing in Java, 
+    JavaScript, PHP, SQL, and React, with experience in Docker-based deployments, 
+    CI/CD pipelines, and CMS development.">
     <link href="css/reset.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?
-        family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900
-        &family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900
+    &family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <link href="css/main.css?v=<?php echo filemtime(__DIR__ . '/css/main.css'); ?>" rel="stylesheet">
     <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
