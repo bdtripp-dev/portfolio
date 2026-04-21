@@ -149,7 +149,7 @@ function project_url($project_slug) {
                     <img 
                         id="pas_screenshot" 
                         class="tracked_image" 
-                        src="images/screenshots/pas_screenshot.png?v=20260326" 
+                        src="images/screenshots/pas_screenshot.png?v=20260421" 
                         onclick="window.open('<?= project_url('portland-art-supply') ?>', '_blank');"
                     />
    
