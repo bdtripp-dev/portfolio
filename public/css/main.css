@@ -247,30 +247,35 @@ html body main section#about div#portrait_container {
 }
 html body main section#about div#portrait_container img#portrait_small {
   display: none;
+  object-fit: cover;
+  height: 100%;
 }
 html body main section#about div#portrait_container img#portrait_og {
   display: block;
 }
 html body main section#about div#intro_container {
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 html body main section#about div#intro_container div.card {
   padding: 20px 0;
   background-color: #F2F2F2;
 }
-html body main section#about div#intro_container div.card p:first-child {
-  font-weight: bold;
+html body main section#about div#intro_container div.card p#title {
+  font-weight: 700;
   border-left: 2px solid #C7523A;
-  margin-left: 13%;
   border-radius: 8px;
 }
-html body main section#about div#intro_container div.card p:last-child {
+html body main section#about div#intro_container div.card p#summary {
   transition: color 0.3s ease;
+  font-weight: 400;
+  padding-bottom: 8px;
+  font-size: 1.25rem;
 }
-html body main section#about div#intro_container div.card p:last-child:hover {
+html body main section#about div#intro_container div.card p#summary:hover {
   color: #022735;
 }
-html body main section#about div#intro_container div.card p:last-child::first-letter {
+html body main section#about div#intro_container div.card p#summary::first-letter {
   font-family: "Libre Baskerville", serif;
   float: left;
   font-size: 2.7em;
@@ -279,7 +284,7 @@ html body main section#about div#intro_container div.card p:last-child::first-le
   color: #022735;
 }
 @supports (initial-letter: 3) or (-webkit-initial-letter: 3) {
-  html body main section#about div#intro_container div.card p:last-child::first-letter {
+  html body main section#about div#intro_container div.card p#summary::first-letter {
     /* Reset the hacks */
     float: none;
     margin-top: 0;
@@ -287,6 +292,10 @@ html body main section#about div#intro_container div.card p:last-child::first-le
     initial-letter: 2;
     -webkit-initial-letter: 2;
   }
+}
+html body main section#about div#intro_container div.card p#tech_stack {
+  font-weight: 500;
+  padding-top: 0;
 }
 html body main section#about div#intro_container div.card p {
   font-size: 1.5rem;
@@ -669,8 +678,9 @@ html body footer table tbody tr th {
 ==== 320PX CSS CODE AND UP =======
 ===============================*/
 @media (min-width: 320px) {
-  html body main section#about div#intro_container div.card p:first-child {
-    margin-left: 8%;
+  html body main section#about div#intro_container div.card p#title {
+    box-sizing: border-box;
+    margin-left: 30px;
   }
 }
 /*===============================
@@ -698,38 +708,6 @@ html body footer table tbody tr th {
 ==== 580PX CSS CODE AND UP =======
 ===============================*/
 @media (min-width: 580px) {
-  html body main section#about {
-    margin-top: -62px;
-    padding-top: 62px;
-    overflow: hidden;
-    display: flex;
-  }
-  html body main section#about div#portrait_container {
-    width: 40%;
-    margin: 0;
-  }
-  html body main section#about div#portrait_container img#portrait_small {
-    display: block;
-  }
-  html body main section#about div#portrait_container img#portrait_og {
-    display: none;
-  }
-  html body main section#about div#intro_container {
-    width: 60%;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    background-color: #F2F2F2;
-  }
-  html body main section#about div#intro_container div.card {
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    width: 100%;
-  }
-  html body main section#about div#intro_container div.card p {
-    font-size: 0.9rem;
-  }
   html body main section#projects {
     margin-top: 0;
   }
@@ -758,11 +736,46 @@ html body footer table tbody tr th {
   .show_in_mobile {
     display: none;
   }
-  html body main section#about div#intro_container div.card p {
+}
+/*===============================
+==== 800PX CSS CODE AND UP =======
+===============================*/
+@media (min-width: 800px) {
+  html body main section#about {
+    margin-top: -62px;
+    padding-top: 62px;
+    overflow: hidden;
+    display: flex;
+  }
+  html body main section#about div#portrait_container {
+    width: 40%;
+    margin: 0;
+  }
+  html body main section#about div#portrait_container img#portrait_small {
+    display: block;
+  }
+  html body main section#about div#portrait_container img#portrait_og {
+    display: none;
+  }
+  html body main section#about div#intro_container {
+    width: 60%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F2;
+  }
+  html body main section#about div#intro_container div.card {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
     max-width: 85%;
     margin: 0 auto;
     padding: 15px 30px;
     font-size: 1.2rem;
+  }
+  html body main section#about div#intro_container div.card p#title {
+    margin-left: 30px;
   }
 }
 /*===============================

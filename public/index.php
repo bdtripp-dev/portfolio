@@ -135,8 +135,10 @@ function project_url($project_slug) {
             </div>
             <div id="intro_container">
                 <div class="card">
-                    <p>Junior Full Stack Developer</p>
-                    <p>Building quality websites and applications with HTML, CSS, JavaScript, PHP, Java and SQL.  Finds satisfaction in problem solving, understanding how things work, and making ideas come to fruition.</p>
+                    <p id="title">Junior Full Stack Developer</p>
+                    <p id="summary">Focused on building reliable, user-centered websites and applications. Enjoys problem 
+                    solving, understanding how things work, and making ideas come to life.</p>
+                    <p id="tech_stack">HTML • CSS • JavaScript • PHP • Java • SQL</p>
                 </div>
             </div>
         </section>
