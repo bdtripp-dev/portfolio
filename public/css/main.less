@@ -316,6 +316,8 @@ html {
 
                                 &#portrait_small {
                                     display: none;
+                                    object-fit: cover;
+                                    height: 100%;
                                 }
 
                                 &#portrait_og {
@@ -329,6 +331,7 @@ html {
                         
                         &#intro_container {
                             margin-top: 15px;
+                            margin-bottom: 15px;
                         
                             div {
 
@@ -336,15 +339,17 @@ html {
                                     padding: 20px 0;
                                     background-color: @off-white;
 
-                                    p:first-child {
-                                        font-weight: bold;
+                                    p#title {
+                                        font-weight: 700;
                                         border-left: 2px solid @accent-color;
-                                        margin-left: 13%;
                                         border-radius: 8px;
                                     }
 
-                                    p:last-child {
+                                    p#summary {
                                         transition: color .3s ease;
+                                        font-weight: 400;
+                                        padding-bottom: 8px;
+                                        font-size: 1.25rem;
 
                                         &:hover {
                                             color: @secondary-color3;
@@ -369,6 +374,11 @@ html {
                                                 -webkit-initial-letter: 2;
                                             }
                                         }
+                                    }
+
+                                    p#tech_stack {
+                                        font-weight: 500;
+                                        padding-top: 0;
                                     }
 
                                     p {
@@ -905,8 +915,9 @@ html {
                         
                                 &.card {
 
-                                    p:first-child {
-                                        margin-left: 8%;
+                                    p#title{
+                                        box-sizing: border-box;
+                                        margin-left: 30px;
                                     }
 
                                     p {
@@ -1075,57 +1086,6 @@ html {
                 
                 section {
                     
-                    &#about {
-                        margin-top: -62px;
-                        padding-top: 62px;
-                        overflow: hidden;
-                        display: flex;
-                        
-                        div {
-                            
-                            &#portrait_container {
-                                width: 40%;
-                                margin: 0;
-                                
-                                img {
-                                
-                                    &#portrait_small {
-                                        display: block;
-                                    }
-
-                                    &#portrait_og {
-                                        display: none;
-                                    }
-                                }
-                            }
-                        }
-
-                        div {
-                            
-                            &#intro_container {
-                                width: 60%;   
-                                margin: 0;
-                                display: flex;
-                                align-items: center;
-                                background-color: @off-white;
-
-                                div {
-
-                                    &.card {
-                                        border: none;
-                                        border-radius: 0;
-                                        box-shadow: none;
-                                        width: 100%;
-
-                                        p {
-                                            font-size: .9rem;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
                     &#projects {
                         margin-top: 0;
                         
@@ -1261,21 +1221,7 @@ html {
 
                         div {
                             
-                            &#intro_container {
-                                
-                                div {
-                                
-                                    &.card {
 
-                                        p {
-                                            max-width: 85%;
-                                            margin: 0 auto;
-                                            padding: 15px 30px;
-                                            font-size: 1.2rem;
-                                        }
-                                    }
-                                }
-                            }
                         }
                     }
                     
@@ -1358,6 +1304,68 @@ html {
         }
     }
 }
+
+/*===============================
+==== 800PX CSS CODE AND UP =======
+===============================*/
+
+@media (min-width: 800px) {
+
+    html body main section#about {
+        margin-top: -62px;
+        padding-top: 62px;
+        overflow: hidden;
+        display: flex;
+        
+        div {
+            
+            &#portrait_container {
+                width: 40%;
+                margin: 0;
+                
+                img {
+                
+                    &#portrait_small {
+                        display: block;
+                    }
+
+                    &#portrait_og {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        div {
+            
+            &#intro_container {
+                width: 60%;   
+                margin: 0;
+                display: flex;
+                align-items: center;
+                background-color: @off-white;
+
+                div {
+
+                    &.card {
+                        border: none;
+                        border-radius: 0;
+                        box-shadow: none;
+                        width: 100%;
+                        max-width: 85%;
+                        margin: 0 auto;
+                        padding: 15px 30px;
+                        font-size: 1.2rem;
+
+                        p#title {
+                            margin-left: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}             
 
 /*===============================
 ==== 900PX CSS CODE AND UP =======
