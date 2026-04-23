@@ -1237,7 +1237,7 @@ startActivity(intent);
                     <li><img src="images/logos/css3.svg">CSS3</li>
                     <li><img src="images/logos/less.svg">Less</li>
                     <li><img src="images/logos/duke.png">Java®</li>
-                    <li><img src="images/logos/python.svg">Python®</li>
+                    <!-- <li><img src="images/logos/python.svg">Python®</li> -->
                     <li><img src="images/logos/bash.svg">Bash</li>
                     <li><img src="images/logos/powershell.png">PowerShell</li>
                     <li><img src="images/logos/yaml.svg">YAML</li>
@@ -1253,17 +1253,17 @@ startActivity(intent);
                     <li><img src="images/logos/docker.svg">Docker</li>
                     <li><a href="https://httpd.apache.org/" target="_blank"></a><img src="images/logos/httpd.svg"></a>Apache HTTP Server</li>
                     <li><img src="images/logos/react.png">React</li>
-                    <li><img src="images/logos/jquery.svg">jQuery</li>
+                    <!-- <li><img src="images/logos/jquery.svg">jQuery</li> -->
                     <li><img src="images/logos/wordpress.png">WordPress</li>
                     <li><img src="images/logos/craft_cms.svg">Craft CMS</li>
-                    <li><img src="images/logos/cpanel.svg">cPanel®</li>
+                    <!-- <li><img src="images/logos/cpanel.svg">cPanel®</li> -->
                     <li><img src="images/logos/phpmyadmin.svg">phpMyAdmin</li>
                     <li><img src="images/logos/gimp.svg">GIMP</li>
                     <li><img src="images/logos/vscode.svg">Visual Studio Code™</li>
                     <li><img src="images/logos/android_studio.png">Android Studio™</li>
-                    <li><a href="https://www.jetbrains.com" target="_blank"><img src="images/logos/phpstorm.svg"></a>PHPStorm</li>
+                    <!-- <li><a href="https://www.jetbrains.com" target="_blank"><img src="images/logos/phpstorm.svg"></a>PHPStorm</li>
                     <li><a href="https://www.jetbrains.com" target="_blank"><img src="images/logos/pycharm.svg"></a>PyCharm</li>
-                    <li><a href="https://www.jetbrains.com" target="_blank"><img src="images/logos/intellij.svg"></a>IntelliJ</li>
+                    <li><a href="https://www.jetbrains.com" target="_blank"><img src="images/logos/intellij.svg"></a>IntelliJ</li> -->
                 </ul>
             </div>
         </section>
@@ -1365,16 +1365,16 @@ startActivity(intent);
                                 <td>n/a</td>
                                 <td>alaa kaddour, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons</td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>jQuery</td>
                                 <td>jQuery and the jQuery logo are trademarks of the OpenJS Foundation</td>
                                 <td>jQuery Team, Public domain, via Wikimedia Commons</td>
-                            </tr>
-                            <tr>
+                            </tr> -->
+                            <!-- <tr>
                                 <td>Python</td>
                                 <td>"Python" and the Python logo are trademarks or registered trademarks of the Python Software Foundation.</td>
                                 <td>www.python.org, GPL <http://www.gnu.org/licenses/gpl.html>, via Wikimedia Commons</td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td>XML</td>
                                 <td>none required</td>
@@ -1395,7 +1395,7 @@ startActivity(intent);
                                 <td>"Craft CMS" and its logo are trademarks of Pixel & Tonic, Inc. DBA Craft CMS.</td>
                                 <td>n/a</td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>PHPStorm</td>
                                 <td>Copyright © 2026 JetBrains s.r.o. PhpStorm and the PhpStorm logo are trademarks of JetBrains s.r.o.</td>
                                 <td>n/a</td>
@@ -1409,7 +1409,7 @@ startActivity(intent);
                                 <td>IntelliJ</td>
                                 <td>Copyright © 2026 JetBrains s.r.o. IntelliJ IDEA and the IntelliJ IDEA logo are trademarks of JetBrains s.r.o.</td>
                                 <td>n/a</td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td>Android Studio</td>
                                 <td>Android is a trademark of Google LLC. Android Studio and its logo are trademarks of Google LLC.</td>
@@ -1430,11 +1430,11 @@ startActivity(intent);
                                 <td>phpMyAdmin logo by phpMyAdmin contributors, used under CC BY-SA 3.0.</td>
                                 <td>Michael Keck, the phpMyAdmin Project, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons</td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>cPanel</td>
                                 <td>cPanel® is a trademark of WebPros International LLC.</td>
                                 <td>n/a</td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td>React</td>
                                 <td>React logo by Meta Platforms, Inc., used under CC BY 4.0. <a href="https://github.com/reactjs/react.dev/blob/main/LICENSE-DOCS.md" target="_blank">License</a> React and the React logo are trademarks of Meta Platforms, Inc.</td>
