@@ -212,7 +212,7 @@ function project_url($project_slug) {
                             </li>
                         </ul>
                         <div>
-                            <a href="https://github.com/bdtripp/portland_art_supply" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
+                            <a href="https://github.com/bdtripp-dev/portland-art-supply" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
                         </div>
                     </div>
 
@@ -805,7 +805,7 @@ return $items;
                             </li>
                         </ul>
                         <div>
-                            <a href="https://github.com/bdtripp/calorie_calculator" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
+                            <a href="https://github.com/bdtripp-dev/calorie-calculator" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
                         </div>
                     </div>
                     
@@ -1156,6 +1156,9 @@ startActivity(intent);
                                 />
                             </li>
                         </ul>
+                        <div>
+                            <a href="https://github.com/bdtripp-dev/sitka-guitars" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
+                        </div>
                     </div>
                     
                     <dialog id="sg_src_custom_css" class="src_code">
