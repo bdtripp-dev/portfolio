@@ -1308,11 +1308,11 @@ startActivity(intent);
             <h3>Resume</h3>
             <div class="card">
                 <div id="icons">
-                    <a href="documents/brian_tripp_resume.pdf" target="_blank">
+                    <a href="documents/brian_tripp_resume.pdf?v=042526" target="_blank">
                         <img id="pdf_icon" src="images/icons/pdf_icon.png">
                     </a>
                 </div>
-                <img src="documents/resume_preview.png" alt="Resume preview">
+                <img src="documents/resume_preview.png?v=042526" alt="Resume preview">
             </div>
         </section>
         
