@@ -72,7 +72,6 @@ dialog {
 }
 dialog .dialog_frame {
   position: relative;
-  height: 100%;
   display: flex;
   flex-direction: column;
   max-height: inherit;
