@@ -41,10 +41,14 @@ function project_url($project_slug) {
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="Full Stack Developer skilled in Java, JavaScript, PHP, SQL, and React, with 
     hands-on experience in Docker-based deployments, CI/CD pipelines, and CMS development.">
-    <title>Brian Tripp – Full Stack Developer</title>
+    <title>Brian Tripp – Software Engineer | Full‑Stack & Backend Development</title>
     <meta name="description" content="Full Stack Developer specializing in Java, 
     JavaScript, PHP, SQL, and React, with experience in Docker-based deployments, 
     CI/CD pipelines, and CMS development.">
+    <meta name="description" content="Software Engineer specializing in full‑stack 
+    and backend development with Java, JavaScript, PHP, and SQL. Experienced with 
+    Docker-based environments, CI/CD pipelines, relational database design, and building maintainable applications.">
+
     <link href="css/reset.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,7 +87,6 @@ function project_url($project_slug) {
                 <span>p</span>
                 <span>p</span>
             </h1>
-            <h2>Full Stack Developer</h2>
         </div>
     </header>
     <nav id="slide_out">
@@ -135,7 +138,7 @@ function project_url($project_slug) {
             </div>
             <div id="intro_container">
                 <div class="card">
-                    <p id="title">Junior Full Stack Developer</p>
+                    <h2 id="title">Software Engineer – <br>Full‑Stack & Backend Development</h2>
                     <p id="summary">Focused on building reliable, user-centered websites and applications. Enjoys problem 
                     solving, understanding how things work, and making ideas come to life.</p>
                     <p id="tech_stack">HTML • CSS • JavaScript • PHP • Java • SQL</p>
