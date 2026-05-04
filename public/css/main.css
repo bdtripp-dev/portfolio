@@ -127,6 +127,8 @@ html body header {
   top: 0;
   background-color: #F2F2F2;
   z-index: 2;
+  display: flex;
+  align-items: center;
 }
 html body header img#menu_icon {
   float: left;
@@ -148,7 +150,8 @@ html body header div.header_text h1 {
   flex-wrap: nowrap;
   justify-content: space-evenly;
   max-width: 185px;
-  margin: 0 auto 7px;
+  margin: 0 auto;
+  padding: 0 5px;
 }
 html body header div.header_text h1 span {
   margin-right: -1.6px;
