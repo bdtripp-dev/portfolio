@@ -267,7 +267,8 @@ html body main section#about div#intro_container div.card h2#title {
   font-weight: 700;
   border-left: 2px solid #C7523A;
   border-radius: 8px;
-  padding-left: 30px;
+  padding: 0 10px 0 30px;
+  font-size: 1.2rem;
   margin-left: 30px;
   line-height: 1.4;
 }
