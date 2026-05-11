@@ -365,97 +365,7 @@ return $items;
                         <button id="pas_view_details_btn" class="view_details_btn">View Details</button>                        
                     </div>
                 </div>
-                
-                <div id="ww2_screenshot_card" class="project screenshot card">
-                    <img 
-                        id="ww2_screenshot" 
-                        class="tracked_image" 
-                        src="images/screenshots/ww2_screenshot.png" 
-                        onclick="window.open('<?= project_url('wwii-soldier-surveys') ?>', '_blank');"
-                    />
-                    
-                    <div id="ww2_accomplishments" class="project accomplishments hidden_card">
-                        <h4>Design &amp; Development Details</h4>
-                        <ul>
-                            <li>Developed with React</li>
-                            <li>Content dynamically generated from a CSV file:
-                                <ul>
-                                    <li>Parsed CSV file using PapaParse</li>
-                                    <li>Used JavaScript Promises to wait until CSV is parsed before rendering React components</li>
-                                </ul>
-                            </li>
-                            <li>Styled using CSS Grid</li>
-                        </ul>
-                        <div>
-                            <a href="https://github.com/bdtripp-dev/wwii-soldier-surveys" target="_blank">
-                                <img src="images/logos/github.svg">View Full Source Code
-                            </a>
-                        </div>
-                    </div>
-                
-                    <div class="project_bottom">
-                        <div class="language_icons">
-                            <ul>
-                                <li><img src="images/logos/react.png">React</li>
-                                <li><img src="images/logos/less.svg">Less</li>
-                            </ul>
-                        </div>
-                        
-                        <button 
-                            id="ww2_visit_site_btn" 
-                            onclick="window.open('<?= project_url('wwii-soldier-surveys') ?>', '_blank');"
-                        >
-                            Visit Site
-                        </button>
-                        <button id="ww2_view_details_btn" class="view_details_btn">View Details</button>
-                    </div>
-                </div>
 
-                <div id="casf_screenshot_card" class="project screenshot card">
-                    <img 
-                        id="casf_screenshot" 
-                        class="tracked_image" 
-                        src="images/screenshots/casf_screenshot.png" 
-                        onclick="window.open('<?= project_url('chord-and-scale-finder') ?>', '_blank');"
-                    />
-                    
-                    <div id="casf_accomplishments" class="project accomplishments hidden_card">
-                        <h4>Design &amp; Development Details</h4>
-                        <ul>
-                            <li>Developed using object-oriented programming in JavaScript</li>
-                            <li>Utilizes OOP principles including:
-                                <ul>
-                                    <li>Inheritance</li>
-                                    <li>Polymorphism</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div>
-                            <a href="https://github.com/bdtripp-dev/chord-and-scale-finder" target="_blank">
-                                <img src="images/logos/github.svg">View Full Source Code
-                            </a>
-                        </div>
-                    </div>
-                
-                    <div class="project_bottom">
-                        <div class="language_icons">
-                            <ul>
-                                <li><img src="images/logos/javascript.svg">JavaScript</li>
-                                <li><img src="images/logos/html5.svg">HTML5</li>
-                                <li><img src="images/logos/css3.svg">CSS3</li>
-                            </ul>
-                        </div>
-                        
-                        <button 
-                            id="casf_visit_site_btn" 
-                            onclick="window.open('<?= project_url('chord-and-scale-finder') ?>', '_blank');"
-                        >
-                            Visit Site
-                        </button>
-                        <button id="casf_view_details_btn" class="view_details_btn">View Details</button>
-                    </div>
-                </div>
-                
                 <div id="hh_screenshot_card" class="project screenshot card">
                     <img 
                         id="hh_screenshot" 
@@ -754,6 +664,96 @@ return $items;
                             Visit Site
                         </button>
                         <button id="hh_view_details_btn" class="view_details_btn">View Details</button>
+                    </div>
+                </div>
+                
+                <div id="ww2_screenshot_card" class="project screenshot card">
+                    <img 
+                        id="ww2_screenshot" 
+                        class="tracked_image" 
+                        src="images/screenshots/ww2_screenshot.png" 
+                        onclick="window.open('<?= project_url('wwii-soldier-surveys') ?>', '_blank');"
+                    />
+                    
+                    <div id="ww2_accomplishments" class="project accomplishments hidden_card">
+                        <h4>Design &amp; Development Details</h4>
+                        <ul>
+                            <li>Developed with React</li>
+                            <li>Content dynamically generated from a CSV file:
+                                <ul>
+                                    <li>Parsed CSV file using PapaParse</li>
+                                    <li>Used JavaScript Promises to wait until CSV is parsed before rendering React components</li>
+                                </ul>
+                            </li>
+                            <li>Styled using CSS Grid</li>
+                        </ul>
+                        <div>
+                            <a href="https://github.com/bdtripp-dev/wwii-soldier-surveys" target="_blank">
+                                <img src="images/logos/github.svg">View Full Source Code
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div class="project_bottom">
+                        <div class="language_icons">
+                            <ul>
+                                <li><img src="images/logos/react.png">React</li>
+                                <li><img src="images/logos/less.svg">Less</li>
+                            </ul>
+                        </div>
+                        
+                        <button 
+                            id="ww2_visit_site_btn" 
+                            onclick="window.open('<?= project_url('wwii-soldier-surveys') ?>', '_blank');"
+                        >
+                            Visit Site
+                        </button>
+                        <button id="ww2_view_details_btn" class="view_details_btn">View Details</button>
+                    </div>
+                </div>
+
+                <div id="casf_screenshot_card" class="project screenshot card">
+                    <img 
+                        id="casf_screenshot" 
+                        class="tracked_image" 
+                        src="images/screenshots/casf_screenshot.png" 
+                        onclick="window.open('<?= project_url('chord-and-scale-finder') ?>', '_blank');"
+                    />
+                    
+                    <div id="casf_accomplishments" class="project accomplishments hidden_card">
+                        <h4>Design &amp; Development Details</h4>
+                        <ul>
+                            <li>Developed using object-oriented programming in JavaScript</li>
+                            <li>Utilizes OOP principles including:
+                                <ul>
+                                    <li>Inheritance</li>
+                                    <li>Polymorphism</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div>
+                            <a href="https://github.com/bdtripp-dev/chord-and-scale-finder" target="_blank">
+                                <img src="images/logos/github.svg">View Full Source Code
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div class="project_bottom">
+                        <div class="language_icons">
+                            <ul>
+                                <li><img src="images/logos/javascript.svg">JavaScript</li>
+                                <li><img src="images/logos/html5.svg">HTML5</li>
+                                <li><img src="images/logos/css3.svg">CSS3</li>
+                            </ul>
+                        </div>
+                        
+                        <button 
+                            id="casf_visit_site_btn" 
+                            onclick="window.open('<?= project_url('chord-and-scale-finder') ?>', '_blank');"
+                        >
+                            Visit Site
+                        </button>
+                        <button id="casf_view_details_btn" class="view_details_btn">View Details</button>
                     </div>
                 </div>
                 
