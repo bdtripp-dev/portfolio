@@ -147,224 +147,6 @@ function project_url($project_slug) {
             <h3>Projects</h3>
 
             <div id="projects_wrapper">
-                <div id="pas_screenshot_card" class="project screenshot card">
-                    <img 
-                        id="pas_screenshot" 
-                        class="tracked_image" 
-                        src="images/screenshots/pas_screenshot.png?v=20260421" 
-                        onclick="window.open('<?= project_url('portland-art-supply') ?>', '_blank');"
-                    />
-   
-                    <div id="pas_accomplishments" class="project accomplishments hidden_card">
-                        <h4>Design &amp; Development Details</h4>
-                        <ul>
-                            <li>PHP &nbsp; <!-- added &nbsp; because the first list item was floating up too high under "PHP" because PHP is such a short word -->
-                                <ul>
-                                    <li>Sessions
-                                        <img 
-                                            class="modal_icon" 
-                                            src="images/icons/source_code_icon.png" 
-                                            data-dialog="pas_src_session" 
-                                        />
-                                    </li>
-                                    <li>Dynamically Generated HTML
-                                        <img 
-                                            class="modal_icon" 
-                                            src="images/icons/source_code_icon.png" 
-                                            data-dialog="pas_src_generate"
-                                        />
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>JavaScript
-                                <ul>
-                                    <li>Dynamic CSS Styling
-                                        <img 
-                                            class="modal_icon" 
-                                            src="images/icons/source_code_icon.png" 
-                                            data-dialog="pas_src_dynamic_styling"
-                                        />
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>Database
-                                <ul>
-                                    <li>SQL
-                                        <img 
-                                            class="modal_icon" 
-                                            src="images/icons/source_code_icon.png" 
-                                            data-dialog="pas_src_sql"
-                                        />
-                                    </li>
-                                    <li>Data Modeling
-                                        <img 
-                                            class="modal_icon hide_in_mobile" 
-                                            src="images/icons/document.png" 
-                                            data-dialog="pas_erd"
-                                        />
-                                        <a class="show_in_mobile" href="documents/pas_erd.pdf" target="_blank">
-                                            <img class="modal_icon" src="images/icons/document.png">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div>
-                            <a href="https://github.com/bdtripp-dev/portland-art-supply" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
-                        </div>
-                    </div>
-
-                    <dialog id="pas_src_session" class="src_code">
-                        <div class="dialog_frame">
-                            <img class="close_btn" src="images/icons/close_icon.png">
-                            <div class="dialog_content">
-
-<pre><code class="PHP">/*
-When the user clicks "Add to Cart", the $_SESSION gets updated with an 
-array that contains the items properties. When the user logs out and back in, the session data is
-retrieved to repopulate the shopping cart.
-*/
-
-function addItemToCart($id, $category, $subcategory, $groupCode, $color, $size, $price, $quantity, $groupDescription) {
-$items = getItemsInCart();
-$newItem = true;
-
-//check if the item already exists in the cart
-for ($count = 0; $count &lt; count($items); $count++) {
-    if ($items[$count][PRODUCT_ITEM_ID_FIELD] == $id) {
-        $items[$count][QUANTITY_FIELD] += $quantity;
-        $newItem = false;
-        set_session_value(SESSION_CART_KEY, $items);
-    }
-}
-if ($newItem) {
-    $items[] = array(PRODUCT_ITEM_ID_FIELD => $id, PRODUCT_CATEGORY_NAME_FIELD => $category,
-        PRODUCT_SUBCATEGORY_NAME_FIELD => $subcategory, PRODUCT_GROUP_CODE_FIELD => $groupCode,
-        PRODUCT_COLOR_NAME_FIELD => $color, PRODUCT_SIZE_DESCRIPTION_FIELD => $size,
-        PRODUCT_ITEM_PRICE_FIELD => $price, QUANTITY_FIELD => $quantity, PRODUCT_GROUP_DESCRIPTION_FIELD => $groupDescription);
-    set_session_value(SESSION_CART_KEY, $items);
-}
-save_session();
-}</code></pre>
-                            </div>
-                        </div>
-                    </dialog> 
-
-                    <dialog id="pas_src_generate" class="src_code">
-                        <div class="dialog_frame">
-                            <img class="close_btn" src="images/icons/close_icon.png">
-                            <div class="dialog_content">
-
-<pre><code class="PHP">/*
-All of the site's HTML is dynamically generated from PHP. The product information is stored
-in the database and inserted into the html code as needed. 
-*/
-
-function show_subcategories($categoryID, $categoryName, $rowsPerColumn) {
-$subcategories = lookup_subcategories($categoryID);
-
-echo '        &lt;div class="' . SIX_COLUMNS_CLASS . '">' . "\n";
-echo '            &lt;ul>' . "\n";
-for ($i = $rowsPerColumn - ROWS_PER_COLUMN; ($i &lt; $rowsPerColumn) &amp;&amp; ($i &lt; sizeof($subcategories)); $i++) {
-    echo '                &lt;li class="' . SUBCATEGORY_BUTTON_CLASS . '"&gt;' . "\n";
-    echo '                    &lt;a href="' . GROUP_PRODUCTS_PAGE . "?" . PRODUCT_CATEGORY_NAME_FIELD . "=" . $categoryName . "&amp;" .
-                                PRODUCT_SUBCATEGORY_NAME_FIELD . "=" . $subcategories[$i][PRODUCT_SUBCATEGORY_NAME_FIELD] . '"&gt;'
-                                . ucfirst($subcategories[$i][PRODUCT_SUBCATEGORY_NAME_FIELD]) . '&lt;/a>' . "\n";
-    echo '                &lt;/li&gt;' . "\n";
-}
-echo '            &lt;/ul&gt;' . "\n";
-echo '        &lt;/div&gt;' . "\n\n";
-}</code></pre>  
-                            </div>
-                        </div>
-                    </dialog>
-
-                    <dialog id="pas_src_dynamic_styling" class="src_code">
-                        <div class="dialog_frame">
-                            <img class="close_btn" src="images/icons/close_icon.png">
-                            <div class="dialog_content">
-
-<pre><code class="JavaScript">/*
-Makes dynamic height adjustments involving calculations that could not be achieved using pure
-css.
-*/
-
-if (window.innerWidth >= 700 &amp;&amp; window.innerWidth &lt; 1000) {
-if (colorThumbnails !== null) {
-    let colorThumbnailsStyle = window.getComputedStyle(colorThumbnails);
-
-    itemOptions.style.height = Math.max(colorThumbnails.clientHeight + parseInt(colorThumbnailsStyle.marginTop) +
-        parseInt(colorThumbnailsStyle.marginBottom), optionsRightCol.clientHeight +
-        parseInt(optionsRightColStyle.marginTop) + parseInt(optionsRightColStyle.marginBottom),
-        itemImage.clientHeight + 40) + "px";
-} else {
-    itemOptions.style.height = Math.max(optionsRightCol.clientHeight + parseInt(optionsRightColStyle.marginTop) +
-        parseInt(optionsRightColStyle.marginBottom), itemImage.clientHeight + 40) + "px";
-}
-
-itemWrapper.style.height = "auto";
-}</code></pre>
-                            </div>
-                        </div>
-                    </dialog>
-
-                    <dialog id="pas_src_sql" class="src_code">
-                        <div class="dialog_frame">
-                            <img class="close_btn" src="images/icons/close_icon.png">
-                            <div class="dialog_content">
-
-<pre><code class="PHP">/*
-All product information is stored in a database. When the user clicks on a link to view a 
-particular product, a query is sent to the database and an array containing all of the products
-color and size options is returned. 
-*/
-
-function lookup_items($groupID) {
-$db = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
-$query = "SELECT " . PRODUCT_ITEM_ID_FIELD . ', ' . PRODUCT_COLOR_NAME_FIELD . ", ";
-$query .= PRODUCT_SIZE_DESCRIPTION_FIELD . ", " . PRODUCT_ITEM_PRICE_FIELD . " FROM " . PRODUCT_ITEM_TABLE;
-$query .= " LEFT JOIN " . PRODUCT_COLOR_TABLE . " ON " . PRODUCT_ITEM_TABLE . "." . PRODUCT_ITEM_COLOR_ID_FIELD;
-$query .= " = " . PRODUCT_COLOR_TABLE . "." . PRODUCT_COLOR_ID_FIELD . " LEFT JOIN " . PRODUCT_SIZE_TABLE;
-$query .= " ON " . PRODUCT_ITEM_TABLE . "." . PRODUCT_ITEM_SIZE_ID_FIELD . " = " . PRODUCT_SIZE_TABLE . ".";
-$query .= PRODUCT_SIZE_ID_FIELD . " WHERE " . PRODUCT_ITEM_GROUP_ID_FIELD . " = " . $groupID;
-$result = $db->query($query);
-while($item = $result->fetch_array(MYSQLI_ASSOC)) {
-    $items[] = $item;
-};
-return $items;
-}</code></pre>
-                            </div>
-                        </div>
-                    </dialog>
-
-                    <dialog id="pas_erd" class="document">
-                        <div class="dialog_frame">
-                            <img class="close_btn" src="images/icons/close_icon.png">
-                            <div class="dialog_content">
-                                <img src="documents/pas_erd.png"></iframe>
-                            </div>
-                        </div>
-                    </dialog>
-
-                    <div class="project_bottom">
-                        <div class="language_icons">
-                            <ul>
-                                <li><img src="images/logos/php.svg">PHP</li>
-                                <li><img src="images/logos/sql.png">SQL</li>
-                                <li><img src="images/logos/javascript.svg">JavaScript</li>
-                            </ul>
-                        </div>
-                        <button 
-                            id="pas_visit_site_btn" 
-                            onclick="window.open('<?= project_url('portland-art-supply') ?>', '_blank');"
-                        >
-                            Visit Site
-                        </button>
-                        <button id="pas_view_details_btn" class="view_details_btn">View Details</button>                        
-                    </div>
-                </div>
 
                 <div id="hh_screenshot_card" class="project screenshot card">
                     <img 
@@ -664,6 +446,225 @@ return $items;
                             Visit Site
                         </button>
                         <button id="hh_view_details_btn" class="view_details_btn">View Details</button>
+                    </div>
+                </div>
+                
+                <div id="pas_screenshot_card" class="project screenshot card">
+                    <img 
+                        id="pas_screenshot" 
+                        class="tracked_image" 
+                        src="images/screenshots/pas_screenshot.png?v=20260421" 
+                        onclick="window.open('<?= project_url('portland-art-supply') ?>', '_blank');"
+                    />
+   
+                    <div id="pas_accomplishments" class="project accomplishments hidden_card">
+                        <h4>Design &amp; Development Details</h4>
+                        <ul>
+                            <li>PHP &nbsp; <!-- added &nbsp; because the first list item was floating up too high under "PHP" because PHP is such a short word -->
+                                <ul>
+                                    <li>Sessions
+                                        <img 
+                                            class="modal_icon" 
+                                            src="images/icons/source_code_icon.png" 
+                                            data-dialog="pas_src_session" 
+                                        />
+                                    </li>
+                                    <li>Dynamically Generated HTML
+                                        <img 
+                                            class="modal_icon" 
+                                            src="images/icons/source_code_icon.png" 
+                                            data-dialog="pas_src_generate"
+                                        />
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>JavaScript
+                                <ul>
+                                    <li>Dynamic CSS Styling
+                                        <img 
+                                            class="modal_icon" 
+                                            src="images/icons/source_code_icon.png" 
+                                            data-dialog="pas_src_dynamic_styling"
+                                        />
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>Database
+                                <ul>
+                                    <li>SQL
+                                        <img 
+                                            class="modal_icon" 
+                                            src="images/icons/source_code_icon.png" 
+                                            data-dialog="pas_src_sql"
+                                        />
+                                    </li>
+                                    <li>Data Modeling
+                                        <img 
+                                            class="modal_icon hide_in_mobile" 
+                                            src="images/icons/document.png" 
+                                            data-dialog="pas_erd"
+                                        />
+                                        <a class="show_in_mobile" href="documents/pas_erd.pdf" target="_blank">
+                                            <img class="modal_icon" src="images/icons/document.png">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div>
+                            <a href="https://github.com/bdtripp-dev/portland-art-supply" target="_blank"><img src="images/logos/github.svg">View Full Source Code</a>
+                        </div>
+                    </div>
+
+                    <dialog id="pas_src_session" class="src_code">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
+
+<pre><code class="PHP">/*
+When the user clicks "Add to Cart", the $_SESSION gets updated with an 
+array that contains the items properties. When the user logs out and back in, the session data is
+retrieved to repopulate the shopping cart.
+*/
+
+function addItemToCart($id, $category, $subcategory, $groupCode, $color, $size, $price, $quantity, $groupDescription) {
+$items = getItemsInCart();
+$newItem = true;
+
+//check if the item already exists in the cart
+for ($count = 0; $count &lt; count($items); $count++) {
+    if ($items[$count][PRODUCT_ITEM_ID_FIELD] == $id) {
+        $items[$count][QUANTITY_FIELD] += $quantity;
+        $newItem = false;
+        set_session_value(SESSION_CART_KEY, $items);
+    }
+}
+if ($newItem) {
+    $items[] = array(PRODUCT_ITEM_ID_FIELD => $id, PRODUCT_CATEGORY_NAME_FIELD => $category,
+        PRODUCT_SUBCATEGORY_NAME_FIELD => $subcategory, PRODUCT_GROUP_CODE_FIELD => $groupCode,
+        PRODUCT_COLOR_NAME_FIELD => $color, PRODUCT_SIZE_DESCRIPTION_FIELD => $size,
+        PRODUCT_ITEM_PRICE_FIELD => $price, QUANTITY_FIELD => $quantity, PRODUCT_GROUP_DESCRIPTION_FIELD => $groupDescription);
+    set_session_value(SESSION_CART_KEY, $items);
+}
+save_session();
+}</code></pre>
+                            </div>
+                        </div>
+                    </dialog> 
+
+                    <dialog id="pas_src_generate" class="src_code">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
+
+<pre><code class="PHP">/*
+All of the site's HTML is dynamically generated from PHP. The product information is stored
+in the database and inserted into the html code as needed. 
+*/
+
+function show_subcategories($categoryID, $categoryName, $rowsPerColumn) {
+$subcategories = lookup_subcategories($categoryID);
+
+echo '        &lt;div class="' . SIX_COLUMNS_CLASS . '">' . "\n";
+echo '            &lt;ul>' . "\n";
+for ($i = $rowsPerColumn - ROWS_PER_COLUMN; ($i &lt; $rowsPerColumn) &amp;&amp; ($i &lt; sizeof($subcategories)); $i++) {
+    echo '                &lt;li class="' . SUBCATEGORY_BUTTON_CLASS . '"&gt;' . "\n";
+    echo '                    &lt;a href="' . GROUP_PRODUCTS_PAGE . "?" . PRODUCT_CATEGORY_NAME_FIELD . "=" . $categoryName . "&amp;" .
+                                PRODUCT_SUBCATEGORY_NAME_FIELD . "=" . $subcategories[$i][PRODUCT_SUBCATEGORY_NAME_FIELD] . '"&gt;'
+                                . ucfirst($subcategories[$i][PRODUCT_SUBCATEGORY_NAME_FIELD]) . '&lt;/a>' . "\n";
+    echo '                &lt;/li&gt;' . "\n";
+}
+echo '            &lt;/ul&gt;' . "\n";
+echo '        &lt;/div&gt;' . "\n\n";
+}</code></pre>  
+                            </div>
+                        </div>
+                    </dialog>
+
+                    <dialog id="pas_src_dynamic_styling" class="src_code">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
+
+<pre><code class="JavaScript">/*
+Makes dynamic height adjustments involving calculations that could not be achieved using pure
+css.
+*/
+
+if (window.innerWidth >= 700 &amp;&amp; window.innerWidth &lt; 1000) {
+if (colorThumbnails !== null) {
+    let colorThumbnailsStyle = window.getComputedStyle(colorThumbnails);
+
+    itemOptions.style.height = Math.max(colorThumbnails.clientHeight + parseInt(colorThumbnailsStyle.marginTop) +
+        parseInt(colorThumbnailsStyle.marginBottom), optionsRightCol.clientHeight +
+        parseInt(optionsRightColStyle.marginTop) + parseInt(optionsRightColStyle.marginBottom),
+        itemImage.clientHeight + 40) + "px";
+} else {
+    itemOptions.style.height = Math.max(optionsRightCol.clientHeight + parseInt(optionsRightColStyle.marginTop) +
+        parseInt(optionsRightColStyle.marginBottom), itemImage.clientHeight + 40) + "px";
+}
+
+itemWrapper.style.height = "auto";
+}</code></pre>
+                            </div>
+                        </div>
+                    </dialog>
+
+                    <dialog id="pas_src_sql" class="src_code">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
+
+<pre><code class="PHP">/*
+All product information is stored in a database. When the user clicks on a link to view a 
+particular product, a query is sent to the database and an array containing all of the products
+color and size options is returned. 
+*/
+
+function lookup_items($groupID) {
+$db = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
+$query = "SELECT " . PRODUCT_ITEM_ID_FIELD . ', ' . PRODUCT_COLOR_NAME_FIELD . ", ";
+$query .= PRODUCT_SIZE_DESCRIPTION_FIELD . ", " . PRODUCT_ITEM_PRICE_FIELD . " FROM " . PRODUCT_ITEM_TABLE;
+$query .= " LEFT JOIN " . PRODUCT_COLOR_TABLE . " ON " . PRODUCT_ITEM_TABLE . "." . PRODUCT_ITEM_COLOR_ID_FIELD;
+$query .= " = " . PRODUCT_COLOR_TABLE . "." . PRODUCT_COLOR_ID_FIELD . " LEFT JOIN " . PRODUCT_SIZE_TABLE;
+$query .= " ON " . PRODUCT_ITEM_TABLE . "." . PRODUCT_ITEM_SIZE_ID_FIELD . " = " . PRODUCT_SIZE_TABLE . ".";
+$query .= PRODUCT_SIZE_ID_FIELD . " WHERE " . PRODUCT_ITEM_GROUP_ID_FIELD . " = " . $groupID;
+$result = $db->query($query);
+while($item = $result->fetch_array(MYSQLI_ASSOC)) {
+    $items[] = $item;
+};
+return $items;
+}</code></pre>
+                            </div>
+                        </div>
+                    </dialog>
+
+                    <dialog id="pas_erd" class="document">
+                        <div class="dialog_frame">
+                            <img class="close_btn" src="images/icons/close_icon.png">
+                            <div class="dialog_content">
+                                <img src="documents/pas_erd.png"></iframe>
+                            </div>
+                        </div>
+                    </dialog>
+
+                    <div class="project_bottom">
+                        <div class="language_icons">
+                            <ul>
+                                <li><img src="images/logos/php.svg">PHP</li>
+                                <li><img src="images/logos/sql.png">SQL</li>
+                                <li><img src="images/logos/javascript.svg">JavaScript</li>
+                            </ul>
+                        </div>
+                        <button 
+                            id="pas_visit_site_btn" 
+                            onclick="window.open('<?= project_url('portland-art-supply') ?>', '_blank');"
+                        >
+                            Visit Site
+                        </button>
+                        <button id="pas_view_details_btn" class="view_details_btn">View Details</button>                        
                     </div>
                 </div>
                 
