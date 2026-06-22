@@ -1149,7 +1149,7 @@ startActivity(intent);
                             <li>Default and Custom Widgets</li>
                             <li>Display Plugins</li>
                             <li>Photo Editing with GIMP</li>
-                            <li>Embedded Google Map and<br> Youtube Video
+                            <li>Embedded Google Map and<br> YouTube Video
                                 <img 
                                     class="modal_icon" 
                                     src="images/icons/source_code_icon.png" 
